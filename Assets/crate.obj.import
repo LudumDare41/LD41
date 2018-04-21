@@ -9,10 +9,10 @@ path="res://.import/crate.obj-608ed7bc84d1af55affbffe2e9ee387c.mesh"
 files=[ "res://.import/crate.obj-608ed7bc84d1af55affbffe2e9ee387c.mesh" ]
 
 source_file="res://Assets/crate.obj"
-source_md5="04129ba7d2ea30e627f5aa142274e3cf"
+source_md5="2b7eba0d961f1e6d4468571c226a36b7"
 
 dest_files=[ "res://.import/crate.obj-608ed7bc84d1af55affbffe2e9ee387c.mesh", "res://.import/crate.obj-608ed7bc84d1af55affbffe2e9ee387c.mesh" ]
-dest_md5="af714d808462b85f61681bfa6d5fc02b"
+dest_md5="5ab677082e7d4f45f02fbc677b204b02"
 
 [params]
 
