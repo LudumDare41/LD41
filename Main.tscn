@@ -108,7 +108,7 @@ _sections_unfolded = [ "Auto Exposure", "Background", "Glow" ]
 bounds = AABB( -10, -10, -10, 20, 20, 20 )
 cell_size = 0.078125
 to_cell_xform = Transform( 12.8, 0, 0, 0, 12.8, 0, 0, 0, 12.8, 128, 128, 128 )
-dynamic_data = PoolIntArray( 0, 9, 256, 256, 256, 1, 0, 6357060, 6357108, 5374044, 6357103, 6881389, 6750318, 4653148, 6553711, 7602287, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 8355711, 0 )
+dynamic_data = PoolIntArray( 0, 9, 256, 256, 256, 1, 0, 7143541, 7209061, 7536756, 4980828, 3407940, 6029361, 7209033, 7602291, 7209057, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 8355711, 0 )
 dynamic_range = 4
 energy = 1.0
 bias = 1.5
@@ -167,7 +167,7 @@ _sections_unfolded = [ "Light" ]
 
 [node name="FPSController" parent="." index="3" instance=ExtResource( 1 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.37132, 1.60282, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.37132, 2.30193, 2.19541 )
 
 [node name="Labyrinth" type="Spatial" parent="." index="4" instance=ExtResource( 2 )]
 
