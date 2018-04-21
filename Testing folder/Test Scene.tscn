@@ -64,13 +64,12 @@ _sections_unfolded = [ "Albedo" ]
 
 points = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1 )
 
-[node name="Test Scene" type="Spatial"]
+[node name="Test Scene" type="Spatial" index="0"]
 
 transform = Transform( 2.52108, 0, 0, 0, 1, 0, 0, 0, 2.96764, 0, 0, 0 )
 
 [node name="Plane" type="MeshInstance" parent="." index="0"]
 
-editor/display_folded = true
 transform = Transform( 6.76144, 0, 0, 0, 1, 0, 0, 0, 8.95951, 0, 0, 0 )
 layers = 1
 material_override = null
