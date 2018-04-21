@@ -140,6 +140,9 @@ axis_lock_angular_y = false
 axis_lock_angular_z = false
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
+speed = 15
+gravity = 3
+jump = 10
 
 [node name="Body" type="Spatial" parent="." index="0"]
 
