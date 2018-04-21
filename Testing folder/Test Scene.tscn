@@ -75,12 +75,13 @@ subdivide_depth = 0
 
 extents = Vector3( 1, 1, 1 )
 
-[node name="Test Scene" type="Spatial"]
+[node name="Test Scene" type="Spatial" index="0"]
 
 transform = Transform( 2.52108, 0, 0, 0, 1, 0, 0, 0, 2.96764, 0, 0, 0 )
 
 [node name="Plane" type="MeshInstance" parent="." index="0"]
 
+editor/display_folded = true
 transform = Transform( 6.76144, 0, 0, 0, 1, 0, 0, 0, 8.95951, 0, 0, 0 )
 layers = 1
 material_override = null
@@ -118,6 +119,7 @@ transform = Transform( 1.16835, 0, 0, 0, 2.65, 0, 0, 0, 1, 0.793312, 4, 1.0109 )
 
 [node name="RigidBody" type="RigidBody" parent="." index="2"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.91411, -4.43106 )
 input_ray_pickable = true
 input_capture_on_drag = false

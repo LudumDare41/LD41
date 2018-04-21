@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/FPSController.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Weapons/Weapons.gd" type="Script" id=2]
 [ext_resource path="res://Assets/UI/crosshair.png.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="CapsuleMesh" id=1]
 
@@ -123,7 +124,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="CylinderMesh" id=6]
+[sub_resource type="CylinderMesh" id=5]
 
 top_radius = 1.0
 bottom_radius = 1.0
@@ -131,7 +132,7 @@ height = 2.0
 radial_segments = 64
 rings = 4
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=6]
 
 render_priority = 0
 flags_transparent = false
@@ -183,12 +184,20 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="CapsuleShape" id=5]
+[sub_resource type="CapsuleShape" id=7]
 
 radius = 2.03451
 height = 0.002
 
-[node name="FPSController" type="KinematicBody" index="0"]
+[sub_resource type="DynamicFont" id=8]
+
+size = 40
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Settings" ]
+
+[node name="FPSController" type="KinematicBody"]
 
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 input_ray_pickable = true
@@ -283,15 +292,15 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 6 )
+mesh = SubResource( 5 )
 skeleton = NodePath("..")
-material/0 = SubResource( 7 )
+material/0 = SubResource( 6 )
 _sections_unfolded = [ "material" ]
 
 [node name="Collider" type="CollisionShape" parent="." index="2"]
 
 transform = Transform( 1, 0, 0, 0, -3.81019e-08, -0.871669, 0, 0.847664, -3.70526e-08, 0, 0.450868, 0 )
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 disabled = false
 
 [node name="Control" type="Control" parent="." index="3"]
@@ -313,5 +322,95 @@ _sections_unfolded = [ "Margin" ]
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="AmmoUI" type="Container" parent="Control" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -505.0
+margin_top = 209.0
+margin_right = -345.0
+margin_bottom = 288.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="InWeapon" type="Label" parent="Control/AmmoUI" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -12.0
+margin_right = 75.0
+margin_bottom = 78.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 8 )
+text = "0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Slash" type="Label" parent="Control/AmmoUI" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_right = 119.0
+margin_bottom = 78.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 8 )
+text = "/"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="InMag" type="Label" parent="Control/AmmoUI" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 76.0
+margin_top = 1.0
+margin_right = 163.0
+margin_bottom = 79.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 8 )
+text = "30"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
 
