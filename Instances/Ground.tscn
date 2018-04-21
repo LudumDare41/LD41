@@ -1,12 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Assets/wall.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Assets/ground.obj" type="ArrayMesh" id=1]
 
-[node name="Wall" type="Spatial" index="0"]
+[node name="Ground" type="Spatial" index="0"]
 
-_sections_unfolded = [ "Transform" ]
-
-[node name="Instance" type="MeshInstance" parent="." index="0"]
+[node name="Ground" type="MeshInstance" parent="." index="0"]
 
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0 )
 layers = 1
@@ -21,6 +19,6 @@ lod_max_hysteresis = 0.0
 mesh = ExtResource( 1 )
 skeleton = NodePath("..")
 material/0 = null
-_sections_unfolded = [ "Geometry", "Transform", "material" ]
+_sections_unfolded = [ "Geometry", "Transform" ]
 
 
