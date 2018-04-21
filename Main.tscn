@@ -1,34 +1,15 @@
 [gd_scene load_steps=3 format=2]
 
-[sub_resource type="ProceduralSky" id=1]
+[ext_resource path="res://blocks.tres" type="MeshLibrary" id=1]
 
-radiance_size = 4
-sky_top_color = Color( 0.0470588, 0.454902, 0.976471, 1 )
-sky_horizon_color = Color( 0.556863, 0.823529, 0.909804, 1 )
-sky_curve = 0.25
-sky_energy = 1.0
-ground_bottom_color = Color( 0.101961, 0.145098, 0.188235, 1 )
-ground_horizon_color = Color( 0.482353, 0.788235, 0.952941, 1 )
-ground_curve = 0.01
-ground_energy = 1.0
-sun_color = Color( 1, 1, 1, 1 )
-sun_latitude = 35.0
-sun_longitude = 0.0
-sun_angle_min = 1.0
-sun_angle_max = 100.0
-sun_curve = 0.05
-sun_energy = 16.0
-texture_size = 2
+[sub_resource type="Environment" id=1]
 
-[sub_resource type="Environment" id=2]
-
-background_mode = 2
-background_sky = SubResource( 1 )
+background_mode = 0
 background_sky_custom_fov = 0.0
 background_color = Color( 0, 0, 0, 1 )
 background_energy = 1.0
 background_canvas_max_layer = 0
-ambient_light_color = Color( 0, 0, 0, 1 )
+ambient_light_color = Color( 1, 1, 1, 1 )
 ambient_light_energy = 1.0
 ambient_light_sky_contribution = 1.0
 fog_enabled = false
@@ -44,7 +25,7 @@ fog_height_enabled = false
 fog_height_min = 0.0
 fog_height_max = 100.0
 fog_height_curve = 1.0
-tonemap_mode = 2
+tonemap_mode = 0
 tonemap_exposure = 1.0
 tonemap_white = 1.0
 auto_exposure_enabled = false
@@ -98,11 +79,33 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
+_sections_unfolded = [ "Ambient Light" ]
 
-[node name="Main" type="Node" index="0"]
+[node name="Node" type="Node" index="0"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
 
-environment = SubResource( 2 )
+environment = SubResource( 1 )
+
+[node name="Spatial" type="Spatial" parent="." index="1"]
+
+[node name="GridMap" type="GridMap" parent="Spatial" index="0"]
+
+theme = ExtResource( 1 )
+cell_size = Vector3( 2, 2, 2 )
+cell_octant_size = 8
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+cell_scale = 1.0
+collision_layer = 1
+collision_mask = 1
+data = {
+"cells": PoolIntArray( 0, 0, 2, 1, 0, 3, 2, 65534, 5, 3, 65535, 5 )
+}
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_editor_clip_": 0
+}
 
 
