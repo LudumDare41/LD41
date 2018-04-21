@@ -9,10 +9,10 @@ var direction = Vector3()
 var velocity = Vector3(0,0,0)
 
 #walk variables
-const MAX_SPEED = 20
-const MAX_RUNNING_SPEED = 30
+const MAX_SPEED = 12
+const MAX_RUNNING_SPEED = 24
 const ACCEL = 2
-const DEACCEL = 6
+const DEACCEL = 8
 export var gravity = -9.8 * 3
 
 #Mouse controller variables
