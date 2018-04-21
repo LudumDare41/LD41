@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/FPSController.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Weapons/Weapons.gd" type="Script" id=2]
 [ext_resource path="res://Assets/UI/crosshair.png.png" type="Texture" id=3]
-=======
-[gd_scene load_steps=7 format=2]
-
-[ext_resource path="res://Scripts/FPSController.gd" type="Script" id=1]
->>>>>>> 22240d136f084f09fd0cd359e6b4b7fa14ef7fa0
 
 [sub_resource type="CapsuleMesh" id=1]
 
@@ -196,7 +190,6 @@ height = 0.002
 
 [node name="FPSController" type="KinematicBody" index="0"]
 
-editor/display_folded = true
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -301,7 +294,6 @@ transform = Transform( 1, 0, 0, 0, -3.81019e-08, -0.871669, 0, 0.847664, -3.7052
 shape = SubResource( 5 )
 disabled = false
 
-<<<<<<< HEAD
 [node name="Control" type="Control" parent="." index="3"]
 
 anchor_left = 0.5
@@ -322,6 +314,4 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-=======
->>>>>>> 22240d136f084f09fd0cd359e6b4b7fa14ef7fa0
 

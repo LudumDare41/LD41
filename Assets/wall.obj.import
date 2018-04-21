@@ -7,10 +7,10 @@ path="res://.import/wall.obj-1b9a07251ddbeb76b163f93da5a6655a.scn"
 [deps]
 
 source_file="res://Assets/wall.obj"
-source_md5="590c68f76990b9defb29c049d3bd7b69"
+source_md5="f005e125447d6f1102bcf6e536de08b4"
 
 dest_files=[ "res://.import/wall.obj-1b9a07251ddbeb76b163f93da5a6655a.scn" ]
-dest_md5="5cb1993b449b41a952c6b3eb50177e38"
+dest_md5="49648eab5e05e68de5c87d5b6fb38977"
 
 [params]
 
