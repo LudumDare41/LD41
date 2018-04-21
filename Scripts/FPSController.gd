@@ -15,7 +15,8 @@ func _ready():
 	# Initialization here
 	pass
 
-func _process(delta):
+func _physics_process(delta):
+	
 	direction = Vector3(0,0,0)
 	if Input.is_action_pressed("up"):
 		direction.z = -1
