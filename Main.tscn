@@ -103,7 +103,7 @@ propagation = 0.7
 interior = false
 compress = false
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
 
