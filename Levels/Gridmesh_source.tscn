@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Instances/MeshAsRoot/Crate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Instances/MeshAsRoot/Floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Instances/MeshAsRoot/Wall.tscn" type="PackedScene" id=3]
+
+[node name="Spatial" type="Spatial" index="0"]
+
+[node name="Crate" parent="." index="0" instance=ExtResource( 1 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.99344, 0, 0 )
+
+[node name="Floor" parent="." index="1" instance=ExtResource( 2 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall" parent="." index="2" instance=ExtResource( 3 )]
+
+_sections_unfolded = [ "Transform" ]
+
+
