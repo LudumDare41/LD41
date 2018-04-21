@@ -64,7 +64,7 @@ _sections_unfolded = [ "Albedo" ]
 
 points = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1 )
 
-[node name="Test Scene" type="Spatial" index="0"]
+[node name="Test Scene" type="Spatial"]
 
 transform = Transform( 2.52108, 0, 0, 0, 1, 0, 0, 0, 2.96764, 0, 0, 0 )
 
@@ -104,6 +104,5 @@ disabled = false
 [node name="FPSController" parent="." index="1" instance=ExtResource( 1 )]
 
 transform = Transform( 1.16835, 0, 0, 0, 2.65, 0, 0, 0, 1, 0.793312, 4, 1.0109 )
-gravity = -29.4
 
 

@@ -103,7 +103,7 @@ propagation = 0.7
 interior = false
 compress = false
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
 
@@ -154,8 +154,7 @@ _sections_unfolded = [ "Light" ]
 
 [node name="FPSController" parent="." index="3" instance=ExtResource( 2 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.14457, 4.76196, 2.47369 )
-gravity = -29.4
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.116277, 4.76196, 2.47369 )
 
 [node name="Labyrinth" parent="." index="4" instance=ExtResource( 3 )]
 
