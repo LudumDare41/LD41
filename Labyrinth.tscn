@@ -4,11 +4,9 @@
 [ext_resource path="res://Instances/Floor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Instances/Crate.tscn" type="PackedScene" id=3]
 
-[node name="Labyrinth" type="Spatial" index="0"]
+[node name="Labyrinth" type="Spatial"]
 
 [node name="Walls" type="Spatial" parent="." index="0"]
-
-editor/display_folded = true
 
 [node name="Wall4" parent="Walls" index="0" instance=ExtResource( 1 )]
 
