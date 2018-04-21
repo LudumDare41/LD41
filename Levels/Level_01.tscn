@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Levels/Gridmap.meshlib" type="MeshLibrary" id=1]
+
+[node name="Spatial" type="Spatial" index="0"]
+
+[node name="GridMap" type="GridMap" parent="." index="0"]
+
+transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0 )
+theme = ExtResource( 1 )
+cell_size = Vector3( 10, 10, 10 )
+cell_octant_size = 8
+cell_center_x = true
+cell_center_y = true
+cell_center_z = true
+cell_scale = 1.0
+collision_layer = 1
+collision_mask = 1
+data = {
+"cells": PoolIntArray( 1, 65524, 1, 3, 65524, 3, 5, 65524, 1, 1, 65528, 1, 3, 65528, 3, 5, 65528, 1, 1, 65532, 1, 3, 65532, 3, 5, 65532, 1, 1, 65534, 1441795, 4, 65534, 1441795 )
+}
+_sections_unfolded = [ "Cell", "Transform" ]
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+
