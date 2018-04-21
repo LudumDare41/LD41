@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/placeholder.png-2a03d1f815b671c55ae8a7b135bfef1f.stex"
+path="res://.import/placeholder.png-43a71552ea5fb7d6a2feca187296d98f.stex"
 
 [deps]
 
-source_file="res://Subscenes/placeholder.png"
+source_file="res://Instances/placeholder.png"
 source_md5="ae7e641067601e2184afcade49abd283"
 
-dest_files=[ "res://.import/placeholder.png-2a03d1f815b671c55ae8a7b135bfef1f.stex" ]
+dest_files=[ "res://.import/placeholder.png-43a71552ea5fb7d6a2feca187296d98f.stex" ]
 dest_md5="84511021bbc8c9d37c7f0f4d181de883"
 
 [params]
