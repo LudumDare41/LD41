@@ -143,10 +143,9 @@ axis_lock_angular_z = false
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-speed = 30
-gravity = 3
-jump = 10
+gravity = -29.4
 mouse_sensitivity = 0.3
+jump = 10
 
 [node name="Body" type="Spatial" parent="." index="0"]
 
