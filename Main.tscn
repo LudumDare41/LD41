@@ -1,4 +1,4 @@
-[gd_resource type="Environment" load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -20,7 +20,7 @@ sun_curve = 0.05
 sun_energy = 16.0
 texture_size = 2
 
-[resource]
+[sub_resource type="Environment" id=2]
 
 background_mode = 2
 background_sky = SubResource( 1 )
@@ -44,7 +44,7 @@ fog_height_enabled = false
 fog_height_min = 0.0
 fog_height_max = 100.0
 fog_height_curve = 1.0
-tonemap_mode = 0
+tonemap_mode = 2
 tonemap_exposure = 1.0
 tonemap_white = 1.0
 auto_exposure_enabled = false
@@ -98,4 +98,11 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
+
+[node name="Main" type="Node" index="0"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+
+environment = SubResource( 2 )
+
 
