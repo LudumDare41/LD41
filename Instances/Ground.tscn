@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/ground.obj" type="ArrayMesh" id=1]
 
-[node name="Ground" type="Spatial" index="0"]
+[node name="Ground" type="Spatial"]
 
 [node name="Ground" type="MeshInstance" parent="." index="0"]
 

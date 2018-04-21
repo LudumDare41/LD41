@@ -126,7 +126,7 @@ _sections_unfolded = [ "Albedo" ]
 radius = 2.03451
 height = 0.002
 
-[node name="FPSController" type="KinematicBody" index="0"]
+[node name="FPSController" type="KinematicBody"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
