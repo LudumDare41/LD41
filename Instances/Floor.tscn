@@ -7,6 +7,7 @@
 [node name="MeshInstance" parent="." index="0"]
 
 transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0 )
-_sections_unfolded = [ "Transform" ]
+use_in_baked_light = true
+_sections_unfolded = [ "Geometry", "Transform" ]
 
 
