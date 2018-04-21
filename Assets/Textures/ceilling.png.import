@@ -2,16 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/crate.png-7aee65d9a0442961ee3027054b637309.s3tc.stex"
-path.etc2="res://.import/crate.png-7aee65d9a0442961ee3027054b637309.etc2.stex"
+path.s3tc="res://.import/ceilling.png-fc46cee3ff4df0128c2506e1b80982e4.s3tc.stex"
+path.etc2="res://.import/ceilling.png-fc46cee3ff4df0128c2506e1b80982e4.etc2.stex"
 
 [deps]
 
-source_file="res://Assets/Textures/crate.png"
+source_file="res://Assets/Textures/ceilling.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
-dest_files=[ "res://.import/crate.png-7aee65d9a0442961ee3027054b637309.s3tc.stex", "res://.import/crate.png-7aee65d9a0442961ee3027054b637309.etc2.stex" ]
-dest_md5="d9d7b231cc0e655e054a9e2bd4060e40"
+dest_files=[ "res://.import/ceilling.png-fc46cee3ff4df0128c2506e1b80982e4.s3tc.stex", "res://.import/ceilling.png-fc46cee3ff4df0128c2506e1b80982e4.etc2.stex" ]
+dest_md5="ac3bae6d1069f9ba8e878fe32c701e8a"
 
 [params]
 

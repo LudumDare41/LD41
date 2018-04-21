@@ -2,15 +2,15 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/wall.obj-1b9a07251ddbeb76b163f93da5a6655a.scn"
+path="res://.import/ceiling.obj-794c7085b58f6213ffc704ae6a073cde.scn"
 
 [deps]
 
-source_file="res://Assets/wall.obj"
-source_md5="590c68f76990b9defb29c049d3bd7b69"
+source_file="res://Assets/ceiling.obj"
+source_md5="6c4fd8f63fbf26ab1d9d589fea018f73"
 
-dest_files=[ "res://.import/wall.obj-1b9a07251ddbeb76b163f93da5a6655a.scn" ]
-dest_md5="5cb1993b449b41a952c6b3eb50177e38"
+dest_files=[ "res://.import/ceiling.obj-794c7085b58f6213ffc704ae6a073cde.scn" ]
+dest_md5="f647a2b40a281e6e5ffcf3414d423441"
 
 [params]
 

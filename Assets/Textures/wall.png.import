@@ -11,7 +11,11 @@ source_file="res://Assets/Textures/wall.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/wall.png-642b133cac371179f83ae98314c08240.s3tc.stex", "res://.import/wall.png-642b133cac371179f83ae98314c08240.etc2.stex" ]
+<<<<<<< HEAD
 dest_md5="095c0ae936a90411fb5f8761ec315504"
+=======
+dest_md5="fc1f92cf8ca850b4ddb64df27ff00c2f"
+>>>>>>> 22240d136f084f09fd0cd359e6b4b7fa14ef7fa0
 
 [params]
 
