@@ -9,15 +9,15 @@
 
 [node name="Wall4" parent="Walls" index="0" instance=ExtResource( 1 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0 )
 
 [node name="Wall7" parent="Walls" index="1" instance=ExtResource( 1 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 6 )
 
 [node name="Wall9" parent="Walls" index="2" instance=ExtResource( 1 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 12 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 12 )
 
 [node name="Wall5" parent="Walls" index="3" instance=ExtResource( 1 )]
 
@@ -35,12 +35,24 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0 )
 
 [node name="Ground" parent="Ground" index="0" instance=ExtResource( 2 )]
 
-[node name="Ground2" parent="Ground" index="1" instance=ExtResource( 2 )]
+[node name="Ground4" parent="Ground" index="1" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0 )
+
+[node name="Ground2" parent="Ground" index="2" instance=ExtResource( 2 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6 )
 
-[node name="Ground3" parent="Ground" index="2" instance=ExtResource( 2 )]
+[node name="Ground6" parent="Ground" index="3" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 6 )
+
+[node name="Ground3" parent="Ground" index="4" instance=ExtResource( 2 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12 )
+
+[node name="Ground5" parent="Ground" index="5" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 12 )
 
 
