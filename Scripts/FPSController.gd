@@ -4,7 +4,6 @@ extends KinematicBody
 # var a = 2
 # var b = "textvar"
 
-
 # Helpers
 var direction = Vector3()
 var velocity = Vector3(0,0,0)
@@ -25,6 +24,7 @@ export var jump = 10
 
 func _ready():
 	set_process_input(true)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	pass
 
 func _physics_process(delta):
