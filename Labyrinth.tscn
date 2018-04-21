@@ -8,7 +8,7 @@
 [ext_resource path="res://Instances/Pillar.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Instances/Window.tscn" type="PackedScene" id=7]
 
-[node name="Labyrinth" type="Spatial" index="0"]
+[node name="Labyrinth" type="Spatial"]
 
 [node name="Walls" type="Spatial" parent="." index="0"]
 
