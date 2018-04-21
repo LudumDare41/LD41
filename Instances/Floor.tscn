@@ -1,7 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/ground.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://Assets/Textures/ground.png" type="Texture" id=2]
+[ext_resource path="res://Assets/ground.png" type="Texture" id=2]
+
+
+
 
 [sub_resource type="SpatialMaterial" id=1]
 
