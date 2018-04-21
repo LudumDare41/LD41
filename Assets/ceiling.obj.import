@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ceiling.obj-794c7085b58f6213ffc704ae6a073cde.mesh"
+
+[deps]
+
+files=[ "res://.import/ceiling.obj-794c7085b58f6213ffc704ae6a073cde.mesh" ]
+
+source_file="res://Assets/ceiling.obj"
+source_md5="6c4fd8f63fbf26ab1d9d589fea018f73"
+
+dest_files=[ "res://.import/ceiling.obj-794c7085b58f6213ffc704ae6a073cde.mesh", "res://.import/ceiling.obj-794c7085b58f6213ffc704ae6a073cde.mesh" ]
+dest_md5="b7287467c116aade84810f103feaa43d"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

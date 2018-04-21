@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Instances/Wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Instances/Floor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Instances/Crate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Instances/Ceiling.tscn" type="PackedScene" id=4]
 
-[node name="Labyrinth" type="Spatial"]
+[node name="Labyrinth" type="Spatial" index="0"]
 
 [node name="Walls" type="Spatial" parent="." index="0"]
 
@@ -64,8 +65,36 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6 )
 
 [node name="Crates" type="Spatial" parent="." index="2"]
 
+editor/display_folded = true
+
 [node name="Crate" parent="Crates" index="0" instance=ExtResource( 3 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6 )
+
+[node name="Ceiling" type="Spatial" parent="." index="3"]
+
+[node name="Ceiling" parent="Ceiling" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, 6 )
+
+[node name="Ceiling4" parent="Ceiling" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5, 6 )
+
+[node name="Ceiling2" parent="Ceiling" index="2" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, 0 )
+
+[node name="Ceiling6" parent="Ceiling" index="3" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5, 0 )
+
+[node name="Ceiling3" parent="Ceiling" index="4" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, -6 )
+
+[node name="Ceiling5" parent="Ceiling" index="5" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5, -6 )
 
 
