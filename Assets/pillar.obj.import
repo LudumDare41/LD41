@@ -9,10 +9,10 @@ path="res://.import/pillar.obj-f968e6bb13c6004e092fc4e7208b95ea.mesh"
 files=[ "res://.import/pillar.obj-f968e6bb13c6004e092fc4e7208b95ea.mesh" ]
 
 source_file="res://Assets/pillar.obj"
-source_md5="3ee38c8397a54c84bf95408772cd190e"
+source_md5="52bf67bc8216ac38e5c538ed83da5f70"
 
 dest_files=[ "res://.import/pillar.obj-f968e6bb13c6004e092fc4e7208b95ea.mesh", "res://.import/pillar.obj-f968e6bb13c6004e092fc4e7208b95ea.mesh" ]
-dest_md5="a0c03b4ee72f6f9703c4c9ccf9bc3e68"
+dest_md5="c4db3649b99dc3281c0ef45ba63d8056"
 
 [params]
 

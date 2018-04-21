@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Instances/Wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Instances/Floor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Instances/Crate.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Instances/Ceiling.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Instances/Pillar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Instances/Window.tscn" type="PackedScene" id=6]
 
 [node name="Labyrinth" type="Spatial" index="0"]
 
 [node name="Walls" type="Spatial" parent="." index="0"]
+
+editor/display_folded = true
 
 [node name="Wall" parent="Walls" index="0" instance=ExtResource( 1 )]
 
@@ -22,23 +25,31 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 6 )
 
-[node name="Wall5" parent="Walls" index="3" instance=ExtResource( 1 )]
+[node name="Wall9" parent="Walls" index="3" instance=ExtResource( 1 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 12 )
+
+[node name="Wall5" parent="Walls" index="4" instance=ExtResource( 1 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6 )
 
-[node name="Wall3" parent="Walls" index="4" instance=ExtResource( 1 )]
+[node name="Wall10" parent="Walls" index="5" instance=ExtResource( 1 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 12 )
+
+[node name="Wall3" parent="Walls" index="6" instance=ExtResource( 1 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6 )
 
-[node name="Wall7" parent="Walls" index="5" instance=ExtResource( 1 )]
+[node name="Wall7" parent="Walls" index="7" instance=ExtResource( 1 )]
 
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0, -9 )
 
-[node name="Wall8" parent="Walls" index="6" instance=ExtResource( 1 )]
+[node name="Wall8" parent="Walls" index="8" instance=ExtResource( 1 )]
 
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 0, -9 )
 
-[node name="Wall6" parent="Walls" index="7" instance=ExtResource( 1 )]
+[node name="Wall6" parent="Walls" index="9" instance=ExtResource( 1 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6 )
 
@@ -80,9 +91,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -12 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6 )
 
-[node name="Floor6" parent="Floor" index="9" instance=ExtResource( 2 )]
+[node name="Floor11" parent="Floor" index="9" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 12 )
+
+[node name="Floor6" parent="Floor" index="10" instance=ExtResource( 2 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6 )
+
+[node name="Floor12" parent="Floor" index="11" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 12 )
 
 [node name="Crates" type="Spatial" parent="." index="2"]
 
@@ -98,27 +117,49 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, 6 )
 
-[node name="Ceiling4" parent="Ceiling" index="1" instance=ExtResource( 4 )]
+[node name="Ceiling2" parent="Ceiling" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, 12 )
+
+[node name="Ceiling4" parent="Ceiling" index="2" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5, 6 )
 
-[node name="Ceiling2" parent="Ceiling" index="2" instance=ExtResource( 4 )]
+[node name="Ceiling7" parent="Ceiling" index="3" instance=ExtResource( 4 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5, 12 )
 
-[node name="Ceiling6" parent="Ceiling" index="3" instance=ExtResource( 4 )]
+[node name="Ceiling6" parent="Ceiling" index="4" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5, 0 )
 
-[node name="Ceiling3" parent="Ceiling" index="4" instance=ExtResource( 4 )]
+[node name="Ceiling3" parent="Ceiling" index="5" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, -6 )
 
-[node name="Ceiling5" parent="Ceiling" index="5" instance=ExtResource( 4 )]
+[node name="Ceiling9" parent="Ceiling" index="6" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, -12 )
+
+[node name="Ceiling11" parent="Ceiling" index="7" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 5, -12 )
+
+[node name="Ceiling5" parent="Ceiling" index="8" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5, -6 )
 
+[node name="Ceiling8" parent="Ceiling" index="9" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5, -12 )
+
+[node name="Ceiling10" parent="Ceiling" index="10" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 5, -12 )
+
 [node name="Pillars" type="Spatial" parent="." index="4"]
+
+editor/display_folded = true
 
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource( 5 )]
 
@@ -127,5 +168,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -9 )
 [node name="Pillar2" parent="Pillars" index="1" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -9 )
+
+[node name="Wndows" type="Spatial" parent="." index="5"]
+
+[node name="Window" parent="Wndows" index="0" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, 0 )
 
 
