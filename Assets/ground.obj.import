@@ -7,10 +7,10 @@ path="res://.import/ground.obj-ff970d601a932885226440ef377ac7ac.scn"
 [deps]
 
 source_file="res://Assets/ground.obj"
-source_md5="0a5c9a6027a6c30c5b210d3a9cb218ca"
+source_md5="addd1ac14e584612d0bc1b4e024c359e"
 
 dest_files=[ "res://.import/ground.obj-ff970d601a932885226440ef377ac7ac.scn" ]
-dest_md5="f43721659093c24193d20ae0b309d85e"
+dest_md5="7938ee8ebf66e8c0bcb262f433ded41a"
 
 [params]
 
