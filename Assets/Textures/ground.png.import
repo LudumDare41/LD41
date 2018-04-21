@@ -11,7 +11,7 @@ source_file="res://Assets/Textures/ground.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/ground.png-1c8edc2a24735869b2bc3ebf7852d896.s3tc.stex", "res://.import/ground.png-1c8edc2a24735869b2bc3ebf7852d896.etc2.stex" ]
-dest_md5="432afe0dd2f1175bdd116498a66f7286"
+dest_md5="7f1b1b5944cc0d235e6f7713fcc7707a"
 
 [params]
 
