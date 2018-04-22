@@ -12,7 +12,7 @@ source_file="res://Assets/door.obj"
 source_md5="3619bd98a3ecb435a6aa32674bf3ac54"
 
 dest_files=[ "res://.import/door.obj-670020533bd910adb7afed4d741c4ca5.mesh", "res://.import/door.obj-670020533bd910adb7afed4d741c4ca5.mesh" ]
-dest_md5="c443020cef1740390e298c48cb2f280c"
+dest_md5="6d096b5ff2d438fbc43839ccf9a70b07"
 
 [params]
 
