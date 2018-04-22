@@ -11,7 +11,7 @@ source_file="res://Assets/Weapons/Handgun/texture_handgund.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/texture_handgund.png-9335e24735448f97d93e6a410903a7f8.s3tc.stex", "res://.import/texture_handgund.png-9335e24735448f97d93e6a410903a7f8.etc2.stex" ]
-dest_md5="e28971bdfb1fde927f04b91b57222263"
+dest_md5="dfcffaa242cf863a33c7efd78f36641f"
 
 [params]
 
