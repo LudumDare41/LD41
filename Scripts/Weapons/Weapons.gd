@@ -18,6 +18,8 @@ var PistolData = {
 }
 
 onready var particleSystem = get_node("Particles")
+onready var audioSystem = get_node("Audio")
+onready var ReloadaudioSystem = get_node("ReloadAudio")
 
 #Animation
 onready var animationPlayer = get_node("Handgun/AnimationPlayer")
@@ -41,7 +43,6 @@ func _input(event):
 func _physics_process(delta):
 	animations()
 	if shooting and !animationPlayer.get_current_animation() == "reload":
-		particleSystem.restart()
 		pistol()
 	shooting = false
 	if Input.is_action_pressed("reload"):
@@ -50,6 +51,8 @@ func _physics_process(delta):
 
 func pistol():
 	if PistolData.bulletsInWeapon > 0:
+		particleSystem.restart()
+		audioSystem.play()
 		var impulse
 		var impact_position
 		
@@ -68,6 +71,7 @@ func pistol():
 				
 func reload(weapon):
 	if weapon.bulletsOutWeapon > 0 and weapon.bulletsInWeapon < weapon.magSize and !animationPlayer.get_current_animation() == "fire":
+		ReloadaudioSystem.play()
 		animationPlayer.play("reload")
 		animationPlayer.queue("idle")
 		var reloadRange = weapon.magSize - weapon.bulletsInWeapon

@@ -27,7 +27,7 @@ damping = 0.0
 damping_random = 0.0
 angle = 0.0
 angle_random = 0.0
-scale = 4.0
+scale = 2.0
 scale_random = 0.0
 color = Color( 0, 0, 0, 1 )
 hue_variation = 0.0
@@ -71,7 +71,7 @@ roughness = 0.0
 roughness_texture_channel = 0
 emission_enabled = true
 emission = Color( 0.882813, 0.867321, 0.486237, 1 )
-emission_energy = 16.0
+emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
 normal_enabled = false
@@ -104,7 +104,7 @@ size = Vector2( 2, 2 )
 subdivide_width = 0
 subdivide_depth = 0
 
-[node name="Particles" type="Particles" index="0"]
+[node name="Particles" type="Particles"]
 
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 layers = 1
@@ -117,12 +117,12 @@ lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 emitting = false
-amount = 2
+amount = 1
 lifetime = 0.12
 one_shot = true
 preprocess = 0.0
 speed_scale = 1.0
-explosiveness = 0.0
+explosiveness = 0.05
 randomness = 0.0
 fixed_fps = 0
 fract_delta = true
@@ -132,6 +132,6 @@ draw_order = 0
 process_material = SubResource( 1 )
 draw_passes = 1
 draw_pass_1 = SubResource( 3 )
-_sections_unfolded = [ "Draw Passes", "Drawing", "Process Material", "Time" ]
+_sections_unfolded = [ "Draw Passes", "Process Material", "Time" ]
 
 

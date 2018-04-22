@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Gun_Shot_1.wav-5410cf692d8bb33204b587bc9dfc2fcf.sample"
+
+[deps]
+
+source_file="res://Particles/Gun_Shot_1.wav"
+source_md5="64487bc3b23e28d3ebd99ec798f5da65"
+
+dest_files=[ "res://.import/Gun_Shot_1.wav-5410cf692d8bb33204b587bc9dfc2fcf.sample" ]
+dest_md5="c36c5b073086cd29716f1845149ad973"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

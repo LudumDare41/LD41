@@ -9,7 +9,7 @@ path="res://.import/wall.obj-1b9a07251ddbeb76b163f93da5a6655a.mesh"
 files=[ "res://.import/wall.obj-1b9a07251ddbeb76b163f93da5a6655a.mesh" ]
 
 source_file="res://Assets/wall.obj"
-source_md5="bc3cce4c2b1a7084f7c62836924b205e"
+source_md5="27d2d12bda5bf394c653950529129e7a"
 
 dest_files=[ "res://.import/wall.obj-1b9a07251ddbeb76b163f93da5a6655a.mesh", "res://.import/wall.obj-1b9a07251ddbeb76b163f93da5a6655a.mesh" ]
 dest_md5="363724e50093cdb2b3386910f9987b6b"

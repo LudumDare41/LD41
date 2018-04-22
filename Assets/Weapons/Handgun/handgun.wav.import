@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/handgun.wav-e09e0df7970d3c09179d262b5a073ce4.sample"
+
+[deps]
+
+source_file="res://Assets/Weapons/Handgun/handgun.wav"
+source_md5="c94d0148daba1490ab7e8ae53474a2e2"
+
+dest_files=[ "res://.import/handgun.wav-e09e0df7970d3c09179d262b5a073ce4.sample" ]
+dest_md5="7809cad19b16819026239e14bfd2b510"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
