@@ -11,7 +11,7 @@ source_file="res://Assets/old-computer emissive.png"
 source_md5="cf98db84e7a32434f4932155817eeebd"
 
 dest_files=[ "res://.import/old-computer emissive.png-746dc5d594293d0543d0e35062b4bbdc.s3tc.stex", "res://.import/old-computer emissive.png-746dc5d594293d0543d0e35062b4bbdc.etc2.stex" ]
-dest_md5="9bd8592b52feb6804751f7998cdb64e4"
+dest_md5="a28f2c255bb8e4e43c613a4f0c624c6f"
 
 [params]
 
