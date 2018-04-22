@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/floor blood.obj-e2ccd7339f5245ff365a6972d3eef2a3.mesh"
+
+[deps]
+
+files=[ "res://.import/floor blood.obj-e2ccd7339f5245ff365a6972d3eef2a3.mesh" ]
+
+source_file="res://Assets/floor blood.obj"
+source_md5="453daa9f48aaa14bfc7d417bf813e70e"
+
+dest_files=[ "res://.import/floor blood.obj-e2ccd7339f5245ff365a6972d3eef2a3.mesh", "res://.import/floor blood.obj-e2ccd7339f5245ff365a6972d3eef2a3.mesh" ]
+dest_md5="6c61e6b513f8468ad97491d3a6d7cf5f"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

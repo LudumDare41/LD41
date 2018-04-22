@@ -80,7 +80,7 @@ dof_blur_far_transition = 5.0
 dof_blur_far_amount = 0.1
 dof_blur_far_quality = 1
 dof_blur_near_enabled = true
-dof_blur_near_distance = 2.5
+dof_blur_near_distance = 2.0
 dof_blur_near_transition = 1.0
 dof_blur_near_amount = 0.1
 dof_blur_near_quality = 0
@@ -115,7 +115,7 @@ editor/display_folded = true
 
 [node name="FPSController" parent="." index="1" instance=ExtResource( 2 )]
 
-transform = Transform( -0.880956, 0, 0.473198, 0, 1, 0, -0.473198, 0, -0.880956, 0.309974, 2.8758, 5.00338 )
+transform = Transform( 0.974986, 0, 0.222268, 0, 1, 0, -0.222268, 0, 0.974986, -0.290459, 2.0593, -6.91363 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
 
