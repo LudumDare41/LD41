@@ -11,7 +11,7 @@ source_file="res://Assets/Textures/crate.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/crate.png-7aee65d9a0442961ee3027054b637309.s3tc.stex", "res://.import/crate.png-7aee65d9a0442961ee3027054b637309.etc2.stex" ]
-dest_md5="daf7cc7e587886b1b970735f4acbc7ae"
+dest_md5="b30183a9accab00680a5b5f71f38aa40"
 
 [params]
 

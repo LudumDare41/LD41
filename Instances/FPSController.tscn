@@ -16,19 +16,19 @@
 [ext_resource path="res://Assets/UI/HealthIcon.png" type="Texture" id=14]
 [ext_resource path="res://Assets/UI/StaminaIcon.png" type="Texture" id=15]
 
-[sub_resource type="CapsuleShape" id=1]
+[sub_resource type="CapsuleShape" id=13]
 
 radius = 1.3
 height = 1.8
 
-[sub_resource type="CapsuleMesh" id=2]
+[sub_resource type="CapsuleMesh" id=14]
 
 radius = 1.0
 mid_height = 1.0
 radial_segments = 64
 rings = 8
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="SpatialMaterial" id=15]
 
 render_priority = 0
 flags_transparent = false
@@ -80,7 +80,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="CylinderMesh" id=4]
+[sub_resource type="CylinderMesh" id=16]
 
 top_radius = 1.0
 bottom_radius = 1.0
@@ -88,7 +88,7 @@ height = 2.0
 radial_segments = 64
 rings = 4
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=17]
 
 render_priority = 0
 flags_transparent = false
@@ -140,7 +140,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="CylinderMesh" id=6]
+[sub_resource type="CylinderMesh" id=18]
 
 top_radius = 1.0
 bottom_radius = 1.0
@@ -148,7 +148,7 @@ height = 2.0
 radial_segments = 64
 rings = 4
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=19]
 
 render_priority = 0
 flags_transparent = false
@@ -200,7 +200,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="ParticlesMaterial" id=8]
+[sub_resource type="ParticlesMaterial" id=20]
 
 render_priority = 0
 trail_divisor = 1
@@ -237,7 +237,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Initial Velocity", "Scale" ]
 
-[sub_resource type="SpatialMaterial" id=9]
+[sub_resource type="SpatialMaterial" id=21]
 
 render_priority = 0
 flags_transparent = true
@@ -294,15 +294,15 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Emission" ]
 
-[sub_resource type="PlaneMesh" id=10]
+[sub_resource type="PlaneMesh" id=22]
 
 lightmap_size_hint = Vector2( 1, 1 )
-material = SubResource( 9 )
+material = SubResource( 21 )
 size = Vector2( 2, 2 )
 subdivide_width = 0
 subdivide_depth = 0
 
-[sub_resource type="SpatialMaterial" id=11]
+[sub_resource type="SpatialMaterial" id=23]
 
 render_priority = 0
 flags_transparent = false
@@ -363,7 +363,7 @@ use_filter = false
 font_data = ExtResource( 13 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="FPSController" type="KinematicBody" index="0"]
+[node name="FPSController" type="KinematicBody"]
 
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 input_ray_pickable = true
@@ -410,7 +410,7 @@ reverb_bus_uniformity = 0.0
 [node name="Collider2" type="CollisionShape" parent="Area" index="0"]
 
 transform = Transform( 1, 0, 0, 0, -3.81019e-08, -0.871669, 0, 0.847664, -3.70526e-08, 0, -0.401785, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 13 )
 disabled = false
 
 [node name="Body" type="Spatial" parent="." index="1"]
@@ -429,14 +429,13 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 2 )
+mesh = SubResource( 14 )
 skeleton = NodePath("..")
-material/0 = SubResource( 3 )
+material/0 = SubResource( 15 )
 _sections_unfolded = [ "material" ]
 
 [node name="Head" type="Spatial" parent="." index="2"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.654512, 0 )
 
 [node name="Camera" type="Camera" parent="Head" index="0"]
@@ -474,9 +473,9 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 4 )
+mesh = SubResource( 16 )
 skeleton = NodePath("..")
-material/0 = SubResource( 5 )
+material/0 = SubResource( 17 )
 _sections_unfolded = [ "material" ]
 
 [node name="PistolMesh" type="MeshInstance" parent="Head/Camera/Hand" index="1"]
@@ -492,9 +491,9 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 6 )
+mesh = SubResource( 18 )
 skeleton = NodePath("..")
-material/0 = SubResource( 7 )
+material/0 = SubResource( 19 )
 _sections_unfolded = [ "material" ]
 
 [node name="Handgun" parent="Head/Camera/Hand" index="2" instance=ExtResource( 3 )]
@@ -509,8 +508,8 @@ use_in_baked_light = true
 amount = 8
 explosiveness = 0.0
 fract_delta = false
-process_material = SubResource( 8 )
-draw_pass_1 = SubResource( 10 )
+process_material = SubResource( 20 )
+draw_pass_1 = SubResource( 22 )
 _sections_unfolded = [ "Draw Passes", "Geometry", "Process Material", "Time", "Transform" ]
 
 [node name="Audio" type="AudioStreamPlayer3D" parent="Head/Camera/Hand" index="4"]
@@ -576,7 +575,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 9 )
 skeleton = NodePath("..")
-material/0 = SubResource( 11 )
+material/0 = SubResource( 23 )
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
 
 [node name="SpotLight" type="SpotLight" parent="Head/Camera" index="2"]
@@ -584,7 +583,7 @@ _sections_unfolded = [ "Geometry", "Transform", "material" ]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.783751, -1.25077 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
-light_energy = 1.0
+light_energy = 0.5
 light_indirect_energy = 1.0
 light_negative = false
 light_specular = 0.5
@@ -596,7 +595,7 @@ shadow_bias = 0.15
 shadow_contact = 0.0
 shadow_reverse_cull_face = false
 editor_only = false
-spot_range = 20.0
+spot_range = 15.0
 spot_attenuation = 1.0
 spot_angle = 35.0
 spot_angle_attenuation = 1.0
@@ -605,7 +604,7 @@ _sections_unfolded = [ "Light", "Shadow", "Spot" ]
 [node name="Collider" type="CollisionShape" parent="." index="3"]
 
 transform = Transform( 1, 0, 0, 0, -3.81019e-08, -0.871669, 0, 0.847664, -3.70526e-08, 0, -0.401785, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 13 )
 disabled = false
 
 [node name="Control" type="Control" parent="." index="4"]

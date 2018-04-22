@@ -9,7 +9,7 @@ path="res://.import/ground.obj-ff970d601a932885226440ef377ac7ac.mesh"
 files=[ "res://.import/ground.obj-ff970d601a932885226440ef377ac7ac.mesh" ]
 
 source_file="res://Assets/ground.obj"
-source_md5="7a2f2dd6e59b6bf7eeebddbbcbeb5162"
+source_md5="c9a66ada56f2ebe7515dae20bd475d3c"
 
 dest_files=[ "res://.import/ground.obj-ff970d601a932885226440ef377ac7ac.mesh", "res://.import/ground.obj-ff970d601a932885226440ef377ac7ac.mesh" ]
 dest_md5="21e5ff9e7829f15b34acd773687b7a85"

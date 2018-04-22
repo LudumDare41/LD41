@@ -11,7 +11,7 @@ source_file="res://Assets/Textures/ceiling.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/ceiling.png-da4074294730c7273331a1dbae0763d2.s3tc.stex", "res://.import/ceiling.png-da4074294730c7273331a1dbae0763d2.etc2.stex" ]
-dest_md5="9516b075fc14be946e028757b9718caf"
+dest_md5="09053d368748687f826f960eaa8a78ab"
 
 [params]
 
