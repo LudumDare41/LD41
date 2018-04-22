@@ -17,6 +17,8 @@ var PistolData = {
 	bulletsOutWeapon = 100
 }
 
+onready var particleSystem = get_node("Particles")
+
 #Animation
 onready var animationPlayer = get_node("Handgun/AnimationPlayer")
 var walk = false
