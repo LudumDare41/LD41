@@ -32,11 +32,11 @@ albedo_texture = ExtResource( 2 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
-roughness = 0.0
+roughness = 0.3
 roughness_texture_channel = 0
 emission_enabled = true
 emission = Color( 0, 0, 0, 1 )
-emission_energy = 16.0
+emission_energy = 0.5
 emission_operator = 0
 emission_on_uv2 = false
 emission_texture = ExtResource( 3 )
@@ -60,7 +60,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Albedo", "Emission" ]
+_sections_unfolded = [ "Emission", "Roughness" ]
 
 [node name="Camera" type="Spatial"]
 

@@ -161,7 +161,7 @@ _sections_unfolded = [ "Albedo" ]
 material = SubResource( 6 )
 size = Vector2( 0.2, 0.2 )
 
-[node name="Zombie" type="KinematicBody" index="0"]
+[node name="Zombie" type="KinematicBody"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
