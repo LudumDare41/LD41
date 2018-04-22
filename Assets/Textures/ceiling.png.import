@@ -2,16 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.s3tc.stex"
-path.etc2="res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.etc2.stex"
+path.s3tc="res://.import/ceiling.png-da4074294730c7273331a1dbae0763d2.s3tc.stex"
+path.etc2="res://.import/ceiling.png-da4074294730c7273331a1dbae0763d2.etc2.stex"
 
 [deps]
 
-source_file="res://Assets/floor.png"
+source_file="res://Assets/Textures/ceiling.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
-dest_files=[ "res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.s3tc.stex", "res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.etc2.stex" ]
-dest_md5="32a3f0eb3e296e5c4f242878fbe271dc"
+dest_files=[ "res://.import/ceiling.png-da4074294730c7273331a1dbae0763d2.s3tc.stex", "res://.import/ceiling.png-da4074294730c7273331a1dbae0763d2.etc2.stex" ]
+dest_md5="9516b075fc14be946e028757b9718caf"
 
 [params]
 

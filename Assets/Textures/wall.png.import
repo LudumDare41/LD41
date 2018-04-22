@@ -2,16 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.s3tc.stex"
-path.etc2="res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.etc2.stex"
+path.s3tc="res://.import/wall.png-642b133cac371179f83ae98314c08240.s3tc.stex"
+path.etc2="res://.import/wall.png-642b133cac371179f83ae98314c08240.etc2.stex"
 
 [deps]
 
-source_file="res://Assets/floor.png"
+source_file="res://Assets/Textures/wall.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
-dest_files=[ "res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.s3tc.stex", "res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.etc2.stex" ]
-dest_md5="32a3f0eb3e296e5c4f242878fbe271dc"
+dest_files=[ "res://.import/wall.png-642b133cac371179f83ae98314c08240.s3tc.stex", "res://.import/wall.png-642b133cac371179f83ae98314c08240.etc2.stex" ]
+dest_md5="dddea6c93275603accbd4dda1c79497e"
 
 [params]
 

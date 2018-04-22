@@ -2,16 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.s3tc.stex"
-path.etc2="res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.etc2.stex"
+path.s3tc="res://.import/crate.png-7aee65d9a0442961ee3027054b637309.s3tc.stex"
+path.etc2="res://.import/crate.png-7aee65d9a0442961ee3027054b637309.etc2.stex"
 
 [deps]
 
-source_file="res://Assets/floor.png"
+source_file="res://Assets/Textures/crate.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
-dest_files=[ "res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.s3tc.stex", "res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.etc2.stex" ]
-dest_md5="32a3f0eb3e296e5c4f242878fbe271dc"
+dest_files=[ "res://.import/crate.png-7aee65d9a0442961ee3027054b637309.s3tc.stex", "res://.import/crate.png-7aee65d9a0442961ee3027054b637309.etc2.stex" ]
+dest_md5="daf7cc7e587886b1b970735f4acbc7ae"
 
 [params]
 
