@@ -66,8 +66,14 @@ func pistol():
 		if result:
 			impulse = (result.position - global_transform.origin).normalized()
 			var position = result.position - result.collider.global_transform.origin
-			if shooting and result.collider is RigidBody:
-				result.collider.apply_impulse(position, impulse*impactForce)
+			if shooting:
+				# for objects
+				if result.collider is RigidBody:
+					result.collider.apply_impulse(position, impulse*impactForce)
+				# for zombie
+				if result.collider is KinematicBody and result.collider.has_method("hit"):
+					result.collider.hit(20, position)
+			
 				
 func reload(weapon):
 	if weapon.bulletsOutWeapon > 0 and weapon.bulletsInWeapon < weapon.magSize and !animationPlayer.get_current_animation() == "fire":

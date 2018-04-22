@@ -5,8 +5,15 @@ var dir = Vector3()
 var vel = Vector3()
 const GRAVITY = -9.8
 
+var life = 100
+var dead = false
+
 
 func _physics_process(delta):
+	
+	if dead:
+		$ZombieModel/AnimationPlayer.stop()
+		return
 	
 	$ZombieModel/AnimationPlayer.queue("ArmatureAction")
 	
@@ -32,3 +39,19 @@ func _physics_process(delta):
 
 	vel = move_and_slide(vel, Vector3(0, 1, 0))
 
+func hit(damage, position):
+	if not dead:
+		life -= damage
+		hit_particle(position)
+		if life <= 0:
+			die()
+		
+func die():
+	dead = true
+	$DeadTimer.start()
+	
+func hit_particle(position):
+	$HitParticle.emitting = true
+
+func _on_DeadTimer_timeout():
+	self.queue_free()

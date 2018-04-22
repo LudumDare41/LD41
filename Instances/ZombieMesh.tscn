@@ -10,6 +10,10 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 transform = Transform( 0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 0, 0 )
 
+[node name="Zombie" parent="Armature/Skeleton" index="0"]
+
+_sections_unfolded = [ "Geometry", "material" ]
+
 [node name="AnimationPlayer" parent="." index="1"]
 
 autoplay = "ArmatureAction"
