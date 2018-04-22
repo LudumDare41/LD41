@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Instances/Wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Instances/Wall2.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Instances/Window.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Instances/Camera.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Instances/Aeration.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Instances/Light.tscn" type="PackedScene" id=10]
 
 [node name="Labyrinth" type="Spatial"]
 
@@ -166,13 +167,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 12 )
 
 [node name="Crates" type="Spatial" parent="." index="2"]
 
-editor/display_folded = true
-
 [node name="Crate" parent="Crates" index="0" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6 )
 
+[node name="Crate2" parent="Crates" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 0.691717, 0, 0.722169, 0, 1, 0, -0.722169, 0, 0.691717, 7.01695, 0, -16.3497 )
+
 [node name="Ceiling" type="Spatial" parent="." index="3"]
+
+editor/display_folded = true
 
 [node name="Ceiling" parent="Ceiling" index="0" instance=ExtResource( 5 )]
 
@@ -222,10 +227,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -6 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -12 )
 
-[node name="Ceiling12" parent="Ceiling" index="12" instance=ExtResource( 5 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -12 )
-
 [node name="Pillars" type="Spatial" parent="." index="4"]
 
 editor/display_folded = true
@@ -265,5 +266,34 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -6 )
 [node name="Aeration2" parent="Aerations" index="1" instance=ExtResource( 9 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -18 )
+
+[node name="Lights" type="Spatial" parent="." index="9"]
+
+[node name="Light" parent="Lights" index="0" instance=ExtResource( 10 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -12 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Light" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.459242, 0 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 0.5
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 15.0
+omni_attenuation = 1.0
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+_sections_unfolded = [ "Light", "Omni" ]
 
 
