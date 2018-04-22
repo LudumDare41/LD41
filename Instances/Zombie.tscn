@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Zombie.gd" type="Script" id=1]
+[ext_resource path="res://Instances/ZombieMesh.tscn" type="PackedScene" id=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -64,10 +65,11 @@ subdivide_depth = 0
 
 [sub_resource type="CapsuleShape" id=3]
 
-radius = 0.747979
+radius = 0.569808
 height = 1.55366
 
 [node name="Zombie" type="KinematicBody" index="0"]
+
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
@@ -83,6 +85,8 @@ script = ExtResource( 1 )
 speed = 1
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
+
+visible = false
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -95,20 +99,26 @@ lod_max_hysteresis = 0.0
 mesh = SubResource( 2 )
 skeleton = NodePath("..")
 material/0 = null
+_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape" type="CollisionShape" parent="." index="1"]
+[node name="ZombieModel" parent="." index="1" instance=ExtResource( 2 )]
+
+transform = Transform( -0.03, 0, -9.77524e-09, 0, 0.03, 0, 9.77524e-09, 0, -0.03, 0, -1.34038, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="2"]
+
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
 shape = SubResource( 3 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="3"]
+
 stream = null
 attenuation_model = 0
 unit_db = 0.0
 unit_size = 1.0
 max_db = 3.0
-pitch_scale = 1.0
 autoplay = false
 max_distance = 0.0
 out_of_range_mode = 0
@@ -120,4 +130,5 @@ emission_angle_filter_attenuation_db = -12.0
 attenuation_filter_cutoff_hz = 5000.0
 attenuation_filter_db = -24.0
 doppler_tracking = 0
+
 

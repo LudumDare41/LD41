@@ -5,7 +5,10 @@ var dir = Vector3()
 var vel = Vector3()
 const GRAVITY = -9.8
 
+
 func _physics_process(delta):
+	
+	$ZombieModel/AnimationPlayer.queue("ArmatureAction")
 	
 	self.look_at(Game.player.translation, Vector3(0,1,0))  
 	
