@@ -1,0 +1,33 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/ceilling emissive.png-0b1d8624e3956f1e72137093e4b8d938.s3tc.stex"
+path.etc2="res://.import/ceilling emissive.png-0b1d8624e3956f1e72137093e4b8d938.etc2.stex"
+
+[deps]
+
+source_file="res://Assets/ceilling emissive.png"
+source_md5="cdbba7a72554dd852c47beb98a733204"
+
+dest_files=[ "res://.import/ceilling emissive.png-0b1d8624e3956f1e72137093e4b8d938.s3tc.stex", "res://.import/ceilling emissive.png-0b1d8624e3956f1e72137093e4b8d938.etc2.stex" ]
+dest_md5="d45db6ed1d02173d2dc9494081a91fe6"
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=1
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

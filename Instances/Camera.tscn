@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/camera.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Assets/camera.png" type="Texture" id=2]
+[ext_resource path="res://Assets/camera emisive.png" type="Texture" id=3]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -33,7 +34,12 @@ metallic_specular = 0.5
 metallic_texture_channel = 0
 roughness = 0.0
 roughness_texture_channel = 0
-emission_enabled = false
+emission_enabled = true
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 16.0
+emission_operator = 0
+emission_on_uv2 = false
+emission_texture = ExtResource( 3 )
 normal_enabled = false
 rim_enabled = false
 clearcoat_enabled = false
@@ -54,7 +60,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Albedo" ]
+_sections_unfolded = [ "Albedo", "Emission" ]
 
 [node name="Camera" type="Spatial"]
 
@@ -74,28 +80,5 @@ mesh = ExtResource( 1 )
 skeleton = NodePath("..")
 material/0 = SubResource( 1 )
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
-
-[node name="OmniLight" type="OmniLight" parent="MeshInstance" index="0"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.47848, 33.4836, 4.37574 )
-layers = 1
-light_color = Color( 1, 0, 0, 1 )
-light_energy = 2.0
-light_indirect_energy = 1.0
-light_negative = false
-light_specular = 0.5
-light_bake_mode = 1
-light_cull_mask = -1
-shadow_enabled = false
-shadow_color = Color( 0, 0, 0, 1 )
-shadow_bias = 0.15
-shadow_contact = 0.0
-shadow_reverse_cull_face = false
-editor_only = false
-omni_range = 5.0
-omni_attenuation = 1.0
-omni_shadow_mode = 1
-omni_shadow_detail = 1
-_sections_unfolded = [ "Light", "Omni" ]
 
 
