@@ -52,6 +52,7 @@ func die():
 	
 func hit_particle(position):
 	$HitParticle.emitting = true
+	$HitParticle.restart()
 
 func _on_DeadTimer_timeout():
 	self.queue_free()
