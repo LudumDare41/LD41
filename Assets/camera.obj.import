@@ -9,10 +9,10 @@ path="res://.import/camera.obj-3855115c72084c5c62836e28577cf00b.mesh"
 files=[ "res://.import/camera.obj-3855115c72084c5c62836e28577cf00b.mesh" ]
 
 source_file="res://Assets/camera.obj"
-source_md5="121a50d17ec0c48095634ae3dc09af17"
+source_md5="7e3b980ae1c8fbf392d9b17a4c51355a"
 
 dest_files=[ "res://.import/camera.obj-3855115c72084c5c62836e28577cf00b.mesh", "res://.import/camera.obj-3855115c72084c5c62836e28577cf00b.mesh" ]
-dest_md5="a53cd6a05b5b673a64ef9d60330949bb"
+dest_md5="1f4abd8040c1f69659512813378afa2b"
 
 [params]
 
