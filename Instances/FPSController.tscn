@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scripts/FPSController.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Weapons/Weapons.gd" type="Script" id=2]
@@ -10,11 +10,12 @@
 [ext_resource path="res://Audio/Pickup_Ammo.wav" type="AudioStream" id=8]
 [ext_resource path="res://Assets/Flashlight.obj" type="ArrayMesh" id=9]
 [ext_resource path="res://Assets/flashlight.png" type="Texture" id=10]
-[ext_resource path="res://Assets/UI/crosshair.png.png" type="Texture" id=11]
-[ext_resource path="res://Assets/UI/crosshair2.png" type="Texture" id=12]
-[ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=13]
-[ext_resource path="res://Assets/UI/HealthIcon.png" type="Texture" id=14]
-[ext_resource path="res://Assets/UI/StaminaIcon.png" type="Texture" id=15]
+[ext_resource path="res://Instances/Flashlight.gd" type="Script" id=11]
+[ext_resource path="res://Assets/UI/crosshair.png.png" type="Texture" id=12]
+[ext_resource path="res://Assets/UI/crosshair2.png" type="Texture" id=13]
+[ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://Assets/UI/HealthIcon.png" type="Texture" id=15]
+[ext_resource path="res://Assets/UI/StaminaIcon.png" type="Texture" id=16]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -360,7 +361,7 @@ _sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
 size = 40
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 13 )
+font_data = ExtResource( 14 )
 _sections_unfolded = [ "Settings" ]
 
 [node name="FPSController" type="KinematicBody" index="0"]
@@ -436,7 +437,6 @@ _sections_unfolded = [ "material" ]
 
 [node name="Head" type="Spatial" parent="." index="2"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.654512, 0 )
 
 [node name="Camera" type="Camera" parent="Head" index="0"]
@@ -579,7 +579,7 @@ skeleton = NodePath("..")
 material/0 = SubResource( 11 )
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
 
-[node name="SpotLight" type="SpotLight" parent="Head/Camera" index="2"]
+[node name="Flashlight" type="SpotLight" parent="Head/Camera" index="2"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.783751, -1.25077 )
 layers = 1
@@ -600,6 +600,7 @@ spot_range = 20.0
 spot_attenuation = 1.0
 spot_angle = 35.0
 spot_angle_attenuation = 1.0
+script = ExtResource( 11 )
 _sections_unfolded = [ "Light", "Shadow", "Spot" ]
 
 [node name="Collider" type="CollisionShape" parent="." index="3"]
@@ -610,6 +611,7 @@ disabled = false
 
 [node name="Control" type="Control" parent="." index="4"]
 
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -625,14 +627,14 @@ _sections_unfolded = [ "Margin" ]
 [node name="Crosshair" type="Sprite" parent="Control" index="0"]
 
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Crosshair2" type="Sprite" parent="Control" index="1"]
 
 visible = false
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AmmoUI" type="Container" parent="Control" index="2"]
@@ -748,7 +750,7 @@ size_flags_vertical = 1
 
 position = Vector2( 49.8344, 43.1076 )
 scale = Vector2( 0.0120465, 0.0120465 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 
 [node name="Health" type="Label" parent="Control/StatusUI" index="1"]
 
@@ -804,7 +806,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 position = Vector2( 265.399, 40.5352 )
 scale = Vector2( 0.0148559, 0.0148559 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 
 [connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
 

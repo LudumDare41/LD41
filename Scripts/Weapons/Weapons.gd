@@ -14,7 +14,8 @@ var weaponID = 0
 var PistolData = {
 	magSize = 30,
 	bulletsInWeapon = 10,
-	bulletsOutWeapon = 100
+	bulletsOutWeapon = 100,
+	demage = 10
 }
 
 #Effects
@@ -74,7 +75,7 @@ func pistol():
 					result.collider.apply_impulse(position, impulse*impactForce)
 				# for zombie
 				if result.collider is KinematicBody and result.collider.has_method("hit"):
-					result.collider.hit(20, position)
+					result.collider.hit(PistolData.demage, position)
 			
 				
 func reload(weapon):
