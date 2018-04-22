@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/window.png-9269117c8439c65de1d1a3b508c88e06.s3tc.stex"
+path.etc2="res://.import/window.png-9269117c8439c65de1d1a3b508c88e06.etc2.stex"
+
+[deps]
+
+source_file="res://Assets/window.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
+<<<<<<< HEAD:Assets/Textures/ceiling.png.import
+dest_files=[ "res://.import/ceiling.png-da4074294730c7273331a1dbae0763d2.s3tc.stex", "res://.import/ceiling.png-da4074294730c7273331a1dbae0763d2.etc2.stex" ]
+dest_md5="e9aa5edaed8b1fe362224461de4fc0ae"
+=======
+dest_files=[ "res://.import/window.png-9269117c8439c65de1d1a3b508c88e06.s3tc.stex", "res://.import/window.png-9269117c8439c65de1d1a3b508c88e06.etc2.stex" ]
+dest_md5="99b9689176b5af185e1dd46657b9fe78"
+>>>>>>> 5bfcd1cf9a7b5170864affae346c274a652ffad5:Assets/window.png.import
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=1
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
