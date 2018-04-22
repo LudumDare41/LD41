@@ -9,14 +9,10 @@ path="res://.import/crate.obj-608ed7bc84d1af55affbffe2e9ee387c.mesh"
 files=[ "res://.import/crate.obj-608ed7bc84d1af55affbffe2e9ee387c.mesh" ]
 
 source_file="res://Assets/crate.obj"
-<<<<<<< HEAD
 source_md5="b28c86b4d0f3984865bd1540f772343d"
-=======
-source_md5="2b7eba0d961f1e6d4468571c226a36b7"
->>>>>>> parent of 712a2ee... Merge branch 'master' of https://github.com/LudumDare41/LD41
 
 dest_files=[ "res://.import/crate.obj-608ed7bc84d1af55affbffe2e9ee387c.mesh", "res://.import/crate.obj-608ed7bc84d1af55affbffe2e9ee387c.mesh" ]
-dest_md5="5ab677082e7d4f45f02fbc677b204b02"
+dest_md5="a0358da040153cf225aba65c3d2284dd"
 
 [params]
 
