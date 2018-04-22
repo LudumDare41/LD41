@@ -199,7 +199,7 @@ use_filter = false
 font_data = ExtResource( 6 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="FPSController" type="KinematicBody"]
+[node name="FPSController" type="KinematicBody" index="0"]
 
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 input_ray_pickable = true
@@ -301,9 +301,9 @@ skeleton = NodePath("..")
 material/0 = SubResource( 6 )
 _sections_unfolded = [ "material" ]
 
-[node name="Handgun" parent="Head/Camera/Hand" index="2" instance=ExtResource( 3 )]
+[node name="Handgun" type="Spatial" parent="Head/Camera/Hand" index="2" instance=ExtResource( 3 )]
 
-transform = Transform( 0.492014, 0, 0.0890062, 0, 0.5, 0, -0.0890062, 0, 0.492014, 0.686237, -0.214034, -1.80324 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.686236, -0.214034, -2.18395 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Collider" type="CollisionShape" parent="." index="2"]
@@ -335,7 +335,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Crosshair2" type="Sprite" parent="Control" index="1"]
 
 visible = false
-scale = Vector2( 0.07, 0.07 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
