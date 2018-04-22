@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scripts/FPSController.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Weapons/Weapons.gd" type="Script" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://Assets/UI/crosshair.png.png" type="Texture" id=11]
 [ext_resource path="res://Assets/UI/crosshair2.png" type="Texture" id=12]
 [ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Assets/UI/HealthIcon.png" type="Texture" id=14]
+[ext_resource path="res://Assets/UI/StaminaIcon.png" type="Texture" id=15]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -328,7 +330,7 @@ albedo_texture = ExtResource( 10 )
 metallic = 0.5
 metallic_specular = 0.5
 metallic_texture_channel = 0
-roughness = 0.4
+roughness = 0.75
 roughness_texture_channel = 0
 emission_enabled = false
 normal_enabled = false
@@ -351,7 +353,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Albedo", "Roughness" ]
+_sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
 
 [sub_resource type="DynamicFont" id=12]
 
@@ -361,7 +363,7 @@ use_filter = false
 font_data = ExtResource( 13 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="FPSController" type="KinematicBody"]
+[node name="FPSController" type="KinematicBody" index="0"]
 
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 input_ray_pickable = true
@@ -434,6 +436,7 @@ _sections_unfolded = [ "material" ]
 
 [node name="Head" type="Spatial" parent="." index="2"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.654512, 0 )
 
 [node name="Camera" type="Camera" parent="Head" index="0"]
@@ -561,7 +564,7 @@ bus = "Master"
 
 [node name="Falshlight" type="MeshInstance" parent="Head/Camera" index="1"]
 
-transform = Transform( -2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.308746, -0.720546 )
+transform = Transform( -2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.339659, -1.01705 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -578,7 +581,7 @@ _sections_unfolded = [ "Geometry", "Transform", "material" ]
 
 [node name="SpotLight" type="SpotLight" parent="Head/Camera" index="2"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.796202, -0.923073 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.783751, -1.25077 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
 light_energy = 1.0
@@ -607,7 +610,6 @@ disabled = false
 
 [node name="Control" type="Control" parent="." index="4"]
 
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -635,14 +637,15 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="AmmoUI" type="Container" parent="Control" index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -505.0
-margin_top = 209.0
-margin_right = -345.0
-margin_bottom = 288.0
+margin_left = -517.0
+margin_top = 268.0
+margin_right = -357.0
+margin_bottom = 347.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -722,6 +725,86 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
+
+[node name="StatusUI" type="Container" parent="Control" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 98.0
+margin_top = 262.0
+margin_right = 550.0
+margin_bottom = 343.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="HealthIcon" type="Sprite" parent="Control/StatusUI" index="0"]
+
+position = Vector2( 49.8344, 43.1076 )
+scale = Vector2( 0.0120465, 0.0120465 )
+texture = ExtResource( 14 )
+
+[node name="Health" type="Label" parent="Control/StatusUI" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 81.0
+margin_top = 5.0
+margin_right = 168.0
+margin_bottom = 83.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 12 )
+text = "100"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Stamina" type="Label" parent="Control/StatusUI" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 303.0
+margin_top = 8.0
+margin_right = 390.0
+margin_bottom = 86.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 12 )
+text = "100"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="StaminaIcon" type="Sprite" parent="Control/StatusUI" index="3"]
+
+position = Vector2( 265.399, 40.5352 )
+scale = Vector2( 0.0148559, 0.0148559 )
+texture = ExtResource( 15 )
 
 [connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
 
