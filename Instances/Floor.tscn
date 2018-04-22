@@ -62,9 +62,11 @@ points = PoolVector3Array( -20, 0, -20, -20, 1, 20, -20, 0, 20, -20, 1, -20, -19
 
 [node name="Floor" type="Spatial"]
 
+_sections_unfolded = [ "Transform" ]
+
 [node name="Floor" type="MeshInstance" parent="." index="0"]
 
-transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0 )
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/locker.obj-ebe53e8a829a44d95a89c89d8a58ff11.mesh"
+
+[deps]
+
+files=[ "res://.import/locker.obj-ebe53e8a829a44d95a89c89d8a58ff11.mesh" ]
+
+source_file="res://Assets/locker.obj"
+source_md5="64b11dd060e491acecd66c61bfc15092"
+
+dest_files=[ "res://.import/locker.obj-ebe53e8a829a44d95a89c89d8a58ff11.mesh", "res://.import/locker.obj-ebe53e8a829a44d95a89c89d8a58ff11.mesh" ]
+dest_md5="cb8e883aebf54cfc9b3d50117a4469d5"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
