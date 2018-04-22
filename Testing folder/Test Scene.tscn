@@ -75,7 +75,7 @@ subdivide_depth = 0
 
 extents = Vector3( 1, 1, 1 )
 
-[node name="Test Scene" type="Spatial"]
+[node name="Test Scene" type="Spatial" index="0"]
 
 transform = Transform( 2.52108, 0, 0, 0, 1, 0, 0, 0, 2.96764, 0, 0, 0 )
 
