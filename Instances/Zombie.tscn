@@ -63,12 +63,12 @@ subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[sub_resource type="CapsuleShape" id=3]
+[sub_resource type="CapsuleShape" id=4]
 
 radius = 0.569808
 height = 1.55366
 
-[sub_resource type="ParticlesMaterial" id=4]
+[sub_resource type="ParticlesMaterial" id=5]
 
 render_priority = 0
 trail_divisor = 1
@@ -104,7 +104,7 @@ anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=6]
 
 render_priority = 0
 flags_transparent = false
@@ -156,12 +156,12 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="QuadMesh" id=6]
+[sub_resource type="QuadMesh" id=7]
 
-material = SubResource( 5 )
+material = SubResource( 6 )
 size = Vector2( 0.2, 0.2 )
 
-[node name="Zombie" type="KinematicBody"]
+[node name="Zombie" type="KinematicBody" index="0"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -192,7 +192,7 @@ lod_max_hysteresis = 0.0
 mesh = SubResource( 2 )
 skeleton = NodePath("..")
 material/0 = null
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "material" ]
 
 [node name="ZombieModel" parent="." index="1" instance=ExtResource( 2 )]
 
@@ -201,7 +201,7 @@ transform = Transform( -0.03, 0, -9.77524e-09, 0, 0.03, 0, 9.77524e-09, 0, -0.03
 [node name="CollisionShape" type="CollisionShape" parent="." index="2"]
 
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
@@ -256,9 +256,9 @@ fract_delta = true
 visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 4 )
+process_material = SubResource( 5 )
 draw_passes = 1
-draw_pass_1 = SubResource( 6 )
+draw_pass_1 = SubResource( 7 )
 _sections_unfolded = [ "Draw Passes", "Drawing", "Process Material", "Time", "Transform" ]
 
 [connection signal="timeout" from="DeadTimer" to="." method="_on_DeadTimer_timeout"]

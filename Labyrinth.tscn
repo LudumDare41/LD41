@@ -299,10 +299,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Lockers" type="Spatial" parent="Dressing" index="2"]
 
-editor/display_folded = true
-
 [node name="Locker" parent="Dressing/Lockers" index="0" instance=ExtResource( 13 )]
 
 transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 11, 0, -13 )
+
+[node name="Locker2" parent="Dressing/Lockers" index="1" instance=ExtResource( 13 )]
+
+transform = Transform( -6.55671e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.55671e-09, -4, 0, -20 )
 
 
