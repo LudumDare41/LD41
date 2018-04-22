@@ -17,11 +17,6 @@ var PistolData = {
 	bulletsOutWeapon = 100
 }
 
-#Animation
-onready var animationPlayer = get_node("Handgun/AnimationPlayer")
-var walk = false
-var idle = true
-
 func _ready():
 	updateAmmoUI(PistolData)
 	screen_width_center = OS.get_window_size().x/2
@@ -37,8 +32,7 @@ func _input(event):
 		if event.button_index == 1:
 			shooting = true
 func _physics_process(delta):
-	animations()
-	if shooting and !animationPlayer.get_current_animation() == "reload":
+	if shooting:
 		pistol()
 	shooting = false
 	if Input.is_action_pressed("reload"):
@@ -54,8 +48,7 @@ func pistol():
 		var result = space_state.intersect_ray(shoot_origin, shoot_direction, [self], 1)
 		
 		PistolData.bulletsInWeapon -= 1
-		animationPlayer.play("fire")
-		animationPlayer.queue("idle")
+		
 		updateAmmoUI(PistolData)
 		if result:
 			impulse = (result.position - global_transform.origin).normalized()
@@ -64,9 +57,7 @@ func pistol():
 				result.collider.apply_impulse(position, impulse*impactForce)
 				
 func reload(weapon):
-	if weapon.bulletsOutWeapon > 0 and weapon.bulletsInWeapon < weapon.magSize and !animationPlayer.get_current_animation() == "fire":
-		animationPlayer.play("reload")
-		animationPlayer.queue("idle")
+	if weapon.bulletsOutWeapon > 0 and weapon.bulletsInWeapon < weapon.magSize:
 		var reloadRange = weapon.magSize - weapon.bulletsInWeapon
 		var reloadValue
 		
@@ -84,19 +75,3 @@ func updateAmmoUI(weapon):
 	inWeaponLabel.text = str(weapon.bulletsInWeapon)
 	var inMagLabel = get_node("../../../Control/AmmoUI/InMag")
 	inMagLabel.text = str(weapon.bulletsOutWeapon)
-
-func animations():
-	if Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down") or Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_left"):
-		if walk or animationPlayer.get_current_animation() == "fire" or animationPlayer.get_current_animation() == "reload":
-			pass
-		else:
-			animationPlayer.play("walk (copy)")
-			walk = true
-			idle = false
-	else:
-		if idle or animationPlayer.get_current_animation() == "fire" or animationPlayer.get_current_animation() == "reload":
-			pass
-		else:
-			animationPlayer.play("idle (copy)")
-			idle = true
-			walk = false

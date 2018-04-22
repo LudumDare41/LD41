@@ -1,11 +1,9 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/FPSController.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Weapons/Weapons.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Weapons/Handgun/HandgunScene.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/UI/crosshair.png.png" type="Texture" id=4]
-[ext_resource path="res://Assets/UI/crosshair2.png" type="Texture" id=5]
-[ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/UI/crosshair.png.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="CapsuleMesh" id=1]
 
@@ -196,7 +194,7 @@ height = 0.002
 size = 40
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 6 )
+font_data = ExtResource( 4 )
 _sections_unfolded = [ "Settings" ]
 
 [node name="FPSController" type="KinematicBody" index="0"]
@@ -246,7 +244,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.654512, 0 )
 
 [node name="Camera" type="Camera" parent="Head" index="0"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0235043, -0.344112, -0.0645734 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0118456, 0, -0.0210662 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -268,7 +266,6 @@ script = ExtResource( 2 )
 [node name="RifleMesh" type="MeshInstance" parent="Head/Camera/Hand" index="0"]
 
 transform = Transform( 0.272193, 0, 0, 0, -1.40905e-08, -0.322354, 0, 0.641222, -2.80287e-08, 1.21735, 0, -1.3451 )
-visible = false
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -286,7 +283,6 @@ _sections_unfolded = [ "material" ]
 [node name="PistolMesh" type="MeshInstance" parent="Head/Camera/Hand" index="1"]
 
 transform = Transform( 0.162982, 0, 0, 0, -1.11806e-08, 0.188161, 0, -0.468186, -1.50548e-08, 1.13211, 0, -1.07561 )
-visible = false
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -300,11 +296,6 @@ mesh = SubResource( 5 )
 skeleton = NodePath("..")
 material/0 = SubResource( 6 )
 _sections_unfolded = [ "material" ]
-
-[node name="Handgun" type="Spatial" parent="Head/Camera/Hand" index="2" instance=ExtResource( 3 )]
-
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.686236, -0.214034, -2.18395 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="Collider" type="CollisionShape" parent="." index="2"]
 
@@ -329,17 +320,10 @@ _sections_unfolded = [ "Margin" ]
 [node name="Crosshair" type="Sprite" parent="Control" index="0"]
 
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Crosshair2" type="Sprite" parent="Control" index="1"]
-
-visible = false
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 5 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="AmmoUI" type="Container" parent="Control" index="2"]
+[node name="AmmoUI" type="Container" parent="Control" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
