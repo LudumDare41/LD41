@@ -9,10 +9,10 @@ path="res://.import/wall2.obj-3e6d081a7f3d7dab37984e6bbdcfec29.mesh"
 files=[ "res://.import/wall2.obj-3e6d081a7f3d7dab37984e6bbdcfec29.mesh" ]
 
 source_file="res://Assets/wall2.obj"
-source_md5="2e841b5cffbc1e4c03f765aa6009edff"
+source_md5="8aa30e6e085a6aad400ee8288756fb15"
 
 dest_files=[ "res://.import/wall2.obj-3e6d081a7f3d7dab37984e6bbdcfec29.mesh", "res://.import/wall2.obj-3e6d081a7f3d7dab37984e6bbdcfec29.mesh" ]
-dest_md5="41c38940d584ccbdd35e44902923caf6"
+dest_md5="7a34222d0ad63c00b7133f6177a5a238"
 
 [params]
 
