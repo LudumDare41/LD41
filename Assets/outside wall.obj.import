@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/outside wall.obj-fdc59851a7e352681a5ab7b6fe565819.mesh"
+
+[deps]
+
+files=[ "res://.import/outside wall.obj-fdc59851a7e352681a5ab7b6fe565819.mesh" ]
+
+source_file="res://Assets/outside wall.obj"
+source_md5="1186c42f02cb5c61b6ab1a271f06f9d5"
+
+dest_files=[ "res://.import/outside wall.obj-fdc59851a7e352681a5ab7b6fe565819.mesh", "res://.import/outside wall.obj-fdc59851a7e352681a5ab7b6fe565819.mesh" ]
+dest_md5="5c6d294c6477f5b9db73d8cf0b6aed3e"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

@@ -69,7 +69,7 @@ dof_blur_near_distance = 2.0
 dof_blur_near_transition = 1.0
 dof_blur_near_amount = 0.1
 dof_blur_near_quality = 0
-glow_enabled = true
+glow_enabled = false
 glow_levels/1 = false
 glow_levels/2 = false
 glow_levels/3 = true
@@ -88,7 +88,7 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
-_sections_unfolded = [ "Ambient Light", "Auto Exposure", "Background", "Fog" ]
+_sections_unfolded = [ "Ambient Light", "Auto Exposure", "Background", "Fog", "Glow" ]
 
 [node name="Node" type="Node" index="0"]
 
