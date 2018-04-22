@@ -11,7 +11,7 @@ source_file="res://Assets/flashlight.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/flashlight.png-8330afeffcf46318cbaca0ba3c9fc1aa.s3tc.stex", "res://.import/flashlight.png-8330afeffcf46318cbaca0ba3c9fc1aa.etc2.stex" ]
-dest_md5="d01af8ae80e0450eed7bf16392bd9cec"
+dest_md5="edcd1459e18b0cddfc8df6f4c2da0083"
 
 [params]
 

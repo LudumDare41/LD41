@@ -11,7 +11,7 @@ source_file="res://Assets/locker.png"
 source_md5="64a051a18bfab943577476d810adc6a2"
 
 dest_files=[ "res://.import/locker.png-c69604b19d27c2f678a2cfaf03ace046.s3tc.stex", "res://.import/locker.png-c69604b19d27c2f678a2cfaf03ace046.etc2.stex" ]
-dest_md5="fdba2a52c75fc2788df8d11679d4a244"
+dest_md5="8cc003dd79721cc54e376fe2342bdfb5"
 
 [params]
 
