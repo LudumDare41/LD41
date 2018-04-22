@@ -61,7 +61,7 @@ func pistol():
 		
 		PistolData.bulletsInWeapon -= 1
 		animationPlayer.play("fire")
-		animationPlayer.queue("idle")
+		animationPlayer.queue("idle (copy)")
 		updateAmmoUI(PistolData)
 		if result:
 			impulse = (result.position - global_transform.origin).normalized()
@@ -73,7 +73,7 @@ func reload(weapon):
 	if weapon.bulletsOutWeapon > 0 and weapon.bulletsInWeapon < weapon.magSize and !animationPlayer.get_current_animation() == "fire":
 		ReloadaudioSystem.play()
 		animationPlayer.play("reload")
-		animationPlayer.queue("idle")
+		animationPlayer.queue("idle (copy)")
 		var reloadRange = weapon.magSize - weapon.bulletsInWeapon
 		var reloadValue
 		
