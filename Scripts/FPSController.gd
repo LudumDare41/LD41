@@ -1,5 +1,9 @@
 extends KinematicBody
 
+# class member variables go here, for example:
+# var a = 2
+# var b = "textvar"
+
 # Helpers
 var direction = Vector3()
 var velocity = Vector3(0,0,0)
@@ -19,14 +23,11 @@ var camera_angle = 0
 export var jump = 10
 
 func _ready():
+	set_process_input(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	#register the player to the global class
-	Game.player = self
+	pass
 
 func _physics_process(delta):
-	
-	if Input.is_action_pressed("quit"):
-		get_tree().quit()
 	
 	direction = Vector3(0,0,0)
 	var aim = $Head/Camera.get_global_transform().basis
@@ -73,6 +74,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_select") && is_on_floor():
 		velocity.y = jump
 
+	pass
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -82,3 +84,10 @@ func _input(event):
 		if (change + camera_angle) < 90 and (change + camera_angle) > -90:
 			$Head/Camera.rotate_x(deg2rad(change))
 			camera_angle += change
+
+
+
+
+
+
+		

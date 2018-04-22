@@ -12,7 +12,7 @@ source_file="res://Assets/camera.obj"
 source_md5="6a8b488a987547b5c90e7e278f333173"
 
 dest_files=[ "res://.import/camera.obj-3855115c72084c5c62836e28577cf00b.mesh", "res://.import/camera.obj-3855115c72084c5c62836e28577cf00b.mesh" ]
-dest_md5="65a08a2d305c25da74449fa5f914218c"
+dest_md5="a53cd6a05b5b673a64ef9d60330949bb"
 
 [params]
 
