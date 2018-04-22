@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Instances/Wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Instances/Wall2.tscn" type="PackedScene" id=2]
@@ -22,12 +22,11 @@
 [ext_resource path="res://Instances/Tree.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Instances/Palette.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Instances/Outside wall.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Instances/Wall outside 2.tscn" type="PackedScene" id=23]
 
-[node name="Labyrinth" type="Spatial" index="0"]
+[node name="Labyrinth" type="Spatial"]
 
 [node name="Walls SCIFI" type="Spatial" parent="." index="0"]
-
-editor/display_folded = true
 
 [node name="Wall4" parent="Walls SCIFI" index="0" instance=ExtResource( 1 )]
 
@@ -106,8 +105,6 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 0, 9
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0, 9 )
 
 [node name="Floor" type="Spatial" parent="." index="1"]
-
-editor/display_folded = true
 
 [node name="Floor4" parent="Floor" index="0" instance=ExtResource( 5 )]
 
@@ -197,6 +194,10 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, -
 
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 0, -18 )
 
+[node name="Floor blood4" parent="Floor" index="22" instance=ExtResource( 7 )]
+
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -21, 0, -18 )
+
 [node name="Crates" type="Spatial" parent="." index="2"]
 
 editor/display_folded = true
@@ -251,8 +252,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 6, -18 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -6 )
 
 [node name="Pillars" type="Spatial" parent="." index="4"]
-
-editor/display_folded = true
 
 [node name="Pillar" parent="Pillars" index="0" instance=ExtResource( 10 )]
 
@@ -312,8 +311,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -18 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -18 )
 
 [node name="Lights" type="Spatial" parent="." index="9"]
-
-editor/display_folded = true
 
 [node name="Light2" parent="Lights" index="0" instance=ExtResource( 13 )]
 
@@ -397,41 +394,57 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -30 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -36 )
 
-[node name="Ground2" parent="Ground" index="3" instance=ExtResource( 19 )]
+[node name="Ground13" parent="Ground" index="3" instance=ExtResource( 19 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -42 )
+
+[node name="Ground2" parent="Ground" index="4" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -24 )
 
-[node name="Ground6" parent="Ground" index="4" instance=ExtResource( 19 )]
+[node name="Ground6" parent="Ground" index="5" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -30 )
 
-[node name="Ground9" parent="Ground" index="5" instance=ExtResource( 19 )]
+[node name="Ground9" parent="Ground" index="6" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -36 )
 
-[node name="Ground3" parent="Ground" index="6" instance=ExtResource( 19 )]
+[node name="Ground14" parent="Ground" index="7" instance=ExtResource( 19 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -42 )
+
+[node name="Ground3" parent="Ground" index="8" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -24 )
 
-[node name="Ground7" parent="Ground" index="7" instance=ExtResource( 19 )]
+[node name="Ground7" parent="Ground" index="9" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -30 )
 
-[node name="Ground10" parent="Ground" index="8" instance=ExtResource( 19 )]
+[node name="Ground10" parent="Ground" index="10" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -36 )
 
-[node name="Ground4" parent="Ground" index="9" instance=ExtResource( 19 )]
+[node name="Ground16" parent="Ground" index="11" instance=ExtResource( 19 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -42 )
+
+[node name="Ground4" parent="Ground" index="12" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -24 )
 
-[node name="Ground8" parent="Ground" index="10" instance=ExtResource( 19 )]
+[node name="Ground8" parent="Ground" index="13" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -30 )
 
-[node name="Ground12" parent="Ground" index="11" instance=ExtResource( 19 )]
+[node name="Ground12" parent="Ground" index="14" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -36 )
+
+[node name="Ground15" parent="Ground" index="15" instance=ExtResource( 19 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -42 )
 
 [node name="Tree" parent="." index="14" instance=ExtResource( 20 )]
 
@@ -456,28 +469,28 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Outside wall" type="Spatial" parent="." index="16"]
 
-[node name="Outside wall" parent="Outside wall" index="0" instance=ExtResource( 22 )]
+[node name="Outside wall4" parent="Outside wall" index="0" instance=ExtResource( 22 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -25 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -24 )
 
-[node name="Outside wall4" parent="Outside wall" index="1" instance=ExtResource( 22 )]
+[node name="Outside wall6" parent="Outside wall" index="1" instance=ExtResource( 22 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -25 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -30 )
 
-[node name="Outside wall2" parent="Outside wall" index="2" instance=ExtResource( 22 )]
+[node name="Outside wall5" parent="Outside wall" index="2" instance=ExtResource( 22 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -31 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -36 )
 
-[node name="Outside wall6" parent="Outside wall" index="3" instance=ExtResource( 22 )]
+[node name="Outside wall7" parent="Outside wall" index="3" instance=ExtResource( 22 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -31 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -42 )
 
-[node name="Outside wall3" parent="Outside wall" index="4" instance=ExtResource( 22 )]
+[node name="Wall outside 2" parent="Outside wall" index="4" instance=ExtResource( 23 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -37 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -27 )
 
-[node name="Outside wall5" parent="Outside wall" index="5" instance=ExtResource( 22 )]
+[node name="Wall outside 3" parent="Outside wall" index="5" instance=ExtResource( 23 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -37 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -39 )
 
 

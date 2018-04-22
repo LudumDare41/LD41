@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/ground.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://Assets/ground.png" type="Texture" id=2]
+[ext_resource path="res://Assets/wall outside 2.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Assets/wall outside 2.png" type="Texture" id=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -31,7 +31,7 @@ albedo_texture = ExtResource( 2 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
-roughness = 1.0
+roughness = 0.0
 roughness_texture_channel = 0
 emission_enabled = false
 normal_enabled = false
@@ -54,22 +54,17 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Albedo", "Roughness" ]
 
-[sub_resource type="BoxShape" id=2]
-
-extents = Vector3( 20, 1, 20 )
-
-[node name="Ground" type="Spatial"]
+[node name="Wall outside 2" type="Spatial"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
-transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -6, 0 )
+transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1
 extra_cull_margin = 0.0
-use_in_baked_light = true
+use_in_baked_light = false
 lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
@@ -77,24 +72,6 @@ lod_max_hysteresis = 0.0
 mesh = ExtResource( 1 )
 skeleton = NodePath("..")
 material/0 = SubResource( 1 )
-_sections_unfolded = [ "Geometry", "Transform", "material" ]
-
-[node name="StaticBody" type="StaticBody" parent="MeshInstance" index="0"]
-
-input_ray_pickable = true
-input_capture_on_drag = false
-collision_layer = 1
-collision_mask = 1
-friction = 1.0
-bounce = 0.0
-constant_linear_velocity = Vector3( 0, 0, 0 )
-constant_angular_velocity = Vector3( 0, 0, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody" index="0"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39, 0 )
-shape = SubResource( 2 )
-disabled = false
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "material" ]
 
 
