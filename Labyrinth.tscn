@@ -173,8 +173,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6 )
 
 [node name="Ceiling" type="Spatial" parent="." index="3"]
 
-editor/display_folded = true
-
 [node name="Ceiling" parent="Ceiling" index="0" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, 6 )
@@ -211,23 +209,27 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -18 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 6, -12 )
 
-[node name="Ceiling14" parent="Ceiling" index="9" instance=ExtResource( 5 )]
+[node name="Ceiling17" parent="Ceiling" index="9" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -12 )
+
+[node name="Ceiling14" parent="Ceiling" index="10" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 6, -18 )
 
-[node name="Ceiling5" parent="Ceiling" index="10" instance=ExtResource( 5 )]
+[node name="Ceiling5" parent="Ceiling" index="11" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -6 )
 
-[node name="Ceiling10" parent="Ceiling" index="11" instance=ExtResource( 5 )]
+[node name="Ceiling10" parent="Ceiling" index="12" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -12 )
 
-[node name="Ceiling12" parent="Ceiling" index="12" instance=ExtResource( 5 )]
+[node name="Ceiling12" parent="Ceiling" index="13" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -12 )
 
-[node name="Ceiling13" parent="Ceiling" index="13" instance=ExtResource( 5 )]
+[node name="Ceiling13" parent="Ceiling" index="14" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -18 )
 
@@ -245,19 +247,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -9 )
 
 [node name="Wndows" type="Spatial" parent="." index="5"]
 
-editor/display_folded = true
-
 [node name="Window" parent="Wndows" index="0" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, 0 )
 
-[node name="Window2" parent="Wndows" index="1" instance=ExtResource( 7 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -12 )
-
 [node name="Ramp" type="Spatial" parent="." index="6"]
 
 [node name="Dressing" type="Spatial" parent="." index="7"]
+
+editor/display_folded = true
 
 [node name="Cameras" type="Spatial" parent="Dressing" index="0"]
 

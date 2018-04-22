@@ -2,16 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/wall.png-642b133cac371179f83ae98314c08240.s3tc.stex"
-path.etc2="res://.import/wall.png-642b133cac371179f83ae98314c08240.etc2.stex"
+path.s3tc="res://.import/flashlight.png-8330afeffcf46318cbaca0ba3c9fc1aa.s3tc.stex"
+path.etc2="res://.import/flashlight.png-8330afeffcf46318cbaca0ba3c9fc1aa.etc2.stex"
 
 [deps]
 
-source_file="res://Assets/Textures/wall.png"
+source_file="res://Assets/flashlight.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
-dest_files=[ "res://.import/wall.png-642b133cac371179f83ae98314c08240.s3tc.stex", "res://.import/wall.png-642b133cac371179f83ae98314c08240.etc2.stex" ]
-dest_md5="b5e012b834365fcf6e72fe463f891eb0"
+dest_files=[ "res://.import/flashlight.png-8330afeffcf46318cbaca0ba3c9fc1aa.s3tc.stex", "res://.import/flashlight.png-8330afeffcf46318cbaca0ba3c9fc1aa.etc2.stex" ]
+dest_md5="ee10674504006efde9a1eda995c3e24a"
 
 [params]
 
