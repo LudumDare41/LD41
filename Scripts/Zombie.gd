@@ -1,6 +1,6 @@
 extends KinematicBody
 
-export var speed = 1
+export var speed = 2.5
 var dir = Vector3()
 var vel = Vector3()
 const GRAVITY = -9.8

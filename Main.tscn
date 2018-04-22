@@ -105,7 +105,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Ambient Light", "Auto Exposure", "Background" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="Models" type="Spatial" parent="." index="0"]
 
@@ -126,7 +126,7 @@ environment = SubResource( 2 )
 transform = Transform( 0.508117, 0.844842, -0.167505, -0.18053, 0.294632, 0.938403, 0.842155, -0.446579, 0.302227, 0, 12.1218, 0 )
 layers = 1
 light_color = Color( 1, 0.97522, 0.890625, 1 )
-light_energy = 0.5
+light_energy = 0.05
 light_indirect_energy = 1.0
 light_negative = false
 light_specular = 0.5

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Scripts/FPSController.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Weapons/Weapons.gd" type="Script" id=2]
@@ -17,10 +17,10 @@
 [ext_resource path="res://Assets/UI/HealthIcon.png" type="Texture" id=15]
 [ext_resource path="res://Assets/UI/StaminaIcon.png" type="Texture" id=16]
 
-[sub_resource type="CapsuleShape" id=1]
+[sub_resource type="CapsuleShape" id=13]
 
-radius = 1.3
-height = 1.8
+radius = 1.0
+height = 1.0
 
 [sub_resource type="CapsuleMesh" id=2]
 
@@ -356,6 +356,11 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
 
+[sub_resource type="CapsuleShape" id=1]
+
+radius = 1.3
+height = 1.8
+
 [sub_resource type="DynamicFont" id=12]
 
 size = 40
@@ -364,7 +369,7 @@ use_filter = false
 font_data = ExtResource( 14 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="FPSController" type="KinematicBody" index="0"]
+[node name="FPSController" type="KinematicBody"]
 
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 input_ray_pickable = true
@@ -386,7 +391,6 @@ jump = 10
 
 [node name="Area" type="Area" parent="." index="0"]
 
-editor/display_folded = true
 input_ray_pickable = false
 input_capture_on_drag = false
 space_override = 0
@@ -408,10 +412,10 @@ reverb_bus_name = "Master"
 reverb_bus_amount = 0.0
 reverb_bus_uniformity = 0.0
 
-[node name="Collider2" type="CollisionShape" parent="Area" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
 
-transform = Transform( 1, 0, 0, 0, -3.81019e-08, -0.871669, 0, 0.847664, -3.70526e-08, 0, -0.401785, 0 )
-shape = SubResource( 1 )
+transform = Transform( 1.79918, 0, 0, 0, -7.04622e-08, 1.61199, 0, -1.52458, -6.66416e-08, 0, 0, -0.184335 )
+shape = SubResource( 13 )
 disabled = false
 
 [node name="Body" type="Spatial" parent="." index="1"]
@@ -809,5 +813,9 @@ scale = Vector2( 0.0148559, 0.0148559 )
 texture = ExtResource( 16 )
 
 [connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
 
 

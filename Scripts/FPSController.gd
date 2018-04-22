@@ -24,6 +24,7 @@ const MAX_STAMINA = 100
 var health = MAX_HEALTH
 var stamina = MAX_STAMINA
 var isRunning = false
+var inDemageArea = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -31,6 +32,12 @@ func _ready():
 	Game.player = self
 
 func _physics_process(delta):
+	
+	
+	if health < 1:
+		get_tree().change_scene("res://Levels/GameOver.tscn")
+	if inDemageArea and health > 0.5:
+		health -= 10 * delta
 	
 	if Input.is_action_pressed("quit"):
 		get_tree().quit()
@@ -80,9 +87,9 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
 	
 	if Input.is_action_pressed("ui_select") && is_on_floor():
-		velocity.y = jump
+		velocity.y = jump	
 	
-	updateStatusUI(health,int(stamina))
+	updateStatusUI(int(health),int(stamina))
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -98,3 +105,14 @@ func updateStatusUI(health, stamina):
 	staminaLabel.text = str(stamina)
 	var healthLabel = get_node("Control/StatusUI/Health")
 	healthLabel.text = str(health)
+
+func _on_Area_body_entered(body):
+	if body.is_in_group("DemageArea"):
+		inDemageArea = true
+	pass # replace with function body
+
+
+func _on_Area_body_exited(body):
+	if body.is_in_group("DemageArea"):
+		inDemageArea = false
+	pass # replace with function body
