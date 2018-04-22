@@ -11,7 +11,7 @@ source_file="res://Assets/Zombie.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/Zombie.png-4230481d8b69ffc29ddafca14fd87919.s3tc.stex", "res://.import/Zombie.png-4230481d8b69ffc29ddafca14fd87919.etc2.stex" ]
-dest_md5="b0a31788b07f3e7e7b510abde3048f70"
+dest_md5="2ebd4c1818594347be65208092f54235"
 
 [params]
 
