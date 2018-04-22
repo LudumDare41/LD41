@@ -360,7 +360,7 @@ use_filter = false
 font_data = ExtResource( 12 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="FPSController" type="KinematicBody"]
+[node name="FPSController" type="KinematicBody" index="0"]
 
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 input_ray_pickable = true
@@ -522,7 +522,7 @@ _sections_unfolded = [ "Doppler" ]
 
 [node name="Falshlight" type="MeshInstance" parent="Head/Camera" index="1"]
 
-transform = Transform( -2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.419515, -1.36493 )
+transform = Transform( -2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.339659, -1.01705 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -539,7 +539,7 @@ _sections_unfolded = [ "Geometry", "Transform", "material" ]
 
 [node name="SpotLight" type="SpotLight" parent="Head/Camera" index="2"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.868613, -1.56584 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.783751, -1.25077 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
 light_energy = 1.0
@@ -556,7 +556,7 @@ shadow_reverse_cull_face = false
 editor_only = false
 spot_range = 20.0
 spot_attenuation = 1.0
-spot_angle = 30.0
+spot_angle = 35.0
 spot_angle_attenuation = 1.0
 _sections_unfolded = [ "Light", "Shadow", "Spot" ]
 
