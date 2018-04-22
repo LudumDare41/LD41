@@ -5,8 +5,8 @@ var direction = Vector3()
 var velocity = Vector3(0,0,0)
 
 #walk variables
-const MAX_SPEED = 12
-const MAX_RUNNING_SPEED = 24
+const MAX_SPEED = 10
+const MAX_RUNNING_SPEED = 20
 const ACCEL = 2
 const DEACCEL = 8
 export var gravity = -9.8 * 3
@@ -17,6 +17,13 @@ var camera_angle = 0
 
 #jump
 export var jump = 10
+
+#Player
+const MAX_HEALTH = 100
+const MAX_STAMINA = 100
+var health = MAX_HEALTH
+var stamina = MAX_STAMINA
+var isRunning = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -38,7 +45,7 @@ func _physics_process(delta):
 		direction += aim.x
 	if Input.is_action_pressed("ui_left"):
 		direction -= aim.x
-	
+		
 	direction.y = 0
 	direction = direction.normalized()
 	velocity.y += gravity * delta
@@ -47,11 +54,13 @@ func _physics_process(delta):
 	temp_velocity.y = 0
 	
 	var speed
-	if Input.is_action_pressed("shift"):
+	if Input.is_action_pressed("shift") and stamina > 0.1:
+		stamina -= 15 * delta
 		speed = MAX_RUNNING_SPEED
 	else:
+		if stamina < 100:
+			stamina += 2 * delta
 		speed = MAX_SPEED
-	
 	# where would the player go at max speed
 	var target = direction * speed
 	
@@ -72,7 +81,8 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("ui_select") && is_on_floor():
 		velocity.y = jump
-
+	
+	updateStatusUI(health,int(stamina))
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -82,3 +92,9 @@ func _input(event):
 		if (change + camera_angle) < 90 and (change + camera_angle) > -90:
 			$Head/Camera.rotate_x(deg2rad(change))
 			camera_angle += change
+			
+func updateStatusUI(health, stamina):
+	var staminaLabel = get_node("Control/StatusUI/Stamina")
+	staminaLabel.text = str(stamina)
+	var healthLabel = get_node("Control/StatusUI/Health")
+	healthLabel.text = str(health)
