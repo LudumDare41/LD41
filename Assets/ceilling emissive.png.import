@@ -11,7 +11,7 @@ source_file="res://Assets/ceilling emissive.png"
 source_md5="51399c299b95a16d2e840c561b91d756"
 
 dest_files=[ "res://.import/ceilling emissive.png-0b1d8624e3956f1e72137093e4b8d938.s3tc.stex", "res://.import/ceilling emissive.png-0b1d8624e3956f1e72137093e4b8d938.etc2.stex" ]
-dest_md5="b236ba0beb3f3c9e61b02ffdcc1a0a54"
+dest_md5="4d25c292fc3ab71dbdac018e4aa9535f"
 
 [params]
 
