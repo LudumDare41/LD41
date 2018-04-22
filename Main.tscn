@@ -113,7 +113,7 @@ _sections_unfolded = [ "Ambient Light", "Background", "DOF Near Blur", "Glow/lev
 
 [node name="FPSController" parent="." index="1" instance=ExtResource( 2 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8758, -6.5846 )
+transform = Transform( -0.880956, 0, 0.473198, 0, 1, 0, -0.473198, 0, -0.880956, 0.00754237, 2.8758, 6.84061 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
 
