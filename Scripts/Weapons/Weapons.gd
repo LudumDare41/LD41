@@ -44,7 +44,7 @@ func _input(event):
 			shooting = true
 func _physics_process(delta):
 	animations()
-	if shooting and !animationPlayer.get_current_animation() == "reload":
+	if shooting and !animationPlayer.get_current_animation() == "reload" and !animationPlayer.get_current_animation() == "fire":
 		pistol()
 	shooting = false
 	if Input.is_action_pressed("reload"):
