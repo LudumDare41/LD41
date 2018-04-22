@@ -205,15 +205,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -18 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -12 )
 
-[node name="Ceiling11" parent="Ceiling" index="7" instance=ExtResource( 6 )]
+[node name="Ceiling19" parent="Ceiling" index="7" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -12 )
+
+[node name="Ceiling11" parent="Ceiling" index="8" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 6, -12 )
 
-[node name="Ceiling14" parent="Ceiling" index="8" instance=ExtResource( 6 )]
+[node name="Ceiling14" parent="Ceiling" index="9" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 6, -18 )
 
-[node name="Ceiling5" parent="Ceiling" index="9" instance=ExtResource( 6 )]
+[node name="Ceiling5" parent="Ceiling" index="10" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -6 )
 
@@ -266,11 +270,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -18 )
 
 [node name="Lights" type="Spatial" parent="." index="9"]
 
-[node name="Light" parent="Lights" index="0" instance=ExtResource( 11 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -12 )
-
-[node name="Light2" parent="Lights" index="1" instance=ExtResource( 11 )]
+[node name="Light2" parent="Lights" index="0" instance=ExtResource( 11 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -12 )
 

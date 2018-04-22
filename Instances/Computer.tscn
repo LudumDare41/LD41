@@ -36,7 +36,7 @@ roughness = 0.5
 roughness_texture_channel = 0
 emission_enabled = true
 emission = Color( 0, 0, 0, 1 )
-emission_energy = 3.0
+emission_energy = 0.5
 emission_operator = 0
 emission_on_uv2 = false
 emission_texture = ExtResource( 3 )
@@ -100,5 +100,28 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 shape = SubResource( 2 )
 disabled = false
+
+[node name="OmniLight" type="OmniLight" parent="." index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27717, 0.98393 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 1.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 5.0
+omni_attenuation = 1.0
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+_sections_unfolded = [ "Shadow" ]
 
 
