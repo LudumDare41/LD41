@@ -11,7 +11,7 @@ source_file="res://Assets/ramp.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/ramp.png-472a2040dbae529466c6054544c38cac.s3tc.stex", "res://.import/ramp.png-472a2040dbae529466c6054544c38cac.etc2.stex" ]
-dest_md5="4e15c33eab35457f51460ac721fb474d"
+dest_md5="9dc53e24fa042dfa1ef1bfee9741e7e4"
 
 [params]
 
