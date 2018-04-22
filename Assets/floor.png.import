@@ -11,7 +11,7 @@ source_file="res://Assets/floor.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.s3tc.stex", "res://.import/floor.png-1e503fdcbfc8415a976a6bbee47dc71e.etc2.stex" ]
-dest_md5="df50b824eabe6754fe0f21c2d69809aa"
+dest_md5="3cec7198d7f31783d1227947e053e4ec"
 
 [params]
 
