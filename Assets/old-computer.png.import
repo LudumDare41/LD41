@@ -11,7 +11,7 @@ source_file="res://Assets/old-computer.png"
 source_md5="bc758ce1d939aadfdac4f1eb0c02eb87"
 
 dest_files=[ "res://.import/old-computer.png-9bf3e9af480da47ad4bb8d5fecc6a5df.s3tc.stex", "res://.import/old-computer.png-9bf3e9af480da47ad4bb8d5fecc6a5df.etc2.stex" ]
-dest_md5="36ae6a6dc73948828b702639d82c326f"
+dest_md5="5a4a9ecb80d64cc1c203494ec974f2c9"
 
 [params]
 
