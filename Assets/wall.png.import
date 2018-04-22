@@ -8,14 +8,10 @@ path.etc2="res://.import/wall.png-73e39cdcdbefc4d5604b0a5ce162a96d.etc2.stex"
 [deps]
 
 source_file="res://Assets/wall.png"
-source_md5="28def41c6528dca19960fbdae24f51ec"
+source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/wall.png-73e39cdcdbefc4d5604b0a5ce162a96d.s3tc.stex", "res://.import/wall.png-73e39cdcdbefc4d5604b0a5ce162a96d.etc2.stex" ]
-<<<<<<< HEAD
 dest_md5="09e7b714546934d72b9783da05e2f718"
-=======
-dest_md5="8deb72c1cf8206708b9c957685a4e993"
->>>>>>> 5bfcd1cf9a7b5170864affae346c274a652ffad5
 
 [params]
 
