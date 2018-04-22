@@ -109,11 +109,13 @@ _sections_unfolded = [ "Ambient Light", "Background", "DOF Near Blur", "Glow/lev
 
 [node name="Models" type="Spatial" parent="." index="0"]
 
+editor/display_folded = true
+
 [node name="Labyrinth" parent="Models" index="0" instance=ExtResource( 1 )]
 
 [node name="FPSController" parent="." index="1" instance=ExtResource( 2 )]
 
-transform = Transform( -0.880956, 0, 0.473198, 0, 1, 0, -0.473198, 0, -0.880956, 0.00754237, 2.8758, 6.84061 )
+transform = Transform( -0.880956, 0, 0.473198, 0, 1, 0, -0.473198, 0, -0.880956, 0.309974, 2.8758, 5.00338 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
 

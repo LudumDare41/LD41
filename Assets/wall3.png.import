@@ -2,16 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/pillar.png-141be472bb345a38d5fd316ae83af6c3.s3tc.stex"
-path.etc2="res://.import/pillar.png-141be472bb345a38d5fd316ae83af6c3.etc2.stex"
+path.s3tc="res://.import/wall3.png-4d1e98316b91583ddb5d1c1c1ca18d2d.s3tc.stex"
+path.etc2="res://.import/wall3.png-4d1e98316b91583ddb5d1c1c1ca18d2d.etc2.stex"
 
 [deps]
 
-source_file="res://Assets/pillar.png"
+source_file="res://Assets/wall3.png"
 source_md5="28def41c6528dca19960fbdae24f51ec"
 
-dest_files=[ "res://.import/pillar.png-141be472bb345a38d5fd316ae83af6c3.s3tc.stex", "res://.import/pillar.png-141be472bb345a38d5fd316ae83af6c3.etc2.stex" ]
-dest_md5="341f7cc3f791c67c4d7cf35499098eb8"
+dest_files=[ "res://.import/wall3.png-4d1e98316b91583ddb5d1c1c1ca18d2d.s3tc.stex", "res://.import/wall3.png-4d1e98316b91583ddb5d1c1c1ca18d2d.etc2.stex" ]
+dest_md5="6fae366e6efe4e87fe66fca66e07de8b"
 
 [params]
 
