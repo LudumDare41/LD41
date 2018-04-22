@@ -8,8 +8,8 @@
 
 [sub_resource type="CapsuleShape" id=1]
 
-radius = 0.569808
-height = 1.55366
+radius = 0.44
+height = 2.48
 
 [sub_resource type="ParticlesMaterial" id=2]
 
@@ -104,7 +104,7 @@ _sections_unfolded = [ "Albedo" ]
 material = SubResource( 3 )
 size = Vector2( 0.2, 0.2 )
 
-[node name="Zombie" type="KinematicBody"]
+[node name="Zombie" type="KinematicBody" index="0"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -127,7 +127,7 @@ transform = Transform( -0.03, 0, -9.77524e-09, 0, 0.03, 0, 9.77524e-09, 0, -0.03
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="1"]
 
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, -0.160754, 0 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.259021, 0 )
 shape = SubResource( 1 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
