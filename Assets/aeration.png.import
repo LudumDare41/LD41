@@ -2,16 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/wall.png-642b133cac371179f83ae98314c08240.s3tc.stex"
-path.etc2="res://.import/wall.png-642b133cac371179f83ae98314c08240.etc2.stex"
+path.s3tc="res://.import/aeration.png-c5834308ddc915a8b84d10a8edeff1d3.s3tc.stex"
+path.etc2="res://.import/aeration.png-c5834308ddc915a8b84d10a8edeff1d3.etc2.stex"
 
 [deps]
 
-source_file="res://Assets/Textures/wall.png"
+source_file="res://Assets/aeration.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
-dest_files=[ "res://.import/wall.png-642b133cac371179f83ae98314c08240.s3tc.stex", "res://.import/wall.png-642b133cac371179f83ae98314c08240.etc2.stex" ]
-dest_md5="b5e012b834365fcf6e72fe463f891eb0"
+dest_files=[ "res://.import/aeration.png-c5834308ddc915a8b84d10a8edeff1d3.s3tc.stex", "res://.import/aeration.png-c5834308ddc915a8b84d10a8edeff1d3.etc2.stex" ]
+dest_md5="56ed655308f6534c373e4f8ce353e09a"
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Instances/Wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Instances/Wall2.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Instances/Pillar.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Instances/Window.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Instances/Camera.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Instances/Aeration.tscn" type="PackedScene" id=9]
 
 [node name="Labyrinth" type="Spatial"]
 
@@ -193,45 +194,37 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, 12 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, 0 )
 
-[node name="Ceiling3" parent="Ceiling" index="5" instance=ExtResource( 5 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -6 )
-
-[node name="Ceiling15" parent="Ceiling" index="6" instance=ExtResource( 5 )]
+[node name="Ceiling15" parent="Ceiling" index="5" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -18 )
 
-[node name="Ceiling16" parent="Ceiling" index="7" instance=ExtResource( 5 )]
+[node name="Ceiling16" parent="Ceiling" index="6" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -18 )
 
-[node name="Ceiling11" parent="Ceiling" index="8" instance=ExtResource( 5 )]
+[node name="Ceiling11" parent="Ceiling" index="7" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 6, -12 )
 
-[node name="Ceiling17" parent="Ceiling" index="9" instance=ExtResource( 5 )]
+[node name="Ceiling17" parent="Ceiling" index="8" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -12 )
 
-[node name="Ceiling14" parent="Ceiling" index="10" instance=ExtResource( 5 )]
+[node name="Ceiling14" parent="Ceiling" index="9" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 6, -18 )
 
-[node name="Ceiling5" parent="Ceiling" index="11" instance=ExtResource( 5 )]
+[node name="Ceiling5" parent="Ceiling" index="10" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -6 )
 
-[node name="Ceiling10" parent="Ceiling" index="12" instance=ExtResource( 5 )]
+[node name="Ceiling10" parent="Ceiling" index="11" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -12 )
 
-[node name="Ceiling12" parent="Ceiling" index="13" instance=ExtResource( 5 )]
+[node name="Ceiling12" parent="Ceiling" index="12" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -12 )
-
-[node name="Ceiling13" parent="Ceiling" index="14" instance=ExtResource( 5 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -18 )
 
 [node name="Pillars" type="Spatial" parent="." index="4"]
 
@@ -247,20 +240,30 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -9 )
 
 [node name="Wndows" type="Spatial" parent="." index="5"]
 
+editor/display_folded = true
+
 [node name="Window" parent="Wndows" index="0" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, 0 )
 
 [node name="Ramp" type="Spatial" parent="." index="6"]
 
-[node name="Dressing" type="Spatial" parent="." index="7"]
+[node name="Cameras" type="Spatial" parent="." index="7"]
 
 editor/display_folded = true
 
-[node name="Cameras" type="Spatial" parent="Dressing" index="0"]
-
-[node name="Camera" parent="Dressing/Cameras" index="0" instance=ExtResource( 8 )]
+[node name="Camera" parent="Cameras" index="0" instance=ExtResource( 8 )]
 
 transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -10, 0, -19 )
+
+[node name="Aerations" type="Spatial" parent="." index="8"]
+
+[node name="Aeration" parent="Aerations" index="0" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -6 )
+
+[node name="Aeration2" parent="Aerations" index="1" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -18 )
 
 

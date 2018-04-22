@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/aeration.obj-f663840f38d6230ea7ddcbfd5e8364c5.mesh"
+
+[deps]
+
+files=[ "res://.import/aeration.obj-f663840f38d6230ea7ddcbfd5e8364c5.mesh" ]
+
+source_file="res://Assets/aeration.obj"
+source_md5="a4668602b0d6c9f7c8a43c1dbc2f6d43"
+
+dest_files=[ "res://.import/aeration.obj-f663840f38d6230ea7ddcbfd5e8364c5.mesh", "res://.import/aeration.obj-f663840f38d6230ea7ddcbfd5e8364c5.mesh" ]
+dest_md5="8edbece216857cd27f5ce8f75b82cd42"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

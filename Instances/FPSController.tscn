@@ -423,7 +423,6 @@ far = 200.0
 
 [node name="Hand" type="Spatial" parent="Head/Camera" index="0"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0118456, -0.654512, 0.0210662 )
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
