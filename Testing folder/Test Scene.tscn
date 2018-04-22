@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Instances/FPSController.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Instances/AmmoBox.tscn" type="PackedScene" id=2]
 
 [sub_resource type="PlaneMesh" id=1]
 
@@ -75,7 +76,7 @@ subdivide_depth = 0
 
 extents = Vector3( 1, 1, 1 )
 
-[node name="Test Scene" type="Spatial" index="0"]
+[node name="Test Scene" type="Spatial"]
 
 transform = Transform( 2.52108, 0, 0, 0, 1, 0, 0, 0, 2.96764, 0, 0, 0 )
 
@@ -167,5 +168,23 @@ material/0 = null
 
 shape = SubResource( 5 )
 disabled = false
+
+[node name="AmmoBox4" parent="." index="3" instance=ExtResource( 2 )]
+
+transform = Transform( -9.0346e-11, 0, 0.00179651, 0, 0.0038583, 0, -0.00175586, 0, -6.67113e-11, -2.47887, 0.0187753, -7.20269 )
+
+[node name="AmmoBox3" type="Spatial" parent="." index="4" instance=ExtResource( 2 )]
+
+transform = Transform( -9.0346e-10, 0, 0.0179651, 0, 0.0385829, 0, -0.0175586, 0, -6.67113e-10, 6.72285, 29.7097, -2237.47 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AmmoBox2" type="Spatial" parent="." index="5" instance=ExtResource( 2 )]
+
+transform = Transform( -9.0346e-10, 0, 0.0179651, 0, 0.0385829, 0, -0.0175586, 0, -6.67113e-10, -1.43938, 1.86265e-09, -6.39161 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AmmoBox" parent="." index="6" instance=ExtResource( 2 )]
+
+transform = Transform( -9.0346e-10, 0, 0.0179651, 0, 0.038583, 0, -0.0175586, 0, -6.67113e-10, -2.47887, 0.0187753, -7.20269 )
 
 

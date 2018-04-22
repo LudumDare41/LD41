@@ -17,9 +17,11 @@ var PistolData = {
 	bulletsOutWeapon = 100
 }
 
+#Effects
 onready var particleSystem = get_node("Particles")
 onready var audioSystem = get_node("Audio")
 onready var ReloadaudioSystem = get_node("ReloadAudio")
+onready var PickUpAudio = get_node("PickUpAudio")
 
 #Animation
 onready var animationPlayer = get_node("Handgun/AnimationPlayer")
@@ -113,3 +115,15 @@ func animations():
 			animationPlayer.play("idle (copy)")
 			idle = true
 			walk = false
+
+func _on_Area_area_entered(area):
+	
+	if area.is_in_group("pistolAmmo"):
+		getAmmo(PistolData, 30)
+		updateAmmoUI(PistolData)
+		area.queue_free()
+		PickUpAudio.play()
+	pass # replace with function body
+
+func getAmmo(weapon, amount):
+	weapon.bulletsOutWeapon += amount
