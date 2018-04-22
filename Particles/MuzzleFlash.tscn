@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Particles/beautiful-muzzle-flash-transparent-background-muzzle-flash-roblox-muzzle-flash-transparent-background.png" type="Texture" id=1]
 
-[sub_resource type="ParticlesMaterial" id=9]
+[sub_resource type="ParticlesMaterial" id=1]
 
 render_priority = 0
 trail_divisor = 1
@@ -27,7 +27,7 @@ damping = 0.0
 damping_random = 0.0
 angle = 0.0
 angle_random = 0.0
-scale = 2.0
+scale = 4.0
 scale_random = 0.0
 color = Color( 0, 0, 0, 1 )
 hue_variation = 0.0
@@ -39,7 +39,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Initial Velocity", "Scale" ]
 
-[sub_resource type="SpatialMaterial" id=10]
+[sub_resource type="SpatialMaterial" id=2]
 
 render_priority = 0
 flags_transparent = true
@@ -71,7 +71,7 @@ roughness = 0.0
 roughness_texture_channel = 0
 emission_enabled = true
 emission = Color( 0.882813, 0.867321, 0.486237, 1 )
-emission_energy = 1.0
+emission_energy = 16.0
 emission_operator = 0
 emission_on_uv2 = false
 normal_enabled = false
@@ -96,10 +96,10 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Emission" ]
 
-[sub_resource type="PlaneMesh" id=11]
+[sub_resource type="PlaneMesh" id=3]
 
 lightmap_size_hint = Vector2( 1, 1 )
-material = SubResource( 10 )
+material = SubResource( 2 )
 size = Vector2( 2, 2 )
 subdivide_width = 0
 subdivide_depth = 0
@@ -116,22 +116,22 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-emitting = true
-amount = 5
-lifetime = 1.0
-one_shot = false
+emitting = false
+amount = 2
+lifetime = 0.12
+one_shot = true
 preprocess = 0.0
 speed_scale = 1.0
-explosiveness = 0.05
+explosiveness = 0.0
 randomness = 0.0
 fixed_fps = 0
 fract_delta = true
 visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 9 )
+process_material = SubResource( 1 )
 draw_passes = 1
-draw_pass_1 = SubResource( 11 )
-_sections_unfolded = [ "Draw Passes", "Process Material" ]
+draw_pass_1 = SubResource( 3 )
+_sections_unfolded = [ "Draw Passes", "Drawing", "Process Material", "Time" ]
 
 

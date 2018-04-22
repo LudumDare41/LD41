@@ -41,6 +41,7 @@ func _input(event):
 func _physics_process(delta):
 	animations()
 	if shooting and !animationPlayer.get_current_animation() == "reload":
+		particleSystem.restart()
 		pistol()
 	shooting = false
 	if Input.is_action_pressed("reload"):
