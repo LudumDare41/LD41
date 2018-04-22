@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ramp.obj-768694197d93e3c1c7386c5bde0088e5.mesh"
+
+[deps]
+
+files=[ "res://.import/ramp.obj-768694197d93e3c1c7386c5bde0088e5.mesh" ]
+
+source_file="res://Assets/ramp.obj"
+source_md5="23662a971375badca8d21ea3bf7f8248"
+
+dest_files=[ "res://.import/ramp.obj-768694197d93e3c1c7386c5bde0088e5.mesh", "res://.import/ramp.obj-768694197d93e3c1c7386c5bde0088e5.mesh" ]
+dest_md5="62c1a67db3790064e55b63c007854fde"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
