@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Zombie_Moan_1.wav-b3fd9848810d75fc289ea6abd633463d.sample"
+
+[deps]
+
+source_file="res://Audio/Zombie/Zombie_Moan_1.wav"
+source_md5="a8b2b2e413262ebda109a3ba2239ee9b"
+
+dest_files=[ "res://.import/Zombie_Moan_1.wav-b3fd9848810d75fc289ea6abd633463d.sample" ]
+dest_md5="79f2dc7ad8e999ddc35ebcd3bc25d6a6"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

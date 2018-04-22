@@ -12,10 +12,9 @@ var dead = false
 func _physics_process(delta):
 	
 	if dead:
-		$ZombieModel/AnimationPlayer.stop()
 		return
 	
-	$ZombieModel/AnimationPlayer.queue("ArmatureAction")
+	$ZombieModel/AnimationPlayer.queue("WalkAction")
 	
 	self.look_at(Game.player.translation, Vector3(0,1,0))  
 	
@@ -45,9 +44,15 @@ func hit(damage, position):
 		hit_particle(position)
 		if life <= 0:
 			die()
+			return
+		$Hit.play()
 		
 func die():
 	dead = true
+	$CollisionShape.disabled = true
+	$ZombieModel/AnimationPlayer.stop()
+	$ZombieModel/AnimationPlayer.play("DieAction")
+	$Die.play()
 	$DeadTimer.start()
 	
 func hit_particle(position):
@@ -56,3 +61,11 @@ func hit_particle(position):
 
 func _on_DeadTimer_timeout():
 	self.queue_free()
+
+
+func _on_GrowlTimer_timeout():
+	if not dead:
+		$Growl.play()
+		print(rand_range(2, 5))
+		$GrowlTimer.wait_time = rand_range(2, 5)
+		$GrowlTimer.start()
