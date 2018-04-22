@@ -18,7 +18,7 @@
 [ext_resource path="res://Instances/Locker.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Instances/Door.tscn" type="PackedScene" id=17]
 
-[node name="Labyrinth" type="Spatial" index="0"]
+[node name="Labyrinth" type="Spatial"]
 
 [node name="Walls SCIFI" type="Spatial" parent="." index="0"]
 
