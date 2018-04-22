@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/wall2.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Assets/wall2.png" type="Texture" id=2]
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="SpatialMaterial" id=1]
 
 render_priority = 0
 flags_transparent = false
@@ -31,7 +31,7 @@ albedo_texture = ExtResource( 2 )
 metallic = 0.5
 metallic_specular = 0.5
 metallic_texture_channel = 0
-roughness = 0.75
+roughness = 0.4
 roughness_texture_channel = 0
 emission_enabled = false
 normal_enabled = false
@@ -76,7 +76,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 1 )
 skeleton = NodePath("..")
-material/0 = SubResource( 3 )
+material/0 = SubResource( 1 )
 _sections_unfolded = [ "Transform", "material" ]
 
 [node name="StaticBody" type="StaticBody" parent="MeshInstance" index="0"]
