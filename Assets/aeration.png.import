@@ -11,7 +11,7 @@ source_file="res://Assets/aeration.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/aeration.png-c5834308ddc915a8b84d10a8edeff1d3.s3tc.stex", "res://.import/aeration.png-c5834308ddc915a8b84d10a8edeff1d3.etc2.stex" ]
-dest_md5="9af0ee46946da58a65c85c534c6e4a2a"
+dest_md5="d425b1e3e3a3b1f42b20e817223b3546"
 
 [params]
 
