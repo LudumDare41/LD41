@@ -11,7 +11,11 @@ source_file="res://Assets/door frame.png"
 source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/door frame.png-6f3dd03881ba121137032b5e50eb5b27.s3tc.stex", "res://.import/door frame.png-6f3dd03881ba121137032b5e50eb5b27.etc2.stex" ]
+<<<<<<< HEAD
 dest_md5="7a091262eaa4ad8ff6dd0832d170b39b"
+=======
+dest_md5="a3804194773ceaeeaa863100329e713b"
+>>>>>>> parent of b0813da... Adding some changes
 
 [params]
 

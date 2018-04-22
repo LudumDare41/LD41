@@ -12,7 +12,11 @@ source_file="res://Assets/door frame.obj"
 source_md5="27f2c6c2fd63f9e7ef8ba28847277c05"
 
 dest_files=[ "res://.import/door frame.obj-a779d9c4fa4a18b31aa41d93b16730c8.mesh", "res://.import/door frame.obj-a779d9c4fa4a18b31aa41d93b16730c8.mesh" ]
+<<<<<<< HEAD
 dest_md5="aa360430a19115ef83fb01be201c9ffb"
+=======
+dest_md5="9001ed6a697b0034b89e0d5fd5b5fc73"
+>>>>>>> parent of b0813da... Adding some changes
 
 [params]
 

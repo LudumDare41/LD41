@@ -115,7 +115,11 @@ editor/display_folded = true
 
 [node name="FPSController" parent="." index="1" instance=ExtResource( 2 )]
 
+<<<<<<< HEAD
 transform = Transform( -0.880956, 0, 0.473198, 0, 1, 0, -0.473198, 0, -0.880956, 0.309974, 2.8758, 5.00338 )
+=======
+transform = Transform( -0.880956, 0, 0.473198, 0, 1, 0, -0.473198, 0, -0.880956, 0.00754237, 2.8758, 6.84061 )
+>>>>>>> parent of b0813da... Adding some changes
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
 
