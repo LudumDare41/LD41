@@ -11,7 +11,7 @@ source_file="res://Assets/chair.png"
 source_md5="22d2c8adfe053fb0b17dd63fe9623aa3"
 
 dest_files=[ "res://.import/chair.png-84b740201e7482b276361ce3ea6a682e.s3tc.stex", "res://.import/chair.png-84b740201e7482b276361ce3ea6a682e.etc2.stex" ]
-dest_md5="83be6791167f0bd9fd9b728f5fb6b4f6"
+dest_md5="1944f53a20542563000bad3eaefebecb"
 
 [params]
 
