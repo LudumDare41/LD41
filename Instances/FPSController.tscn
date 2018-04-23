@@ -253,7 +253,7 @@ use_filter = false
 font_data = ExtResource( 17 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="FPSController" type="KinematicBody" index="0"]
+[node name="FPSController" type="KinematicBody"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
