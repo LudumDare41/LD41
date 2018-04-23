@@ -1155,11 +1155,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 6, 21 )
 
 [node name="Pillar18" parent="Pillars" index="17" instance=ExtResource( 11 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 16 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 15 )
 
 [node name="Pillar23" parent="Pillars" index="18" instance=ExtResource( 11 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 6, 16 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 6, 15 )
 
 [node name="Pillar22" parent="Pillars" index="19" instance=ExtResource( 11 )]
 
