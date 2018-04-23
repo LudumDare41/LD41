@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/ControlsMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/menuBackgroun.png" type="Texture" id=2]
 [ext_resource path="res://Assets/UI/backArrow.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Assets/UI/godot_icon.png" type="Texture" id=5]
-[ext_resource path="res://Assets/UI/Blender-icon.png" type="Texture" id=6]
-[ext_resource path="res://Audio/LD41_Way_Out_Main_scene_-_Track_01_Merlin(1).ogg" type="AudioStream" id=7]
+[ext_resource path="res://Assets/UI/magicavoxel-icon.png" type="Texture" id=6]
+[ext_resource path="res://Assets/UI/Blender-icon.png" type="Texture" id=7]
+[ext_resource path="res://Audio/LD41_Way_Out_Main_scene_-_Track_01_Merlin(1).ogg" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -25,9 +26,8 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -131,7 +131,6 @@ align = 1
 
 [node name="Container" type="Container" parent="." index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -155,7 +154,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -187.0
 margin_top = -25.0
-margin_right = 469.0
+margin_right = 491.0
 margin_bottom = 672.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -166,7 +165,7 @@ size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
 text = "## Credits ##
 
-Linko - Level design/Game Design
+Linko - 3D Modelling and Level design
 Victor Lima - Programmer
 Nutriz - Programmer
 Leida - 3D Modelling and UI
@@ -187,15 +186,21 @@ position = Vector2( -422.295, 591.334 )
 scale = Vector2( 0.394491, 0.394491 )
 texture = ExtResource( 5 )
 
-[node name="Blender-icon" type="Sprite" parent="Container" index="2"]
+[node name="magicavoxel_icon" type="Sprite" parent="Container" index="2"]
 
-position = Vector2( -305.344, 595.018 )
-scale = Vector2( 0.356124, 0.356124 )
+position = Vector2( -306.511, 588.076 )
+scale = Vector2( 0.394491, 0.394491 )
 texture = ExtResource( 6 )
+
+[node name="Blender-icon" type="Sprite" parent="Container" index="3"]
+
+position = Vector2( -201.556, 592.311 )
+scale = Vector2( 0.356124, 0.356124 )
+texture = ExtResource( 7 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
 
-stream = ExtResource( 7 )
+stream = ExtResource( 8 )
 volume_db = 0.0
 autoplay = true
 mix_target = 0
