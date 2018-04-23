@@ -43,6 +43,7 @@ func _physics_process(delta):
 		timer -= delta
 		if health <= 0:
 			dead = true
+			# to take screenshot and use it on death screen
 			var img = get_viewport().get_texture().get_data()
 			yield(get_tree(),"idle_frame")
 			yield(get_tree(),"idle_frame")
@@ -102,7 +103,6 @@ func _physics_process(delta):
 
 		velocity.x = temp_velocity.x
 		velocity.z = temp_velocity.z
-
 
 		velocity = move_and_slide(velocity, Vector3(0, 1, 0))
 
