@@ -130,3 +130,13 @@ func footstep():
 	if !FootstepsAudio.is_playing() and timer < 0.01:
 		FootstepsAudio.play()
 		timer = 0.5
+
+func _on_Area_area_entered(area):
+	if area.is_in_group("MedKit"):
+		if health < 100:
+			if health > 70:
+				health = 100
+			else:
+				health += 30
+			area.queue_free()
+	pass # replace with function body

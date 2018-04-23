@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Zombie.gd" type="Script" id=1]
 [ext_resource path="res://Instances/ZombieMesh.tscn" type="PackedScene" id=2]
@@ -104,7 +104,11 @@ _sections_unfolded = [ "Albedo" ]
 material = SubResource( 3 )
 size = Vector2( 0.2, 0.2 )
 
-[node name="Zombie" type="KinematicBody" groups=[
+[sub_resource type="SphereShape" id=5]
+
+radius = 15.8234
+
+[node name="Zombie" type="KinematicBody" index="0" groups=[
 "DemageArea",
 ]]
 
@@ -237,12 +241,42 @@ autostart = true
 
 [node name="PathFollow" type="PathFollow" parent="." index="8"]
 
-offset = 0.0
+offset = 2.0
 h_offset = 0.0
 v_offset = 0.0
 rotation_mode = 3
 cubic_interp = true
 loop = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sens" type="Area" parent="." index="9"]
+
+editor/display_folded = true
+input_ray_pickable = false
+input_capture_on_drag = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision_layer = 1
+collision_mask = 1
+audio_bus_override = false
+audio_bus_name = "Master"
+reverb_bus_enable = false
+reverb_bus_name = "Master"
+reverb_bus_amount = 0.0
+reverb_bus_uniformity = 0.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Sens" index="0"]
+
+shape = SubResource( 5 )
+disabled = false
 
 [connection signal="timeout" from="DeadTimer" to="." method="_on_DeadTimer_timeout"]
 

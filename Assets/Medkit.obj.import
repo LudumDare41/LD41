@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Medkit.obj-47a9e526ceae6ee7c52e258a885a5971.mesh"
+
+[deps]
+
+files=[ "res://.import/Medkit.obj-47a9e526ceae6ee7c52e258a885a5971.mesh" ]
+
+source_file="res://Assets/Medkit.obj"
+source_md5="6d3615f90d69aacb1640d5f8af601bde"
+
+dest_files=[ "res://.import/Medkit.obj-47a9e526ceae6ee7c52e258a885a5971.mesh", "res://.import/Medkit.obj-47a9e526ceae6ee7c52e258a885a5971.mesh" ]
+dest_md5="4c91628964a19c56e69ac4e36fb3842c"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
