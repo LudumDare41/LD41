@@ -40,18 +40,18 @@ fog_height_curve = 1.0
 tonemap_mode = 2
 tonemap_exposure = 1.0
 tonemap_white = 1.0
-auto_exposure_enabled = true
+auto_exposure_enabled = false
 auto_exposure_scale = 0.4
 auto_exposure_min_luma = 0.2
 auto_exposure_max_luma = 8.0
 auto_exposure_speed = 0.5
-ss_reflections_enabled = true
+ss_reflections_enabled = false
 ss_reflections_max_steps = 64
 ss_reflections_fade_in = 0.15
 ss_reflections_fade_out = 2.0
 ss_reflections_depth_tolerance = 0.2
 ss_reflections_roughness = true
-ssao_enabled = true
+ssao_enabled = false
 ssao_radius = 1.0
 ssao_intensity = 1.0
 ssao_radius2 = 0.0
@@ -67,12 +67,12 @@ dof_blur_far_distance = 10.0
 dof_blur_far_transition = 5.0
 dof_blur_far_amount = 0.1
 dof_blur_far_quality = 1
-dof_blur_near_enabled = true
+dof_blur_near_enabled = false
 dof_blur_near_distance = 2.0
 dof_blur_near_transition = 1.0
 dof_blur_near_amount = 0.1
 dof_blur_near_quality = 0
-glow_enabled = true
+glow_enabled = false
 glow_levels/1 = false
 glow_levels/2 = false
 glow_levels/3 = true
@@ -91,9 +91,9 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
-_sections_unfolded = [ "Ambient Light", "Auto Exposure", "Background", "Fog" ]
+_sections_unfolded = [ "Background" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="Models" type="Spatial" parent="." index="0"]
 
