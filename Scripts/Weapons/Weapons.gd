@@ -12,10 +12,10 @@ var weaponID = 0
 
 # Pistol
 var PistolData = {
-	magSize = 6,
-	bulletsInWeapon = 6,
-	bulletsOutWeapon = 16,
-	demage = 10
+	magSize = 12,
+	bulletsInWeapon = 12,
+	bulletsOutWeapon = 24,
+	damage = 10
 }
 
 #Effects
@@ -40,7 +40,7 @@ func _input(event):
 		var camera = get_node("../")
 		shoot_origin = camera.project_ray_origin(Vector2(screen_width_center, screen_height_center))
 		shoot_direction = camera.project_ray_normal(Vector2(screen_width_center, screen_height_center)) * shoot_range
-		
+
 		if event.button_index == 1:
 			shooting = true
 func _physics_process(delta):
@@ -58,10 +58,10 @@ func pistol():
 		audioSystem.play()
 		var impulse
 		var impact_position
-		
+
 		var space_state = get_world().direct_space_state
 		var result = space_state.intersect_ray(shoot_origin, shoot_direction, [self], 1)
-		
+
 		PistolData.bulletsInWeapon -= 1
 		animationPlayer.play("fire")
 		animationPlayer.queue("idle (copy)")
@@ -75,9 +75,9 @@ func pistol():
 					result.collider.apply_impulse(position, impulse*impactForce)
 				# for zombie
 				if result.collider is KinematicBody and result.collider.has_method("hit"):
-					result.collider.hit(PistolData.demage, position)
-			
-				
+					result.collider.hit(PistolData.damage, position)
+
+
 func reload(weapon):
 	if weapon.bulletsOutWeapon > 0 and weapon.bulletsInWeapon < weapon.magSize and !animationPlayer.get_current_animation() == "fire":
 		ReloadaudioSystem.play()
@@ -85,16 +85,16 @@ func reload(weapon):
 		animationPlayer.queue("idle (copy)")
 		var reloadRange = weapon.magSize - weapon.bulletsInWeapon
 		var reloadValue
-		
+
 		if weapon.bulletsOutWeapon >= reloadRange:
 			reloadValue = reloadRange
 		else:
 			reloadValue = weapon.bulletsOutWeapon
-			
+
 		weapon.bulletsOutWeapon -= reloadValue
 		weapon.bulletsInWeapon += reloadValue
 		updateAmmoUI(weapon)
-	
+
 func updateAmmoUI(weapon):
 	var inWeaponLabel = get_node("../../../Control/AmmoUI/InWeapon")
 	inWeaponLabel.text = str(weapon.bulletsInWeapon)
@@ -118,7 +118,7 @@ func animations():
 			walk = false
 
 func _on_Area_area_entered(area):
-	
+
 	if area.is_in_group("pistolAmmo"):
 		getAmmo(PistolData, 30)
 		updateAmmoUI(PistolData)
