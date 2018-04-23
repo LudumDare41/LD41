@@ -312,7 +312,7 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 39, 12,
 
 [node name="Wall197" parent="Walls SCIFI" index="69" instance=ExtResource( 2 )]
 
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33, 6, 3 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33, 6.11886, 3 )
 
 [node name="Wall206" parent="Walls SCIFI" index="70" instance=ExtResource( 2 )]
 
@@ -324,7 +324,7 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 39, 12,
 
 [node name="Wall199" parent="Walls SCIFI" index="72" instance=ExtResource( 2 )]
 
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 42, 6, 18 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 42, 6.01621, 18 )
 
 [node name="Wall203" parent="Walls SCIFI" index="73" instance=ExtResource( 2 )]
 
@@ -344,11 +344,11 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 30, 12,
 
 [node name="Wall200" parent="Walls SCIFI" index="77" instance=ExtResource( 2 )]
 
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 42, 6, 12 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 42, 6.04681, 12 )
 
 [node name="Wall201" parent="Walls SCIFI" index="78" instance=ExtResource( 2 )]
 
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 42, 6, 6 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 42, 6.06854, 6 )
 
 [node name="Wall173" parent="Walls SCIFI" index="79" instance=ExtResource( 2 )]
 
@@ -364,7 +364,7 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 27, 6.0
 
 [node name="Wall198" parent="Walls SCIFI" index="82" instance=ExtResource( 2 )]
 
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 27, 6, 9 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 27, 6.13206, 9 )
 
 [node name="Wall171" parent="Walls SCIFI" index="83" instance=ExtResource( 2 )]
 
@@ -833,7 +833,7 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 6, 
 
 [node name="Wall window43" parent="Walls SCIFI" index="199" instance=ExtResource( 5 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 39, 6, 3 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 39, 6.10254, 3 )
 
 [node name="Wall window44" parent="Walls SCIFI" index="200" instance=ExtResource( 5 )]
 
@@ -841,7 +841,7 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 39, 6, 
 
 [node name="Wall window42" parent="Walls SCIFI" index="201" instance=ExtResource( 5 )]
 
-transform = Transform( 1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 30, 6, 6 )
+transform = Transform( 1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 30, 6.13826, 6 )
 
 [node name="Wall window45" parent="Walls SCIFI" index="202" instance=ExtResource( 5 )]
 
