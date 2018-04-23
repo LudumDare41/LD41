@@ -93,7 +93,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Ambient Light", "Auto Exposure", "Background", "Fog" ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="Models" type="Spatial" parent="." index="0"]
 

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/border.obj-10528569d02b0a9f379d52603ace1e14.mesh"
+
+[deps]
+
+files=[ "res://.import/border.obj-10528569d02b0a9f379d52603ace1e14.mesh" ]
+
+source_file="res://Assets/border.obj"
+source_md5="4e4a59983af1bfd3fe2e74f9ccdc4f9d"
+
+dest_files=[ "res://.import/border.obj-10528569d02b0a9f379d52603ace1e14.mesh", "res://.import/border.obj-10528569d02b0a9f379d52603ace1e14.mesh" ]
+dest_md5="bb9cea609cc2e4a84ca5ce70b070b4f2"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
