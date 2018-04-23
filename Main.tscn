@@ -3,10 +3,10 @@
 [ext_resource path="res://Labyrinth.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Instances/FPSController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://satara_night_no_lamps_2k.hdr" type="Texture" id=3]
-[ext_resource path="res://Instances/Zombie.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Instances/MedKit.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Instances/AmmoBox.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Audio/Gameplay_1.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Audio/Gameplay_1.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Instances/Zombie.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Instances/MedKit.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Instances/AmmoBox.tscn" type="PackedScene" id=7]
 
 [sub_resource type="PanoramaSky" id=1]
 
@@ -101,30 +101,56 @@ _sections_unfolded = [ "Ambient Light", "Auto Exposure", "Background", "Fog", "G
 
 [node name="FPSController" parent="." index="1" instance=ExtResource( 2 )]
 
-transform = Transform( 0.974986, 0, 0.222268, 0, 1, 0, -0.222268, 0, 0.974986, -0.290459, 2.0593, -6.91363 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.66888, 2.0593, 5.68849 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
 
 environment = SubResource( 2 )
 
-[node name="Zombie" parent="." index="3" instance=ExtResource( 4 )]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.79196, -14.8125 )
-
-[node name="MedKit" parent="." index="4" instance=ExtResource( 5 )]
-
-transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -1.8437, 0, -18.1082 )
-
-[node name="AmmoBox" parent="." index="5" instance=ExtResource( 6 )]
-
-transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, 1.54246, -9.53674e-07, -17.1451 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="6"]
-
-stream = ExtResource( 7 )
+stream = ExtResource( 4 )
 volume_db = 0.0
 autoplay = true
 mix_target = 0
 bus = "Master"
+
+[node name="Zombies" type="Node" parent="." index="4"]
+
+[node name="Zombie" parent="Zombies" index="0" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.12165, 1.5582, -15.8944 )
+
+[node name="Zombie2" parent="Zombies" index="1" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9247, 25.5582, -51.9851 )
+
+[node name="Zombie13" parent="Zombies" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9247, 25.5582, -45.9851 )
+
+[node name="Zombie8" parent="Zombies" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9247, 25.5582, -47.9851 )
+
+[node name="Zombie4" parent="Zombies" index="4" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9247, 25.5582, -51.9851 )
+
+[node name="Zombie10" parent="Zombies" index="5" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9247, 25.5582, -47.9851 )
+
+[node name="MedKits" type="Node" parent="." index="5"]
+
+[node name="MedKit" parent="MedKits" index="0" instance=ExtResource( 6 )]
+
+transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -1.8437, 0, -18.1082 )
+
+[node name="AmmoBoxes" type="Node" parent="." index="6"]
+
+[node name="AmmoBox" parent="AmmoBoxes" index="0" instance=ExtResource( 7 )]
+
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, 1.54246, -9.53674e-07, -17.1451 )
 
 
