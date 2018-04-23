@@ -11,7 +11,7 @@ source_file="res://Assets/palette.png"
 source_md5="1599b7eefce511eee7ba8e35579b3284"
 
 dest_files=[ "res://.import/palette.png-a9489b31af284cee4564710167596713.s3tc.stex", "res://.import/palette.png-a9489b31af284cee4564710167596713.etc2.stex" ]
-dest_md5="54412253258762f74034ffae84270634"
+dest_md5="67614f4e29e523c23724c00eb259423f"
 
 [params]
 
