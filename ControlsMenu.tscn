@@ -149,9 +149,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -187.0
+margin_left = -471.0
 margin_top = -25.0
-margin_right = 579.0
+margin_right = 682.0
 margin_bottom = 544.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -160,16 +160,16 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
-text = "## Commands ##
+text = "## Help ##
+
+Try to survive and find the escape of the maze !
+
+## Commands ##
 
 W, A, S, D / Z, Q, S, D- Move the character
-
 Left mouse button - Shoot
-
 R - Reload
-
 F - Turn Off/On the flashlight
-
 Esc - Go to main menu/Exit the game"
 align = 1
 percent_visible = 1.0
