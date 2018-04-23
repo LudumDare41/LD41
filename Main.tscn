@@ -117,35 +117,33 @@ bus = "Master"
 
 [node name="Zombies" type="Node" parent="." index="4"]
 
-editor/display_folded = true
-
 [node name="Zombie" parent="Zombies" index="0" instance=ExtResource( 5 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.12165, 1.5582, -15.8944 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.34822, 1.6799, -12.5443 )
 
 [node name="Zombie2" parent="Zombies" index="1" instance=ExtResource( 5 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9247, 25.5582, -51.9851 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65985, 1.6799, -56.4747 )
 
-[node name="Zombie13" parent="Zombies" index="2" instance=ExtResource( 5 )]
+[node name="Zombie3" parent="Zombies" index="2" instance=ExtResource( 5 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9247, 25.5582, -45.9851 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7809, 25.9535, -50.2246 )
 
-[node name="Zombie8" parent="Zombies" index="3" instance=ExtResource( 5 )]
+[node name="Zombie6" parent="Zombies" index="3" instance=ExtResource( 5 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7565, 9.11144, -35.667 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6692, 25.9535, -47.1579 )
 
-[node name="Zombie11" parent="Zombies" index="4" instance=ExtResource( 5 )]
+[node name="Zombie7" parent="Zombies" index="4" instance=ExtResource( 5 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13021, 2.20154, -57.5856 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5464, 16.5292, -54.2065 )
 
 [node name="Zombie4" parent="Zombies" index="5" instance=ExtResource( 5 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9247, 25.5582, -51.9851 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2891, 1.6799, -78.484 )
 
-[node name="Zombie10" parent="Zombies" index="6" instance=ExtResource( 5 )]
+[node name="Zombie5" parent="Zombies" index="6" instance=ExtResource( 5 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9247, 25.5582, -47.9851 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0785, 1.6799, -61.578 )
 
 [node name="MedKits" type="Node" parent="." index="5"]
 

@@ -62,7 +62,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Roughness" ]
 
-[node name="Light" type="Spatial" index="0"]
+[node name="Light" type="Spatial"]
 
 [node name="OmniLight" type="OmniLight" parent="." index="0"]
 
