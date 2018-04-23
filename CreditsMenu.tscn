@@ -25,7 +25,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Control" type="Control" index="0"]
+[node name="Control" type="Control"]
 
 editor/display_folded = true
 anchor_left = 0.0

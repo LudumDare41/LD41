@@ -41,7 +41,6 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="Play" type="Container" parent="." index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

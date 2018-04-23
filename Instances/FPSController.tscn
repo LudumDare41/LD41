@@ -392,7 +392,6 @@ jump = 10
 
 [node name="Area" type="Area" parent="." index="0"]
 
-editor/display_folded = true
 input_ray_pickable = false
 input_capture_on_drag = false
 space_override = 0
@@ -640,7 +639,6 @@ doppler_tracking = 0
 
 [node name="Control" type="Control" parent="." index="5"]
 
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -837,12 +835,21 @@ position = Vector2( 265.399, 40.5352 )
 scale = Vector2( 0.0148559, 0.0148559 )
 texture = ExtResource( 17 )
 
-[connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
+[node name="DeathTimer" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 0.2
+one_shot = true
+autostart = false
 
 [connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
+
+[connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
+
+[connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]
 
 
