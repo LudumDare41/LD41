@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/antenna.obj-0641281f5479689f26cfac36adedb5cc.mesh"
+
+[deps]
+
+files=[ "res://.import/antenna.obj-0641281f5479689f26cfac36adedb5cc.mesh" ]
+
+source_file="res://Assets/antenna.obj"
+source_md5="6ef3e7f420bd04d139683b614148a17f"
+
+dest_files=[ "res://.import/antenna.obj-0641281f5479689f26cfac36adedb5cc.mesh", "res://.import/antenna.obj-0641281f5479689f26cfac36adedb5cc.mesh" ]
+dest_md5="182c18b8a582eb8a39b19e404eb432aa"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
