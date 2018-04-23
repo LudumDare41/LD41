@@ -42,10 +42,10 @@ func _physics_process(delta):
 		get_tree().change_scene("res://Levels/GameOver.tscn")
 	if inDemageArea and health > 0.5:
 		health -= 10 * delta
-	
+
 	if Input.is_action_pressed("quit"):
-		get_tree().quit()
-	
+		get_tree().change_scene("res://MainMenu.tscn")
+
 	direction = Vector3(0,0,0)
 	var aim = $Head/Camera.get_global_transform().basis
 	if Input.is_action_pressed("ui_up"):
@@ -60,14 +60,14 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_left"):
 		direction -= aim.x
 		footstep()
-		
+
 	direction.y = 0
 	direction = direction.normalized()
 	velocity.y += gravity * delta
-	
+
 	var temp_velocity = velocity
 	temp_velocity.y = 0
-	
+
 	var speed
 	if Input.is_action_pressed("shift") and stamina > 0.1:
 		stamina -= 15 * delta
@@ -78,37 +78,37 @@ func _physics_process(delta):
 		speed = MAX_SPEED
 	# where would the player go at max speed
 	var target = direction * speed
-	
+
 	var acceleration
 	if direction.dot(temp_velocity) > 0:
 		acceleration = ACCEL
 	else:
 		acceleration = DEACCEL
-	
+
 	# calculate a portion of the distance to go
 	temp_velocity = temp_velocity.linear_interpolate(target, acceleration * delta)
-	
+
 	velocity.x = temp_velocity.x
 	velocity.z = temp_velocity.z
-	
+
 
 	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
-	
+
 	if Input.is_action_pressed("ui_select") && is_on_floor():
 		velocity.y = jump
 		timer = 0.8
-	
+
 	updateStatusUI(int(health),int(stamina))
 
 func _input(event):
 	if event is InputEventMouseMotion:
 		$Head.rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
 		var change = -event.relative.y * mouse_sensitivity
-		
+
 		if (change + camera_angle) < 90 and (change + camera_angle) > -90:
 			$Head/Camera.rotate_x(deg2rad(change))
 			camera_angle += change
-			
+
 func updateStatusUI(health, stamina):
 	var staminaLabel = get_node("Control/StatusUI/Stamina")
 	staminaLabel.text = str(stamina)
