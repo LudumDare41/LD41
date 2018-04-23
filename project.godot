@@ -67,4 +67,3 @@ Flashlight=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name
 
 quality/filters/anisotropic_filter_level=1
 quality/directional_shadow/size=256
-quality/filters/msaa=1

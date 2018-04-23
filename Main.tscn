@@ -46,7 +46,7 @@ auto_exposure_scale = 0.4
 auto_exposure_min_luma = 0.2
 auto_exposure_max_luma = 8.0
 auto_exposure_speed = 0.5
-ss_reflections_enabled = true
+ss_reflections_enabled = false
 ss_reflections_max_steps = 64
 ss_reflections_fade_in = 0.15
 ss_reflections_fade_out = 2.0
@@ -92,6 +92,7 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
+_sections_unfolded = [ "Auto Exposure" ]
 
 [node name="Node" type="Node" index="0"]
 
@@ -103,11 +104,11 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Labyrinth 2" parent="Levels" index="1" instance=ExtResource( 2 )]
 
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -45, 0, -124 )
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 66, -1.5, 51.8659 )
 
 [node name="FPSController" parent="." index="1" instance=ExtResource( 3 )]
 
-transform = Transform( 0.174917, 0, 0.984583, 0, 1, 0, -0.984583, 0, 0.174917, 2.89118, 2.0593, 27.6745 )
+transform = Transform( 0.174917, 0, 0.984583, 0, 1, 0, -0.984583, 0, 0.174917, -4.52391, 2.0593, 27.6745 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
 
