@@ -9,10 +9,10 @@ path="res://.import/ramp.obj-768694197d93e3c1c7386c5bde0088e5.mesh"
 files=[ "res://.import/ramp.obj-768694197d93e3c1c7386c5bde0088e5.mesh" ]
 
 source_file="res://Assets/ramp.obj"
-source_md5="1da08386693901305e01cbe7353882e2"
+source_md5="a948c0eb9c5050c54fecb5202d9f34dc"
 
 dest_files=[ "res://.import/ramp.obj-768694197d93e3c1c7386c5bde0088e5.mesh", "res://.import/ramp.obj-768694197d93e3c1c7386c5bde0088e5.mesh" ]
-dest_md5="e426377b196d1441ede5f4813ae311bb"
+dest_md5="5ac629e868dbc11944916bea5e4ee305"
 
 [params]
 
