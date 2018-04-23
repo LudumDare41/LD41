@@ -103,7 +103,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Labyrinth 2" parent="Levels" index="1" instance=ExtResource( 2 )]
 
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -45, 0, -124 )
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 66, -1.5, 51.8659 )
 
 [node name="FPSController" parent="." index="1" instance=ExtResource( 3 )]
 
