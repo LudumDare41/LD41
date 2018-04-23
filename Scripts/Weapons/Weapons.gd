@@ -24,6 +24,7 @@ onready var audioSystem = get_node("Audio")
 onready var ReloadaudioSystem = get_node("ReloadAudio")
 onready var PickUpAudio = get_node("PickUpAudio")
 onready var Shotlight = get_node("Shotlight")
+onready var NoBullets = get_node("NoBullets")
 
 #Animation
 onready var animationPlayer = get_node("Handgun/AnimationPlayer")
@@ -82,7 +83,8 @@ func pistol():
 				if result.collider is KinematicBody and result.collider.has_method("hit"):
 					var headshot = position.y > 0.96 # height of body
 					result.collider.hit(PistolData.damage, headshot)
-
+	else:
+		NoBullets.play()
 
 func reload(weapon):
 	if weapon.bulletsOutWeapon > 0 and weapon.bulletsInWeapon < weapon.magSize and !animationPlayer.get_current_animation() == "fire":
