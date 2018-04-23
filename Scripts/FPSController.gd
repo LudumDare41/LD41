@@ -26,14 +26,18 @@ var stamina = MAX_STAMINA
 var isRunning = false
 var inDemageArea = false
 
+#Audio
+onready var FootstepsAudio = get_node("Footsteps")
+var footstepSounIsPlaying = false
+var timer = 0.5
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	#register the player to the global class
 	Game.player = self
 
 func _physics_process(delta):
-	
-	
+	timer -= delta
 	if health < 1:
 		get_tree().change_scene("res://Levels/GameOver.tscn")
 	if inDemageArea and health > 0.5:
@@ -46,12 +50,16 @@ func _physics_process(delta):
 	var aim = $Head/Camera.get_global_transform().basis
 	if Input.is_action_pressed("ui_up"):
 		direction -= aim.z
+		footstep()
 	if Input.is_action_pressed("ui_down"):
 		direction += aim.z
+		footstep()
 	if Input.is_action_pressed("ui_right"):
 		direction += aim.x
+		footstep()
 	if Input.is_action_pressed("ui_left"):
 		direction -= aim.x
+		footstep()
 		
 	direction.y = 0
 	direction = direction.normalized()
@@ -87,7 +95,8 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
 	
 	if Input.is_action_pressed("ui_select") && is_on_floor():
-		velocity.y = jump	
+		velocity.y = jump
+		timer = 0.8
 	
 	updateStatusUI(int(health),int(stamina))
 
@@ -116,3 +125,8 @@ func _on_Area_body_exited(body):
 	if body.is_in_group("DemageArea"):
 		inDemageArea = false
 	pass # replace with function body
+
+func footstep():
+	if !FootstepsAudio.is_playing() and timer < 0.01:
+		FootstepsAudio.play()
+		timer = 0.5

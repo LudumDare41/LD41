@@ -12,9 +12,9 @@ var weaponID = 0
 
 # Pistol
 var PistolData = {
-	magSize = 30,
-	bulletsInWeapon = 10,
-	bulletsOutWeapon = 100,
+	magSize = 6,
+	bulletsInWeapon = 6,
+	bulletsOutWeapon = 16,
 	demage = 10
 }
 
