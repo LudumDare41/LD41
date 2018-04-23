@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Scripts/FPSController.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Weapons/Weapons.gd" type="Script" id=2]
@@ -8,17 +8,18 @@
 [ext_resource path="res://Assets/Weapons/Handgun/handgun.wav" type="AudioStream" id=6]
 [ext_resource path="res://Audio/Reload_1.wav" type="AudioStream" id=7]
 [ext_resource path="res://Audio/Pickup_Ammo.wav" type="AudioStream" id=8]
-[ext_resource path="res://Assets/Flashlight.obj" type="ArrayMesh" id=9]
-[ext_resource path="res://Assets/flashlight.png" type="Texture" id=10]
-[ext_resource path="res://Instances/Flashlight.gd" type="Script" id=11]
-[ext_resource path="res://Audio/Movement_1.wav" type="AudioStream" id=12]
-[ext_resource path="res://Audio/Player_Damage_1.wav" type="AudioStream" id=13]
-[ext_resource path="res://Assets/UI/crosshair.png.png" type="Texture" id=14]
-[ext_resource path="res://Assets/UI/crosshair2.png" type="Texture" id=15]
-[ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=16]
-[ext_resource path="res://Assets/UI/HealthIcon.png" type="Texture" id=17]
-[ext_resource path="res://Assets/UI/StaminaIcon.png" type="Texture" id=18]
-[ext_resource path="res://Assets/UI/Flashlight.png" type="Texture" id=19]
+[ext_resource path="res://Audio/Gun_Empty_2.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Flashlight.obj" type="ArrayMesh" id=10]
+[ext_resource path="res://Assets/flashlight.png" type="Texture" id=11]
+[ext_resource path="res://Instances/Flashlight.gd" type="Script" id=12]
+[ext_resource path="res://Audio/Movement_1.wav" type="AudioStream" id=13]
+[ext_resource path="res://Audio/Player_Damage_1.wav" type="AudioStream" id=14]
+[ext_resource path="res://Assets/UI/crosshair.png.png" type="Texture" id=15]
+[ext_resource path="res://Assets/UI/crosshair2.png" type="Texture" id=16]
+[ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://Assets/UI/HealthIcon.png" type="Texture" id=18]
+[ext_resource path="res://Assets/UI/StaminaIcon.png" type="Texture" id=19]
+[ext_resource path="res://Assets/UI/Flashlight.png" type="Texture" id=20]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -210,7 +211,7 @@ params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
 albedo_color = Color( 1, 1, 1, 1 )
-albedo_texture = ExtResource( 10 )
+albedo_texture = ExtResource( 11 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
@@ -249,10 +250,10 @@ height = 1.8
 size = 40
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 16 )
+font_data = ExtResource( 17 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="FPSController" type="KinematicBody" index="0"]
+[node name="FPSController" type="KinematicBody"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -435,6 +436,14 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
+[node name="NoBullets" type="AudioStreamPlayer" parent="Head/Camera/Hand" index="6"]
+
+stream = ExtResource( 9 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
 [node name="Flashlight" type="MeshInstance" parent="Head/Camera" index="1"]
 
 transform = Transform( -2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 2.79397e-08, 0.338993, -0.924779 )
@@ -447,7 +456,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 9 )
+mesh = ExtResource( 10 )
 skeleton = NodePath("..")
 material/0 = SubResource( 7 )
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
@@ -473,7 +482,7 @@ spot_range = 20.0
 spot_attenuation = 1.0
 spot_angle = 35.0
 spot_angle_attenuation = 1.0
-script = ExtResource( 11 )
+script = ExtResource( 12 )
 _sections_unfolded = [ "Light", "Shadow", "Spot" ]
 
 [node name="Collider" type="CollisionShape" parent="." index="3"]
@@ -485,7 +494,7 @@ disabled = false
 [node name="Footsteps" type="AudioStreamPlayer3D" parent="." index="4"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0116587, -0.344112, -0.0435072 )
-stream = ExtResource( 12 )
+stream = ExtResource( 13 )
 attenuation_model = 0
 unit_db = 0.0
 unit_size = 10.0
@@ -504,7 +513,7 @@ doppler_tracking = 0
 
 [node name="Hurt" type="AudioStreamPlayer3D" parent="." index="5"]
 
-stream = ExtResource( 13 )
+stream = ExtResource( 14 )
 attenuation_model = 0
 unit_db = 0.0
 unit_size = 5.0
@@ -539,14 +548,14 @@ _sections_unfolded = [ "Margin" ]
 [node name="Crosshair" type="Sprite" parent="Control" index="0"]
 
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Crosshair2" type="Sprite" parent="Control" index="1"]
 
 visible = false
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="AmmoUI" type="Container" parent="Control" index="2"]
@@ -662,7 +671,7 @@ size_flags_vertical = 1
 
 position = Vector2( 49.8344, 43.1076 )
 scale = Vector2( 0.0120465, 0.0120465 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="Health" type="Label" parent="Control/StatusUI" index="1"]
 
@@ -718,7 +727,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 position = Vector2( 265.399, 40.5352 )
 scale = Vector2( 0.0148559, 0.0148559 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="FlashlightStatus" type="Container" parent="Control" index="4"]
 
@@ -767,7 +776,7 @@ _sections_unfolded = [ "custom_fonts" ]
 position = Vector2( 255.578, 48.0673 )
 rotation = 1.58494
 scale = Vector2( 0.107652, 0.107652 )
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 
 [node name="DeathTimer" type="Timer" parent="." index="7"]
 
