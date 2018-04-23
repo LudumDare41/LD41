@@ -22,7 +22,7 @@
 [ext_resource path="res://Instances/Wall3.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Instances/Ramp.tscn" type="PackedScene" id=21]
 
-[node name="Spatial" type="Spatial"]
+[node name="Spatial" type="Spatial" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15779, -2.70603, -1.1028 )
 
@@ -1594,6 +1594,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -24 )
 [node name="OutsideWall" type="Spatial" parent="." index="2"]
 
 editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
 
 [node name="Wall outside 2" parent="OutsideWall" index="0" instance=ExtResource( 18 )]
 
@@ -1741,8 +1742,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Maze" type="Spatial" parent="." index="4"]
 
-editor/display_folded = true
-
 [node name="Wall outside 2" parent="Maze" index="0" instance=ExtResource( 18 )]
 
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.423828, 0, 9 )
@@ -1777,7 +1776,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4238, 1, 3 )
 
 [node name="Wall outside 7" parent="Maze" index="8" instance=ExtResource( 18 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4238, 0, 15 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4238, 0, 12 )
 
 [node name="Wall outside 3" parent="Maze" index="9" instance=ExtResource( 18 )]
 

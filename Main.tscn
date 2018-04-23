@@ -102,7 +102,7 @@ _sections_unfolded = [ "Auto Exposure" ]
 
 [node name="Labyrinth 2" parent="Levels" index="1" instance=ExtResource( 2 )]
 
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -45, -3, -120 )
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -45, -2, -118 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="FPSController" parent="." index="1" instance=ExtResource( 3 )]
