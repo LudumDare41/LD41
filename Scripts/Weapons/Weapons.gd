@@ -75,7 +75,8 @@ func pistol():
 					result.collider.apply_impulse(position, impulse*impactForce)
 				# for zombie
 				if result.collider is KinematicBody and result.collider.has_method("hit"):
-					result.collider.hit(PistolData.damage, position)
+					var headshot = position.y > 0.96 # height of body
+					result.collider.hit(PistolData.damage, headshot)
 
 
 func reload(weapon):

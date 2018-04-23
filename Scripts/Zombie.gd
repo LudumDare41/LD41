@@ -5,7 +5,7 @@ var dir = Vector3()
 var vel = Vector3()
 const GRAVITY = -9.8
 
-var life = 100
+var life = 80
 var dead = false
 
 
@@ -38,10 +38,14 @@ func _physics_process(delta):
 
 	vel = move_and_slide(vel, Vector3(0, 1, 0))
 
-func hit(damage, position):
+func hit(damage, headshot):
 	if not dead:
+		if headshot:
+			damage = damage*3
+			
 		life -= damage
-		hit_particle(position)
+
+		hit_particle()
 		if life <= 0:
 			die()
 			return
@@ -55,7 +59,7 @@ func die():
 	$Die.play()
 	$DeadTimer.start()
 
-func hit_particle(position):
+func hit_particle():
 	$HitParticle.emitting = true
 	$HitParticle.restart()
 
@@ -66,6 +70,5 @@ func _on_DeadTimer_timeout():
 func _on_GrowlTimer_timeout():
 	if not dead:
 		$Growl.play()
-		print(rand_range(2, 5))
 		$GrowlTimer.wait_time = rand_range(2, 5)
 		$GrowlTimer.start()
