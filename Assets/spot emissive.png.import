@@ -11,7 +11,7 @@ source_file="res://Assets/spot emissive.png"
 source_md5="20e7627b13e9fdc4394ead895bc3ed1e"
 
 dest_files=[ "res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.s3tc.stex", "res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.etc2.stex" ]
-dest_md5="bfa6229bb393132b403f90b5de43accd"
+dest_md5="db7c00ba463626f51eb5450e907c0e7b"
 
 [params]
 

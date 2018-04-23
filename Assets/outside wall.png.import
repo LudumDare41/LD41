@@ -11,7 +11,7 @@ source_file="res://Assets/outside wall.png"
 source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/outside wall.png-14127a4ba75048e926f443bf04788255.s3tc.stex", "res://.import/outside wall.png-14127a4ba75048e926f443bf04788255.etc2.stex" ]
-dest_md5="1c8d6dcca06290317c45bfbfc0d33341"
+dest_md5="9acf204c742df03996d58e7b3ed5e510"
 
 [params]
 

@@ -104,7 +104,7 @@ _sections_unfolded = [ "Albedo" ]
 material = SubResource( 3 )
 size = Vector2( 0.2, 0.2 )
 
-[node name="Zombie" type="KinematicBody" groups=[
+[node name="Zombie" type="KinematicBody" index="0" groups=[
 "DemageArea",
 ]]
 
@@ -234,15 +234,6 @@ process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = true
-
-[node name="PathFollow" type="PathFollow" parent="." index="8"]
-
-offset = 0.0
-h_offset = 0.0
-v_offset = 0.0
-rotation_mode = 3
-cubic_interp = true
-loop = true
 
 [connection signal="timeout" from="DeadTimer" to="." method="_on_DeadTimer_timeout"]
 

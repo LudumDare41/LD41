@@ -11,7 +11,7 @@ source_file="res://Assets/spot.png"
 source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/spot.png-33985ac49022ce29a5e47c8070054ab0.s3tc.stex", "res://.import/spot.png-33985ac49022ce29a5e47c8070054ab0.etc2.stex" ]
-dest_md5="c225ae4ac4b468b91511eb6e91aa4952"
+dest_md5="792478ef667feb0781450480bc4480a1"
 
 [params]
 

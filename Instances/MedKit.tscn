@@ -60,7 +60,7 @@ _sections_unfolded = [ "Albedo" ]
 
 extents = Vector3( 1, 1, 1 )
 
-[node name="MedKit" type="Spatial" index="0"]
+[node name="MedKit" type="Spatial"]
 
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
