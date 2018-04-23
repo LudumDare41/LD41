@@ -30,7 +30,7 @@
 [ext_resource path="res://Instances/Border.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Instances/Tree.tscn" type="PackedScene" id=29]
 
-[node name="Labyrinth" type="Spatial"]
+[node name="Labyrinth" type="Spatial" index="0"]
 
 [node name="Walls SCIFI" type="Spatial" parent="." index="0"]
 
@@ -1527,7 +1527,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 30, -42 )
 
 [node name="Ceiling31" parent="Ceiling" index="49" instance=ExtResource( 10 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 30, -42 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 30, -43 )
 
 [node name="Ceiling23" parent="Ceiling" index="50" instance=ExtResource( 10 )]
 
