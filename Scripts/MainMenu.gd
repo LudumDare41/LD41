@@ -9,6 +9,7 @@ func _input(event):
 		get_tree().quit()
 
 func _on_PlayButton_pressed():
+	Game.musicMenu.stop()
 	get_tree().change_scene("res://Main.tscn")
 
 func _on_ControlsButton_pressed():
