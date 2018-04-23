@@ -370,7 +370,7 @@ use_filter = false
 font_data = ExtResource( 15 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="FPSController" type="KinematicBody" index="0"]
+[node name="FPSController" type="KinematicBody"]
 
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 input_ray_pickable = true

@@ -93,7 +93,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Ambient Light", "Auto Exposure", "Background", "Fog", "Glow" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="Models" type="Spatial" parent="." index="0"]
 
@@ -111,15 +111,13 @@ environment = SubResource( 2 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.79196, -14.8125 )
 
-[node name="MedKit" type="Spatial" parent="." index="4" instance=ExtResource( 5 )]
+[node name="MedKit" parent="." index="4" instance=ExtResource( 5 )]
 
 transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -1.8437, 0, -18.1082 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="AmmoBox" type="Spatial" parent="." index="5" instance=ExtResource( 6 )]
+[node name="AmmoBox" parent="." index="5" instance=ExtResource( 6 )]
 
 transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, 1.54246, -9.53674e-07, -17.1451 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="6"]
 
