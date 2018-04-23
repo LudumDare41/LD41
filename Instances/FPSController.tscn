@@ -573,10 +573,10 @@ bus = "Master"
 
 [node name="Falshlight" type="MeshInstance" parent="Head/Camera" index="1"]
 
-transform = Transform( -2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.339659, -1.01705 )
+transform = Transform( -2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.339659, -0.923264 )
 layers = 1
 material_override = null
-cast_shadow = 1
+cast_shadow = 0
 extra_cull_margin = 0.0
 use_in_baked_light = false
 lod_min_distance = 0.0
@@ -586,11 +586,11 @@ lod_max_hysteresis = 0.0
 mesh = ExtResource( 9 )
 skeleton = NodePath("..")
 material/0 = SubResource( 11 )
-_sections_unfolded = [ "Geometry", "Transform", "material" ]
+_sections_unfolded = [ "Geometry", "Transform", "Visibility", "material" ]
 
 [node name="Flashlight" type="SpotLight" parent="Head/Camera" index="2"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.783751, -1.25077 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.607301 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
 light_energy = 1.0
