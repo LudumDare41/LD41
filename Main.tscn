@@ -41,12 +41,12 @@ fog_height_curve = 1.0
 tonemap_mode = 2
 tonemap_exposure = 1.0
 tonemap_white = 1.0
-auto_exposure_enabled = false
+auto_exposure_enabled = true
 auto_exposure_scale = 0.4
 auto_exposure_min_luma = 0.2
 auto_exposure_max_luma = 8.0
 auto_exposure_speed = 0.5
-ss_reflections_enabled = false
+ss_reflections_enabled = true
 ss_reflections_max_steps = 64
 ss_reflections_fade_in = 0.15
 ss_reflections_fade_out = 2.0
@@ -92,7 +92,7 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
-_sections_unfolded = [ "Auto Exposure" ]
+_sections_unfolded = [ "SS Reflections" ]
 
 [node name="Node" type="Node" index="0"]
 
@@ -100,14 +100,15 @@ _sections_unfolded = [ "Auto Exposure" ]
 
 [node name="Labyrinth" parent="Levels" index="0" instance=ExtResource( 1 )]
 
+_sections_unfolded = [ "Transform" ]
+
 [node name="Labyrinth 2" parent="Levels" index="1" instance=ExtResource( 2 )]
 
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -45, -2, -118 )
-_sections_unfolded = [ "Transform" ]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -45, 0, -118 )
 
 [node name="FPSController" parent="." index="1" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.66888, 2.0593, 5.68849 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34193, 2.0593, 4.4781 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
 
@@ -135,21 +136,25 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65985, 1.6799, -56.4747 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7809, 25.9535, -50.2246 )
 
-[node name="Zombie6" parent="Zombies" index="3" instance=ExtResource( 6 )]
+[node name="Zombie5" parent="Zombies" index="3" instance=ExtResource( 6 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6692, 25.9535, -47.1579 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4727, 25.9535, -43.6442 )
 
 [node name="Zombie7" parent="Zombies" index="4" instance=ExtResource( 6 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5464, 16.5292, -54.2065 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0152, 25.9535, -42.8698 )
 
-[node name="Zombie4" parent="Zombies" index="5" instance=ExtResource( 6 )]
+[node name="Zombie8" parent="Zombies" index="5" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.47808, 8.76073, -54.5273 )
+
+[node name="Zombie6" parent="Zombies" index="6" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6692, 25.9535, -47.1579 )
+
+[node name="Zombie4" parent="Zombies" index="7" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2891, 1.6799, -78.484 )
-
-[node name="Zombie5" parent="Zombies" index="6" instance=ExtResource( 6 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0785, 1.6799, -61.578 )
 
 [node name="MedKits" type="Node" parent="." index="5"]
 
