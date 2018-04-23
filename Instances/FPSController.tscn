@@ -462,7 +462,6 @@ far = 200.0
 
 [node name="Hand" type="Spatial" parent="Head/Camera" index="0"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0118456, -0.654512, 0.0210662 )
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
@@ -470,7 +469,6 @@ _sections_unfolded = [ "Transform" ]
 [node name="RifleMesh" type="MeshInstance" parent="Head/Camera/Hand" index="0"]
 
 transform = Transform( 0.272193, 0, 0, 0, -1.40905e-08, -0.322354, 0, 0.641222, -2.80287e-08, 1.21735, 0, -1.3451 )
-visible = false
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -488,7 +486,6 @@ _sections_unfolded = [ "material" ]
 [node name="PistolMesh" type="MeshInstance" parent="Head/Camera/Hand" index="1"]
 
 transform = Transform( 0.162982, 0, 0, 0, -1.11806e-08, 0.188161, 0, -0.468186, -1.50548e-08, 1.13211, 0, -1.07561 )
-visible = false
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -508,7 +505,31 @@ _sections_unfolded = [ "material" ]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.686236, -0.214034, -2.18395 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Particles" parent="Head/Camera/Hand" index="3" instance=ExtResource( 4 )]
+[node name="Shotlight" type="OmniLight" parent="Head/Camera/Hand" index="3"]
+
+transform = Transform( 0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.686236, 0.632916, -3.18938 )
+visible = false
+layers = 1
+light_color = Color( 1, 0.956055, 0.71875, 1 )
+light_energy = 2.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 4.0
+omni_attenuation = 1.0
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+_sections_unfolded = [ "Light", "Omni", "Shadow" ]
+
+[node name="Particles" parent="Head/Camera/Hand" index="4" instance=ExtResource( 4 )]
 
 transform = Transform( 0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.686236, 0.632916, -3.18938 )
 use_in_baked_light = true
@@ -519,7 +540,7 @@ process_material = SubResource( 8 )
 draw_pass_1 = SubResource( 10 )
 _sections_unfolded = [ "Draw Passes", "Geometry", "Process Material", "Time", "Transform" ]
 
-[node name="Audio" type="AudioStreamPlayer3D" parent="Head/Camera/Hand" index="4"]
+[node name="Audio" type="AudioStreamPlayer3D" parent="Head/Camera/Hand" index="5"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.597659 )
 stream = ExtResource( 6 )
@@ -540,7 +561,7 @@ attenuation_filter_db = -24.0
 doppler_tracking = 0
 _sections_unfolded = [ "Transform" ]
 
-[node name="ReloadAudio" type="AudioStreamPlayer3D" parent="Head/Camera/Hand" index="5"]
+[node name="ReloadAudio" type="AudioStreamPlayer3D" parent="Head/Camera/Hand" index="6"]
 
 stream = ExtResource( 7 )
 attenuation_model = 0
@@ -560,7 +581,7 @@ attenuation_filter_db = -24.0
 doppler_tracking = 0
 _sections_unfolded = [ "Doppler" ]
 
-[node name="PickUpAudio" type="AudioStreamPlayer" parent="Head/Camera/Hand" index="6"]
+[node name="PickUpAudio" type="AudioStreamPlayer" parent="Head/Camera/Hand" index="7"]
 
 stream = ExtResource( 8 )
 volume_db = 0.0
@@ -568,7 +589,7 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Falshlight" type="MeshInstance" parent="Head/Camera" index="1"]
+[node name="Flashlight" type="MeshInstance" parent="Head/Camera" index="1"]
 
 transform = Transform( -2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0.339659, -0.923264 )
 layers = 1
@@ -585,7 +606,7 @@ skeleton = NodePath("..")
 material/0 = SubResource( 11 )
 _sections_unfolded = [ "Geometry", "Transform", "Visibility", "material" ]
 
-[node name="Flashlight" type="SpotLight" parent="Head/Camera" index="2"]
+[node name="Spotlight" type="SpotLight" parent="Head/Camera" index="2"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.685766 )
 layers = 1

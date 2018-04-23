@@ -51,7 +51,7 @@ ss_reflections_fade_in = 0.15
 ss_reflections_fade_out = 2.0
 ss_reflections_depth_tolerance = 0.2
 ss_reflections_roughness = true
-ssao_enabled = false
+ssao_enabled = true
 ssao_radius = 1.0
 ssao_intensity = 1.0
 ssao_radius2 = 0.0
@@ -72,7 +72,7 @@ dof_blur_near_distance = 2.0
 dof_blur_near_transition = 1.0
 dof_blur_near_amount = 0.1
 dof_blur_near_quality = 0
-glow_enabled = false
+glow_enabled = true
 glow_levels/1 = false
 glow_levels/2 = false
 glow_levels/3 = true
@@ -91,7 +91,7 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
-_sections_unfolded = [ "Ambient Light", "Auto Exposure", "Background", "Fog", "Glow" ]
+_sections_unfolded = [ "Ambient Light", "Auto Exposure", "Background", "Fog" ]
 
 [node name="Node" type="Node" index="0"]
 
@@ -117,6 +117,8 @@ bus = "Master"
 
 [node name="Zombies" type="Node" parent="." index="4"]
 
+editor/display_folded = true
+
 [node name="Zombie" parent="Zombies" index="0" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.12165, 1.5582, -15.8944 )
@@ -131,13 +133,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9247, 25.5582, -45.9851 )
 
 [node name="Zombie8" parent="Zombies" index="3" instance=ExtResource( 5 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9247, 25.5582, -47.9851 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7565, 9.11144, -35.667 )
 
-[node name="Zombie4" parent="Zombies" index="4" instance=ExtResource( 5 )]
+[node name="Zombie11" parent="Zombies" index="4" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13021, 2.20154, -57.5856 )
+
+[node name="Zombie4" parent="Zombies" index="5" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9247, 25.5582, -51.9851 )
 
-[node name="Zombie10" parent="Zombies" index="5" instance=ExtResource( 5 )]
+[node name="Zombie10" parent="Zombies" index="6" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9247, 25.5582, -47.9851 )
 
