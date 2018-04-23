@@ -23,6 +23,7 @@ onready var particleSystem = get_node("Particles")
 onready var audioSystem = get_node("Audio")
 onready var ReloadaudioSystem = get_node("ReloadAudio")
 onready var PickUpAudio = get_node("PickUpAudio")
+onready var Shotlight = get_node("Shotlight")
 
 #Animation
 onready var animationPlayer = get_node("Handgun/AnimationPlayer")
@@ -44,6 +45,10 @@ func _input(event):
 		if event.button_index == 1:
 			shooting = true
 func _physics_process(delta):
+	if animationPlayer.get_current_animation() == "fire":
+		Shotlight.light_energy = lerp(Shotlight.light_energy,4,0.4)
+	else:
+		Shotlight.light_energy = lerp(Shotlight.light_energy,0,0.4)
 	animations()
 	if shooting and !animationPlayer.get_current_animation() == "reload" and !animationPlayer.get_current_animation() == "fire":
 		pistol()

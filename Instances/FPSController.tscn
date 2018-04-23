@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scripts/FPSController.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Weapons/Weapons.gd" type="Script" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://Assets/UI/HealthIcon.png" type="Texture" id=17]
 [ext_resource path="res://Assets/UI/StaminaIcon.png" type="Texture" id=18]
+[ext_resource path="res://Assets/UI/Flashlight.png" type="Texture" id=19]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -322,7 +323,6 @@ _sections_unfolded = [ "material" ]
 
 [node name="Head" type="Spatial" parent="." index="2"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.654512, 0 )
 
 [node name="Camera" type="Camera" parent="Head" index="0"]
@@ -355,10 +355,9 @@ _sections_unfolded = [ "Transform" ]
 [node name="Shotlight" type="OmniLight" parent="Head/Camera/Hand" index="1"]
 
 transform = Transform( 0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.686236, 0.632916, -3.18938 )
-visible = false
 layers = 1
 light_color = Color( 1, 0.956055, 0.71875, 1 )
-light_energy = 2.0
+light_energy = 4.0
 light_indirect_energy = 1.0
 light_negative = false
 light_specular = 0.5
@@ -370,7 +369,7 @@ shadow_bias = 0.15
 shadow_contact = 0.0
 shadow_reverse_cull_face = false
 editor_only = false
-omni_range = 4.0
+omni_range = 8.0
 omni_attenuation = 1.0
 omni_shadow_mode = 1
 omni_shadow_detail = 1
@@ -524,6 +523,7 @@ doppler_tracking = 0
 
 [node name="Control" type="Control" parent="." index="6"]
 
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -720,6 +720,55 @@ position = Vector2( 265.399, 40.5352 )
 scale = Vector2( 0.0148559, 0.0148559 )
 texture = ExtResource( 18 )
 
+[node name="FlashlightStatus" type="Container" parent="Control" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 165.0
+margin_top = -353.0
+margin_right = 617.0
+margin_bottom = -272.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Flashlight" type="Label" parent="Control/FlashlightStatus" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 303.0
+margin_top = 8.0
+margin_right = 390.0
+margin_bottom = 86.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 9 )
+text = "100"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="StaminaIcon" type="Sprite" parent="Control/FlashlightStatus" index="1"]
+
+position = Vector2( 255.578, 48.0673 )
+rotation = 1.58494
+scale = Vector2( 0.107652, 0.107652 )
+texture = ExtResource( 19 )
+
 [node name="DeathTimer" type="Timer" parent="." index="7"]
 
 process_mode = 1
@@ -727,9 +776,9 @@ wait_time = 0.2
 one_shot = true
 autostart = false
 
-[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
-
 [connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
+
+[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 
