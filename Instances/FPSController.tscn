@@ -442,12 +442,10 @@ _sections_unfolded = [ "material" ]
 
 [node name="Head" type="Spatial" parent="." index="2"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.654512, 0 )
 
 [node name="Camera" type="Camera" parent="Head" index="0"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0235043, -0.344112, -0.0645734 )
 keep_aspect = 1
 cull_mask = 1048575
@@ -589,7 +587,7 @@ _sections_unfolded = [ "Geometry", "Transform", "Visibility", "material" ]
 
 [node name="Flashlight" type="SpotLight" parent="Head/Camera" index="2"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.607301 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.685766 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
 light_energy = 1.0
@@ -606,7 +604,7 @@ shadow_reverse_cull_face = false
 editor_only = false
 spot_range = 20.0
 spot_attenuation = 1.0
-spot_angle = 35.0
+spot_angle = 40.0
 spot_angle_attenuation = 1.0
 script = ExtResource( 11 )
 _sections_unfolded = [ "Light", "Shadow", "Spot" ]
@@ -842,9 +840,9 @@ wait_time = 0.2
 one_shot = true
 autostart = false
 
-[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
-
 [connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
+
+[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 

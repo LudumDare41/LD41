@@ -11,7 +11,7 @@ source_file="res://Assets/camera.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/camera.png-8628292eedc0aea760ec26a4afd99ea1.s3tc.stex", "res://.import/camera.png-8628292eedc0aea760ec26a4afd99ea1.etc2.stex" ]
-dest_md5="2b759272a59fab9c5772ec329078595e"
+dest_md5="27dfed28789fa7127e01c8718995298e"
 
 [params]
 
