@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/ControlsMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/menuBackgroun.png" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Assets/UI/godot_icon.png" type="Texture" id=5]
 [ext_resource path="res://Assets/UI/magicavoxel-icon.png" type="Texture" id=6]
 [ext_resource path="res://Assets/UI/Blender-icon.png" type="Texture" id=7]
-[ext_resource path="res://Audio/LD41_Way_Out_Main_scene_-_Track_01_Merlin(1).ogg" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -26,7 +25,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -197,14 +196,6 @@ texture = ExtResource( 6 )
 position = Vector2( -201.556, 592.311 )
 scale = Vector2( 0.356124, 0.356124 )
 texture = ExtResource( 7 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
-
-stream = ExtResource( 8 )
-volume_db = 0.0
-autoplay = true
-mix_target = 0
-bus = "Master"
 
 [connection signal="pressed" from="To main menu/ToMainMenuButton" to="." method="_on_ToMainMenuButton_pressed"]
 

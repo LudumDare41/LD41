@@ -57,6 +57,7 @@ func _physics_process(delta):
 			health -= 100 * delta
 
 		if Input.is_action_pressed("quit"):
+			Game.musicMenu.play()
 			get_tree().change_scene("res://MainMenu.tscn")
 
 		direction = Vector3(0,0,0)
