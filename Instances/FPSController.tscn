@@ -453,10 +453,10 @@ _sections_unfolded = [ "Geometry", "Transform", "material" ]
 
 [node name="Spotlight" type="SpotLight" parent="Head/Camera" index="2"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.685766 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.622309 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
-light_energy = 1.0
+light_energy = 0.5
 light_indirect_energy = 1.0
 light_negative = false
 light_specular = 0.5
@@ -470,7 +470,7 @@ shadow_reverse_cull_face = false
 editor_only = false
 spot_range = 20.0
 spot_attenuation = 1.0
-spot_angle = 40.0
+spot_angle = 35.0
 spot_angle_attenuation = 1.0
 script = ExtResource( 11 )
 _sections_unfolded = [ "Light", "Shadow", "Spot" ]
