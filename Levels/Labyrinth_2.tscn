@@ -2984,7 +2984,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="trees" type="Spatial" parent="." index="8"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 68.3571, 0, -28.5453 )
 _sections_unfolded = [ "Transform" ]
 
@@ -3023,124 +3022,59 @@ _sections_unfolded = [ "Transform" ]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53014, 2, -8 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tree35" parent="trees" index="7" instance=ExtResource( 21 )]
+[node name="Tree36" parent="trees" index="7" instance=ExtResource( 21 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.53014, -3, 6 )
+transform = Transform( 0.999988, -0.00359755, 0.00340796, 0.00355636, 0.999922, 0.0120194, -0.00345095, -0.0120071, 0.999922, -6.88451, 1.17886, 2.21737 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tree36" parent="trees" index="8" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53014, -3, 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree37" parent="trees" index="9" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01149, -2.52856, 1.45088 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree14" parent="trees" index="10" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5301, 2, -8 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree15" parent="trees" index="11" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5301, 2, -33 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree16" parent="trees" index="12" instance=ExtResource( 21 )]
+[node name="Tree16" parent="trees" index="8" instance=ExtResource( 21 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5301, 2, -32 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tree17" parent="trees" index="13" instance=ExtResource( 21 )]
+[node name="Tree17" parent="trees" index="9" instance=ExtResource( 21 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5301, 2, -28 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tree18" parent="trees" index="14" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5301, 2, -18 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree19" parent="trees" index="15" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.5301, 2, -9 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree20" parent="trees" index="16" instance=ExtResource( 21 )]
+[node name="Tree20" parent="trees" index="10" instance=ExtResource( 21 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5301, 2, -9 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tree21" parent="trees" index="17" instance=ExtResource( 21 )]
+[node name="Tree21" parent="trees" index="11" instance=ExtResource( 21 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5301, 2, 1.90735e-06 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tree22" parent="trees" index="18" instance=ExtResource( 21 )]
+[node name="Tree22" parent="trees" index="12" instance=ExtResource( 21 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5301, 2, 7 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tree23" parent="trees" index="19" instance=ExtResource( 21 )]
+[node name="Tree23" parent="trees" index="13" instance=ExtResource( 21 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.530136, 2, 7 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tree24" parent="trees" index="20" instance=ExtResource( 21 )]
+[node name="Tree24" parent="trees" index="14" instance=ExtResource( 21 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.530136, 2, 13 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tree25" parent="trees" index="21" instance=ExtResource( 21 )]
+[node name="Tree25" parent="trees" index="15" instance=ExtResource( 21 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4699, 2, 13 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tree26" parent="trees" index="22" instance=ExtResource( 21 )]
+[node name="Tree26" parent="trees" index="16" instance=ExtResource( 21 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46986, 2, 16 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tree27" parent="trees" index="23" instance=ExtResource( 21 )]
+[node name="Tree27" parent="trees" index="17" instance=ExtResource( 21 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59725, 2, 16.0765 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree28" parent="trees" index="24" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.4027, 2, -4.92345 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree29" parent="trees" index="25" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56.4027, 2, -4.92345 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree30" parent="trees" index="26" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -69.4027, 2, -4.92345 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree31" parent="trees" index="27" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -103.403, 2, -4.92345 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree32" parent="trees" index="28" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -103.403, 2, -16.9235 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree33" parent="trees" index="29" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -91.4027, 2, -16.9235 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Tree34" parent="trees" index="30" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -91.4027, 2, -16.9235 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Spatial" type="Spatial" parent="." index="9"]
