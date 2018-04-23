@@ -54,7 +54,7 @@ func _physics_process(delta):
 			$DeathTimer.start()
 
 		if inDamageArea and not dead:
-			health -= 100 * delta
+			health -= 30 * delta
 
 		if Input.is_action_pressed("quit"):
 			Game.musicMenu.play()
@@ -131,10 +131,12 @@ func updateStatusUI(health, stamina):
 func _on_Area_body_entered(body):
 	if body.is_in_group("DemageArea"):
 		inDamageArea = true
+		$Hurt.play()
 
 func _on_Area_body_exited(body):
 	if body.is_in_group("DemageArea"):
 		inDamageArea = false
+		$Hurt.stop()
 
 
 func footstep():

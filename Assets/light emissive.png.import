@@ -11,7 +11,7 @@ source_file="res://Assets/light emissive.png"
 source_md5="20e7627b13e9fdc4394ead895bc3ed1e"
 
 dest_files=[ "res://.import/light emissive.png-47126474b87e698c92b09920a6e12826.s3tc.stex", "res://.import/light emissive.png-47126474b87e698c92b09920a6e12826.etc2.stex" ]
-dest_md5="93a5cb652dd02b2e994d24fc46d0f677"
+dest_md5="c018abdee3c59539d30684a4637b0559"
 
 [params]
 
