@@ -23,6 +23,7 @@ Game="*res://Game.gd"
 window/size/width=1280
 window/size/height=720
 window/size/resizable=false
+window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
@@ -67,3 +68,4 @@ Flashlight=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name
 
 quality/filters/anisotropic_filter_level=1
 quality/directional_shadow/size=256
+quality/shadow_atlas/size=256
