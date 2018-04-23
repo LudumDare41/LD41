@@ -1527,7 +1527,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 30, -42 )
 
 [node name="Ceiling31" parent="Ceiling" index="49" instance=ExtResource( 10 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 30, -43 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 30, -42 )
 
 [node name="Ceiling23" parent="Ceiling" index="50" instance=ExtResource( 10 )]
 
@@ -1543,7 +1543,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 30, -54 )
 
 [node name="Ceiling29" parent="Ceiling" index="53" instance=ExtResource( 10 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 30, -48 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 30, -48 )
 
 [node name="Ceiling28" parent="Ceiling" index="54" instance=ExtResource( 10 )]
 
@@ -1856,7 +1856,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 30, -36 )
 
 [node name="Aeration8" parent="Aerations" index="7" instance=ExtResource( 14 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 30, -49 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 30, -48 )
 
 [node name="Aeration6" parent="Aerations" index="8" instance=ExtResource( 14 )]
 
