@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Levels/Labyrinth.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Labyrinth_2.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Audio/Gameplay_1.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Instances/MedKit.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Instances/AmmoBox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Instances/Zombie.tscn" type="PackedScene" id=8]
 
 [sub_resource type="PanoramaSky" id=1]
 
@@ -129,18 +130,22 @@ transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 26.0623, 0, 5.23946 )
 
 [node name="AmmoBoxes" type="Node" parent="." index="5"]
 
-[node name="AmmoBox" parent="AmmoBoxes" index="0" instance=ExtResource( 7 )]
-
-transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, 3.91346, -9.53674e-07, -18.6608 )
-
-[node name="AmmoBox2" parent="AmmoBoxes" index="1" instance=ExtResource( 7 )]
+[node name="AmmoBox2" parent="AmmoBoxes" index="0" instance=ExtResource( 7 )]
 
 transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, 21.5348, 0.909179, -42.6335 )
 
-[node name="AmmoBox3" parent="AmmoBoxes" index="2" instance=ExtResource( 7 )]
+[node name="AmmoBox3" parent="AmmoBoxes" index="1" instance=ExtResource( 7 )]
 
 transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.029221, -32.901, 0.909179, -77.893 )
 
 [node name="Node" type="Node" parent="." index="6"]
+
+[node name="Zombie" parent="Node" index="0" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107578, 1.75794, -2.72615 )
+
+[node name="Zombie2" parent="Node" index="1" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45455, 1.75794, -34.4996 )
 
 

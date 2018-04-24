@@ -11,7 +11,7 @@ source_file="res://Assets/border.png"
 source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/border.png-b4d2264339d7afc72f4c1cf5638f806c.s3tc.stex", "res://.import/border.png-b4d2264339d7afc72f4c1cf5638f806c.etc2.stex" ]
-dest_md5="a6903ba46a474dbc851ca60585959a3d"
+dest_md5="495566658d805bae2f5cfe4cad449f42"
 
 [params]
 
