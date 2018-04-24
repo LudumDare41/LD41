@@ -104,7 +104,7 @@ _sections_unfolded = [ "Albedo" ]
 material = SubResource( 3 )
 size = Vector2( 0.2, 0.2 )
 
-[node name="Zombie" type="KinematicBody" index="0" groups=[
+[node name="Zombie" type="RigidBody" index="0" groups=[
 "DemageArea",
 ]]
 
@@ -112,13 +112,27 @@ input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
 collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = false
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
 axis_lock_linear_x = false
 axis_lock_linear_y = false
 axis_lock_linear_z = false
-axis_lock_angular_x = false
+axis_lock_angular_x = true
 axis_lock_angular_y = true
-axis_lock_angular_z = false
-collision/safe_margin = 0.001
+axis_lock_angular_z = true
+linear_velocity = Vector3( 0, 0, 0 )
+linear_damp = -1.0
+angular_velocity = Vector3( 0, 0, 0 )
+angular_damp = -1.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Axis Lock" ]
 speed = 2.5
@@ -234,9 +248,5 @@ process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = true
-
-[connection signal="timeout" from="DeadTimer" to="." method="_on_DeadTimer_timeout"]
-
-[connection signal="timeout" from="GrowlTimer" to="." method="_on_GrowlTimer_timeout"]
 
 
