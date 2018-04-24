@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallbroken.obj-2146b57488f9e08f67dc762e430ee018.mesh"
+
+[deps]
+
+files=[ "res://.import/wallbroken.obj-2146b57488f9e08f67dc762e430ee018.mesh" ]
+
+source_file="res://Assets/wallbroken.obj"
+source_md5="ff31605e47adf06e22b8fccd93aac865"
+
+dest_files=[ "res://.import/wallbroken.obj-2146b57488f9e08f67dc762e430ee018.mesh", "res://.import/wallbroken.obj-2146b57488f9e08f67dc762e430ee018.mesh" ]
+dest_md5="977706f22fef53c7a7b09bc00568c90e"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
