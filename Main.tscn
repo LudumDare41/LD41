@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Levels/Labyrinth.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Labyrinth_2.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Audio/Gameplay_1.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Instances/MedKit.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Instances/AmmoBox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Instances/Zombie.tscn" type="PackedScene" id=8]
 
 [sub_resource type="PanoramaSky" id=1]
 
@@ -45,7 +46,7 @@ auto_exposure_scale = 0.4
 auto_exposure_min_luma = 0.2
 auto_exposure_max_luma = 8.0
 auto_exposure_speed = 0.5
-ss_reflections_enabled = false
+ss_reflections_enabled = true
 ss_reflections_max_steps = 64
 ss_reflections_fade_in = 0.15
 ss_reflections_fade_out = 2.0
@@ -72,7 +73,7 @@ dof_blur_near_distance = 2.0
 dof_blur_near_transition = 1.0
 dof_blur_near_amount = 0.1
 dof_blur_near_quality = 0
-glow_enabled = false
+glow_enabled = true
 glow_levels/1 = false
 glow_levels/2 = false
 glow_levels/3 = true
@@ -91,7 +92,7 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
-_sections_unfolded = [ "Auto Exposure" ]
+_sections_unfolded = [ "Glow" ]
 
 [node name="Node" type="Node" index="0"]
 
@@ -140,5 +141,71 @@ transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0
 [node name="AmmoBox3" parent="AmmoBoxes" index="2" instance=ExtResource( 7 )]
 
 transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.029221, -32.901, 0.909179, -77.893 )
+
+[node name="Node" type="Node" parent="." index="6"]
+
+[node name="Zombie" parent="Node" index="0" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.99456, 0 )
+
+[node name="Zombie2" parent="Node" index="1" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.29858, 1.99457, -48.0009 )
+
+[node name="Zombie3" parent="Node" index="2" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.035, 1.99457, -73.0767 )
+
+[node name="Zombie4" parent="Node" index="3" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.4576, 1.99457, -48.314 )
+
+[node name="Zombie13" parent="Node" index="4" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3995, 25.9973, -52.7266 )
+
+[node name="Zombie15" parent="Node" index="5" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7058, 26.4383, 13.8997 )
+
+[node name="Zombie14" parent="Node" index="6" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3072, 14.1732, 18.9987 )
+
+[node name="Zombie16" parent="Node" index="7" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3416, 8.91342, 12.206 )
+
+[node name="Zombie5" parent="Node" index="8" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65004, 1.99457, -86.3462 )
+
+[node name="Zombie6" parent="Node" index="9" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9836, 1.99457, -17.7997 )
+
+[node name="Zombie7" parent="Node" index="10" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9255, 1.99457, -1.17823 )
+
+[node name="Zombie8" parent="Node" index="11" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.7063, 1.99457, -49.6058 )
+
+[node name="Zombie9" parent="Node" index="12" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.6487, 1.99457, 11.7847 )
+
+[node name="Zombie10" parent="Node" index="13" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5442, 1.99457, 19.5484 )
+
+[node name="Zombie11" parent="Node" index="14" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98113, 1.99457, 29.5248 )
+
+[node name="Zombie12" parent="Node" index="15" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39.2052, 1.99457, -88.9139 )
 
 

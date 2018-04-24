@@ -61,7 +61,7 @@ _sections_unfolded = [ "Albedo", "Roughness" ]
 radius = 4.0
 height = 25.0
 
-[node name="Tree" type="Spatial" index="0"]
+[node name="Tree" type="Spatial"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
