@@ -126,7 +126,7 @@ bus = "Master"
 
 [node name="MedKit" parent="MedKits" index="0" instance=ExtResource( 6 )]
 
-transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 26.0623, 0, 5.23946 )
+transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -46.0366, 0, -60.116 )
 
 [node name="AmmoBoxes" type="Node" parent="." index="5"]
 
@@ -134,9 +134,17 @@ transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 26.0623, 0, 5.23946 )
 
 transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, 21.5348, 0.909179, -42.6335 )
 
-[node name="AmmoBox3" parent="AmmoBoxes" index="1" instance=ExtResource( 7 )]
+[node name="AmmoBox4" parent="AmmoBoxes" index="1" instance=ExtResource( 7 )]
+
+transform = Transform( 0.00615137, 0, 0.0293626, 0, 0.03, 0, -0.0293626, 0, 0.00615137, 40.1731, 7, 5.63144 )
+
+[node name="AmmoBox3" parent="AmmoBoxes" index="2" instance=ExtResource( 7 )]
 
 transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.029221, -32.901, 0.909179, -77.893 )
+
+[node name="AmmoBox5" parent="AmmoBoxes" index="3" instance=ExtResource( 7 )]
+
+transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.029221, 25.6102, 0, -18.2904 )
 
 [node name="Node" type="Node" parent="." index="6"]
 
@@ -144,8 +152,104 @@ transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107578, 1.75794, -2.72615 )
 
-[node name="Zombie2" parent="Node" index="1" instance=ExtResource( 8 )]
+[node name="Zombie3" parent="Node" index="1" instance=ExtResource( 8 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45455, 1.75794, -34.4996 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4192, 1.75794, -30.7507 )
+
+[node name="Zombie2" parent="Node" index="2" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.11867, 1.75794, -56.8539 )
+
+[node name="Zombie14" parent="Node" index="3" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.39503, 1.75794, -86.7405 )
+
+[node name="Zombie15" parent="Node" index="4" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.6571, 1.75794, -89.8522 )
+
+[node name="Zombie17" parent="Node" index="5" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9657, 1.75794, -90.4311 )
+
+[node name="Zombie18" parent="Node" index="6" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.4181, 1.75794, -59.8209 )
+
+[node name="Zombie19" parent="Node" index="7" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.7412, 1.75794, -30.187 )
+
+[node name="Zombie20" parent="Node" index="8" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.6129, 1.75794, -73.9979 )
+
+[node name="Zombie21" parent="Node" index="9" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.2998, 1.75794, 48.1739 )
+
+[node name="Zombie22" parent="Node" index="10" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91.7317, 1.75794, 86.7627 )
+
+[node name="Zombie23" parent="Node" index="11" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.50381, 1.75794, 80.3634 )
+
+[node name="Zombie24" parent="Node" index="12" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9142, 1.75794, 114.624 )
+
+[node name="Zombie25" parent="Node" index="13" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.7826, 1.75794, 104.976 )
+
+[node name="Zombie26" parent="Node" index="14" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 57.8815, 1.75794, 101.486 )
+
+[node name="Zombie16" parent="Node" index="15" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.815, 1.75794, -90.4311 )
+
+[node name="Zombie4" parent="Node" index="16" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.3336, 1.75794, -9.58424 )
+
+[node name="Zombie5" parent="Node" index="17" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5408, 1.75794, 12.4015 )
+
+[node name="Zombie6" parent="Node" index="18" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8274, 1.75794, -18.0459 )
+
+[node name="Zombie7" parent="Node" index="19" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1168, 1.75794, -3.53924 )
+
+[node name="Zombie8" parent="Node" index="20" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.5587, 1.75794, -50.1247 )
+
+[node name="Zombie9" parent="Node" index="21" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.59791, 26.6868, -45.2962 )
+
+[node name="Zombie10" parent="Node" index="22" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.322657, 26.6868, 18.4077 )
+
+[node name="Zombie11" parent="Node" index="23" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5154, 9.02197, 11.6915 )
+
+[node name="Zombie12" parent="Node" index="24" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2252, 1.37929, 43.9742 )
+
+[node name="Zombie13" parent="Node" index="25" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3314, 11.9626, -49.0067 )
 
 
