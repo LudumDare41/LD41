@@ -98,6 +98,8 @@ _sections_unfolded = [ "Glow" ]
 
 [node name="Levels" type="Spatial" parent="." index="0"]
 
+editor/display_folded = true
+
 [node name="Labyrinth" parent="Levels" index="0" instance=ExtResource( 1 )]
 
 _sections_unfolded = [ "Transform" ]
@@ -124,11 +126,15 @@ bus = "Master"
 
 [node name="MedKits" type="Node" parent="." index="4"]
 
+editor/display_folded = true
+
 [node name="MedKit" parent="MedKits" index="0" instance=ExtResource( 6 )]
 
 transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -46.0366, 0, -60.116 )
 
 [node name="AmmoBoxes" type="Node" parent="." index="5"]
+
+editor/display_folded = true
 
 [node name="AmmoBox2" parent="AmmoBoxes" index="0" instance=ExtResource( 7 )]
 
@@ -147,6 +153,8 @@ transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.
 transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.029221, 25.6102, 0, -18.2904 )
 
 [node name="Node" type="Node" parent="." index="6"]
+
+editor/display_folded = true
 
 [node name="Zombie" parent="Node" index="0" instance=ExtResource( 8 )]
 
@@ -251,5 +259,35 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2252, 1.37929, 43.9742 )
 [node name="Zombie13" parent="Node" index="25" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3314, 11.9626, -49.0067 )
+
+[node name="BakedLightmap" type="BakedLightmap" parent="." index="7"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29411, 19.7828, -34.4116 )
+layers = 1
+bake_cell_size = 0.25
+bake_quality = 1
+bake_mode = 0
+bake_propagation = 1.0
+bake_energy = 1.0
+bake_hdr = false
+bake_extents = Vector3( 58.8604, 21.6853, 74.3944 )
+capture_cell_size = 0.5
+image_path = "."
+light_data = null
+
+[node name="BakedLightmap2" type="BakedLightmap" parent="." index="8"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.0094, 11.5409, 81.4399 )
+layers = 1
+bake_cell_size = 0.25
+bake_quality = 1
+bake_mode = 0
+bake_propagation = 1.0
+bake_energy = 1.0
+bake_hdr = false
+bake_extents = Vector3( 72.4536, 15.9909, 53.721 )
+capture_cell_size = 0.5
+image_path = "."
+light_data = null
 
 
