@@ -1233,41 +1233,41 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -12 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -12 )
 
-[node name="Floor2" parent="Floor" index="61" instance=ExtResource( 7 )]
-
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 0, -6 )
-
-[node name="Floor3" parent="Floor" index="62" instance=ExtResource( 7 )]
+[node name="Floor3" parent="Floor" index="61" instance=ExtResource( 7 )]
 
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0, 12 )
 
-[node name="Floor blood" parent="Floor" index="63" instance=ExtResource( 8 )]
+[node name="Floor blood" parent="Floor" index="62" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -12 )
 
-[node name="Floor blood3" parent="Floor" index="64" instance=ExtResource( 8 )]
+[node name="Floor blood3" parent="Floor" index="63" instance=ExtResource( 8 )]
 
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, -12 )
 
-[node name="Floor blood4" parent="Floor" index="65" instance=ExtResource( 8 )]
+[node name="Floor blood4" parent="Floor" index="64" instance=ExtResource( 8 )]
 
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9, 24.1094, -48 )
 
-[node name="Floor blood6" parent="Floor" index="66" instance=ExtResource( 8 )]
+[node name="Floor blood6" parent="Floor" index="65" instance=ExtResource( 8 )]
 
 transform = Transform( -1, 0, -2.23517e-08, 0, 1, 0, 2.23517e-08, 0, -1, -15, 24.1094, -42 )
 
-[node name="Floor blood7" parent="Floor" index="67" instance=ExtResource( 8 )]
+[node name="Floor blood7" parent="Floor" index="66" instance=ExtResource( 8 )]
 
 transform = Transform( 7.45058e-09, 0, 1, 0, 1, 0, -1, 0, 7.45058e-09, -9, 24.1094, -24 )
 
-[node name="Floor blood5" parent="Floor" index="68" instance=ExtResource( 8 )]
+[node name="Floor blood5" parent="Floor" index="67" instance=ExtResource( 8 )]
 
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 24.1094, -54 )
 
-[node name="Floor blood2" parent="Floor" index="69" instance=ExtResource( 8 )]
+[node name="Floor blood2" parent="Floor" index="68" instance=ExtResource( 8 )]
 
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 0, -18 )
+
+[node name="Floor2" parent="Floor" index="69" instance=ExtResource( 7 )]
+
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 0, -6 )
 
 [node name="Crates" type="Spatial" parent="." index="2"]
 
