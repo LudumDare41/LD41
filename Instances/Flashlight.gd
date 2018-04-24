@@ -21,7 +21,7 @@ func _process(delta):
 		flashlightStatus = !flashlightStatus
 	if flashlightStatus and battery > 1:
 		light_energy = default_light_energy
-		battery -= 3.5 * delta
+		battery -= 1.5 * delta
 	else:
 		light_energy = 0
 		battery += 3 * delta
