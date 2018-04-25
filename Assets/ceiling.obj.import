@@ -9,10 +9,10 @@ path="res://.import/ceiling.obj-794c7085b58f6213ffc704ae6a073cde.mesh"
 files=[ "res://.import/ceiling.obj-794c7085b58f6213ffc704ae6a073cde.mesh" ]
 
 source_file="res://Assets/ceiling.obj"
-source_md5="0039b964f3de86193e25f2e9739fb294"
+source_md5="352341468e1a7037a94bc6f14054ffe3"
 
 dest_files=[ "res://.import/ceiling.obj-794c7085b58f6213ffc704ae6a073cde.mesh", "res://.import/ceiling.obj-794c7085b58f6213ffc704ae6a073cde.mesh" ]
-dest_md5="d9fc14b80d045be965006077c8a255d4"
+dest_md5="4198f0e6536cfe37f2b9636759a315c0"
 
 [params]
 

@@ -8,10 +8,10 @@ path.etc2="res://.import/border.png-b4d2264339d7afc72f4c1cf5638f806c.etc2.stex"
 [deps]
 
 source_file="res://Assets/border.png"
-source_md5="268c9d052fbb1eb6f3a0a9448806a2ae"
+source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/border.png-b4d2264339d7afc72f4c1cf5638f806c.s3tc.stex", "res://.import/border.png-b4d2264339d7afc72f4c1cf5638f806c.etc2.stex" ]
-dest_md5="d17d3a62bd72af16ceab81a9e93a2b91"
+dest_md5="1203db54c76f4741978803d820095049"
 
 [params]
 

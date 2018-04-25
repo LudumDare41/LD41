@@ -8,10 +8,10 @@ path.etc2="res://.import/floor blood.png-2052f37393dfbdddd5d9e5c004144a8a.etc2.s
 [deps]
 
 source_file="res://Assets/floor blood.png"
-source_md5="145c6eb7b42856afc46666159816540d"
+source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/floor blood.png-2052f37393dfbdddd5d9e5c004144a8a.s3tc.stex", "res://.import/floor blood.png-2052f37393dfbdddd5d9e5c004144a8a.etc2.stex" ]
-dest_md5="7e62c84a3753277f3074afbb6c589195"
+dest_md5="54bb9aa2fec032de055424b128441b67"
 
 [params]
 

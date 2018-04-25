@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/camera.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Assets/camera.png" type="Texture" id=2]
-[ext_resource path="res://Assets/camera emisive.png" type="Texture" id=3]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -34,12 +33,7 @@ metallic_specular = 0.5
 metallic_texture_channel = 0
 roughness = 0.9
 roughness_texture_channel = 0
-emission_enabled = true
-emission = Color( 0, 0, 0, 1 )
-emission_energy = 1.0
-emission_operator = 0
-emission_on_uv2 = false
-emission_texture = ExtResource( 3 )
+emission_enabled = false
 normal_enabled = false
 rim_enabled = false
 clearcoat_enabled = false
@@ -60,9 +54,9 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Emission", "Roughness" ]
+_sections_unfolded = [ "Albedo", "Emission", "Roughness" ]
 
-[node name="Camera" type="Spatial"]
+[node name="Camera" type="Spatial" index="0"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 

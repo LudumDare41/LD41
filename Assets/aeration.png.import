@@ -8,10 +8,10 @@ path.etc2="res://.import/aeration.png-c5834308ddc915a8b84d10a8edeff1d3.etc2.stex
 [deps]
 
 source_file="res://Assets/aeration.png"
-source_md5="08baa11f4fe4749d0caea278bc3359c0"
+source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/aeration.png-c5834308ddc915a8b84d10a8edeff1d3.s3tc.stex", "res://.import/aeration.png-c5834308ddc915a8b84d10a8edeff1d3.etc2.stex" ]
-dest_md5="e15c7a510135cc1f50a2528c399ccb45"
+dest_md5="08ba04a4f498339aedfcca3bad4cdcfa"
 
 [params]
 

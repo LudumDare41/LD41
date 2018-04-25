@@ -8,10 +8,10 @@ path.etc2="res://.import/door.png-a542cb27d09af7bf397856fe9af441c6.etc2.stex"
 [deps]
 
 source_file="res://Assets/door.png"
-source_md5="6b796219fa0536effb16c5d770f3c441"
+source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/door.png-a542cb27d09af7bf397856fe9af441c6.s3tc.stex", "res://.import/door.png-a542cb27d09af7bf397856fe9af441c6.etc2.stex" ]
-dest_md5="47f6e7b372673e55380b899a8dfd099a"
+dest_md5="798b576741d06f48045f48b0cc46f652"
 
 [params]
 
