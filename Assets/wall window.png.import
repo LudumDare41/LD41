@@ -11,7 +11,7 @@ source_file="res://Assets/wall window.png"
 source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/wall window.png-35912acf70268c2a8ddcaa0ee837d30a.s3tc.stex", "res://.import/wall window.png-35912acf70268c2a8ddcaa0ee837d30a.etc2.stex" ]
-dest_md5="1486dcbf0389164e984909f0a79c81f9"
+dest_md5="f633c2d52f122d312ee565d5b73a5bca"
 
 [params]
 

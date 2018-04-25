@@ -11,7 +11,7 @@ source_file="res://Assets/camera emisive.png"
 source_md5="1df2dce28af6f5b23127a420958ddca0"
 
 dest_files=[ "res://.import/camera emisive.png-a5dba187275adb2c2e9599d986abae0b.s3tc.stex", "res://.import/camera emisive.png-a5dba187275adb2c2e9599d986abae0b.etc2.stex" ]
-dest_md5="a574f32ad22e582e34d969a70f8e6eb2"
+dest_md5="bf4df09bef9bb5d6a6784bd761d4a3fe"
 
 [params]
 

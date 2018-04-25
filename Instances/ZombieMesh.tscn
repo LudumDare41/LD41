@@ -6,6 +6,7 @@
 
 [node name="Zombie" parent="Armature/Skeleton" index="0"]
 
-_sections_unfolded = [ "material" ]
+use_in_baked_light = false
+_sections_unfolded = [ "Geometry", "material" ]
 
 

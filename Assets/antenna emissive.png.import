@@ -11,7 +11,7 @@ source_file="res://Assets/antenna emissive.png"
 source_md5="dd7d4590fe5f41f988a3691714f49885"
 
 dest_files=[ "res://.import/antenna emissive.png-cdeecd6dd18994002bb5636cad7f7bcf.s3tc.stex", "res://.import/antenna emissive.png-cdeecd6dd18994002bb5636cad7f7bcf.etc2.stex" ]
-dest_md5="65a63247d68571a798e7a848af2c4618"
+dest_md5="039f61f9070cf272800c6953b522bc6e"
 
 [params]
 

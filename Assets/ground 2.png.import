@@ -11,7 +11,7 @@ source_file="res://Assets/ground 2.png"
 source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/ground 2.png-887f5cad2f6e9ff33306b47d989549b6.s3tc.stex", "res://.import/ground 2.png-887f5cad2f6e9ff33306b47d989549b6.etc2.stex" ]
-dest_md5="43edff228d30d987be28107f93b81ffd"
+dest_md5="4259e6003e5140404e23c058777d2afa"
 
 [params]
 

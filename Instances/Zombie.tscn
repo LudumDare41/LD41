@@ -6,7 +6,6 @@
 [ext_resource path="res://Assets/Audio/Zombie/Zombie_Growl_1.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Audio/Zombie/Zombie_Hit_2.wav" type="AudioStream" id=5]
 
-
 [sub_resource type="CapsuleShape" id=1]
 
 radius = 0.44
@@ -105,7 +104,7 @@ _sections_unfolded = [ "Albedo" ]
 material = SubResource( 3 )
 size = Vector2( 0.2, 0.2 )
 
-[node name="Zombie" type="KinematicBody" index="0" groups=[
+[node name="Zombie" type="KinematicBody" groups=[
 "DemageArea",
 ]]
 

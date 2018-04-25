@@ -36,7 +36,7 @@ roughness = 0.9
 roughness_texture_channel = 0
 emission_enabled = true
 emission = Color( 0, 0, 0, 1 )
-emission_energy = 0.5
+emission_energy = 0.05
 emission_operator = 0
 emission_on_uv2 = false
 emission_texture = ExtResource( 3 )
@@ -60,7 +60,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Roughness" ]
+_sections_unfolded = [ "Emission", "Roughness" ]
 
 [sub_resource type="BoxShape" id=2]
 
@@ -108,7 +108,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27717, 0.98393 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
 light_energy = 0.1
-light_indirect_energy = 1.0
+light_indirect_energy = 0.1
 light_negative = false
 light_specular = 0.5
 light_bake_mode = 1

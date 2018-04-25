@@ -19,11 +19,6 @@
 [ext_resource path="res://Assets/UI/StaminaIcon.png" type="Texture" id=17]
 [ext_resource path="res://Assets/UI/Flashlight.png" type="Texture" id=18]
 
-
-
-
-
-
 [sub_resource type="CapsuleShape" id=1]
 
 radius = 1.0
@@ -59,7 +54,7 @@ params_point_size = 1.0
 params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
-albedo_color = Color( 0.107881, 0.816406, 0.0478363, 1 )
+albedo_color = Color( 0.155823, 0.164026, 0.179688, 1 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
@@ -253,8 +248,6 @@ disabled = false
 
 [node name="Body" type="Spatial" parent="." index="1"]
 
-editor/display_folded = true
-
 [node name="CharacterMesh" type="MeshInstance" parent="Body" index="0"]
 
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
@@ -270,7 +263,7 @@ lod_max_hysteresis = 0.0
 mesh = SubResource( 2 )
 skeleton = NodePath("..")
 material/0 = SubResource( 3 )
-_sections_unfolded = [ "material" ]
+_sections_unfolded = [ "Geometry", "material" ]
 
 [node name="Head" type="Spatial" parent="." index="2"]
 
@@ -414,8 +407,8 @@ skeleton = NodePath("..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.622309 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
-light_energy = 0.5
-light_indirect_energy = 1.0
+light_energy = 0.4
+light_indirect_energy = 0.4
 light_negative = false
 light_specular = 0.5
 light_bake_mode = 1
@@ -733,9 +726,9 @@ wait_time = 0.2
 one_shot = true
 autostart = false
 
-[connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
-
 [connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
+
+[connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 
