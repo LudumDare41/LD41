@@ -36,7 +36,7 @@ roughness = 0.75
 roughness_texture_channel = 0
 emission_enabled = true
 emission = Color( 0, 0, 0, 1 )
-emission_energy = 1.0
+emission_energy = 0.5
 emission_operator = 0
 emission_on_uv2 = false
 emission_texture = ExtResource( 3 )
@@ -150,8 +150,9 @@ tracks/4/keys = PoolRealArray( 0, 1, 0.601671, -1.32374, -0.386095, 0.140916, -0
 
 [node name="Glock" parent="Armature/Skeleton" index="0"]
 
+use_in_baked_light = false
 material/0 = SubResource( 1 )
-_sections_unfolded = [ "material" ]
+_sections_unfolded = [ "Geometry", "material" ]
 
 [node name="AnimationPlayer" parent="." index="1"]
 

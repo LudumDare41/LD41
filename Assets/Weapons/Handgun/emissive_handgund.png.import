@@ -11,7 +11,7 @@ source_file="res://Assets/Weapons/Handgun/emissive_handgund.png"
 source_md5="92cea4497916ec6b0f6fa716f2dddea3"
 
 dest_files=[ "res://.import/emissive_handgund.png-054dc17475c6f60374b6e1effa1a47f7.s3tc.stex", "res://.import/emissive_handgund.png-054dc17475c6f60374b6e1effa1a47f7.etc2.stex" ]
-dest_md5="858934ecc5c9a8978c2e2ba4dd01fc41"
+dest_md5="bd6838a09f2e748f9fb1cfd4008b287a"
 
 [params]
 
