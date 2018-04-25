@@ -8,6 +8,8 @@ const GRAVITY = -9.8
 var life = 80
 var dead = false
 
+var following = false
+
 
 func _physics_process(delta):
 
@@ -20,6 +22,13 @@ func _physics_process(delta):
 
 	dir = Game.player.translation - self.translation
 	dir.y = 0
+	
+	# if player is far from zombie, don't follow him
+	if not following and (dir.x > 16 or dir.z > 16):
+		return
+	else:
+		following = true
+	
 	dir = dir.normalized()
 
 	vel.y += GRAVITY * delta
