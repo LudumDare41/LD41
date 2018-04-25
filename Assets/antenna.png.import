@@ -8,10 +8,10 @@ path.etc2="res://.import/antenna.png-9436fa3435bc23b83c94393002e7acdf.etc2.stex"
 [deps]
 
 source_file="res://Assets/antenna.png"
-source_md5="6b32cca2e38be28f244bfc1c48e3850e"
+source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/antenna.png-9436fa3435bc23b83c94393002e7acdf.s3tc.stex", "res://.import/antenna.png-9436fa3435bc23b83c94393002e7acdf.etc2.stex" ]
-dest_md5="3f44b66cb7dce982878f24c7fcd9274d"
+dest_md5="00ef6c729da491315a0c533c850a005b"
 
 [params]
 

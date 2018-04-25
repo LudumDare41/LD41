@@ -8,10 +8,10 @@ path.etc2="res://.import/light emissive.png-47126474b87e698c92b09920a6e12826.etc
 [deps]
 
 source_file="res://Assets/light emissive.png"
-source_md5="c441b05cbee486ed55b5ff11fba4508b"
+source_md5="d3dc2fd6fc83d07c7968ee20a834dd67"
 
 dest_files=[ "res://.import/light emissive.png-47126474b87e698c92b09920a6e12826.s3tc.stex", "res://.import/light emissive.png-47126474b87e698c92b09920a6e12826.etc2.stex" ]
-dest_md5="e456ecce6908ee72433675e1972c5982"
+dest_md5="825a2fba2b819212895887b827ed19c8"
 
 [params]
 

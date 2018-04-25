@@ -8,10 +8,10 @@ path.etc2="res://.import/ramp.png-472a2040dbae529466c6054544c38cac.etc2.stex"
 [deps]
 
 source_file="res://Assets/ramp.png"
-source_md5="6f0b259993e19aa5731304575346a6f6"
+source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/ramp.png-472a2040dbae529466c6054544c38cac.s3tc.stex", "res://.import/ramp.png-472a2040dbae529466c6054544c38cac.etc2.stex" ]
-dest_md5="c6121e31adde1443a3a01ea85e4414ba"
+dest_md5="b95e162ac5a0daac9554913c56aa4c7e"
 
 [params]
 

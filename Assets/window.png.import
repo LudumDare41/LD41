@@ -8,10 +8,10 @@ path.etc2="res://.import/window.png-9269117c8439c65de1d1a3b508c88e06.etc2.stex"
 [deps]
 
 source_file="res://Assets/window.png"
-source_md5="61dcda9e174031aa9c31d371c7b643e4"
+source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/window.png-9269117c8439c65de1d1a3b508c88e06.s3tc.stex", "res://.import/window.png-9269117c8439c65de1d1a3b508c88e06.etc2.stex" ]
-dest_md5="6c0cce1cbd51f1a04dcb7298dd48c386"
+dest_md5="ce4d43f17091b524ab81e61188c46133"
 
 [params]
 
