@@ -7,6 +7,9 @@ var player
 var deathScreenShot
 var musicMenu
 
+var high_res_voxel = true
+var postproc_effects = true
+
 func _ready():
 	musicMenu = AudioStreamPlayer.new()
 	musicMenu.stream = load("res://Audio/LD41_Way_Out_Main_scene_-_Track_01_Merlin(1).ogg")

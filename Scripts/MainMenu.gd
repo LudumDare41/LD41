@@ -20,3 +20,10 @@ func _on_ExitButton_pressed():
 
 func _on_CreditsButton_pressed():
 	get_tree().change_scene("res://CreditsMenu.tscn")
+
+
+func _on_HighResVoxel_toggled(button_pressed):
+	Game.high_res_voxel = button_pressed
+
+func _on_PostprocEffects_toggled(button_pressed):
+	Game.postproc_effects = button_pressed
