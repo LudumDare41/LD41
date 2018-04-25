@@ -88,7 +88,7 @@ func _physics_process(delta):
 			speed = MAX_RUNNING_SPEED
 		else:
 			if stamina < 100:
-				stamina += 4 * delta
+				stamina += 6 * delta
 			speed = MAX_SPEED
 		# where would the player go at max speed
 		var target = direction * speed
