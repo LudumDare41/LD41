@@ -155,8 +155,6 @@ bus = "Master"
 
 [node name="MedKits" type="Node" parent="." index="5"]
 
-editor/display_folded = true
-
 [node name="MedKit3" parent="MedKits" index="0" instance=ExtResource( 6 )]
 
 transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.0699998, 0.000141948, -0.0699994, 0.000119187, -0.000262151, 3.10444, 0, -48.116 )
@@ -166,8 +164,6 @@ transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.069
 transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 40.1585, -0.581193, 115.656 )
 
 [node name="AmmoBoxes" type="Node" parent="." index="6"]
-
-editor/display_folded = true
 
 [node name="AmmoBox2" parent="AmmoBoxes" index="0" instance=ExtResource( 7 )]
 
@@ -187,7 +183,7 @@ transform = Transform( 0.0160754, 0, 0.0253295, 0, 0.03, 0, -0.0253295, 0, 0.016
 
 [node name="AmmoBox4" parent="AmmoBoxes" index="4" instance=ExtResource( 7 )]
 
-transform = Transform( 0.00615137, 0, 0.0293626, 0, 0.03, 0, -0.0293626, 0, 0.00615137, 40.1731, 7, 5.63144 )
+transform = Transform( 0.00615137, 0, 0.0293626, 0, 0.03, 0, -0.0293626, 0, 0.00615137, 32.7574, 6.84928, 6.03336 )
 
 [node name="AmmoBox3" parent="AmmoBoxes" index="5" instance=ExtResource( 7 )]
 
