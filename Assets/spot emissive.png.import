@@ -8,10 +8,10 @@ path.etc2="res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.etc2
 [deps]
 
 source_file="res://Assets/spot emissive.png"
-source_md5="a0f3c5403073381802bd65cbd1b15209"
+source_md5="97d2a3b274f90fcd01766198da40f072"
 
 dest_files=[ "res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.s3tc.stex", "res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.etc2.stex" ]
-dest_md5="24b17c11e2c166d9414b0c5fa4c5f4f7"
+dest_md5="da4089bc3fe459b6987f084494403154"
 
 [params]
 

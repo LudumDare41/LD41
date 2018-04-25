@@ -20,13 +20,13 @@ background_mode = 2
 background_sky = SubResource( 1 )
 background_sky_custom_fov = 0.0
 background_color = Color( 1, 1, 1, 1 )
-background_energy = 0.01
+background_energy = 0.02
 background_canvas_max_layer = 0
 ambient_light_color = Color( 0, 0, 0, 1 )
 ambient_light_energy = 1.0
 ambient_light_sky_contribution = 1.0
 fog_enabled = true
-fog_color = Color( 0, 0.0136719, 0.0273438, 1 )
+fog_color = Color( 0.0057373, 0.0184937, 0.03125, 1 )
 fog_sun_color = Color( 1, 0.9, 0.7, 1 )
 fog_sun_amount = 0.0
 fog_depth_enabled = true
@@ -78,9 +78,9 @@ glow_levels/1 = false
 glow_levels/2 = false
 glow_levels/3 = true
 glow_levels/4 = false
-glow_levels/5 = true
-glow_levels/6 = false
-glow_levels/7 = true
+glow_levels/5 = false
+glow_levels/6 = true
+glow_levels/7 = false
 glow_intensity = 0.8
 glow_strength = 1.0
 glow_bloom = 0.0
@@ -92,7 +92,7 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
-_sections_unfolded = [ "Glow" ]
+_sections_unfolded = [ "Background", "Fog", "Glow", "Glow/levels", "Tonemap" ]
 
 [node name="Node" type="Node" index="0"]
 

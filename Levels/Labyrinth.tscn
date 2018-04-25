@@ -4491,31 +4491,31 @@ transform = Transform( 0.662063, 0, 0, 0, 0.662063, 0, 0, 0, 0.662063, -0.455218
 
 [node name="Border" parent="Borders" index="0" instance=ExtResource( 29 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -63 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -67.4712 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Border9" parent="Borders" index="1" instance=ExtResource( 29 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -99 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -103.471 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Border5" parent="Borders" index="2" instance=ExtResource( 29 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -75 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -79.4712 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Border6" parent="Borders" index="3" instance=ExtResource( 29 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -87 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -91.4712 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Border2" parent="Borders" index="4" instance=ExtResource( 29 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -51 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -55.4712 )
 
 [node name="Border3" parent="Borders" index="5" instance=ExtResource( 29 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -39 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -43.4712 )
 
 [node name="Border12" parent="Borders" index="6" instance=ExtResource( 29 )]
 
@@ -4603,27 +4603,27 @@ transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 50, 0, 
 
 [node name="Border4" parent="Borders" index="27" instance=ExtResource( 29 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -27 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -31.4712 )
 
 [node name="Border10" parent="Borders" index="28" instance=ExtResource( 29 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -15 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -19.4712 )
 
 [node name="Border11" parent="Borders" index="29" instance=ExtResource( 29 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -3 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, -7.47118 )
 
 [node name="Border23" parent="Borders" index="30" instance=ExtResource( 29 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, 9 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, 4.52882 )
 
 [node name="Border24" parent="Borders" index="31" instance=ExtResource( 29 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, 21 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, 16.5288 )
 
 [node name="Border25" parent="Borders" index="32" instance=ExtResource( 29 )]
 
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, 29 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, 28.5288 )
 
 [node name="Border22" parent="Borders" index="33" instance=ExtResource( 29 )]
 
