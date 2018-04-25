@@ -8,10 +8,10 @@ path.etc2="res://.import/camera.png-8628292eedc0aea760ec26a4afd99ea1.etc2.stex"
 [deps]
 
 source_file="res://Assets/camera.png"
-source_md5="04a893daa9ca42b541222106757e78a2"
+source_md5="084cff31b3780cb3bc757cc592b9d1ce"
 
 dest_files=[ "res://.import/camera.png-8628292eedc0aea760ec26a4afd99ea1.s3tc.stex", "res://.import/camera.png-8628292eedc0aea760ec26a4afd99ea1.etc2.stex" ]
-dest_md5="d39254b44345ff087a1e2bf51d6deace"
+dest_md5="e9a8d16c9b90036854a6bf5b8741b052"
 
 [params]
 

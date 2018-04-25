@@ -8,10 +8,10 @@ path.etc2="res://.import/wallbroken.png-41256efeb4e834d083be81c8a379cd99.etc2.st
 [deps]
 
 source_file="res://Assets/wallbroken.png"
-source_md5="28def41c6528dca19960fbdae24f51ec"
+source_md5="564cb8be2f380a18a1ab1b21d31f4d27"
 
 dest_files=[ "res://.import/wallbroken.png-41256efeb4e834d083be81c8a379cd99.s3tc.stex", "res://.import/wallbroken.png-41256efeb4e834d083be81c8a379cd99.etc2.stex" ]
-dest_md5="5321b2fc77a5a515e6bd7dd46ceefd76"
+dest_md5="0cd5bec738c8b1515c150cb4033dd2c3"
 
 [params]
 

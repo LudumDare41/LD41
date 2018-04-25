@@ -8,10 +8,10 @@ path.etc2="res://.import/ground 2.png-887f5cad2f6e9ff33306b47d989549b6.etc2.stex
 [deps]
 
 source_file="res://Assets/ground 2.png"
-source_md5="28def41c6528dca19960fbdae24f51ec"
+source_md5="e75b95e3b055515050ae97992e4b8ccd"
 
 dest_files=[ "res://.import/ground 2.png-887f5cad2f6e9ff33306b47d989549b6.s3tc.stex", "res://.import/ground 2.png-887f5cad2f6e9ff33306b47d989549b6.etc2.stex" ]
-dest_md5="c4aa0fc70d88b597ee21cc983bf2a058"
+dest_md5="9076be3c45e979a0c3fb073729637ec9"
 
 [params]
 

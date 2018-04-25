@@ -9,10 +9,10 @@ path="res://.import/floor2.obj-f9a48453d2f8fad5099eac9c830ab581.mesh"
 files=[ "res://.import/floor2.obj-f9a48453d2f8fad5099eac9c830ab581.mesh" ]
 
 source_file="res://Assets/floor2.obj"
-source_md5="f79a7eb810110bd102cd5e7651e00cf6"
+source_md5="606f11caecbe629f7545d3ecb0b12b45"
 
 dest_files=[ "res://.import/floor2.obj-f9a48453d2f8fad5099eac9c830ab581.mesh", "res://.import/floor2.obj-f9a48453d2f8fad5099eac9c830ab581.mesh" ]
-dest_md5="8058100e18c0ce0db33be2ad573eb608"
+dest_md5="f7cd9fe198cd01d8ec401affe2da4eb2"
 
 [params]
 

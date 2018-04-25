@@ -9,10 +9,10 @@ path="res://.import/antenna.obj-0641281f5479689f26cfac36adedb5cc.mesh"
 files=[ "res://.import/antenna.obj-0641281f5479689f26cfac36adedb5cc.mesh" ]
 
 source_file="res://Assets/antenna.obj"
-source_md5="b04254245cc874294b577f755c3532b8"
+source_md5="659ea9d0054e9465142ee7a52a0bb27e"
 
 dest_files=[ "res://.import/antenna.obj-0641281f5479689f26cfac36adedb5cc.mesh", "res://.import/antenna.obj-0641281f5479689f26cfac36adedb5cc.mesh" ]
-dest_md5="950603c7602d7e5623b97a144ad6895f"
+dest_md5="7acb884acb4f1f3235d99fcd1aa5e703"
 
 [params]
 

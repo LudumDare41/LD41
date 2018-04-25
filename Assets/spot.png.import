@@ -8,10 +8,10 @@ path.etc2="res://.import/spot.png-33985ac49022ce29a5e47c8070054ab0.etc2.stex"
 [deps]
 
 source_file="res://Assets/spot.png"
-source_md5="28def41c6528dca19960fbdae24f51ec"
+source_md5="55997244b4c11306f943ea725753e9d0"
 
 dest_files=[ "res://.import/spot.png-33985ac49022ce29a5e47c8070054ab0.s3tc.stex", "res://.import/spot.png-33985ac49022ce29a5e47c8070054ab0.etc2.stex" ]
-dest_md5="f7024de65bacf9e2a6269dac38ff6010"
+dest_md5="0faa90db999252df66f3bd26428d27cb"
 
 [params]
 
