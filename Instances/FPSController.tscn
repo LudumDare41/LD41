@@ -1,23 +1,28 @@
 [gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scripts/FPSController.gd" type="Script" id=1]
-[ext_resource path="res://Scripts/Weapons/Weapons.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Weapons.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Weapons/Handgun/HandgunScene.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Particles/MuzzleFlash.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Particles/beautiful-muzzle-flash-transparent-background-muzzle-flash-roblox-muzzle-flash-transparent-background.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Particles/MuzzleFlash.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Particles/beautiful-muzzle-flash-transparent-background-muzzle-flash-roblox-muzzle-flash-transparent-background.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Weapons/Handgun/handgun.wav" type="AudioStream" id=6]
-[ext_resource path="res://Audio/Reload_1.wav" type="AudioStream" id=7]
-[ext_resource path="res://Audio/Pickup_Ammo.wav" type="AudioStream" id=8]
-[ext_resource path="res://Audio/Gun_Empty_2.wav" type="AudioStream" id=9]
-[ext_resource path="res://Instances/Flashlight.gd" type="Script" id=10]
-[ext_resource path="res://Audio/Movement_1.wav" type="AudioStream" id=11]
-[ext_resource path="res://Audio/Player_Damage_1.wav" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Audio/Reload_1.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Audio/Pickup_Ammo.wav" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Audio/Gun_Empty_2.wav" type="AudioStream" id=9]
+[ext_resource path="res://Scripts/Flashlight.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Audio/Movement_1.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Audio/Player_Damage_1.wav" type="AudioStream" id=12]
 [ext_resource path="res://Assets/UI/crosshair.png.png" type="Texture" id=13]
 [ext_resource path="res://Assets/UI/crosshair2.png" type="Texture" id=14]
-[ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://Assets/Fonts/gunplay rg.ttf" type="DynamicFontData" id=15]
 [ext_resource path="res://Assets/UI/HealthIcon.png" type="Texture" id=16]
 [ext_resource path="res://Assets/UI/StaminaIcon.png" type="Texture" id=17]
 [ext_resource path="res://Assets/UI/Flashlight.png" type="Texture" id=18]
+
+
+
+
+
 
 [sub_resource type="CapsuleShape" id=1]
 

@@ -2,9 +2,10 @@
 
 [ext_resource path="res://Scripts/Zombie.gd" type="Script" id=1]
 [ext_resource path="res://Instances/ZombieMesh.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Audio/Zombie/Zombie_Death_1.wav" type="AudioStream" id=3]
-[ext_resource path="res://Audio/Zombie/Zombie_Growl_1.wav" type="AudioStream" id=4]
-[ext_resource path="res://Audio/Zombie/Zombie_Hit_2.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Audio/Zombie/Zombie_Death_1.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Audio/Zombie/Zombie_Growl_1.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Audio/Zombie/Zombie_Hit_2.wav" type="AudioStream" id=5]
+
 
 [sub_resource type="CapsuleShape" id=1]
 

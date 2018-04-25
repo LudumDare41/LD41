@@ -3,10 +3,11 @@
 [ext_resource path="res://Scripts/ControlsMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/menuBackgroun.png" type="Texture" id=2]
 [ext_resource path="res://Assets/UI/backArrow.png" type="Texture" id=3]
-[ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Fonts/gunplay rg.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Assets/UI/godot_icon.png" type="Texture" id=5]
 [ext_resource path="res://Assets/UI/magicavoxel-icon.png" type="Texture" id=6]
 [ext_resource path="res://Assets/UI/Blender-icon.png" type="Texture" id=7]
+
 
 [sub_resource type="DynamicFont" id=1]
 

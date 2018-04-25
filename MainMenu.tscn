@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/menuBackgroun.png" type="Texture" id=2]
 [ext_resource path="res://Assets/UI/btn.png" type="Texture" id=3]
-[ext_resource path="res://Fonts/gunplay rg.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Fonts/gunplay rg.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Assets/UI/btn2.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
@@ -14,7 +14,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Control" type="Control" index="0"]
+[node name="Control" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0

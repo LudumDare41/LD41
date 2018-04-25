@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/tree.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Assets/tree.png" type="Texture" id=2]
@@ -61,7 +61,15 @@ _sections_unfolded = [ "Albedo", "Roughness" ]
 radius = 4.0
 height = 25.0
 
-[node name="Tree" type="Spatial"]
+[sub_resource type="MultiMesh" id=3]
+
+color_format = 0
+transform_format = 0
+instance_count = 0
+transform_array = PoolVector3Array(  )
+color_array = PoolColorArray(  )
+
+[node name="Tree" type="Spatial" index="0"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
@@ -96,5 +104,18 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 12.0748, -8.12325e-07 )
 shape = SubResource( 2 )
 disabled = false
+
+[node name="MultiMeshInstance" type="MultiMeshInstance" parent="." index="1"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+multimesh = SubResource( 3 )
 
 

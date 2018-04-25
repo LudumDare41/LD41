@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Pickup_Ammo.wav-482e3582fb94dfdecaf72914d5b17cff.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Pickup_Ammo.wav"
+source_md5="b98910a61bd02277392e66dc102a0f14"
+
+dest_files=[ "res://.import/Pickup_Ammo.wav-482e3582fb94dfdecaf72914d5b17cff.sample" ]
+dest_md5="917821d6ab2e050ee145695b828fa797"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

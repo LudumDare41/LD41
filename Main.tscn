@@ -4,10 +4,11 @@
 [ext_resource path="res://Levels/Labyrinth_2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Instances/FPSController.tscn" type="PackedScene" id=3]
 [ext_resource path="res://satara_night_no_lamps_2k.hdr" type="Texture" id=4]
-[ext_resource path="res://Audio/Gameplay_1.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Audio/Gameplay_1.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Instances/MedKit.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Instances/AmmoBox.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Instances/Zombie.tscn" type="PackedScene" id=8]
+
 
 [sub_resource type="PanoramaSky" id=1]
 
