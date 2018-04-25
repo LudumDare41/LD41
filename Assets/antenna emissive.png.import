@@ -8,10 +8,10 @@ path.etc2="res://.import/antenna emissive.png-cdeecd6dd18994002bb5636cad7f7bcf.e
 [deps]
 
 source_file="res://Assets/antenna emissive.png"
-source_md5="4319084f3f5de43213264d0163ee5ab4"
+source_md5="f53beb50982dba2d1b6ba688ab2e70a5"
 
 dest_files=[ "res://.import/antenna emissive.png-cdeecd6dd18994002bb5636cad7f7bcf.s3tc.stex", "res://.import/antenna emissive.png-cdeecd6dd18994002bb5636cad7f7bcf.etc2.stex" ]
-dest_md5="a3280de2fa79c9f1652705dada5cb779"
+dest_md5="3f44b66cb7dce982878f24c7fcd9274d"
 
 [params]
 
