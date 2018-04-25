@@ -92,13 +92,11 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
-_sections_unfolded = [ "Glow" ]
+_sections_unfolded = [ "Glow", "SS Reflections", "SSAO" ]
 
 [node name="Node" type="Node" index="0"]
 
 [node name="Levels" type="Spatial" parent="." index="0"]
-
-editor/display_folded = true
 
 [node name="Labyrinth" parent="Levels" index="0" instance=ExtResource( 1 )]
 
@@ -126,11 +124,13 @@ bus = "Master"
 
 [node name="MedKits" type="Node" parent="." index="4"]
 
-editor/display_folded = true
-
 [node name="MedKit" parent="MedKits" index="0" instance=ExtResource( 6 )]
 
 transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -46.0366, 0, -60.116 )
+
+[node name="MedKit2" parent="MedKits" index="1" instance=ExtResource( 6 )]
+
+transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 40.1585, -0.581193, 115.656 )
 
 [node name="AmmoBoxes" type="Node" parent="." index="5"]
 
@@ -140,15 +140,27 @@ editor/display_folded = true
 
 transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, 21.5348, 0.909179, -42.6335 )
 
-[node name="AmmoBox4" parent="AmmoBoxes" index="1" instance=ExtResource( 7 )]
+[node name="AmmoBox6" parent="AmmoBoxes" index="1" instance=ExtResource( 7 )]
+
+transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, 3.10693, 0.909179, 66.853 )
+
+[node name="AmmoBox8" parent="AmmoBoxes" index="2" instance=ExtResource( 7 )]
+
+transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, 40.8525, -0.521325, 109.033 )
+
+[node name="AmmoBox7" parent="AmmoBoxes" index="3" instance=ExtResource( 7 )]
+
+transform = Transform( 0.0160754, 0, 0.0253295, 0, 0.03, 0, -0.0253295, 0, 0.0160754, 12.2882, 2.58941, 61.79 )
+
+[node name="AmmoBox4" parent="AmmoBoxes" index="4" instance=ExtResource( 7 )]
 
 transform = Transform( 0.00615137, 0, 0.0293626, 0, 0.03, 0, -0.0293626, 0, 0.00615137, 40.1731, 7, 5.63144 )
 
-[node name="AmmoBox3" parent="AmmoBoxes" index="2" instance=ExtResource( 7 )]
+[node name="AmmoBox3" parent="AmmoBoxes" index="5" instance=ExtResource( 7 )]
 
 transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.029221, -32.901, 0.909179, -77.893 )
 
-[node name="AmmoBox5" parent="AmmoBoxes" index="3" instance=ExtResource( 7 )]
+[node name="AmmoBox5" parent="AmmoBoxes" index="6" instance=ExtResource( 7 )]
 
 transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.029221, 25.6102, 0, -18.2904 )
 
@@ -259,35 +271,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2252, 1.37929, 43.9742 )
 [node name="Zombie13" parent="Node" index="25" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3314, 11.9626, -49.0067 )
-
-[node name="BakedLightmap" type="BakedLightmap" parent="." index="7"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29411, 19.7828, -34.4116 )
-layers = 1
-bake_cell_size = 0.25
-bake_quality = 1
-bake_mode = 0
-bake_propagation = 1.0
-bake_energy = 1.0
-bake_hdr = false
-bake_extents = Vector3( 58.8604, 21.6853, 74.3944 )
-capture_cell_size = 0.5
-image_path = "."
-light_data = null
-
-[node name="BakedLightmap2" type="BakedLightmap" parent="." index="8"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.0094, 11.5409, 81.4399 )
-layers = 1
-bake_cell_size = 0.25
-bake_quality = 1
-bake_mode = 0
-bake_propagation = 1.0
-bake_energy = 1.0
-bake_hdr = false
-bake_extents = Vector3( 72.4536, 15.9909, 53.721 )
-capture_cell_size = 0.5
-image_path = "."
-light_data = null
 
 
