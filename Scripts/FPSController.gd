@@ -5,10 +5,10 @@ var direction = Vector3()
 var velocity = Vector3(0,0,0)
 
 #walk variables
-const MAX_SPEED = 10
-const MAX_RUNNING_SPEED = 20
-const ACCEL = 2
-const DEACCEL = 8
+const MAX_SPEED = 8
+const MAX_RUNNING_SPEED = 15
+const ACCEL = 20
+const DEACCEL = 20
 export var gravity = -9.8 * 3
 
 #Mouse controller variables
@@ -88,7 +88,7 @@ func _physics_process(delta):
 			speed = MAX_RUNNING_SPEED
 		else:
 			if stamina < 100:
-				stamina += 2 * delta
+				stamina += 4 * delta
 			speed = MAX_SPEED
 		# where would the player go at max speed
 		var target = direction * speed
