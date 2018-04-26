@@ -30,7 +30,7 @@
 [ext_resource path="res://Instances/Antenna.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Instances/Border.tscn" type="PackedScene" id=29]
 
-[node name="Labyrinth" type="Spatial" index="0"]
+[node name="Labyrinth" type="Spatial"]
 
 [node name="Walls SCIFI" type="Spatial" parent="." index="0"]
 

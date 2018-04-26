@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/old-computer emissive.png-746dc5d594293d0543d0e35062b4bbdc.stex"
+path="res://.import/wall emissive.png-1e270832b61036a4c1bcc759b2640215.stex"
 
 [deps]
 
-source_file="res://Assets/old-computer emissive.png"
-source_md5="7351081c264068a0e534efa699cd34ec"
+source_file="res://Assets/wall emissive.png"
+source_md5="921783f0d569b7b4fb278a6daf9b26bc"
 
-dest_files=[ "res://.import/old-computer emissive.png-746dc5d594293d0543d0e35062b4bbdc.stex" ]
-dest_md5="402711b28cd53ff6685c558d643c69c0"
+dest_files=[ "res://.import/wall emissive.png-1e270832b61036a4c1bcc759b2640215.stex" ]
+dest_md5="f3615f80a05d795695a1c4faa4fa97f4"
 
 [params]
 
