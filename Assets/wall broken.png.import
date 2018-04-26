@@ -11,7 +11,7 @@ source_file="res://Assets/wall broken.png"
 source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/wall broken.png-eecdb91ed079938be2766b1aef959612.s3tc.stex", "res://.import/wall broken.png-eecdb91ed079938be2766b1aef959612.etc2.stex" ]
-dest_md5="d8c20eea42584d763d98674fc10c1f6c"
+dest_md5="917f3564b47c35e1d205a7a28ce21b36"
 
 [params]
 

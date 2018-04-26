@@ -11,7 +11,7 @@ source_file="res://Assets/pillar.png"
 source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/pillar.png-141be472bb345a38d5fd316ae83af6c3.s3tc.stex", "res://.import/pillar.png-141be472bb345a38d5fd316ae83af6c3.etc2.stex" ]
-dest_md5="8c91047fbfe4457bd53749f02285c776"
+dest_md5="93ed90d687bb2149073e2c3d51cd2813"
 
 [params]
 

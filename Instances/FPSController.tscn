@@ -58,7 +58,7 @@ albedo_color = Color( 0.155823, 0.164026, 0.179688, 1 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
-roughness = 0.0
+roughness = 0.9
 roughness_texture_channel = 0
 emission_enabled = false
 normal_enabled = false
@@ -81,7 +81,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Albedo" ]
+_sections_unfolded = [ "Albedo", "Roughness" ]
 
 [sub_resource type="ParticlesMaterial" id=4]
 
@@ -198,7 +198,7 @@ use_filter = false
 font_data = ExtResource( 15 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="FPSController" type="KinematicBody"]
+[node name="FPSController" type="KinematicBody" index="0"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -726,9 +726,9 @@ wait_time = 0.2
 one_shot = true
 autostart = false
 
-[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
-
 [connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
+
+[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 

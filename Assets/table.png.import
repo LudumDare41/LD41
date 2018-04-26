@@ -11,7 +11,7 @@ source_file="res://Assets/table.png"
 source_md5="dbbc2d29a79e808983ad63bda1ca39a9"
 
 dest_files=[ "res://.import/table.png-177b454fdc598cd5a4f023de2d4f1fe3.s3tc.stex", "res://.import/table.png-177b454fdc598cd5a4f023de2d4f1fe3.etc2.stex" ]
-dest_md5="db7a1b03dba679a77704d5eedc2415c9"
+dest_md5="7f24b91536a58ee51035de700bb00866"
 
 [params]
 

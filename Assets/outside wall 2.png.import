@@ -2,32 +2,31 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/outside wall 2.png-d53f75896242de50ffabe5821fd30905.s3tc.stex"
-path.etc2="res://.import/outside wall 2.png-d53f75896242de50ffabe5821fd30905.etc2.stex"
+path="res://.import/outside wall 2.png-d53f75896242de50ffabe5821fd30905.stex"
 
 [deps]
 
 source_file="res://Assets/outside wall 2.png"
 source_md5="e2e89944e4e4217ee9ace7e2ef67c9ee"
 
-dest_files=[ "res://.import/outside wall 2.png-d53f75896242de50ffabe5821fd30905.s3tc.stex", "res://.import/outside wall 2.png-d53f75896242de50ffabe5821fd30905.etc2.stex" ]
-dest_md5="1817da086a17b197aad6cc1d6e61c028"
+dest_files=[ "res://.import/outside wall 2.png-d53f75896242de50ffabe5821fd30905.stex" ]
+dest_md5="edb28f04546e9a128d45fe1690dd0073"
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=true
+flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

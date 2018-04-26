@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ceilling emiter.tga-482d9e8b563fd42d476e96fcca02094b.stex"
+path="res://.import/light emissive.png-47126474b87e698c92b09920a6e12826.stex"
 
 [deps]
 
-source_file="res://Assets/ceilling emiter.tga"
-source_md5="3d11ea8aea27dc7b3bbe42d4888a564f"
+source_file="res://Assets/light emissive.png"
+source_md5="f52f13ef76db63d23252ee1034f31dc2"
 
-dest_files=[ "res://.import/ceilling emiter.tga-482d9e8b563fd42d476e96fcca02094b.stex" ]
-dest_md5="5a145d18005948b9fc02b0ff0a9e345d"
+dest_files=[ "res://.import/light emissive.png-47126474b87e698c92b09920a6e12826.stex" ]
+dest_md5="7e4ffd3e256f33a22d354c3e11547349"
 
 [params]
 

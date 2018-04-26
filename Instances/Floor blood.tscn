@@ -60,7 +60,7 @@ _sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
 
 extents = Vector3( 20, 1, 20 )
 
-[node name="Floor blood" type="Spatial"]
+[node name="Floor blood" type="Spatial" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 

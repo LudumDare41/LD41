@@ -60,7 +60,7 @@ _sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
 
 extents = Vector3( 5, 20, 5 )
 
-[node name="Pillar" type="Spatial"]
+[node name="Pillar" type="Spatial" index="0"]
 
 [node name="Pillar" type="MeshInstance" parent="." index="0"]
 

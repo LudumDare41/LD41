@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/emissive_handgund.png-054dc17475c6f60374b6e1effa1a47f7.stex"
+path="res://.import/ceiling emissive.png-ebb3dedbe05ae8430f336654f8df1302.stex"
 
 [deps]
 
-source_file="res://Assets/Weapons/Handgun/emissive_handgund.png"
-source_md5="92cea4497916ec6b0f6fa716f2dddea3"
+source_file="res://Assets/ceiling emissive.png"
+source_md5="0b2963aa275dc7ad6283001e68682fbf"
 
-dest_files=[ "res://.import/emissive_handgund.png-054dc17475c6f60374b6e1effa1a47f7.stex" ]
-dest_md5="2420637b6a53d786fc5d1b85a3b10fe8"
+dest_files=[ "res://.import/ceiling emissive.png-ebb3dedbe05ae8430f336654f8df1302.stex" ]
+dest_md5="a3775021eea91a604505de41380cf61f"
 
 [params]
 

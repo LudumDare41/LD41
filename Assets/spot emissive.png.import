@@ -2,20 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.s3tc.stex"
-path.etc2="res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.etc2.stex"
+path="res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.stex"
 
 [deps]
 
 source_file="res://Assets/spot emissive.png"
 source_md5="97d2a3b274f90fcd01766198da40f072"
 
-dest_files=[ "res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.s3tc.stex", "res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.etc2.stex" ]
-dest_md5="df8295aaa34096c10470756e9f3a3fc5"
+dest_files=[ "res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.stex" ]
+dest_md5="1145abdaa6a51c910ebe564e11e8faa8"
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0

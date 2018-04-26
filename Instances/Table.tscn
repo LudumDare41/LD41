@@ -60,7 +60,7 @@ _sections_unfolded = [ "Metallic", "Roughness" ]
 
 extents = Vector3( 10, 5, 13 )
 
-[node name="Table" type="Spatial"]
+[node name="Table" type="Spatial" index="0"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 

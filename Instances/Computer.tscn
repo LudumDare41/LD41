@@ -36,7 +36,7 @@ roughness = 0.9
 roughness_texture_channel = 0
 emission_enabled = true
 emission = Color( 0, 0, 0, 1 )
-emission_energy = 0.05
+emission_energy = 0.15
 emission_operator = 0
 emission_on_uv2 = false
 emission_texture = ExtResource( 3 )
@@ -66,7 +66,7 @@ _sections_unfolded = [ "Emission", "Roughness" ]
 
 extents = Vector3( 6, 6, 6 )
 
-[node name="Computer" type="Spatial"]
+[node name="Computer" type="Spatial" index="0"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 

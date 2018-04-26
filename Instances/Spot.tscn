@@ -36,7 +36,7 @@ roughness = 0.0
 roughness_texture_channel = 0
 emission_enabled = true
 emission = Color( 0, 0, 0, 1 )
-emission_energy = 0.2
+emission_energy = 1.0
 emission_operator = 0
 emission_on_uv2 = false
 emission_texture = ExtResource( 3 )
@@ -60,9 +60,8 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Emission" ]
 
-[node name="Spot" type="Spatial"]
+[node name="Spot" type="Spatial" index="0"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 

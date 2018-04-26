@@ -2,20 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/old-computer emissive.png-746dc5d594293d0543d0e35062b4bbdc.s3tc.stex"
-path.etc2="res://.import/old-computer emissive.png-746dc5d594293d0543d0e35062b4bbdc.etc2.stex"
+path="res://.import/old-computer emissive.png-746dc5d594293d0543d0e35062b4bbdc.stex"
 
 [deps]
 
 source_file="res://Assets/old-computer emissive.png"
 source_md5="cf98db84e7a32434f4932155817eeebd"
 
-dest_files=[ "res://.import/old-computer emissive.png-746dc5d594293d0543d0e35062b4bbdc.s3tc.stex", "res://.import/old-computer emissive.png-746dc5d594293d0543d0e35062b4bbdc.etc2.stex" ]
-dest_md5="b5f71729f155296485c1be4ef8aa412b"
+dest_files=[ "res://.import/old-computer emissive.png-746dc5d594293d0543d0e35062b4bbdc.stex" ]
+dest_md5="645dd7621aa5eb85e9616d16d18c4b72"
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
