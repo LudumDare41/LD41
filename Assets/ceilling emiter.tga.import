@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/ceilling emiter.tga-482d9e8b563fd42d476e96fcca02094b.stex"
+
+[deps]
+
+source_file="res://Assets/ceilling emiter.tga"
+source_md5="3d11ea8aea27dc7b3bbe42d4888a564f"
+
+dest_files=[ "res://.import/ceilling emiter.tga-482d9e8b563fd42d476e96fcca02094b.stex" ]
+dest_md5="5a145d18005948b9fc02b0ff0a9e345d"
+
+[params]
+
+compress/mode=3
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=1
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

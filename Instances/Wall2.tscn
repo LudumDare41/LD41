@@ -28,10 +28,10 @@ params_grow = false
 params_use_alpha_scissor = false
 albedo_color = Color( 1, 1, 1, 1 )
 albedo_texture = ExtResource( 2 )
-metallic = 0.8
+metallic = 0.4
 metallic_specular = 0.5
 metallic_texture_channel = 0
-roughness = 0.2
+roughness = 0.5
 roughness_texture_channel = 0
 emission_enabled = false
 normal_enabled = false
@@ -60,7 +60,7 @@ _sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
 
 extents = Vector3( 2.5, 20, 20 )
 
-[node name="Wall" type="Spatial" index="0"]
+[node name="Wall" type="Spatial"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
@@ -77,7 +77,7 @@ lod_max_hysteresis = 0.0
 mesh = ExtResource( 1 )
 skeleton = NodePath("..")
 material/0 = SubResource( 1 )
-_sections_unfolded = [ "Transform", "material" ]
+_sections_unfolded = [ "Geometry", "Transform", "material" ]
 
 [node name="StaticBody" type="StaticBody" parent="MeshInstance" index="0"]
 

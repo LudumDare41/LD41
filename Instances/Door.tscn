@@ -30,10 +30,10 @@ params_grow = false
 params_use_alpha_scissor = false
 albedo_color = Color( 1, 1, 1, 1 )
 albedo_texture = ExtResource( 2 )
-metallic = 0.5
+metallic = 0.8
 metallic_specular = 0.5
 metallic_texture_channel = 0
-roughness = 0.4
+roughness = 0.2
 roughness_texture_channel = 0
 emission_enabled = false
 normal_enabled = false
@@ -83,10 +83,10 @@ params_grow = false
 params_use_alpha_scissor = false
 albedo_color = Color( 1, 1, 1, 1 )
 albedo_texture = ExtResource( 4 )
-metallic = 0.5
+metallic = 0.8
 metallic_specular = 0.5
 metallic_texture_channel = 0
-roughness = 0.4
+roughness = 0.2
 roughness_texture_channel = 0
 emission_enabled = false
 normal_enabled = false
@@ -115,7 +115,7 @@ _sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
 
 extents = Vector3( 1, 20, 7.5 )
 
-[node name="Door" type="Spatial" index="0"]
+[node name="Door" type="Spatial"]
 
 [node name="Door frame" type="MeshInstance" parent="." index="0"]
 
@@ -136,7 +136,6 @@ _sections_unfolded = [ "Geometry", "Transform", "material" ]
 
 [node name="door1" type="MeshInstance" parent="Door frame" index="0"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1

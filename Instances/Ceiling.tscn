@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/ceiling.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://Assets/ceiling.png" type="Texture" id=2]
-[ext_resource path="res://Assets/ceilling emissive.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Textures/ceiling.png" type="Texture" id=2]
+[ext_resource path="res://Assets/ceilling emissive.tga" type="Texture" id=3]
 
-[sub_resource type="SpatialMaterial" id=1]
+[sub_resource type="SpatialMaterial" id=3]
 
 render_priority = 0
 flags_transparent = false
@@ -29,14 +29,14 @@ params_grow = false
 params_use_alpha_scissor = false
 albedo_color = Color( 1, 1, 1, 1 )
 albedo_texture = ExtResource( 2 )
-metallic = 0.8
+metallic = 0.4
 metallic_specular = 0.5
 metallic_texture_channel = 0
-roughness = 0.2
+roughness = 0.5
 roughness_texture_channel = 0
 emission_enabled = true
 emission = Color( 0, 0, 0, 1 )
-emission_energy = 0.25
+emission_energy = 0.1
 emission_operator = 0
 emission_on_uv2 = false
 emission_texture = ExtResource( 3 )
@@ -60,7 +60,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Albedo", "Emission", "Metallic", "Roughness" ]
+_sections_unfolded = [ "Albedo", "Emission" ]
 
 [sub_resource type="ConvexPolygonShape" id=2]
 
@@ -82,7 +82,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 1 )
 skeleton = NodePath("..")
-material/0 = SubResource( 1 )
+material/0 = SubResource( 3 )
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
 
 [node name="StaticBody" type="StaticBody" parent="ceiling" index="0"]
