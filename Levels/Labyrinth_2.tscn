@@ -26,12 +26,11 @@
 [ext_resource path="res://Instances/Spot.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Instances/Border.tscn" type="PackedScene" id=25]
 
-
 [sub_resource type="BoxShape" id=1]
 
 extents = Vector3( 3, 2, 3 )
 
-[node name="Labyrinth2" type="Spatial"]
+[node name="Labyrinth2" type="Spatial" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15779, -2.70603, -1.1028 )
 
@@ -1641,19 +1640,131 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, -42 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, -47 )
 
-[node name="Ground22" parent="Yard_01/Ground10" index="20" instance=ExtResource( 20 )]
+[node name="Ground26" parent="Yard_01/Ground10" index="20" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, -53 )
+
+[node name="Ground28" parent="Yard_01/Ground10" index="21" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, -59 )
+
+[node name="Ground32" parent="Yard_01/Ground10" index="22" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, -65 )
+
+[node name="Ground37" parent="Yard_01/Ground10" index="23" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, -71 )
+
+[node name="Ground44" parent="Yard_01/Ground10" index="24" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, -77 )
+
+[node name="Ground22" parent="Yard_01/Ground10" index="25" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, -47 )
 
-[node name="Ground23" parent="Yard_01/Ground10" index="21" instance=ExtResource( 20 )]
+[node name="Ground23" parent="Yard_01/Ground10" index="26" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -47 )
 
-[node name="Ground24" parent="Yard_01/Ground10" index="22" instance=ExtResource( 20 )]
+[node name="Ground27" parent="Yard_01/Ground10" index="27" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -53 )
+
+[node name="Ground35" parent="Yard_01/Ground10" index="28" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1, -53 )
+
+[node name="Ground29" parent="Yard_01/Ground10" index="29" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -59 )
+
+[node name="Ground36" parent="Yard_01/Ground10" index="30" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1, -59 )
+
+[node name="Ground33" parent="Yard_01/Ground10" index="31" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -65 )
+
+[node name="Ground38" parent="Yard_01/Ground10" index="32" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -71 )
+
+[node name="Ground41" parent="Yard_01/Ground10" index="33" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -77 )
+
+[node name="Ground34" parent="Yard_01/Ground10" index="34" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1, -65 )
+
+[node name="Ground40" parent="Yard_01/Ground10" index="35" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1, -71 )
+
+[node name="Ground43" parent="Yard_01/Ground10" index="36" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1, -77 )
+
+[node name="Ground24" parent="Yard_01/Ground10" index="37" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 1, -47 )
 
-[node name="Ground8" parent="Yard_01/Ground10" index="23" instance=ExtResource( 20 )]
+[node name="Ground25" parent="Yard_01/Ground10" index="38" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 1, -53 )
+
+[node name="Ground30" parent="Yard_01/Ground10" index="39" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 1, -59 )
+
+[node name="Ground46" parent="Yard_01/Ground10" index="40" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -59 )
+
+[node name="Ground50" parent="Yard_01/Ground10" index="41" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, -59 )
+
+[node name="Ground31" parent="Yard_01/Ground10" index="42" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 1, -65 )
+
+[node name="Ground48" parent="Yard_01/Ground10" index="43" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -65 )
+
+[node name="Ground52" parent="Yard_01/Ground10" index="44" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, -65 )
+
+[node name="Ground39" parent="Yard_01/Ground10" index="45" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 1, -71 )
+
+[node name="Ground47" parent="Yard_01/Ground10" index="46" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -71 )
+
+[node name="Ground51" parent="Yard_01/Ground10" index="47" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, -71 )
+
+[node name="Ground42" parent="Yard_01/Ground10" index="48" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 1, -77 )
+
+[node name="Ground45" parent="Yard_01/Ground10" index="49" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -77 )
+
+[node name="Ground49" parent="Yard_01/Ground10" index="50" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, -77 )
+
+[node name="Ground8" parent="Yard_01/Ground10" index="51" instance=ExtResource( 20 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -24 )
 
@@ -1921,7 +2032,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Building_02" type="Spatial" parent="." index="6"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11 )
 
 [node name="Floor" type="Spatial" parent="Building_02" index="0"]

@@ -2,31 +2,32 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/camera emisive.png-a5dba187275adb2c2e9599d986abae0b.stex"
+path.s3tc="res://.import/camera emisive.png-a5dba187275adb2c2e9599d986abae0b.s3tc.stex"
+path.etc2="res://.import/camera emisive.png-a5dba187275adb2c2e9599d986abae0b.etc2.stex"
 
 [deps]
 
 source_file="res://Assets/camera emisive.png"
-source_md5="1df2dce28af6f5b23127a420958ddca0"
+source_md5="7b57894e01357facd702ac24b50a4d90"
 
-dest_files=[ "res://.import/camera emisive.png-a5dba187275adb2c2e9599d986abae0b.stex" ]
-dest_md5="bd30c1ffc05ba53e5862e0c45fe3a1f7"
+dest_files=[ "res://.import/camera emisive.png-a5dba187275adb2c2e9599d986abae0b.s3tc.stex", "res://.import/camera emisive.png-a5dba187275adb2c2e9599d986abae0b.etc2.stex" ]
+dest_md5="dd157b7872249fc9037c033340d5167f"
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=true
 flags/filter=true
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
