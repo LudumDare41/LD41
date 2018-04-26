@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/light 2.obj-fac3e4c7c631c1cbb2788219219eee33.mesh"
+
+[deps]
+
+files=[ "res://.import/light 2.obj-fac3e4c7c631c1cbb2788219219eee33.mesh" ]
+
+source_file="res://Assets/light 2.obj"
+source_md5="5f893ff38d0672e1b74d6496f0346ada"
+
+dest_files=[ "res://.import/light 2.obj-fac3e4c7c631c1cbb2788219219eee33.mesh", "res://.import/light 2.obj-fac3e4c7c631c1cbb2788219219eee33.mesh" ]
+dest_md5="820c5e191e2205c4671122b46b39bdab"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
