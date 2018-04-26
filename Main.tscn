@@ -171,8 +171,6 @@ transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 40.1585, -0.581193, 1
 
 [node name="AmmoBoxes" type="Node" parent="." index="6"]
 
-editor/display_folded = true
-
 [node name="AmmoBox2" parent="AmmoBoxes" index="0" instance=ExtResource( 7 )]
 
 transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, 21.5348, 0.909179, -42.6335 )
@@ -183,7 +181,7 @@ transform = Transform( -0.0286671, 0, 0.00884285, 0, 0.03, 0, -0.00884285, 0, -0
 
 [node name="AmmoBox6" parent="AmmoBoxes" index="2" instance=ExtResource( 7 )]
 
-transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, 3.10693, 0.909179, 66.853 )
+transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, 3.10693, 0, 66.853 )
 
 [node name="AmmoBox8" parent="AmmoBoxes" index="3" instance=ExtResource( 7 )]
 
@@ -195,7 +193,7 @@ transform = Transform( 0.0160754, 0, 0.0253295, 0, 0.03, 0, -0.0253295, 0, 0.016
 
 [node name="AmmoBox4" parent="AmmoBoxes" index="5" instance=ExtResource( 7 )]
 
-transform = Transform( 0.0298588, 0, -0.00290761, 0, 0.03, 0, 0.00290761, 0, 0.0298588, 40.492, 8.4309, 8.74761 )
+transform = Transform( 0.0298588, 0, -0.00290761, 0, 0.03, 0, 0.00290761, 0, 0.0298588, 39.8493, 10.4171, 6.66473 )
 
 [node name="AmmoBox3" parent="AmmoBoxes" index="6" instance=ExtResource( 7 )]
 
@@ -203,7 +201,7 @@ transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.
 
 [node name="AmmoBox9" parent="AmmoBoxes" index="7" instance=ExtResource( 7 )]
 
-transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.029221, -21.6133, 24.2222, -35.8849 )
+transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.029221, -21.6133, 24.6699, -35.8849 )
 
 [node name="AmmoBox5" parent="AmmoBoxes" index="8" instance=ExtResource( 7 )]
 

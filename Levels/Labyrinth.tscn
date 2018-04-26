@@ -2030,7 +2030,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Table12" parent="Dressing/Tables" index="2" instance=ExtResource( 17 )]
 
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 39.7645, 7, 7.0983 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 39.7645, 7, 7.9373 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Table20" parent="Dressing/Tables" index="3" instance=ExtResource( 17 )]
@@ -2134,7 +2134,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Computer12" parent="Dressing/Computers" index="2" instance=ExtResource( 18 )]
 
-transform = Transform( 0.34202, 0, -0.939692, 0, 1, 0, 0.939692, 0, 0.34202, 40.3135, 8.47931, 6.2926 )
+transform = Transform( 0.34202, 0, -0.939692, 0, 1, 0, 0.939692, 0, 0.34202, 40.3135, 8.47931, 6.41992 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Computer20" parent="Dressing/Computers" index="3" instance=ExtResource( 18 )]
