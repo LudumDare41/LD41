@@ -61,7 +61,7 @@ uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
 
-[node name="Spot" type="Spatial" index="0"]
+[node name="Spot" type="Spatial"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
@@ -85,7 +85,7 @@ _sections_unfolded = [ "Geometry", "Transform", "material" ]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 3, 1.96548 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
-light_energy = 0.1
+light_energy = 0.2
 light_indirect_energy = 0.1
 light_negative = false
 light_specular = 0.5

@@ -30,7 +30,7 @@
 [ext_resource path="res://Instances/Antenna.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Instances/Border.tscn" type="PackedScene" id=29]
 
-[node name="Labyrinth" type="Spatial"]
+[node name="Labyrinth" type="Spatial" index="0"]
 
 [node name="Walls SCIFI" type="Spatial" parent="." index="0"]
 
@@ -3886,11 +3886,11 @@ transform = Transform( -0.0337317, 0, -0.999431, 0, 1, 0, 0.999431, 0, -0.033731
 
 [node name="Palette11" parent="Pallettes" index="2" instance=ExtResource( 24 )]
 
-transform = Transform( -0.0337317, 0, -0.999431, 0, 1, 0, 0.999431, 0, -0.0337317, -27.6082, 0, -46.1595 )
+transform = Transform( -0.0337317, 0, -0.999431, 0, 1, 0, 0.999431, 0, -0.0337317, -27.6082, 0, -39.9744 )
 
 [node name="Palette12" parent="Pallettes" index="3" instance=ExtResource( 24 )]
 
-transform = Transform( 0.00995447, 0, -0.999951, 0, 1, 0, 0.999951, 0, 0.00995447, -27.7264, 0, -42.0963 )
+transform = Transform( 0.00995447, 0, -0.999951, 0, 1, 0, 0.999951, 0, 0.00995447, -27.7264, 0, -35.9112 )
 
 [node name="Palette8" parent="Pallettes" index="4" instance=ExtResource( 24 )]
 

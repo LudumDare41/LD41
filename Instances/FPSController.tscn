@@ -1,15 +1,15 @@
 [gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scripts/FPSController.gd" type="Script" id=1]
-[ext_resource path="res://Scripts/Weapons.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Weapons/Handgun/HandgunScene.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Particles/MuzzleFlash.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Particles/beautiful-muzzle-flash-transparent-background-muzzle-flash-roblox-muzzle-flash-transparent-background.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Weapons/Handgun/handgun.wav" type="AudioStream" id=6]
-[ext_resource path="res://Assets/Audio/Reload_1.wav" type="AudioStream" id=7]
-[ext_resource path="res://Assets/Audio/Pickup_Ammo.wav" type="AudioStream" id=8]
-[ext_resource path="res://Assets/Audio/Gun_Empty_2.wav" type="AudioStream" id=9]
-[ext_resource path="res://Scripts/Flashlight.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Flashlight.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Weapons.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Weapons/Handgun/HandgunScene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Particles/MuzzleFlash.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Particles/beautiful-muzzle-flash-transparent-background-muzzle-flash-roblox-muzzle-flash-transparent-background.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Weapons/Handgun/handgun.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Audio/Reload_1.wav" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Audio/Pickup_Ammo.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Audio/Gun_Empty_2.wav" type="AudioStream" id=10]
 [ext_resource path="res://Assets/Audio/Movement_1.wav" type="AudioStream" id=11]
 [ext_resource path="res://Assets/Audio/Player_Damage_1.wav" type="AudioStream" id=12]
 [ext_resource path="res://Assets/UI/crosshair.png.png" type="Texture" id=13]
@@ -144,7 +144,7 @@ params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
 albedo_color = Color( 1, 1, 1, 1 )
-albedo_texture = ExtResource( 5 )
+albedo_texture = ExtResource( 6 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
@@ -285,13 +285,53 @@ size = 1.0
 near = 0.05
 far = 200.0
 
-[node name="Hand" type="Spatial" parent="Head/Camera" index="0"]
+[node name="Flashlight" type="MeshInstance" parent="Head/Camera" index="0"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0118456, -0.654512, 0.0210662 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.622309 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = null
+skeleton = NodePath("..")
+
+[node name="Spotlight" type="SpotLight" parent="Head/Camera" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.622309 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 0.4
+light_indirect_energy = 0.4
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+spot_range = 20.0
+spot_attenuation = 1.0
+spot_angle = 35.0
+spot_angle_attenuation = 1.0
 script = ExtResource( 2 )
+_sections_unfolded = [ "Light", "Shadow", "Spot" ]
+
+[node name="Hand" type="Spatial" parent="Head/Camera" index="2"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0118456, -0.654512, 0.0210662 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Handgun" parent="Head/Camera/Hand" index="0" instance=ExtResource( 3 )]
+[node name="Handgun" parent="Head/Camera/Hand" index="0" instance=ExtResource( 4 )]
 
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.686236, -0.214034, -2.18395 )
 _sections_unfolded = [ "Transform" ]
@@ -319,7 +359,7 @@ omni_shadow_mode = 1
 omni_shadow_detail = 1
 _sections_unfolded = [ "Light", "Omni", "Shadow" ]
 
-[node name="Particles" parent="Head/Camera/Hand" index="2" instance=ExtResource( 4 )]
+[node name="Particles" parent="Head/Camera/Hand" index="2" instance=ExtResource( 5 )]
 
 transform = Transform( 0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.686236, 0.632916, -3.18938 )
 use_in_baked_light = true
@@ -333,7 +373,7 @@ _sections_unfolded = [ "Draw Passes", "Geometry", "Process Material", "Time", "T
 [node name="Audio" type="AudioStreamPlayer3D" parent="Head/Camera/Hand" index="3"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.597659 )
-stream = ExtResource( 6 )
+stream = ExtResource( 7 )
 attenuation_model = 0
 unit_db = 10.0
 unit_size = 6.0
@@ -353,7 +393,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="ReloadAudio" type="AudioStreamPlayer3D" parent="Head/Camera/Hand" index="4"]
 
-stream = ExtResource( 7 )
+stream = ExtResource( 8 )
 attenuation_model = 0
 unit_db = 10.0
 unit_size = 6.0
@@ -373,7 +413,7 @@ _sections_unfolded = [ "Doppler" ]
 
 [node name="PickUpAudio" type="AudioStreamPlayer" parent="Head/Camera/Hand" index="5"]
 
-stream = ExtResource( 8 )
+stream = ExtResource( 9 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
@@ -381,50 +421,11 @@ bus = "Master"
 
 [node name="NoBullets" type="AudioStreamPlayer" parent="Head/Camera/Hand" index="6"]
 
-stream = ExtResource( 9 )
+stream = ExtResource( 10 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
 bus = "Master"
-
-[node name="Flashlight" type="MeshInstance" parent="Head/Camera" index="1"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.622309 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = null
-skeleton = NodePath("..")
-
-[node name="Spotlight" type="SpotLight" parent="Head/Camera" index="2"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.622309 )
-layers = 1
-light_color = Color( 1, 1, 1, 1 )
-light_energy = 0.4
-light_indirect_energy = 0.4
-light_negative = false
-light_specular = 0.5
-light_bake_mode = 1
-light_cull_mask = -1
-shadow_enabled = true
-shadow_color = Color( 0, 0, 0, 1 )
-shadow_bias = 0.15
-shadow_contact = 0.0
-shadow_reverse_cull_face = false
-editor_only = false
-spot_range = 20.0
-spot_attenuation = 1.0
-spot_angle = 35.0
-spot_angle_attenuation = 1.0
-script = ExtResource( 10 )
-_sections_unfolded = [ "Light", "Shadow", "Spot" ]
 
 [node name="Collider" type="CollisionShape" parent="." index="3"]
 
@@ -473,7 +474,6 @@ doppler_tracking = 0
 
 [node name="Control" type="Control" parent="." index="6"]
 
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -726,9 +726,9 @@ wait_time = 0.2
 one_shot = true
 autostart = false
 
-[connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
-
 [connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
+
+[connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 
