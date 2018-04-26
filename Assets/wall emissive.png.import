@@ -1,0 +1,33 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/wall emissive.png-1e270832b61036a4c1bcc759b2640215.s3tc.stex"
+path.etc2="res://.import/wall emissive.png-1e270832b61036a4c1bcc759b2640215.etc2.stex"
+
+[deps]
+
+source_file="res://Assets/wall emissive.png"
+source_md5="de318d40fb0663f2b2878e7a1c13b41d"
+
+dest_files=[ "res://.import/wall emissive.png-1e270832b61036a4c1bcc759b2640215.s3tc.stex", "res://.import/wall emissive.png-1e270832b61036a4c1bcc759b2640215.etc2.stex" ]
+dest_md5="e0fbc906d1dfefdd209c1f8eabbe2a54"
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=1
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
