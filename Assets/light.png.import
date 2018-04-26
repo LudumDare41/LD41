@@ -11,7 +11,7 @@ source_file="res://Assets/light.png"
 source_md5="04a893daa9ca42b541222106757e78a2"
 
 dest_files=[ "res://.import/light.png-2a7c25d2528b528b4775521a146eeb11.s3tc.stex", "res://.import/light.png-2a7c25d2528b528b4775521a146eeb11.etc2.stex" ]
-dest_md5="4d040387b39ac53c0ad10e40b2671a5b"
+dest_md5="c6e2bfa97a900b0cde8097a9f791aeee"
 
 [params]
 

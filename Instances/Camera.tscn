@@ -62,7 +62,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Emission", "Roughness" ]
 
-[node name="Camera" type="Spatial"]
+[node name="Camera" type="Spatial" index="0"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 

@@ -11,7 +11,7 @@ source_file="res://Assets/wallbroken.png"
 source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/wallbroken.png-41256efeb4e834d083be81c8a379cd99.s3tc.stex", "res://.import/wallbroken.png-41256efeb4e834d083be81c8a379cd99.etc2.stex" ]
-dest_md5="ce43805d26011e47af06b53f5e69fdee"
+dest_md5="6bdb484359dd7dffbe781d8bb5943f1a"
 
 [params]
 

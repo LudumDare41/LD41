@@ -11,7 +11,7 @@ source_file="res://Assets/door.png"
 source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/door.png-a542cb27d09af7bf397856fe9af441c6.s3tc.stex", "res://.import/door.png-a542cb27d09af7bf397856fe9af441c6.etc2.stex" ]
-dest_md5="45fbe20a0357c6b1c89293002a87b2ef"
+dest_md5="3627e1feb9bd01ca66f46a0f696fc000"
 
 [params]
 

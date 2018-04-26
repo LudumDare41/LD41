@@ -30,7 +30,7 @@
 
 extents = Vector3( 3, 2, 3 )
 
-[node name="Labyrinth2" type="Spatial"]
+[node name="Labyrinth2" type="Spatial" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15779, -2.70603, -1.1028 )
 

@@ -11,7 +11,7 @@ source_file="res://Assets/antenna.png"
 source_md5="28def41c6528dca19960fbdae24f51ec"
 
 dest_files=[ "res://.import/antenna.png-9436fa3435bc23b83c94393002e7acdf.s3tc.stex", "res://.import/antenna.png-9436fa3435bc23b83c94393002e7acdf.etc2.stex" ]
-dest_md5="22c0413d5dc211213d15f8a77e29c661"
+dest_md5="cb9457275b983663d9953e7d2a01e7fc"
 
 [params]
 

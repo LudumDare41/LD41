@@ -11,7 +11,7 @@ source_file="res://Assets/tree.png"
 source_md5="47e221b83ce745cc6ca03d3f73023eb5"
 
 dest_files=[ "res://.import/tree.png-f0858fcddf0a23aa79accde76137cff6.s3tc.stex", "res://.import/tree.png-f0858fcddf0a23aa79accde76137cff6.etc2.stex" ]
-dest_md5="8ff9e516eb74d1b19979a76f18e565e5"
+dest_md5="c151bdcce618eecb9c670799f7736630"
 
 [params]
 

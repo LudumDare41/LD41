@@ -66,7 +66,7 @@ _sections_unfolded = [ "Albedo", "Emission" ]
 
 extents = Vector3( 20, 2, 20 )
 
-[node name="Light" type="Spatial"]
+[node name="Light" type="Spatial" index="0"]
 
 [node name="OmniLight" type="OmniLight" parent="." index="0"]
 
