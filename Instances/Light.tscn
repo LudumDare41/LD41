@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/light.png" type="Texture" id=2]
 [ext_resource path="res://Assets/light emissive.png" type="Texture" id=3]
 
-[sub_resource type="SpatialMaterial" id=1]
+[sub_resource type="SpatialMaterial" id=3]
 
 render_priority = 0
 flags_transparent = false
@@ -66,7 +66,7 @@ _sections_unfolded = [ "Albedo", "Emission" ]
 
 extents = Vector3( 20, 2, 20 )
 
-[node name="Light" type="Spatial" index="0"]
+[node name="Light" type="Spatial"]
 
 [node name="OmniLight" type="OmniLight" parent="." index="0"]
 
@@ -79,7 +79,7 @@ light_negative = false
 light_specular = 0.5
 light_bake_mode = 1
 light_cull_mask = -1
-shadow_enabled = true
+shadow_enabled = false
 shadow_color = Color( 0, 0, 0, 1 )
 shadow_bias = 0.15
 shadow_contact = 0.0
@@ -105,7 +105,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 1 )
 skeleton = NodePath("..")
-material/0 = SubResource( 1 )
+material/0 = SubResource( 3 )
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
 
 [node name="StaticBody" type="StaticBody" parent="MeshInstance" index="0"]
