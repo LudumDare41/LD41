@@ -2,19 +2,20 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ceiling emissive.png-ebb3dedbe05ae8430f336654f8df1302.stex"
+path.s3tc="res://.import/ceiling emissive.png-ebb3dedbe05ae8430f336654f8df1302.s3tc.stex"
+path.etc2="res://.import/ceiling emissive.png-ebb3dedbe05ae8430f336654f8df1302.etc2.stex"
 
 [deps]
 
 source_file="res://Assets/ceiling emissive.png"
 source_md5="0b2963aa275dc7ad6283001e68682fbf"
 
-dest_files=[ "res://.import/ceiling emissive.png-ebb3dedbe05ae8430f336654f8df1302.stex" ]
-dest_md5="67c8cb761b2c0db4d9794d5452aca933"
+dest_files=[ "res://.import/ceiling emissive.png-ebb3dedbe05ae8430f336654f8df1302.s3tc.stex", "res://.import/ceiling emissive.png-ebb3dedbe05ae8430f336654f8df1302.etc2.stex" ]
+dest_md5="9305728ed4181592fbd681932a31c8bc"
 
 [params]
 
-compress/mode=3
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
