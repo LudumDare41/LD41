@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/menuBackgroun.png" type="Texture" id=2]
 [ext_resource path="res://Assets/UI/btn.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fonts/gunplay rg.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Assets/UI/btn2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Audio/LD41_Way_Out_Main_scene_-_Track_01_Merlin.ogg" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -357,6 +358,14 @@ shortcut = null
 group = null
 flat = true
 align = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 [connection signal="pressed" from="Play/PlayButton" to="." method="_on_PlayButton_pressed"]
 

@@ -175,7 +175,7 @@ _sections_unfolded = [ "Draw Passes", "Drawing", "Process Material", "Time", "Tr
 
 stream = ExtResource( 3 )
 attenuation_model = 0
-unit_db = 14.0
+unit_db = 12.0
 unit_size = 0.7
 max_db = 3.0
 autoplay = false
@@ -194,7 +194,7 @@ doppler_tracking = 0
 
 stream = ExtResource( 4 )
 attenuation_model = 0
-unit_db = 14.0
+unit_db = 10.0
 unit_size = 0.7
 max_db = 3.0
 autoplay = false
@@ -213,7 +213,7 @@ doppler_tracking = 0
 
 stream = ExtResource( 5 )
 attenuation_model = 0
-unit_db = 20.0
+unit_db = 12.0
 unit_size = 0.7
 max_db = 3.0
 autoplay = false
