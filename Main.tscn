@@ -92,7 +92,7 @@ adjustment_enabled = true
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.1
-_sections_unfolded = [ "Adjustments", "Background", "Glow/levels", "Tonemap" ]
+_sections_unfolded = [ "Background", "Glow/levels" ]
 
 [sub_resource type="GIProbeData" id=3]
 
@@ -108,7 +108,7 @@ propagation = 0.7
 interior = false
 compress = false
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
 
