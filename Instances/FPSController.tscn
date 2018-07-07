@@ -327,7 +327,6 @@ _sections_unfolded = [ "Light", "Shadow", "Spot" ]
 
 [node name="Hand" type="Spatial" parent="Head/Camera" index="2"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0118456, -0.654512, 0.0210662 )
 script = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
@@ -376,14 +375,14 @@ _sections_unfolded = [ "Draw Passes", "Geometry", "Process Material", "Time", "T
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.597659 )
 stream = ExtResource( 7 )
 attenuation_model = 0
-unit_db = 10.0
-unit_size = 6.0
+unit_db = 50.0
+unit_size = 20.0
 max_db = 6.0
-pitch_scale = 1.0
+pitch_scale = 1.2
 autoplay = false
 max_distance = 0.0
 out_of_range_mode = 0
-bus = "Master"
+bus = "Shot"
 area_mask = 1
 emission_angle_enabled = false
 emission_angle_degrees = 45.0
@@ -404,7 +403,7 @@ pitch_scale = 1.0
 autoplay = false
 max_distance = 0.0
 out_of_range_mode = 0
-bus = "Master"
+bus = "Sounds"
 area_mask = 1
 emission_angle_enabled = false
 emission_angle_degrees = 45.0
@@ -421,7 +420,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "Sounds"
 
 [node name="NoBullets" type="AudioStreamPlayer" parent="Head/Camera/Hand" index="6"]
 
@@ -430,7 +429,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "Sounds"
 
 [node name="Collider" type="CollisionShape" parent="." index="3"]
 
@@ -450,7 +449,7 @@ pitch_scale = 1.0
 autoplay = false
 max_distance = 0.0
 out_of_range_mode = 0
-bus = "Master"
+bus = "Sounds"
 area_mask = 1
 emission_angle_enabled = false
 emission_angle_degrees = 45.0
@@ -470,7 +469,7 @@ pitch_scale = 1.0
 autoplay = false
 max_distance = 0.0
 out_of_range_mode = 0
-bus = "Master"
+bus = "Sounds"
 area_mask = 1
 emission_angle_enabled = false
 emission_angle_degrees = 45.0

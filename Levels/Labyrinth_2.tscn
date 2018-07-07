@@ -17,7 +17,7 @@
 [ext_resource path="res://Instances/Palette.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Instances/Pillar.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Instances/Ceiling.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Aeration.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Assets/Aeration.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Instances/Antenna.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Instances/Ground.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Instances/Wall outside 2.tscn" type="PackedScene" id=21]
@@ -25,6 +25,9 @@
 [ext_resource path="res://Instances/Ramp.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Instances/Spot.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Instances/Border.tscn" type="PackedScene" id=25]
+
+
+
 
 [sub_resource type="BoxShape" id=1]
 

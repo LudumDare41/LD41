@@ -26,7 +26,7 @@ ambient_light_color = Color( 0, 0, 0, 1 )
 ambient_light_energy = 1.0
 ambient_light_sky_contribution = 1.0
 fog_enabled = true
-fog_color = Color( 0.0057373, 0.0184937, 0.03125, 1 )
+fog_color = Color( 0.03125, 0.0105209, 0.0057373, 1 )
 fog_sun_color = Color( 1, 0.9, 0.7, 1 )
 fog_sun_amount = 0.0
 fog_depth_enabled = true
@@ -34,10 +34,10 @@ fog_depth_begin = 0.0
 fog_depth_curve = 0.5
 fog_transmit_enabled = false
 fog_transmit_curve = 1.0
-fog_height_enabled = false
-fog_height_min = 0.0
-fog_height_max = 100.0
-fog_height_curve = 1.0
+fog_height_enabled = true
+fog_height_min = 1.5
+fog_height_max = -2.5
+fog_height_curve = 2.0
 tonemap_mode = 2
 tonemap_exposure = 1.0
 tonemap_white = 1.0
@@ -46,7 +46,7 @@ auto_exposure_scale = 0.4
 auto_exposure_min_luma = 0.2
 auto_exposure_max_luma = 8.0
 auto_exposure_speed = 0.5
-ss_reflections_enabled = false
+ss_reflections_enabled = true
 ss_reflections_max_steps = 64
 ss_reflections_fade_in = 0.15
 ss_reflections_fade_out = 2.0
@@ -68,7 +68,7 @@ dof_blur_far_distance = 10.0
 dof_blur_far_transition = 5.0
 dof_blur_far_amount = 0.1
 dof_blur_far_quality = 1
-dof_blur_near_enabled = false
+dof_blur_near_enabled = true
 dof_blur_near_distance = 2.0
 dof_blur_near_transition = 1.0
 dof_blur_near_amount = 0.1
@@ -92,9 +92,9 @@ adjustment_enabled = true
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.1
-_sections_unfolded = [ "Ambient Light", "Glow", "Glow/levels" ]
+_sections_unfolded = [ "Ambient Light", "DOF Near Blur", "Fog", "Glow/levels" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
 
@@ -113,6 +113,7 @@ transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, 66, -
 [node name="FPSController" parent="." index="2" instance=ExtResource( 4 )]
 
 transform = Transform( 0.174917, 0, 0.984583, 0, 1, 0, -0.984583, 0, 0.174917, -4.52391, 2.0593, 27.6745 )
+jump = 11
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
 

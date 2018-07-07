@@ -16,7 +16,7 @@ var mouse_sensitivity = 0.2
 var camera_angle = 0
 
 #jump
-export var jump = 10
+export var jump = 11
 
 #Player
 const MAX_HEALTH = 100

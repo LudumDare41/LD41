@@ -102,9 +102,10 @@ _sections_unfolded = [ "Albedo" ]
 [sub_resource type="QuadMesh" id=4]
 
 material = SubResource( 3 )
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 size = Vector2( 0.2, 0.2 )
 
-[node name="Zombie" type="KinematicBody" groups=[
+[node name="Zombie" type="KinematicBody" index="0" groups=[
 "DemageArea",
 ]]
 
@@ -125,11 +126,11 @@ speed = 2.5
 
 [node name="ZombieModel" parent="." index="0" instance=ExtResource( 2 )]
 
-transform = Transform( -0.03, 0, -9.77524e-09, 0, 0.03, 0, 9.77524e-09, 0, -0.03, 0, -1.34038, 0 )
+transform = Transform( -0.03, 0, -9.77524e-009, 0, 0.03, 0, 9.77524e-009, 0, -0.03, 0, -1.34038, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="1"]
 
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.259021, 0 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-007, -1, 0, 1, -1.62921e-007, 0, 0.259021, 0 )
 shape = SubResource( 1 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
@@ -143,7 +144,7 @@ autostart = false
 
 [node name="HitParticle" type="Particles" parent="." index="3"]
 
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 1.04554, -0.31383 )
+transform = Transform( -1, 0, -3.25841e-007, 0, 1, 0, 3.25841e-007, 0, -1, 0, 1.04554, -0.31383 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -178,10 +179,11 @@ attenuation_model = 0
 unit_db = 12.0
 unit_size = 0.7
 max_db = 3.0
+pitch_scale = 1.0
 autoplay = false
 max_distance = 0.0
 out_of_range_mode = 0
-bus = "Master"
+bus = "Sounds"
 area_mask = 1
 emission_angle_enabled = false
 emission_angle_degrees = 45.0
@@ -197,10 +199,11 @@ attenuation_model = 0
 unit_db = 10.0
 unit_size = 0.7
 max_db = 3.0
+pitch_scale = 1.0
 autoplay = false
 max_distance = 0.0
 out_of_range_mode = 0
-bus = "Master"
+bus = "Sounds"
 area_mask = 1
 emission_angle_enabled = false
 emission_angle_degrees = 45.0
@@ -216,10 +219,11 @@ attenuation_model = 0
 unit_db = 12.0
 unit_size = 0.7
 max_db = 3.0
+pitch_scale = 1.0
 autoplay = false
 max_distance = 0.0
 out_of_range_mode = 0
-bus = "Master"
+bus = "Sounds"
 area_mask = 1
 emission_angle_enabled = false
 emission_angle_degrees = 45.0
