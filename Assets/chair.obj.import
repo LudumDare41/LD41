@@ -9,10 +9,7 @@ path="res://.import/chair.obj-c74667a4fb377218a0150df2f36479c0.mesh"
 files=[ "res://.import/chair.obj-c74667a4fb377218a0150df2f36479c0.mesh" ]
 
 source_file="res://Assets/chair.obj"
-source_md5="0e4bdc914cd6eee19ebaf4bd6e399094"
-
 dest_files=[ "res://.import/chair.obj-c74667a4fb377218a0150df2f36479c0.mesh", "res://.import/chair.obj-c74667a4fb377218a0150df2f36479c0.mesh" ]
-dest_md5="c7de4d24076146e67f65b108f43ae232"
 
 [params]
 

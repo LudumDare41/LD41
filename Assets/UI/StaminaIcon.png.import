@@ -7,10 +7,7 @@ path="res://.import/StaminaIcon.png-8704b0ca2b4d77ce9e0f9b05b1d783ac.stex"
 [deps]
 
 source_file="res://Assets/UI/StaminaIcon.png"
-source_md5="4df8e9dff7c59db4f9eae26e6c8fcf6f"
-
 dest_files=[ "res://.import/StaminaIcon.png-8704b0ca2b4d77ce9e0f9b05b1d783ac.stex" ]
-dest_md5="41d2feb2785913fee4d5a5d4e188d2ac"
 
 [params]
 
@@ -18,15 +15,15 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
+flags/repeat=true
+flags/filter=false
+flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

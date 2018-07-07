@@ -2,28 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Zombie.png-4230481d8b69ffc29ddafca14fd87919.s3tc.stex"
-path.etc2="res://.import/Zombie.png-4230481d8b69ffc29ddafca14fd87919.etc2.stex"
+path="res://.import/Zombie.png-4230481d8b69ffc29ddafca14fd87919.stex"
 
 [deps]
 
 source_file="res://Assets/Zombie.png"
-source_md5="04a893daa9ca42b541222106757e78a2"
-
-dest_files=[ "res://.import/Zombie.png-4230481d8b69ffc29ddafca14fd87919.s3tc.stex", "res://.import/Zombie.png-4230481d8b69ffc29ddafca14fd87919.etc2.stex" ]
-dest_md5="095c0ae936a90411fb5f8761ec315504"
+dest_files=[ "res://.import/Zombie.png-4230481d8b69ffc29ddafca14fd87919.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

@@ -2,28 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/tree.png-f0858fcddf0a23aa79accde76137cff6.s3tc.stex"
-path.etc2="res://.import/tree.png-f0858fcddf0a23aa79accde76137cff6.etc2.stex"
+path="res://.import/tree.png-f0858fcddf0a23aa79accde76137cff6.stex"
 
 [deps]
 
 source_file="res://Assets/tree.png"
-source_md5="47e221b83ce745cc6ca03d3f73023eb5"
-
-dest_files=[ "res://.import/tree.png-f0858fcddf0a23aa79accde76137cff6.s3tc.stex", "res://.import/tree.png-f0858fcddf0a23aa79accde76137cff6.etc2.stex" ]
-dest_md5="c151bdcce618eecb9c670799f7736630"
+dest_files=[ "res://.import/tree.png-f0858fcddf0a23aa79accde76137cff6.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/camera.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Assets/camera.png" type="Texture" id=2]
+[ext_resource path="res://Assets/camera emisive.png" type="Texture" id=3]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -35,9 +36,10 @@ roughness = 0.0
 roughness_texture_channel = 0
 emission_enabled = true
 emission = Color( 0, 0, 0, 1 )
-emission_energy = 1.0
+emission_energy = 0.5
 emission_operator = 0
 emission_on_uv2 = false
+emission_texture = ExtResource( 3 )
 normal_enabled = false
 rim_enabled = false
 clearcoat_enabled = false
@@ -101,5 +103,28 @@ omni_attenuation = 1.0
 omni_shadow_mode = 1
 omni_shadow_detail = 1
 _sections_unfolded = [ "Light", "Omni", "Shadow" ]
+
+[node name="SpotLight" type="SpotLight" parent="." index="2"]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0.378913, 5.02404, 0.651457 )
+layers = 1
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 1.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+spot_range = 21.4599
+spot_attenuation = 1.0
+spot_angle = 18.5353
+spot_angle_attenuation = 1.0
+_sections_unfolded = [ "Light" ]
 
 

@@ -7,22 +7,19 @@ path="res://.import/light emissive.png-47126474b87e698c92b09920a6e12826.stex"
 [deps]
 
 source_file="res://Assets/light emissive.png"
-source_md5="f52f13ef76db63d23252ee1034f31dc2"
-
 dest_files=[ "res://.import/light emissive.png-47126474b87e698c92b09920a6e12826.stex" ]
-dest_md5="c5d3589ebff34e469b882435f5f936c1"
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

@@ -9,10 +9,7 @@ path="res://.import/outside wall.obj-fdc59851a7e352681a5ab7b6fe565819.mesh"
 files=[ "res://.import/outside wall.obj-fdc59851a7e352681a5ab7b6fe565819.mesh" ]
 
 source_file="res://Assets/outside wall.obj"
-source_md5="b832a8ef9ab4aa5289266eeb7af9a558"
-
 dest_files=[ "res://.import/outside wall.obj-fdc59851a7e352681a5ab7b6fe565819.mesh", "res://.import/outside wall.obj-fdc59851a7e352681a5ab7b6fe565819.mesh" ]
-dest_md5="ad4099f2bcda329acc38580adbd9ec94"
 
 [params]
 

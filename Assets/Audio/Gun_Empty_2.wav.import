@@ -7,10 +7,7 @@ path="res://.import/Gun_Empty_2.wav-87133943959fa33b6b830f4fca3974f9.sample"
 [deps]
 
 source_file="res://Assets/Audio/Gun_Empty_2.wav"
-source_md5="726a10308000927c8659f007bbd51c1a"
-
 dest_files=[ "res://.import/Gun_Empty_2.wav-87133943959fa33b6b830f4fca3974f9.sample" ]
-dest_md5="4e8490bb88b60f5d34d1a5216889801b"
 
 [params]
 

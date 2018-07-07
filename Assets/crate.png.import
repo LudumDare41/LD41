@@ -2,28 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/crate.png-b9c1bde1c58c6e5e80e470ba210c4026.s3tc.stex"
-path.etc2="res://.import/crate.png-b9c1bde1c58c6e5e80e470ba210c4026.etc2.stex"
+path="res://.import/crate.png-b9c1bde1c58c6e5e80e470ba210c4026.stex"
 
 [deps]
 
 source_file="res://Assets/crate.png"
-source_md5="04a893daa9ca42b541222106757e78a2"
-
-dest_files=[ "res://.import/crate.png-b9c1bde1c58c6e5e80e470ba210c4026.s3tc.stex", "res://.import/crate.png-b9c1bde1c58c6e5e80e470ba210c4026.etc2.stex" ]
-dest_md5="c5e37ea8d880ed4bffbce4c1061dc92d"
+dest_files=[ "res://.import/crate.png-b9c1bde1c58c6e5e80e470ba210c4026.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

@@ -7,10 +7,7 @@ path="res://.import/Gun_Shot_1.wav-e6cab7febde90494cd3809e20f590db1.sample"
 [deps]
 
 source_file="res://Assets/Particles/Gun_Shot_1.wav"
-source_md5="64487bc3b23e28d3ebd99ec798f5da65"
-
 dest_files=[ "res://.import/Gun_Shot_1.wav-e6cab7febde90494cd3809e20f590db1.sample" ]
-dest_md5="c36c5b073086cd29716f1845149ad973"
 
 [params]
 

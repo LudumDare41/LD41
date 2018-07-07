@@ -73,28 +73,28 @@ dof_blur_near_distance = 2.0
 dof_blur_near_transition = 1.0
 dof_blur_near_amount = 0.1
 dof_blur_near_quality = 0
-glow_enabled = false
+glow_enabled = true
 glow_levels/1 = false
 glow_levels/2 = false
 glow_levels/3 = true
 glow_levels/4 = false
 glow_levels/5 = true
 glow_levels/6 = false
-glow_levels/7 = false
+glow_levels/7 = true
 glow_intensity = 0.8
 glow_strength = 1.0
 glow_bloom = 0.0
 glow_blend_mode = 2
 glow_hdr_threshold = 1.0
 glow_hdr_scale = 2.0
-glow_bicubic_upscale = false
+glow_bicubic_upscale = true
 adjustment_enabled = true
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.1
-_sections_unfolded = [ "Background", "DOF Far Blur", "Glow/levels", "SSAO" ]
+_sections_unfolded = [ "Ambient Light", "Glow", "Glow/levels" ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
 
@@ -108,7 +108,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Labyrinth 2" parent="Levels" index="1" instance=ExtResource( 3 )]
 
-transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 66, -1.5, 51.8659 )
+transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, 66, -1.5, 51.8659 )
 
 [node name="FPSController" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -118,6 +118,7 @@ transform = Transform( 0.174917, 0, 0.984583, 0, 1, 0, -0.984583, 0, 0.174917, -
 
 stream = ExtResource( 5 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
@@ -132,7 +133,7 @@ transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.069
 
 [node name="MedKit4" parent="MedKits" index="1" instance=ExtResource( 6 )]
 
-transform = Transform( -0.0544867, 3.24488e-06, 0.0439454, 0.000118657, 0.0699998, 0.000141948, -0.0439452, 0.000184982, -0.0544865, 20.3247, 0, -30.107 )
+transform = Transform( -0.0544867, 3.24488e-006, 0.0439454, 0.000118657, 0.0699998, 0.000141948, -0.0439452, 0.000184982, -0.0544865, 20.3247, 0, -30.107 )
 
 [node name="MedKit2" parent="MedKits" index="2" instance=ExtResource( 6 )]
 
@@ -152,7 +153,7 @@ transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0
 
 [node name="AmmoBox12" parent="AmmoBoxes" index="2" instance=ExtResource( 7 )]
 
-transform = Transform( 0.00438235, 0, 0.0296782, 0, 0.03, 0, -0.0296782, 0, 0.00438235, -13.1761, 4.76837e-07, -31.8097 )
+transform = Transform( 0.00438235, 0, 0.0296782, 0, 0.03, 0, -0.0296782, 0, 0.00438235, -13.1761, 4.76837e-007, -31.8097 )
 
 [node name="AmmoBox10" parent="AmmoBoxes" index="3" instance=ExtResource( 7 )]
 

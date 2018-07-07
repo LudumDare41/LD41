@@ -7,10 +7,7 @@ path="res://.import/crosshair2.png-fe590726d2243de22f54aee42b2a0c31.stex"
 [deps]
 
 source_file="res://Assets/UI/crosshair2.png"
-source_md5="a665f8fdfc0f3e03774a3326e022f499"
-
 dest_files=[ "res://.import/crosshair2.png-fe590726d2243de22f54aee42b2a0c31.stex" ]
-dest_md5="badefda13034b70756b600d217870d13"
 
 [params]
 
@@ -18,15 +15,15 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
+flags/repeat=true
+flags/filter=false
+flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

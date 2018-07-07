@@ -7,10 +7,7 @@ path="res://.import/Zombie_Moan_1.wav-f9d4bfb95710205b367fd8aa44056518.sample"
 [deps]
 
 source_file="res://Assets/Audio/Zombie/Zombie_Moan_1.wav"
-source_md5="a8b2b2e413262ebda109a3ba2239ee9b"
-
 dest_files=[ "res://.import/Zombie_Moan_1.wav-f9d4bfb95710205b367fd8aa44056518.sample" ]
-dest_md5="79f2dc7ad8e999ddc35ebcd3bc25d6a6"
 
 [params]
 

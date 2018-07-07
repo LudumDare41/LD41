@@ -2,28 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/chair.png-84b740201e7482b276361ce3ea6a682e.s3tc.stex"
-path.etc2="res://.import/chair.png-84b740201e7482b276361ce3ea6a682e.etc2.stex"
+path="res://.import/chair.png-84b740201e7482b276361ce3ea6a682e.stex"
 
 [deps]
 
 source_file="res://Assets/chair.png"
-source_md5="22d2c8adfe053fb0b17dd63fe9623aa3"
-
-dest_files=[ "res://.import/chair.png-84b740201e7482b276361ce3ea6a682e.s3tc.stex", "res://.import/chair.png-84b740201e7482b276361ce3ea6a682e.etc2.stex" ]
-dest_md5="256abbe8009d261d33b718a7f52e6bfb"
+dest_files=[ "res://.import/chair.png-84b740201e7482b276361ce3ea6a682e.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

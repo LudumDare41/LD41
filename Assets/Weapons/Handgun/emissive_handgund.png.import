@@ -7,22 +7,19 @@ path="res://.import/emissive_handgund.png-054dc17475c6f60374b6e1effa1a47f7.stex"
 [deps]
 
 source_file="res://Assets/Weapons/Handgun/emissive_handgund.png"
-source_md5="92cea4497916ec6b0f6fa716f2dddea3"
-
 dest_files=[ "res://.import/emissive_handgund.png-054dc17475c6f60374b6e1effa1a47f7.stex" ]
-dest_md5="214298e8b1c971822971586d74403fa1"
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

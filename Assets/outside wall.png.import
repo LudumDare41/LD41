@@ -2,28 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/outside wall.png-14127a4ba75048e926f443bf04788255.s3tc.stex"
-path.etc2="res://.import/outside wall.png-14127a4ba75048e926f443bf04788255.etc2.stex"
+path="res://.import/outside wall.png-14127a4ba75048e926f443bf04788255.stex"
 
 [deps]
 
 source_file="res://Assets/outside wall.png"
-source_md5="28def41c6528dca19960fbdae24f51ec"
-
-dest_files=[ "res://.import/outside wall.png-14127a4ba75048e926f443bf04788255.s3tc.stex", "res://.import/outside wall.png-14127a4ba75048e926f443bf04788255.etc2.stex" ]
-dest_md5="1790557f73199c2cc6ab510c2e20097d"
+dest_files=[ "res://.import/outside wall.png-14127a4ba75048e926f443bf04788255.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

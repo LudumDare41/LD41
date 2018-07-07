@@ -7,10 +7,7 @@ path="res://.import/Reload_1.wav-c7336a6df282eadaf0c74221032bd133.sample"
 [deps]
 
 source_file="res://Assets/Audio/Reload_1.wav"
-source_md5="7daf2494417942d90081d3d1a299a881"
-
 dest_files=[ "res://.import/Reload_1.wav-c7336a6df282eadaf0c74221032bd133.sample" ]
-dest_md5="7bb967f029a7ff7518061969cf272f31"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/Player_Damage_1.wav-a18862c639c04c6f2811e8bf2ac45d22.sample"
 [deps]
 
 source_file="res://Assets/Audio/Player_Damage_1.wav"
-source_md5="e3e6fe840611c1af89142d7f8cf6e759"
-
 dest_files=[ "res://.import/Player_Damage_1.wav-a18862c639c04c6f2811e8bf2ac45d22.sample" ]
-dest_md5="5b013da16a649fd2ea9b45dfc3e94f5c"
 
 [params]
 

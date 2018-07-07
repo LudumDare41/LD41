@@ -2,28 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/wall broken.png-eecdb91ed079938be2766b1aef959612.s3tc.stex"
-path.etc2="res://.import/wall broken.png-eecdb91ed079938be2766b1aef959612.etc2.stex"
+path="res://.import/wall broken.png-eecdb91ed079938be2766b1aef959612.stex"
 
 [deps]
 
 source_file="res://Assets/wall broken.png"
-source_md5="28def41c6528dca19960fbdae24f51ec"
-
-dest_files=[ "res://.import/wall broken.png-eecdb91ed079938be2766b1aef959612.s3tc.stex", "res://.import/wall broken.png-eecdb91ed079938be2766b1aef959612.etc2.stex" ]
-dest_md5="3e7537f7412fce200d43c38d5071b6c3"
+dest_files=[ "res://.import/wall broken.png-eecdb91ed079938be2766b1aef959612.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

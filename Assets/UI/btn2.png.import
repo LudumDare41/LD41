@@ -7,10 +7,7 @@ path="res://.import/btn2.png-18f154c73033b3b2392b9b6defe4bff9.stex"
 [deps]
 
 source_file="res://Assets/UI/btn2.png"
-source_md5="d6792d501b6baf3356cfe3e86da032c3"
-
 dest_files=[ "res://.import/btn2.png-18f154c73033b3b2392b9b6defe4bff9.stex" ]
-dest_md5="b8ec368cd0819998842ee6fd56bf48fe"
 
 [params]
 
@@ -18,15 +15,15 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
+flags/repeat=true
+flags/filter=false
+flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

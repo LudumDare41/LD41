@@ -7,22 +7,19 @@ path="res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.stex"
 [deps]
 
 source_file="res://Assets/spot emissive.png"
-source_md5="97d2a3b274f90fcd01766198da40f072"
-
 dest_files=[ "res://.import/spot emissive.png-22b322f122264fd6126099442451e05c.stex" ]
-dest_md5="f08323feef6aea6930cc607100fce6fd"
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

@@ -7,10 +7,7 @@ path="res://.import/HealthIcon.png-5829162bf4d33621019ddc0caebaa7d3.stex"
 [deps]
 
 source_file="res://Assets/UI/HealthIcon.png"
-source_md5="b86de68f3d43efc97f0698df130f7c3c"
-
 dest_files=[ "res://.import/HealthIcon.png-5829162bf4d33621019ddc0caebaa7d3.stex" ]
-dest_md5="8dc057c694e98780f994aedf9849b3dd"
 
 [params]
 
@@ -18,15 +15,15 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
+flags/repeat=true
+flags/filter=false
+flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

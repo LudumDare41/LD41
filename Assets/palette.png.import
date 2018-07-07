@@ -2,28 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/palette.png-a9489b31af284cee4564710167596713.s3tc.stex"
-path.etc2="res://.import/palette.png-a9489b31af284cee4564710167596713.etc2.stex"
+path="res://.import/palette.png-a9489b31af284cee4564710167596713.stex"
 
 [deps]
 
 source_file="res://Assets/palette.png"
-source_md5="1599b7eefce511eee7ba8e35579b3284"
-
-dest_files=[ "res://.import/palette.png-a9489b31af284cee4564710167596713.s3tc.stex", "res://.import/palette.png-a9489b31af284cee4564710167596713.etc2.stex" ]
-dest_md5="c9d35231cdc50d716564688a29c9e82f"
+dest_files=[ "res://.import/palette.png-a9489b31af284cee4564710167596713.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

@@ -15,7 +15,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -363,6 +363,7 @@ align = 1
 
 stream = ExtResource( 6 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"

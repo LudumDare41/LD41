@@ -26,6 +26,7 @@ height = 1.0
 
 [sub_resource type="CapsuleMesh" id=2]
 
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 radius = 1.0
 mid_height = 1.0
 radial_segments = 64
@@ -96,7 +97,7 @@ flatness = 0.0
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 0.3
 initial_velocity_random = 0.0
-angular_velocity = 1.06531e-38
+angular_velocity = 1.06531e-038
 angular_velocity_random = 0.0
 linear_accel = 0.0
 linear_accel_random = 0.0
@@ -181,6 +182,7 @@ _sections_unfolded = [ "Albedo", "Emission" ]
 
 lightmap_size_hint = Vector2( 1, 1 )
 material = SubResource( 5 )
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 size = Vector2( 2, 2 )
 subdivide_width = 0
 subdivide_depth = 0
@@ -198,7 +200,7 @@ use_filter = false
 font_data = ExtResource( 15 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="FPSController" type="KinematicBody"]
+[node name="FPSController" type="KinematicBody" index="0"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -214,7 +216,6 @@ collision/safe_margin = 0.001
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 gravity = -29.4
-mouse_sensitivity = 0.3
 jump = 10
 
 [node name="Area" type="Area" parent="." index="0"]
@@ -242,7 +243,7 @@ reverb_bus_uniformity = 0.0
 
 [node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
 
-transform = Transform( 1.79918, 0, 0, 0, -7.04622e-08, 1.61199, 0, -1.52458, -6.66416e-08, 0, 0, -0.184335 )
+transform = Transform( 1.79918, 0, 0, 0, -7.04622e-008, 1.61199, 0, -1.52458, -6.66416e-008, 0, 0, -0.184335 )
 shape = SubResource( 1 )
 disabled = false
 
@@ -250,7 +251,7 @@ disabled = false
 
 [node name="CharacterMesh" type="MeshInstance" parent="Body" index="0"]
 
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -338,7 +339,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Shotlight" type="OmniLight" parent="Head/Camera/Hand" index="1"]
 
-transform = Transform( 0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.686236, 0.632916, -3.18938 )
+transform = Transform( 0.5, 0, 0, 0, -2.18557e-008, -0.5, 0, 0.5, -2.18557e-008, 0.686236, 0.632916, -3.18938 )
 layers = 1
 light_color = Color( 1, 0.956055, 0.71875, 1 )
 light_energy = 4.0
@@ -361,7 +362,7 @@ _sections_unfolded = [ "Light", "Omni", "Shadow" ]
 
 [node name="Particles" parent="Head/Camera/Hand" index="2" instance=ExtResource( 5 )]
 
-transform = Transform( 0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.686236, 0.632916, -3.18938 )
+transform = Transform( 0.5, 0, 0, 0, -2.18557e-008, -0.5, 0, 0.5, -2.18557e-008, 0.686236, 0.632916, -3.18938 )
 use_in_baked_light = true
 amount = 8
 explosiveness = 0.0
@@ -378,6 +379,7 @@ attenuation_model = 0
 unit_db = 10.0
 unit_size = 6.0
 max_db = 6.0
+pitch_scale = 1.0
 autoplay = false
 max_distance = 0.0
 out_of_range_mode = 0
@@ -398,6 +400,7 @@ attenuation_model = 0
 unit_db = 10.0
 unit_size = 6.0
 max_db = 6.0
+pitch_scale = 1.0
 autoplay = false
 max_distance = 0.0
 out_of_range_mode = 0
@@ -415,6 +418,7 @@ _sections_unfolded = [ "Doppler" ]
 
 stream = ExtResource( 9 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
@@ -423,13 +427,14 @@ bus = "Master"
 
 stream = ExtResource( 10 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
 [node name="Collider" type="CollisionShape" parent="." index="3"]
 
-transform = Transform( 1, 0, 0, 0, -3.81019e-08, -0.871669, 0, 0.847664, -3.70526e-08, 0, -0.401785, 0 )
+transform = Transform( 1, 0, 0, 0, -3.81019e-008, -0.871669, 0, 0.847664, -3.70526e-008, 0, -0.401785, 0 )
 shape = SubResource( 7 )
 disabled = false
 
@@ -441,6 +446,7 @@ attenuation_model = 0
 unit_db = 1.0
 unit_size = 10.0
 max_db = 1.0
+pitch_scale = 1.0
 autoplay = false
 max_distance = 0.0
 out_of_range_mode = 0
@@ -460,6 +466,7 @@ attenuation_model = 0
 unit_db = 0.0
 unit_size = 5.0
 max_db = 3.0
+pitch_scale = 1.0
 autoplay = false
 max_distance = 0.0
 out_of_range_mode = 0
@@ -726,9 +733,9 @@ wait_time = 0.2
 one_shot = true
 autostart = false
 
-[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
-
 [connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
+
+[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 

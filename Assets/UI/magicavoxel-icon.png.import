@@ -7,10 +7,7 @@ path="res://.import/magicavoxel-icon.png-51397a9a18988b9f806ab57e86af20c4.stex"
 [deps]
 
 source_file="res://Assets/UI/magicavoxel-icon.png"
-source_md5="64ba6d1187827aa3ff3577c9ef9419fc"
-
 dest_files=[ "res://.import/magicavoxel-icon.png-51397a9a18988b9f806ab57e86af20c4.stex" ]
-dest_md5="1e746e543bd259295abc346f7671d5fb"
 
 [params]
 
@@ -18,15 +15,15 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
+flags/repeat=true
+flags/filter=false
+flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

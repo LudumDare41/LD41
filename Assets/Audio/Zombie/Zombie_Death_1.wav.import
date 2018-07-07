@@ -7,10 +7,7 @@ path="res://.import/Zombie_Death_1.wav-16a3d8a5d3fb1bbb258706f440318739.sample"
 [deps]
 
 source_file="res://Assets/Audio/Zombie/Zombie_Death_1.wav"
-source_md5="a14ea3db6568b7740f2e0668b783cb32"
-
 dest_files=[ "res://.import/Zombie_Death_1.wav-16a3d8a5d3fb1bbb258706f440318739.sample" ]
-dest_md5="461450ac962a79f7dcc92141a852562d"
 
 [params]
 

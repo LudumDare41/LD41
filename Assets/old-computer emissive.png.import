@@ -7,22 +7,19 @@ path="res://.import/old-computer emissive.png-746dc5d594293d0543d0e35062b4bbdc.s
 [deps]
 
 source_file="res://Assets/old-computer emissive.png"
-source_md5="08fc160c399efb0f4164ff3a3fa5bba2"
-
 dest_files=[ "res://.import/old-computer emissive.png-746dc5d594293d0543d0e35062b4bbdc.stex" ]
-dest_md5="5270c8fc580df88434ac882a985b41b0"
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

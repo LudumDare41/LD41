@@ -12,7 +12,7 @@ const DEACCEL = 20
 export var gravity = -9.8 * 3
 
 #Mouse controller variables
-export var mouse_sensitivity = 0.3
+var mouse_sensitivity = 0.2
 var camera_angle = 0
 
 #jump
@@ -142,7 +142,16 @@ func _on_Area_body_exited(body):
 func footstep():
 	if !FootstepsAudio.is_playing() and timer < 0.01:
 		FootstepsAudio.play()
-		timer = 0.5
+		
+		if Input.is_action_pressed("shift"):
+			timer = 0.3
+			FootstepsAudio.pitch_scale = 1.2
+			
+		else:
+			timer = 0.45
+			FootstepsAudio.pitch_scale = 1
+		
+		
 
 func _on_Area_area_entered(area):
 	if area.is_in_group("MedKit"):

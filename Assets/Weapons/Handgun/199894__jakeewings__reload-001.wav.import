@@ -7,10 +7,7 @@ path="res://.import/199894__jakeewings__reload-001.wav-6a6c1b2a56ec92041ae8b2a80
 [deps]
 
 source_file="res://Assets/Weapons/Handgun/199894__jakeewings__reload-001.wav"
-source_md5="2852bfabc8f18461a71b1d7b40f6f188"
-
 dest_files=[ "res://.import/199894__jakeewings__reload-001.wav-6a6c1b2a56ec92041ae8b2a804185ece.sample" ]
-dest_md5="835932c51a2522e56c2b68e2fb2e1e12"
 
 [params]
 

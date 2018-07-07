@@ -9,10 +9,7 @@ path="res://.import/light 2.obj-fac3e4c7c631c1cbb2788219219eee33.mesh"
 files=[ "res://.import/light 2.obj-fac3e4c7c631c1cbb2788219219eee33.mesh" ]
 
 source_file="res://Assets/light 2.obj"
-source_md5="13a7d516fb1eba7452d70c73515767df"
-
 dest_files=[ "res://.import/light 2.obj-fac3e4c7c631c1cbb2788219219eee33.mesh", "res://.import/light 2.obj-fac3e4c7c631c1cbb2788219219eee33.mesh" ]
-dest_md5="820c5e191e2205c4671122b46b39bdab"
 
 [params]
 

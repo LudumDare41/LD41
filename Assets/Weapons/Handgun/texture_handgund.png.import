@@ -2,28 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/texture_handgund.png-9335e24735448f97d93e6a410903a7f8.s3tc.stex"
-path.etc2="res://.import/texture_handgund.png-9335e24735448f97d93e6a410903a7f8.etc2.stex"
+path="res://.import/texture_handgund.png-9335e24735448f97d93e6a410903a7f8.stex"
 
 [deps]
 
 source_file="res://Assets/Weapons/Handgun/texture_handgund.png"
-source_md5="04a893daa9ca42b541222106757e78a2"
-
-dest_files=[ "res://.import/texture_handgund.png-9335e24735448f97d93e6a410903a7f8.s3tc.stex", "res://.import/texture_handgund.png-9335e24735448f97d93e6a410903a7f8.etc2.stex" ]
-dest_md5="96118cb4b7cb25b29a9d122d2a81232f"
+dest_files=[ "res://.import/texture_handgund.png-9335e24735448f97d93e6a410903a7f8.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

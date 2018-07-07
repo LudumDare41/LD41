@@ -7,10 +7,7 @@ path="res://.import/zombie.dae-2dc76feef80b8ba98efe1ff98666d016.scn"
 [deps]
 
 source_file="res://Assets/zombie.dae"
-source_md5="93fdcf13a5cd811d3aff389af6e23741"
-
 dest_files=[ "res://.import/zombie.dae-2dc76feef80b8ba98efe1ff98666d016.scn" ]
-dest_md5="20e430d6b2d33d374afa43cb01516f9d"
 
 [params]
 

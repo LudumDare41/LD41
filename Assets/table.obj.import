@@ -9,10 +9,7 @@ path="res://.import/table.obj-24582fdaac54ec77c2699664c5714e28.mesh"
 files=[ "res://.import/table.obj-24582fdaac54ec77c2699664c5714e28.mesh" ]
 
 source_file="res://Assets/table.obj"
-source_md5="3c5fd577f8336951c813ad1e649554c2"
-
 dest_files=[ "res://.import/table.obj-24582fdaac54ec77c2699664c5714e28.mesh", "res://.import/table.obj-24582fdaac54ec77c2699664c5714e28.mesh" ]
-dest_md5="dbc1062029eaecd5764a5a55bbece4c5"
 
 [params]
 

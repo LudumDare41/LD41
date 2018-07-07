@@ -7,10 +7,7 @@ path="res://.import/backArrow.png-de3edd3db5508051dab93c7e83c4ca6f.stex"
 [deps]
 
 source_file="res://Assets/UI/backArrow.png"
-source_md5="5ec1bfa2f1a89f8788e484e8636d7b5f"
-
 dest_files=[ "res://.import/backArrow.png-de3edd3db5508051dab93c7e83c4ca6f.stex" ]
-dest_md5="d1f9e7cfc2499b90b6958cb4dbbe2314"
 
 [params]
 
@@ -18,15 +15,15 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
+flags/repeat=true
+flags/filter=false
+flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

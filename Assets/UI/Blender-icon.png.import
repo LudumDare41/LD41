@@ -7,10 +7,7 @@ path="res://.import/Blender-icon.png-89f944d4faadfaa7d9fc04100c880df3.stex"
 [deps]
 
 source_file="res://Assets/UI/Blender-icon.png"
-source_md5="f0c6d90637ba75f8b074cb9a20544d51"
-
 dest_files=[ "res://.import/Blender-icon.png-89f944d4faadfaa7d9fc04100c880df3.stex" ]
-dest_md5="31078b53cccfc245449030390ddb6b5e"
 
 [params]
 
@@ -18,15 +15,15 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
+flags/repeat=true
+flags/filter=false
+flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

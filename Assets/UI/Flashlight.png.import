@@ -7,10 +7,7 @@ path="res://.import/Flashlight.png-9ac1942fba7534b2c475df4bfeec309a.stex"
 [deps]
 
 source_file="res://Assets/UI/Flashlight.png"
-source_md5="d2dc2637b22aeded96fba18ab6be2860"
-
 dest_files=[ "res://.import/Flashlight.png-9ac1942fba7534b2c475df4bfeec309a.stex" ]
-dest_md5="666b093e6db2839edf60aa2195d1d2be"
 
 [params]
 
@@ -18,15 +15,15 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
+flags/repeat=true
+flags/filter=false
+flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
