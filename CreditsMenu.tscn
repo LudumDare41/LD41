@@ -41,7 +41,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 
-[node name="Sprite" parent="." index="0" instance=ExtResource( 2 )]
+[node name="Background" parent="." index="0" instance=ExtResource( 2 )]
 
 [node name="To main menu" type="Container" parent="." index="1"]
 
@@ -145,10 +145,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -187.0
-margin_top = -25.0
-margin_right = 491.0
-margin_bottom = 672.0
+margin_left = -513.0
+margin_top = 2.0
+margin_right = 767.0
+margin_bottom = 652.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

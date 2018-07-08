@@ -86,8 +86,8 @@ _sections_unfolded = [ "Geometry", "Transform", "material" ]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.37549, 0 )
 layers = 1
 light_color = Color( 1, 0, 0, 1 )
-light_energy = 0.4
-light_indirect_energy = 0.4
+light_energy = 0.5
+light_indirect_energy = 0.5
 light_negative = false
 light_specular = 0.5
 light_bake_mode = 1
@@ -102,6 +102,6 @@ omni_range = 5.0
 omni_attenuation = 1.0
 omni_shadow_mode = 1
 omni_shadow_detail = 1
-_sections_unfolded = [ "Light", "Shadow" ]
+_sections_unfolded = [ "Light", "Omni", "Shadow" ]
 
 

@@ -70,7 +70,7 @@ extents = Vector3( 6, 6, 6 )
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
-transform = Transform( -6.55671e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.55671e-09, 0, 0, 0 )
+transform = Transform( -6.55671e-009, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.55671e-009, 0, 0, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -98,7 +98,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody" index="0"]
 
-transform = Transform( 1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 6.5133, 0 )
+transform = Transform( 1, 0, -1.06581e-014, 0, 1, 0, 1.06581e-014, 0, 1, 0, 6.5133, 0 )
 shape = SubResource( 2 )
 disabled = false
 
@@ -107,8 +107,8 @@ disabled = false
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27717, 0.98393 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
-light_energy = 0.1
-light_indirect_energy = 0.1
+light_energy = 0.4
+light_indirect_energy = 0.4
 light_negative = false
 light_specular = 0.5
 light_bake_mode = 1

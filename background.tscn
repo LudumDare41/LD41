@@ -2,12 +2,12 @@
 
 [ext_resource path="res://Assets/UI/menuBackgroun.png" type="Texture" id=1]
 
-[node name="Sprite" type="Sprite"]
+[node name="Background" type="Sprite" index="0"]
 
-position = Vector2( 644.069, 364.981 )
-scale = Vector2( 0.632519, 0.64081 )
+scale = Vector2( 0.631475, 0.631579 )
 z_index = -1
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Z Index" ]
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
 
 

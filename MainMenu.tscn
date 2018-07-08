@@ -31,7 +31,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 
-[node name="Sprite" parent="." index="0" instance=ExtResource( 2 )]
+[node name="Background" parent="." index="0" instance=ExtResource( 2 )]
 
 [node name="Play" type="Container" parent="." index="1"]
 
