@@ -56,7 +56,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Roughness" ]
 
-[node name="ZombieMesh" index="0" instance=ExtResource( 1 )]
+[node name="ZombieMesh" instance=ExtResource( 1 )]
 
 [node name="Zombie" parent="Armature/Skeleton" index="0"]
 

@@ -30,10 +30,7 @@
 [ext_resource path="res://Instances/Antenna.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Instances/Border.tscn" type="PackedScene" id=29]
 
-
-
-
-[node name="Labyrinth" type="Spatial" index="0"]
+[node name="Labyrinth" type="Spatial"]
 
 [node name="Walls SCIFI" type="Spatial" parent="." index="0"]
 
@@ -1293,7 +1290,7 @@ transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, 39, 0, 
 
 [node name="Crate" parent="Crates" index="0" instance=ExtResource( 10 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99751, 0, -0.161515 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.29924, 0, -0.339839 )
 
 [node name="Crate15" parent="Crates" index="1" instance=ExtResource( 10 )]
 
@@ -1346,10 +1343,6 @@ transform = Transform( -0.053873, 0, -0.998548, 0, 1, 0, 0.998548, 0, -0.053873,
 [node name="Crate12" parent="Crates" index="13" instance=ExtResource( 10 )]
 
 transform = Transform( -0.105455, 0, 0.994424, 0, 1, 0, -0.994424, 0, -0.105455, -40.5959, 0, -54.1177 )
-
-[node name="Crate2" parent="Crates" index="14" instance=ExtResource( 10 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99751, 0, -0.161515 )
 
 [node name="Ceiling" type="Spatial" parent="." index="3"]
 

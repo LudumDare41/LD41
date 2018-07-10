@@ -8,7 +8,7 @@
 
 [sub_resource type="CapsuleShape" id=1]
 
-radius = 0.44
+radius = 0.55
 height = 2.48
 
 [sub_resource type="ParticlesMaterial" id=2]

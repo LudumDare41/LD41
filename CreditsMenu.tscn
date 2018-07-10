@@ -2,11 +2,19 @@
 
 [ext_resource path="res://Scripts/ControlsMenu.gd" type="Script" id=1]
 [ext_resource path="res://background.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/UI/backArrow.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Fonts/gunplay rg.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Assets/UI/godot_icon.png" type="Texture" id=5]
-[ext_resource path="res://Assets/UI/magicavoxel-icon.png" type="Texture" id=6]
-[ext_resource path="res://Assets/UI/Blender-icon.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Fonts/gunplay rg.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/UI/godot_icon.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/magicavoxel-icon.png" type="Texture" id=5]
+[ext_resource path="res://Assets/UI/Blender-icon.png" type="Texture" id=6]
+[ext_resource path="res://Assets/UI/backArrow.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 38
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -14,18 +22,10 @@ resource_local_to_scene = true
 size = 30
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 4 )
+font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=2]
-
-size = 38
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 4 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[node name="Control" type="Control" index="0"]
+[node name="Control" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -43,16 +43,85 @@ script = ExtResource( 1 )
 
 [node name="Background" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="To main menu" type="Container" parent="." index="1"]
+[node name="Container" type="Container" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 877.0
-margin_top = 631.0
-margin_right = 1178.0
-margin_bottom = 697.0
+margin_left = 830.0
+margin_top = 190.0
+margin_right = 870.0
+margin_bottom = 230.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Label" type="Label" parent="Container" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -513.0
+margin_top = 2.0
+margin_right = 767.0
+margin_bottom = 652.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "## Credits ##
+
+Linko - 3D Modelling and Level design
+Victor Lima - Programmer
+Nutriz - Programmer
+Leida - 3D Modelling and UI
+Orendi - 3D Modelling and Animation
+Seba - 3D Modelling and Animation
+Merlin - Sound designer/ Level design 
+Tye - Sound designer
+Typodermic Fonts - Game font"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="godot_icon" type="Sprite" parent="Container" index="1"]
+
+position = Vector2( -479.505, 683.753 )
+scale = Vector2( 0.394491, 0.394491 )
+texture = ExtResource( 4 )
+
+[node name="magicavoxel_icon" type="Sprite" parent="Container" index="2"]
+
+position = Vector2( -363.721, 680.495 )
+scale = Vector2( 0.394491, 0.394491 )
+texture = ExtResource( 5 )
+
+[node name="Blender-icon" type="Sprite" parent="Container" index="3"]
+
+position = Vector2( -258.766, 684.73 )
+scale = Vector2( 0.356124, 0.356124 )
+texture = ExtResource( 6 )
+
+[node name="To main menu" type="Container" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1260.0
+margin_top = 830.0
+margin_right = 1561.0
+margin_bottom = 896.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -64,7 +133,7 @@ size_flags_vertical = 1
 
 position = Vector2( 6.30396, 7.20612 )
 scale = Vector2( 0.6127, 0.628355 )
-normal = ExtResource( 3 )
+normal = ExtResource( 7 )
 pressed = null
 bitmask = null
 shape = null
@@ -121,75 +190,6 @@ shortcut = null
 group = null
 flat = true
 align = 1
-
-[node name="Container" type="Container" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 513.0
-margin_top = 68.0
-margin_right = 553.0
-margin_bottom = 108.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="Label" type="Label" parent="Container" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -513.0
-margin_top = 2.0
-margin_right = 767.0
-margin_bottom = 652.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
-text = "## Credits ##
-
-Linko - 3D Modelling and Level design
-Victor Lima - Programmer
-Nutriz - Programmer
-Leida - 3D Modelling and UI
-Orendi - 3D Modelling and Animation
-Seba - 3D Modelling and Animation
-Merlin - Sound designer/ Level design 
-Tye - Sound designer
-Typodermic Fonts - Game font"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
-
-[node name="godot_icon" type="Sprite" parent="Container" index="1"]
-
-position = Vector2( -422.295, 591.334 )
-scale = Vector2( 0.394491, 0.394491 )
-texture = ExtResource( 5 )
-
-[node name="magicavoxel_icon" type="Sprite" parent="Container" index="2"]
-
-position = Vector2( -306.511, 588.076 )
-scale = Vector2( 0.394491, 0.394491 )
-texture = ExtResource( 6 )
-
-[node name="Blender-icon" type="Sprite" parent="Container" index="3"]
-
-position = Vector2( -201.556, 592.311 )
-scale = Vector2( 0.356124, 0.356124 )
-texture = ExtResource( 7 )
 
 [connection signal="pressed" from="To main menu/ToMainMenuButton" to="." method="_on_ToMainMenuButton_pressed"]
 

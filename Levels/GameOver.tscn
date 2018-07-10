@@ -3,7 +3,6 @@
 [ext_resource path="res://Scripts/GameOver.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/gunplay rg.ttf" type="DynamicFontData" id=2]
 
-
 [sub_resource type="DynamicFont" id=1]
 
 size = 26
@@ -39,9 +38,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = 696.0
-margin_right = 1181.0
-margin_bottom = 1412.0
+margin_top = 1061.0
+margin_right = 1901.0
+margin_bottom = 2142.0
 rect_rotation = 180.0
 rect_scale = Vector2( -1, 1 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -60,10 +59,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 94.0
-margin_top = 288.0
-margin_right = 1041.0
-margin_bottom = 390.0
+margin_left = 532.0
+margin_top = 447.0
+margin_right = 1479.0
+margin_bottom = 549.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

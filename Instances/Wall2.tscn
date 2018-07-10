@@ -60,7 +60,7 @@ _sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
 
 extents = Vector3( 2.5, 20, 20 )
 
-[node name="Wall" type="Spatial" index="0"]
+[node name="Wall" type="Spatial"]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
