@@ -15,14 +15,14 @@ func _physics_process(delta):
 
 	if dead:
 		return
-
+	
 	$ZombieModel/AnimationPlayer.queue("WalkAction")
 
 	self.look_at(Game.player.translation, Vector3(0,1,0))
 
 	dir = Game.player.translation - self.translation
-	dir.y = 0
 	
+
 	# if player is far from zombie, don't follow him
 	if not following and (dir.x > 14 or dir.z > 14 and dir.y < -3 or dir.y > 3):
 		return

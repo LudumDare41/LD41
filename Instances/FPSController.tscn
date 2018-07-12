@@ -24,65 +24,21 @@
 radius = 1.0
 height = 1.0
 
-[sub_resource type="CapsuleMesh" id=2]
+[sub_resource type="CubeMesh" id=9]
 
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
-radius = 1.0
-mid_height = 1.0
-radial_segments = 64
-rings = 8
+size = Vector3( 2, 1.2, 2.8 )
+subdivide_width = 0
+subdivide_height = 0
+subdivide_depth = 0
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="CubeMesh" id=10]
 
-render_priority = 0
-flags_transparent = false
-flags_unshaded = false
-flags_vertex_lighting = false
-flags_no_depth_test = false
-flags_use_point_size = false
-flags_world_triplanar = false
-flags_fixed_size = false
-flags_albedo_tex_force_srgb = false
-vertex_color_use_as_albedo = false
-vertex_color_is_srgb = false
-params_diffuse_mode = 0
-params_specular_mode = 0
-params_blend_mode = 0
-params_cull_mode = 0
-params_depth_draw_mode = 0
-params_line_width = 1.0
-params_point_size = 1.0
-params_billboard_mode = 0
-params_grow = false
-params_use_alpha_scissor = false
-albedo_color = Color( 0.155823, 0.164026, 0.179688, 1 )
-metallic = 0.0
-metallic_specular = 0.5
-metallic_texture_channel = 0
-roughness = 0.9
-roughness_texture_channel = 0
-emission_enabled = false
-normal_enabled = false
-rim_enabled = false
-clearcoat_enabled = false
-anisotropy_enabled = false
-ao_enabled = false
-depth_enabled = false
-subsurf_scatter_enabled = false
-transmission_enabled = false
-refraction_enabled = false
-detail_enabled = false
-uv1_scale = Vector3( 1, 1, 1 )
-uv1_offset = Vector3( 0, 0, 0 )
-uv1_triplanar = false
-uv1_triplanar_sharpness = 1.0
-uv2_scale = Vector3( 1, 1, 1 )
-uv2_offset = Vector3( 0, 0, 0 )
-uv2_triplanar = false
-uv2_triplanar_sharpness = 1.0
-proximity_fade_enable = false
-distance_fade_enable = false
-_sections_unfolded = [ "Albedo", "Roughness" ]
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+size = Vector3( 0.8, 0.8, 0.8 )
+subdivide_width = 0
+subdivide_height = 0
+subdivide_depth = 0
 
 [sub_resource type="ParticlesMaterial" id=4]
 
@@ -200,7 +156,7 @@ use_filter = false
 font_data = ExtResource( 15 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="FPSController" type="KinematicBody"]
+[node name="FPSController" type="KinematicBody" index="0"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -249,9 +205,9 @@ disabled = false
 
 [node name="Body" type="Spatial" parent="." index="1"]
 
-[node name="CharacterMesh" type="MeshInstance" parent="Body" index="0"]
+[node name="Body" type="MeshInstance" parent="Body" index="0"]
 
-transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, -1.08708, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -261,13 +217,31 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 2 )
+mesh = SubResource( 9 )
 skeleton = NodePath("..")
-material/0 = SubResource( 3 )
+material/0 = null
 _sections_unfolded = [ "Geometry", "material" ]
+
+[node name="Head" type="MeshInstance" parent="Body" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.504299, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 10 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "material" ]
 
 [node name="Head" type="Spatial" parent="." index="2"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.654512, 0 )
 
 [node name="Camera" type="Camera" parent="Head" index="0"]
@@ -372,7 +346,7 @@ _sections_unfolded = [ "Draw Passes", "Geometry", "Process Material", "Time", "T
 
 [node name="Audio" type="AudioStreamPlayer3D" parent="Head/Camera/Hand" index="3"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.597659 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.685856, 0.504197, -2.98141 )
 stream = ExtResource( 7 )
 attenuation_model = 0
 unit_db = 50.0
@@ -394,6 +368,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="ReloadAudio" type="AudioStreamPlayer3D" parent="Head/Camera/Hand" index="4"]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.680445, 0.107661, -2.15016 )
 stream = ExtResource( 8 )
 attenuation_model = 0
 unit_db = 10.0
@@ -439,7 +414,7 @@ disabled = false
 
 [node name="Footsteps" type="AudioStreamPlayer3D" parent="." index="4"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0116587, -0.344112, -0.0435072 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0116587, -2.38467, -0.0435072 )
 stream = ExtResource( 11 )
 attenuation_model = 0
 unit_db = 1.0
@@ -460,6 +435,7 @@ doppler_tracking = 0
 
 [node name="Hurt" type="AudioStreamPlayer3D" parent="." index="5"]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.422605, -1.15785 )
 stream = ExtResource( 12 )
 attenuation_model = 0
 unit_db = 0.0
@@ -732,9 +708,9 @@ wait_time = 0.2
 one_shot = true
 autostart = false
 
-[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
-
 [connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
+
+[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 
