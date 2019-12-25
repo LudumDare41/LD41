@@ -12,7 +12,6 @@ var canGrowl = false
 
 var seePlayer = false
 
-
 func _ready():
 	$GrowlTimer.wait_time = rand_range(2.0, 5.0)
 

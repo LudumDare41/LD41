@@ -109,6 +109,9 @@ transform = Transform( 0.000182583, 0, 0.0299995, 0, 0.03, 0, -0.0299995, 0, 0.0
 [node name="AmmoBox15" parent="AmmoBoxes" instance=ExtResource( 7 )]
 transform = Transform( 0.000182583, 0, 0.0299995, 0, 0.03, 0, -0.0299995, 0, 0.000182583, -45.9269, 5.9783, -66.8936 )
 
+[node name="AmmoBox16" parent="AmmoBoxes" instance=ExtResource( 7 )]
+transform = Transform( 0.0103057, 0, 0.0281744, 0, 0.03, 0, -0.0281744, 0, 0.0103057, -33.536, -0.035964, -79.8783 )
+
 [node name="AmmoBox9" parent="AmmoBoxes" instance=ExtResource( 7 )]
 transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.029221, -21.6133, 24.1973, -35.8849 )
 
@@ -204,6 +207,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.6571, 1.75794, -89.8522 )
 [node name="Zombie17" parent="Zombies" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9657, 1.75794, -90.4311 )
 
+[node name="Zombie90" parent="Zombies" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1199, 1.75794, -76.5382 )
+
 [node name="Zombie18" parent="Zombies" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.4181, 1.75794, -59.8209 )
 
@@ -291,11 +297,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.4803, 1.75794, -82.3238 )
 [node name="Zombie85" parent="Zombies" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.0679, 1.75794, -79.1262 )
 
-[node name="Zombie67" parent="Zombies" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.9532, 1.75818, -3.58638 )
-
 [node name="Zombie68" parent="Zombies" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.9532, 1.75818, -42.2386 )
+
+[node name="Zombie91" parent="Zombies" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.5742, 1.75818, -36.1149 )
 
 [node name="Zombie46" parent="Zombies" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.3821, 1.75794, 58.9747 )
