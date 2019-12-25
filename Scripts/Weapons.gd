@@ -35,9 +35,6 @@ func _ready():
 	Game.animation = animationPlayer
 	animationPlayer.play("pull out")
 	updateAmmoUI(PistolData)
-	screen_width_center = OS.get_window_size().x/2
-	screen_height_center = OS.get_window_size().y/2
-	pass
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
@@ -48,6 +45,8 @@ func _input(event):
 		if event.button_index == 1:
 			shooting = true
 func _physics_process(delta):
+	screen_width_center = OS.get_window_size().x/2
+	screen_height_center = OS.get_window_size().y/2
 	if animationPlayer.get_current_animation() == "fire":
 		Shotlight.light_energy = lerp(Shotlight.light_energy,4,0.4)
 	else:
