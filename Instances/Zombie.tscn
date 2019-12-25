@@ -12,7 +12,6 @@ height = 2.48
 
 [sub_resource type="ParticlesMaterial" id=2]
 initial_velocity = 1.0
-angular_velocity = 0.0
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 1, 0, 0, 1 )
@@ -73,7 +72,7 @@ one_shot = true
 autostart = true
 
 [node name="RayCast" type="RayCast" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42928, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.714367, 0 )
 enabled = true
 cast_to = Vector3( 0, 0, -40 )
 [connection signal="timeout" from="DeadTimer" to="." method="_on_DeadTimer_timeout"]
