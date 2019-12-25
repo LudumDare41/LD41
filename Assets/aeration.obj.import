@@ -15,3 +15,4 @@ dest_files=[ "res://.import/aeration.obj-f663840f38d6230ea7ddcbfd5e8364c5.mesh",
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

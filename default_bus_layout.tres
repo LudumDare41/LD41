@@ -1,55 +1,24 @@
 [gd_resource type="AudioBusLayout" load_steps=4 format=2]
 
 [sub_resource type="AudioEffectDelay" id=1]
-
 resource_name = "Delay"
-dry = 1.0
-tap1/active = true
 tap1/delay_ms = 500.0
 tap1/level_db = -10.0
-tap1/pan = 0.2
-tap2/active = true
 tap2/delay_ms = 1000.0
 tap2/level_db = -20.0
-tap2/pan = -0.4
-feedback/active = false
-feedback/delay_ms = 340.0
-feedback/level_db = -6.0
-feedback/lowpass = 16000.0
-_sections_unfolded = [ "tap1", "tap2" ]
 
 [sub_resource type="AudioEffectReverb" id=2]
-
 resource_name = "Reverb"
-predelay_msec = 150.0
-predelay_feedback = 0.4
 room_size = 0.0
-damping = 0.5
-spread = 1.0
-hipass = 0.0
-dry = 1.0
 wet = 0.05
 
 [sub_resource type="AudioEffectReverb" id=3]
-
 resource_name = "Reverb"
-predelay_msec = 150.0
-predelay_feedback = 0.4
 room_size = 0.0
-damping = 0.5
-spread = 1.0
-hipass = 0.0
-dry = 1.0
 wet = 0.05
 
 [resource]
-
-bus/0/name = "Master"
-bus/0/solo = false
-bus/0/mute = false
-bus/0/bypass_fx = false
 bus/0/volume_db = -6.6
-bus/0/send = ""
 bus/1/name = "Shot"
 bus/1/solo = false
 bus/1/mute = false
@@ -68,4 +37,3 @@ bus/2/volume_db = 0.0
 bus/2/send = "Master"
 bus/2/effect/0/effect = SubResource( 3 )
 bus/2/effect/0/enabled = true
-

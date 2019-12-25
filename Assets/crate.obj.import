@@ -15,3 +15,4 @@ dest_files=[ "res://.import/crate.obj-608ed7bc84d1af55affbffe2e9ee387c.mesh", "r
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

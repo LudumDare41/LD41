@@ -15,3 +15,4 @@ dest_files=[ "res://.import/antenna.obj-0641281f5479689f26cfac36adedb5cc.mesh", 
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

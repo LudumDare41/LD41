@@ -15,3 +15,4 @@ dest_files=[ "res://.import/wall3.obj-37d980e592f9fec37d0a26488985c024.mesh", "r
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

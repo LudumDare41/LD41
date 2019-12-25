@@ -15,3 +15,4 @@ dest_files=[ "res://.import/light 2.obj-fac3e4c7c631c1cbb2788219219eee33.mesh", 
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

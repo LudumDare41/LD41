@@ -15,3 +15,4 @@ dest_files=[ "res://.import/wall broken.obj-54f0161512ab9761ef7e19fbef6019ff.mes
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

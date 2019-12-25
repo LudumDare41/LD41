@@ -15,3 +15,4 @@ dest_files=[ "res://.import/Medkit.obj-47a9e526ceae6ee7c52e258a885a5971.mesh", "
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

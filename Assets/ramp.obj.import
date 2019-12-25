@@ -15,3 +15,4 @@ dest_files=[ "res://.import/ramp.obj-768694197d93e3c1c7386c5bde0088e5.mesh", "re
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
