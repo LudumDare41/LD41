@@ -48,6 +48,7 @@ draw_pass_1 = SubResource( 4 )
 [node name="Die" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 3 )
 unit_db = 12.0
+unit_size = 6.0
 bus = "Sounds"
 
 [node name="Growl" type="AudioStreamPlayer3D" parent="."]
@@ -66,6 +67,7 @@ bus = "Sounds"
 [node name="Hit" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 5 )
 unit_db = 12.0
+unit_size = 6.0
 bus = "Sounds"
 
 [node name="GrowlTimer" type="Timer" parent="."]

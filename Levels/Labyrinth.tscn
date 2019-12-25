@@ -2599,7 +2599,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -36 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -36 )
 
 [node name="Ground67" parent="Ground" instance=ExtResource( 23 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39.065, 0, -36.0072 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -36.007 )
 
 [node name="Ground74" parent="Ground" instance=ExtResource( 23 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.065, 0, -36.0072 )
