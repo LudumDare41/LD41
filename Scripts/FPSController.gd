@@ -12,7 +12,7 @@ const DEACCEL = 20
 export var gravity = -9.8 * 3
 
 #Mouse controller variables
-var mouse_sensitivity = 0.2
+var mouse_sensitivity = 0.25
 var camera_angle = 0
 
 #jump
@@ -121,6 +121,10 @@ func _input(event):
 		if (change + camera_angle) < 90 and (change + camera_angle) > -90:
 			$Head/Camera.rotate_x(deg2rad(change))
 			camera_angle += change
+	if event is InputEventMouseButton:
+		if event.button_index == 1 and event.pressed == true:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			get_tree().paused = false
 
 func updateStatusUI(health, stamina):
 	var staminaLabel = get_node("Control/StatusUI/Stamina")

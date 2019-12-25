@@ -8,26 +8,25 @@ const GRAVITY = -9.8
 var life = 80
 var dead = false
 
-var following = false
+var canGrowl = false
 
+var seePlayer = false
+
+
+func _ready():
+	$GrowlTimer.wait_time = rand_range(2.0, 5.0)
 
 func _physics_process(delta):
 
+	
 	if dead:
 		return
 	
 	$ZombieModel/AnimationPlayer.queue("WalkAction")
 
-	self.look_at(Game.player.translation, Vector3(0,1,0))
-
 	dir = Game.player.translation - self.translation
-	
 
-	# if player is far from zombie, don't follow him
-	if not following and (dir.x > 14 or dir.z > 14 and dir.y < -3 or dir.y > 3):
-		return
-	else:
-		following = true
+
 	
 	dir = dir.normalized()
 
@@ -45,7 +44,17 @@ func _physics_process(delta):
 	vel.x = tmp_vel.x
 	vel.z = tmp_vel.z
 
-	vel = move_and_slide(vel, Vector3(0, 1, 0))
+	$RayCast.look_at(Game.player.translation, Vector3.UP)
+	if $RayCast.get_collider() == Game.player:
+		vel = move_and_slide(vel, Vector3(0, 1, 0))
+		look_at(Game.player.translation, Vector3(0,1,0))
+		seePlayer = true
+	else:
+		seePlayer = false
+	
+	rotation.x = 0
+	if $RayCast != null:
+		$RayCast.rotation.x = 0
 
 func hit(damage, headshot):
 	if not dead:
@@ -65,6 +74,8 @@ func die():
 	$CollisionShape.disabled = true
 	$ZombieModel/AnimationPlayer.stop()
 	$ZombieModel/AnimationPlayer.play("DieAction")
+	$RayCast.queue_free()
+	$CollisionShape.queue_free()
 	$Die.play()
 	$DeadTimer.start()
 
@@ -78,6 +89,13 @@ func _on_DeadTimer_timeout():
 
 func _on_GrowlTimer_timeout():
 	if not dead:
-		$Growl.play()
-		$GrowlTimer.wait_time = rand_range(2, 5)
+		if canGrowl:
+			if seePlayer == false:
+				$Growl.play()
+				$GrowlTimer.wait_time = rand_range(2.0, 5.0)
+			else:
+				$GrowlAttack.play()
+				$GrowlTimer.wait_time = rand_range(0.5, 1.3)
+		
 		$GrowlTimer.start()
+		canGrowl = true

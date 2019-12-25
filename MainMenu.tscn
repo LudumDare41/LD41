@@ -35,6 +35,8 @@ margin_left = 1.0
 margin_top = -10.0
 margin_right = 487.0
 margin_bottom = 82.0
+focus_mode = 0
+enabled_focus_mode = 0
 icon = ExtResource( 3 )
 flat = true
 
@@ -72,6 +74,8 @@ margin_left = 1.0
 margin_top = -10.0
 margin_right = 308.0
 margin_bottom = 82.0
+focus_mode = 0
+enabled_focus_mode = 0
 flat = true
 
 [node name="Exit" type="Container" parent="."]
@@ -99,6 +103,8 @@ margin_left = 1.0
 margin_top = -10.0
 margin_right = 308.0
 margin_bottom = 82.0
+focus_mode = 0
+enabled_focus_mode = 0
 flat = true
 
 [node name="Credits" type="Container" parent="."]
@@ -126,6 +132,8 @@ margin_left = -2.0
 margin_top = -10.0
 margin_right = 305.0
 margin_bottom = 82.0
+focus_mode = 0
+enabled_focus_mode = 0
 flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
