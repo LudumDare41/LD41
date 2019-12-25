@@ -6,6 +6,7 @@ extends Node
 var player
 var deathScreenShot
 var musicMenu
+var animation
 
 func _ready():
 	musicMenu = AudioStreamPlayer.new()

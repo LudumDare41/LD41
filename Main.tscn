@@ -50,7 +50,7 @@ environment = SubResource( 2 )
 transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, 66, -1.5, 51.8659 )
 
 [node name="FPSController" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.174917, 0, 0.984583, 0, 1, 0, -0.984583, 0, 0.174917, -25.2003, 2.0593, -79.0911 )
+transform = Transform( 0.174917, 0, 0.984583, 0, 1, 0, -0.984583, 0, 0.174917, -2.66221, 2.0593, 25.4535 )
 jump = 11
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

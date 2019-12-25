@@ -100,7 +100,6 @@ spot_angle = 35.0
 script = ExtResource( 2 )
 
 [node name="Hand" type="Spatial" parent="Head/Camera"]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0118456, -0.654512, 0.0210662 )
 script = ExtResource( 3 )
 

@@ -110,6 +110,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("ui_select") && is_on_floor():
 			velocity.y = jump
 			timer = 0.8
+			Game.animation.play("pull out")
 
 		updateStatusUI(int(health),int(stamina))
 
@@ -154,8 +155,6 @@ func footstep():
 		else:
 			timer = 0.45
 			FootstepsAudio.pitch_scale = 1
-		
-		
 
 func _on_Area_area_entered(area):
 	if area.is_in_group("MedKit"):

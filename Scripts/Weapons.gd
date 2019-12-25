@@ -32,6 +32,8 @@ var walk = false
 var idle = true
 
 func _ready():
+	Game.animation = animationPlayer
+	animationPlayer.play("pull out")
 	updateAmmoUI(PistolData)
 	screen_width_center = OS.get_window_size().x/2
 	screen_height_center = OS.get_window_size().y/2
