@@ -110,7 +110,6 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.686236, -0.214034, -2.
 transform = Transform( 0.5, 0, 0, 0, -2.18557e-008, -0.5, 0, 0.5, -2.18557e-008, 0.686236, 0.632916, -3.18938 )
 light_color = Color( 1, 0.956055, 0.71875, 1 )
 light_energy = 4.0
-shadow_enabled = true
 
 [node name="Particles" parent="Head/Camera/Hand" instance=ExtResource( 5 )]
 transform = Transform( 0.5, 0, 0, 0, -2.18557e-008, -0.5, 0, 0.5, -2.18557e-008, 0.686236, 0.632916, -3.18938 )
@@ -276,8 +275,8 @@ texture = ExtResource( 18 )
 [node name="DeathTimer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
-[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
 [connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
+[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]

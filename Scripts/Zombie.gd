@@ -46,9 +46,9 @@ func _physics_process(delta):
 
 	$RayCast.look_at(Game.player.translation, Vector3.UP)
 	if $RayCast.get_collider() == Game.player:
+		seePlayer = true
 		vel = move_and_slide(vel, Vector3(0, 1, 0))
 		look_at(Game.player.translation, Vector3(0,1,0))
-		seePlayer = true
 	else:
 		seePlayer = false
 	
