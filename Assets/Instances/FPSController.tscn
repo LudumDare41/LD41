@@ -1,0 +1,282 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Scripts/FPSController.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Flashlight.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Weapons.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Weapons/Handgun/HandgunScene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Particles/MuzzleFlash.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Particles/beautiful-muzzle-flash-transparent-background-muzzle-flash-roblox-muzzle-flash-transparent-background.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Weapons/Handgun/handgun.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Audio/Reload_1.wav" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Audio/Pickup_Ammo.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Audio/Gun_Empty_2.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Audio/Movement_1.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Audio/Player_Damage_1.wav" type="AudioStream" id=12]
+[ext_resource path="res://Assets/UI/crosshair.png.png" type="Texture" id=13]
+[ext_resource path="res://Assets/UI/crosshair2.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Fonts/gunplay rg.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://Assets/UI/HealthIcon.png" type="Texture" id=16]
+[ext_resource path="res://Assets/UI/StaminaIcon.png" type="Texture" id=17]
+[ext_resource path="res://Assets/UI/Flashlight.png" type="Texture" id=18]
+
+[sub_resource type="CapsuleShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 2, 1.2, 2.8 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 0.8, 0.8, 0.8 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 0.3
+angular_velocity = 1.06531e-038
+scale = 2.0
+color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=5]
+flags_transparent = true
+albedo_texture = ExtResource( 6 )
+roughness = 0.0
+emission_enabled = true
+emission = Color( 0.882813, 0.867321, 0.486237, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="PlaneMesh" id=6]
+lightmap_size_hint = Vector2( 1, 1 )
+material = SubResource( 5 )
+
+[sub_resource type="CapsuleShape" id=7]
+radius = 0.9487
+height = 1.99442
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+font_data = ExtResource( 15 )
+
+[node name="FPSController" type="KinematicBody"]
+script = ExtResource( 1 )
+gravity = -29.4
+jump = 10
+
+[node name="Area" type="Area" parent="."]
+input_ray_pickable = false
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 1.79918, 0, 0, 0, -7.04622e-008, 1.61199, 0, -1.52458, -6.66416e-008, 0, 0, -0.184335 )
+shape = SubResource( 1 )
+
+[node name="Body" type="Spatial" parent="."]
+
+[node name="Body" type="MeshInstance" parent="Body"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, -1.08708, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Head" type="MeshInstance" parent="Body"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.504299, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="Head" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.654512, 0 )
+
+[node name="Camera" type="Camera" parent="Head"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0235043, -0.344112, -0.0645734 )
+current = true
+far = 200.0
+
+[node name="Flashlight" type="MeshInstance" parent="Head/Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.622309 )
+
+[node name="Spotlight" type="SpotLight" parent="Head/Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764994, -0.622309 )
+light_energy = 2.0
+light_indirect_energy = 2.0
+spot_range = 20.0
+spot_angle = 35.0
+script = ExtResource( 2 )
+
+[node name="Hand" type="Spatial" parent="Head/Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0118456, -0.654512, 0.0210662 )
+script = ExtResource( 3 )
+
+[node name="Handgun" parent="Head/Camera/Hand" instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.686236, -0.214034, -2.18395 )
+
+[node name="Shotlight" type="OmniLight" parent="Head/Camera/Hand"]
+transform = Transform( 0.5, 0, 0, 0, -2.18557e-008, -0.5, 0, 0.5, -2.18557e-008, 0.686236, 0.632916, -3.18938 )
+light_color = Color( 1, 0.956055, 0.71875, 1 )
+light_energy = 4.0
+
+[node name="Particles" parent="Head/Camera/Hand" instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, -2.18557e-008, -0.5, 0, 0.5, -2.18557e-008, 0.686236, 0.632916, -3.18938 )
+use_in_baked_light = true
+amount = 8
+explosiveness = 0.0
+fract_delta = false
+process_material = SubResource( 4 )
+draw_pass_1 = SubResource( 6 )
+
+[node name="Audio" type="AudioStreamPlayer3D" parent="Head/Camera/Hand"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.685856, 0.504197, -2.98141 )
+stream = ExtResource( 7 )
+unit_db = 50.0
+unit_size = 20.0
+max_db = 6.0
+pitch_scale = 1.2
+bus = "Shot"
+
+[node name="ReloadAudio" type="AudioStreamPlayer3D" parent="Head/Camera/Hand"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.680445, 0.107661, -2.15016 )
+stream = ExtResource( 8 )
+unit_db = 10.0
+unit_size = 6.0
+max_db = 6.0
+bus = "Sounds"
+
+[node name="PickUpAudio" type="AudioStreamPlayer" parent="Head/Camera/Hand"]
+stream = ExtResource( 9 )
+bus = "Sounds"
+
+[node name="NoBullets" type="AudioStreamPlayer" parent="Head/Camera/Hand"]
+stream = ExtResource( 10 )
+bus = "Sounds"
+
+[node name="Collider" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -3.81019e-008, -0.871669, 0, 0.847664, -3.70526e-008, 0, -0.746115, 0 )
+shape = SubResource( 7 )
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0116587, -2.38467, -0.0435072 )
+stream = ExtResource( 11 )
+unit_db = 1.0
+unit_size = 10.0
+max_db = 1.0
+bus = "Sounds"
+
+[node name="Hurt" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.422605, -1.15785 )
+stream = ExtResource( 12 )
+unit_size = 5.0
+bus = "Sounds"
+
+[node name="Control" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="Crosshair" type="Sprite" parent="Control"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 13 )
+
+[node name="Crosshair2" type="Sprite" parent="Control"]
+visible = false
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 14 )
+
+[node name="AmmoUI" type="Container" parent="Control"]
+editor/display_folded = true
+margin_left = -895.0
+margin_top = 439.0
+margin_right = -735.0
+margin_bottom = 518.0
+
+[node name="InWeapon" type="Label" parent="Control/AmmoUI"]
+margin_left = -12.0
+margin_right = 75.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 8 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Slash" type="Label" parent="Control/AmmoUI"]
+margin_left = 32.0
+margin_right = 119.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 8 )
+text = "/"
+align = 1
+valign = 1
+
+[node name="InMag" type="Label" parent="Control/AmmoUI"]
+margin_left = 76.0
+margin_top = 1.0
+margin_right = 163.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 8 )
+text = "30"
+align = 1
+valign = 1
+
+[node name="StatusUI" type="Container" parent="Control"]
+editor/display_folded = true
+margin_left = 475.0
+margin_top = 426.0
+margin_right = 927.0
+margin_bottom = 507.0
+
+[node name="HealthIcon" type="Sprite" parent="Control/StatusUI"]
+position = Vector2( 49.8344, 48.8292 )
+scale = Vector2( 0.0120465, 0.0120465 )
+texture = ExtResource( 16 )
+
+[node name="Health" type="Label" parent="Control/StatusUI"]
+margin_left = 81.0
+margin_top = 11.0
+margin_right = 168.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 8 )
+text = "100"
+align = 1
+valign = 1
+
+[node name="Stamina" type="Label" parent="Control/StatusUI"]
+margin_left = 301.0
+margin_top = 10.0
+margin_right = 388.0
+margin_bottom = 88.0
+custom_fonts/font = SubResource( 8 )
+text = "100"
+align = 1
+valign = 1
+
+[node name="StaminaIcon" type="Sprite" parent="Control/StatusUI"]
+position = Vector2( 265.399, 40.5352 )
+scale = Vector2( 0.0148559, 0.0148559 )
+texture = ExtResource( 17 )
+
+[node name="FlashlightStatus" type="Container" parent="Control"]
+margin_left = 476.0
+margin_top = -521.0
+margin_right = 928.0
+margin_bottom = -440.0
+
+[node name="Flashlight" type="Label" parent="Control/FlashlightStatus"]
+margin_left = 303.0
+margin_top = 8.0
+margin_right = 390.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 8 )
+text = "100"
+align = 1
+valign = 1
+
+[node name="StaminaIcon" type="Sprite" parent="Control/FlashlightStatus"]
+position = Vector2( 255.578, 48.0673 )
+rotation = 1.58494
+scale = Vector2( 0.107652, 0.107652 )
+texture = ExtResource( 18 )
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
+[connection signal="area_entered" from="Area" to="Head/Camera/Hand" method="_on_Area_area_entered"]
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Zombie.gd" type="Script" id=1]
 [ext_resource path="res://Instances/ZombieMesh.tscn" type="PackedScene" id=2]
@@ -7,12 +7,12 @@
 [ext_resource path="res://Assets/Audio/Zombie/Zombie_Hit_2.wav" type="AudioStream" id=5]
 
 [sub_resource type="CapsuleShape" id=1]
-radius = 0.55
+radius = 0.44
 height = 2.48
 
 [sub_resource type="ParticlesMaterial" id=2]
 initial_velocity = 1.0
-angular_velocity = 1.0
+angular_velocity = 0.0
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 1, 0, 0, 1 )
@@ -21,6 +21,9 @@ roughness = 0.0
 [sub_resource type="QuadMesh" id=4]
 material = SubResource( 3 )
 size = Vector2( 0.2, 0.2 )
+
+[sub_resource type="SphereShape" id=5]
+radius = 15.8234
 
 [node name="Zombie" type="KinematicBody" groups=[
 "DemageArea",
@@ -47,36 +50,30 @@ draw_pass_1 = SubResource( 4 )
 
 [node name="Die" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 3 )
-unit_db = 12.0
-unit_size = 6.0
-bus = "Sounds"
+unit_db = 14.0
+unit_size = 2.0
 
 [node name="Growl" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 4 )
-unit_db = -3.0
-unit_size = 6.0
-bus = "Sounds"
-
-[node name="GrowlAttack" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource( 4 )
-unit_db = 5.0
-unit_size = 6.0
-pitch_scale = 1.3
-bus = "Sounds"
+unit_db = 14.0
 
 [node name="Hit" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 5 )
-unit_db = 12.0
-unit_size = 6.0
-bus = "Sounds"
+unit_db = 10.0
+unit_size = 2.0
 
 [node name="GrowlTimer" type="Timer" parent="."]
 one_shot = true
 autostart = true
 
-[node name="RayCast" type="RayCast" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.64515, 0 )
-enabled = true
-cast_to = Vector3( 0, 0, -40 )
+[node name="PathFollow" type="PathFollow" parent="."]
+offset = 2.0
+
+[node name="Sens" type="Area" parent="."]
+editor/display_folded = true
+input_ray_pickable = false
+
+[node name="CollisionShape" type="CollisionShape" parent="Sens"]
+shape = SubResource( 5 )
 [connection signal="timeout" from="DeadTimer" to="." method="_on_DeadTimer_timeout"]
 [connection signal="timeout" from="GrowlTimer" to="." method="_on_GrowlTimer_timeout"]

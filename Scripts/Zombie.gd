@@ -77,7 +77,6 @@ func die():
 	$CollisionShape.queue_free()
 	$Die.play()
 	$DeadTimer.start()
-	$CollisionShape.queue_free()
 
 func hit_particle():
 	$HitParticle.emitting = true
