@@ -47,7 +47,7 @@ environment = SubResource( 2 )
 [node name="Labyrinth" parent="Levels" instance=ExtResource( 2 )]
 
 [node name="Labyrinth 2" parent="Levels" instance=ExtResource( 3 )]
-transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, 66, -1.5, 51.8659 )
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 66, -1.5, 51.8659 )
 
 [node name="FPSController" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.174917, 0, 0.984583, 0, 1, 0, -0.984583, 0, 0.174917, -2.66221, 2.0593, 25.4535 )
@@ -80,7 +80,7 @@ transform = Transform( -0.0199717, 0, -0.022386, 0, 0.03, 0, 0.022386, 0, -0.019
 transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, -8.52525, 0, -18.5219 )
 
 [node name="AmmoBox12" parent="AmmoBoxes" instance=ExtResource( 7 )]
-transform = Transform( 0.00438235, 0, 0.0296782, 0, 0.03, 0, -0.0296782, 0, 0.00438235, -13.1761, 4.76837e-007, -31.8097 )
+transform = Transform( 0.00438235, 0, 0.0296782, 0, 0.03, 0, -0.0296782, 0, 0.00438235, -13.1761, 4.76837e-07, -31.8097 )
 
 [node name="AmmoBox10" parent="AmmoBoxes" instance=ExtResource( 7 )]
 transform = Transform( -0.0286671, 0, 0.00884285, 0, 0.03, 0, -0.00884285, 0, -0.0286671, -8.98025, 0, 11.6624 )
