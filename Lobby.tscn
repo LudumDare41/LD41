@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Lobby.gd" type="Script" id=1]
+
+[node name="Lobby" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -99.5
+margin_top = -65.5
+margin_right = 99.5
+margin_bottom = 65.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HostButton" type="Button" parent="Menu"]
+margin_right = 199.0
+margin_bottom = 20.0
+text = "Host game/solo"
+
+[node name="HSeparator" type="HSeparator" parent="Menu"]
+margin_top = 24.0
+margin_right = 199.0
+margin_bottom = 28.0
+
+[node name="IP" type="LineEdit" parent="Menu"]
+margin_top = 32.0
+margin_right = 199.0
+margin_bottom = 56.0
+text = "127.0.0.1"
+
+[node name="JoinButton" type="Button" parent="Menu"]
+margin_top = 60.0
+margin_right = 199.0
+margin_bottom = 80.0
+text = "Join game"
+[connection signal="pressed" from="Menu/HostButton" to="." method="_on_HostButton_pressed"]
+[connection signal="pressed" from="Menu/JoinButton" to="." method="_on_JoinButton_pressed"]

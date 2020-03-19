@@ -15,4 +15,5 @@ dest_files=[ "res://.import/ceiling.obj-794c7085b58f6213ffc704ae6a073cde.mesh", 
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

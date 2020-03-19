@@ -15,4 +15,5 @@ dest_files=[ "res://.import/old-computer.obj-918745a6a9d9894f431de63542b8222b.me
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

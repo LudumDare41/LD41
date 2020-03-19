@@ -15,4 +15,5 @@ dest_files=[ "res://.import/ground 2.obj-55b1656f8c4208fcbb2ae9af3577447b.mesh",
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

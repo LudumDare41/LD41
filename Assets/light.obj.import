@@ -15,4 +15,5 @@ dest_files=[ "res://.import/light.obj-b70ff195b397813b5e1701d12ad59c9f.mesh", "r
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://satara_night_no_lamps_2k.hdr" type="Texture" id=1]
 [ext_resource path="res://Levels/Labyrinth.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/Labyrinth_2.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Instances/FPSController.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Audio/Gameplay_1.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Instances/MedKit.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Instances/AmmoBox.tscn" type="PackedScene" id=7]
@@ -29,7 +28,6 @@ tonemap_mode = 2
 auto_exposure_enabled = true
 auto_exposure_min_luma = 0.2
 ss_reflections_enabled = true
-dof_blur_near_enabled = true
 dof_blur_near_quality = 0
 glow_enabled = true
 glow_levels/7 = true
@@ -47,10 +45,7 @@ environment = SubResource( 2 )
 [node name="Labyrinth" parent="Levels" instance=ExtResource( 2 )]
 
 [node name="Labyrinth 2" parent="Levels" instance=ExtResource( 3 )]
-transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, 66, -1.5, 51.8659 )
-
-[node name="FPSController" parent="." instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -3.89085, 3, 26.1317 )
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 66, -1.5, 51.8659 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
@@ -68,7 +63,6 @@ transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.069
 transform = Transform( 0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 40.1585, -0.581193, 115.656 )
 
 [node name="AmmoBoxes" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="AmmoBox2" parent="AmmoBoxes" instance=ExtResource( 7 )]
 transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, 21.5348, 0.909179, -42.6335 )
@@ -80,7 +74,7 @@ transform = Transform( -0.0199717, 0, -0.022386, 0, 0.03, 0, 0.022386, 0, -0.019
 transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, -8.52525, 0, -18.5219 )
 
 [node name="AmmoBox12" parent="AmmoBoxes" instance=ExtResource( 7 )]
-transform = Transform( 0.00438235, 0, 0.0296782, 0, 0.03, 0, -0.0296782, 0, 0.00438235, -13.1761, 4.76837e-007, -31.8097 )
+transform = Transform( 0.00438235, 0, 0.0296782, 0, 0.03, 0, -0.0296782, 0, 0.00438235, -13.1761, 4.76837e-07, -31.8097 )
 
 [node name="AmmoBox10" parent="AmmoBoxes" instance=ExtResource( 7 )]
 transform = Transform( -0.0286671, 0, 0.00884285, 0, 0.03, 0, -0.00884285, 0, -0.0286671, -8.98025, 0, 11.6624 )
@@ -113,7 +107,6 @@ transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.
 transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.029221, 25.6102, 0, -18.2904 )
 
 [node name="Zombies" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Zombie70" parent="Zombies" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8051, 1.75794, -0.200688 )
@@ -381,3 +374,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5154, 8.35512, 9.4297 )
 
 [node name="Zombie12" parent="Zombies" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2252, 1.37929, 43.9742 )
+
+[node name="Spawn" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 26 )

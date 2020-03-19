@@ -15,4 +15,5 @@ dest_files=[ "res://.import/camera.obj-3855115c72084c5c62836e28577cf00b.mesh", "
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

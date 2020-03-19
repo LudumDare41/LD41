@@ -15,4 +15,5 @@ dest_files=[ "res://.import/AmmoBox.obj-49e02bacc090059e941d4b0c853e5a23.mesh", 
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

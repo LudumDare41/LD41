@@ -15,4 +15,5 @@ dest_files=[ "res://.import/border.obj-10528569d02b0a9f379d52603ace1e14.mesh", "
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true
