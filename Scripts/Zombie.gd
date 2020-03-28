@@ -1,5 +1,68 @@
 extends KinematicBody
-##
+
+var health = 100
+
+var dead = false
+
+var pitch_level = 1
+
+var vector = Vector3()
+
+puppet var puppet_dead = false
+puppet var puppet_transform = transform
+
+func _ready():
+	set_network_master(1)
+	if is_network_master():
+		pitch_level = rand_range(0.9, 1.1)
+		rpc("sound")
+
+func _process(delta):
+	if is_network_master():
+		if get_tree().get_nodes_in_group("Player"):
+			var player = get_tree().get_nodes_in_group("Player")[0]
+			look_at(player.global_transform.origin, Vector3.UP)
+			rotation.x = 0
+			
+			vector.x = player.global_transform.origin.x - global_transform.origin.x
+			vector.z = player.global_transform.origin.z - global_transform.origin.z
+			vector.y -= 9.8 * delta
+			
+			move_and_slide(vector / 3)
+			
+			
+			rset_unreliable("puppet_transform", transform)
+		if health <= 0:
+			dead = true
+			rset_unreliable("puppet_dead", dead)
+	else:
+		transform = puppet_transform
+		dead = puppet_dead
+		
+	if dead:
+		visible = false
+		$CollisionShape.disabled = true
+
+remotesync func sound():
+	$Hit.pitch_scale = pitch_level
+
+remotesync func shot():
+	health -= 25
+	$Hit.play()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ##export var speed = 2.5
 ##var dir = Vector3()
 ##var vel = Vector3()

@@ -1,39 +1,89 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Instances/Player.gd" type="Script" id=1]
+[ext_resource path="res://other/crosshair.png" type="Texture" id=2]
+[ext_resource path="res://other/fire.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Weapons/Handgun/HandgunScene.tscn" type="PackedScene" id=4]
 
-[sub_resource type="CylinderMesh" id=3]
+[sub_resource type="CylinderMesh" id=1]
 top_radius = 0.1
 bottom_radius = 0.3
 height = 0.5
 
-[sub_resource type="CapsuleShape" id=1]
+[sub_resource type="CapsuleShape" id=2]
 radius = 0.5
 height = 2.5
 
-[sub_resource type="CapsuleMesh" id=2]
-radius = 0.5
-mid_height = 2.5
+[sub_resource type="CapsuleMesh" id=3]
+radius = 0.35
+mid_height = 2.8
 
-[node name="Player" type="KinematicBody"]
+[node name="Player" type="KinematicBody" groups=[
+"Player",
+]]
 script = ExtResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
 
-[node name="SpotLight" type="SpotLight" parent="Camera"]
+[node name="Flashlight" type="SpotLight" parent="Camera"]
+shadow_enabled = true
 spot_range = 30.0
 
 [node name="Angle" type="MeshInstance" parent="Camera"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.5 )
+visible = false
 cast_shadow = 0
-mesh = SubResource( 3 )
+mesh = SubResource( 1 )
 material/0 = null
+
+[node name="Handgun" parent="Camera" instance=ExtResource( 4 )]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.239572, -0.362193, -0.900766 )
+
+[node name="RayCast" type="RayCast" parent="Camera"]
+enabled = true
+cast_to = Vector3( 0, 0, -100 )
+
+[node name="ShootLight" type="OmniLight" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.236496, 1.19209e-07, -1.48368 )
+visible = false
+shadow_enabled = true
+omni_range = 10.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -1.3, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -1.3, 0 )
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = null
+
+[node name="HUD" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Crosshair" type="TextureRect" parent="HUD"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="ShootSound" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+stream = ExtResource( 3 )
+unit_db = -20.0
+unit_size = 100.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[node name="ShootLightTimer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="ShootLightTimer" to="." method="_on_ShootLightTimer_timeout"]

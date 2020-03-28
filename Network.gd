@@ -4,6 +4,13 @@ var map = "res://Main.tscn"
 var player = "res://Instances/Player.tscn"
 var spawn = null
 
+var mute = false
+
+func _physics_process(delta):
+	if Input.is_action_just_pressed("mute"):
+		mute = !mute
+		AudioServer.set_bus_mute(0, mute)
+
 func _ready():
 	get_tree().connect("network_peer_connected", self, "_on_network_peer_connected")
 

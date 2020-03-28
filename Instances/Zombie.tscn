@@ -23,15 +23,15 @@ material = SubResource( 3 )
 size = Vector2( 0.2, 0.2 )
 
 [node name="Zombie" type="KinematicBody" groups=[
-"DemageArea",
+"Zombie",
 ]]
 script = ExtResource( 1 )
 
 [node name="ZombieModel" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.03, 0, -9.77524e-009, 0, 0.03, 0, 9.77524e-009, 0, -0.03, 0, -1.34038, 0 )
+transform = Transform( -0.03, 0, -9.77524e-09, 0, 0.03, 0, 9.77524e-09, 0, -0.03, 0, -1.34038, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-007, -1, 0, 1, -1.62921e-007, 0, 0.259021, 0 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.259021, 0 )
 shape = SubResource( 1 )
 
 [node name="DeadTimer" type="Timer" parent="."]
@@ -39,25 +39,28 @@ wait_time = 10.0
 one_shot = true
 
 [node name="HitParticle" type="Particles" parent="."]
-transform = Transform( -1, 0, -3.25841e-007, 0, 1, 0, 3.25841e-007, 0, -1, 0, 1.04554, -0.31383 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 1.04554, -0.31383 )
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource( 2 )
 draw_pass_1 = SubResource( 4 )
 
 [node name="Die" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60091, -0.470155 )
 stream = ExtResource( 3 )
 unit_db = 12.0
 unit_size = 6.0
 bus = "Sounds"
 
 [node name="Growl" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60091, -0.470155 )
 stream = ExtResource( 4 )
 unit_db = -3.0
 unit_size = 6.0
 bus = "Sounds"
 
 [node name="GrowlAttack" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60091, -0.470155 )
 stream = ExtResource( 4 )
 unit_db = 5.0
 unit_size = 6.0
@@ -65,9 +68,10 @@ pitch_scale = 1.3
 bus = "Sounds"
 
 [node name="Hit" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60091, -0.470155 )
 stream = ExtResource( 5 )
-unit_db = 12.0
-unit_size = 6.0
+unit_db = -25.0
+unit_size = 100.0
 bus = "Sounds"
 
 [node name="GrowlTimer" type="Timer" parent="."]
