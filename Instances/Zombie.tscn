@@ -50,14 +50,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60091, -0.470155 )
 stream = ExtResource( 3 )
 unit_db = 12.0
 unit_size = 6.0
-bus = "Sounds"
 
 [node name="Growl" type="AudioStreamPlayer3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60091, -0.470155 )
 stream = ExtResource( 4 )
 unit_db = -3.0
 unit_size = 6.0
-bus = "Sounds"
 
 [node name="GrowlAttack" type="AudioStreamPlayer3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60091, -0.470155 )
@@ -65,14 +63,12 @@ stream = ExtResource( 4 )
 unit_db = 5.0
 unit_size = 6.0
 pitch_scale = 1.3
-bus = "Sounds"
 
 [node name="Hit" type="AudioStreamPlayer3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60091, -0.470155 )
 stream = ExtResource( 5 )
 unit_db = -25.0
 unit_size = 100.0
-bus = "Sounds"
 
 [node name="GrowlTimer" type="Timer" parent="."]
 one_shot = true

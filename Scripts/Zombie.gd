@@ -4,6 +4,8 @@ var health = 100
 
 var dead = false
 
+var death_animation = false
+
 var pitch_level = 1
 
 var vector = Vector3()
@@ -19,16 +21,18 @@ func _ready():
 
 func _process(delta):
 	if is_network_master():
+		
 		if get_tree().get_nodes_in_group("Player"):
-			var player = get_tree().get_nodes_in_group("Player")[0]
-			look_at(player.global_transform.origin, Vector3.UP)
-			rotation.x = 0
-			
-			vector.x = player.global_transform.origin.x - global_transform.origin.x
-			vector.z = player.global_transform.origin.z - global_transform.origin.z
-			vector.y -= 9.8 * delta
-			
-			move_and_slide(vector / 3)
+			if not dead:
+				var player = get_tree().get_nodes_in_group("Player")[0]
+				look_at(player.global_transform.origin, Vector3.UP)
+				rotation.x = 0
+				
+				vector.x = player.global_transform.origin.x - global_transform.origin.x
+				vector.z = player.global_transform.origin.z - global_transform.origin.z
+				vector.y -= 9.8 * delta
+				
+				move_and_slide(vector / 3)
 			
 			
 			rset_unreliable("puppet_transform", transform)
@@ -38,9 +42,11 @@ func _process(delta):
 	else:
 		transform = puppet_transform
 		dead = puppet_dead
-		
+
 	if dead:
-		visible = false
+		if death_animation == false:
+			$ZombieModel/AnimationPlayer.play("DieAction")
+			death_animation = true
 		$CollisionShape.disabled = true
 
 remotesync func sound():
