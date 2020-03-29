@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/antenna.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Assets/antenna.png" type="Texture" id=2]
@@ -10,10 +10,27 @@ metallic = 0.5
 roughness = 0.4
 emission_enabled = true
 emission = Color( 0, 0, 0, 1 )
-emission_energy = 1.0
+emission_energy = 3.0
 emission_operator = 0
 emission_on_uv2 = false
 emission_texture = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "LightAnimation"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("MeshInstance:material/0:emission_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.35, 0.45, 0.5, 0.55, 0.65, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 3.0, 3.0, 0.0, 0.0, 3.0, 0.0, 0.0, 3.0 ]
+}
 
 [node name="Antenna" type="Spatial"]
 
@@ -22,3 +39,7 @@ transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 use_in_baked_light = true
 mesh = ExtResource( 1 )
 material/0 = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "LightAnimation"
+anims/LightAnimation = SubResource( 2 )

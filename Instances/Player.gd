@@ -11,6 +11,7 @@ var pack = 2
 
 var impact = "res://Instances/Impact.tscn"
 var bullet = "res://Instances/Bullet.tscn"
+var shell = "res://Instances/Shell.tscn"
 
 var can_shoot = true
 
@@ -132,6 +133,17 @@ func attacked(delta):
 	health_float -= 30 * delta
 	health = int(health_float)
 	update_HUD()
+	rpc("hurt_sound")
+
+remotesync func hurt_sound():
+	if $Hurt1.playing == false and $Hurt2.playing == false:
+		var number = rand_range(0,2)
+		if number < 1:
+			$Hurt1.play()
+		else:
+			$Hurt2.play()
+	
+	
 
 remotesync func reload():
 	$Camera/Handgun/AnimationPlayer.play("reload")
@@ -154,9 +166,14 @@ remotesync func shoot(position, direction):
 	$ShootLightTimer.start()
 
 	var bullet_instance = load(bullet).instance()
-	bullet_instance.global_transform = position
+	bullet_instance.global_transform = $Camera/Nozzle.global_transform
 	get_tree().get_root().get_node("Game").add_child(bullet_instance)
-	bullet_instance.linear_velocity = direction * -200
+	bullet_instance.linear_velocity = $Camera.global_transform.basis.z * -200
+	
+	var shell_instance = load(shell).instance()
+	bullet_instance.global_transform = $Camera/ShellPosition.global_transform
+	get_tree().get_root().get_node("Game").add_child(shell_instance)
+	
 	yield(get_tree().create_timer(2), "timeout")
 	bullet_instance.queue_free()
 

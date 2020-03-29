@@ -18,6 +18,7 @@ func _ready():
 	
 	set_network_master(1)
 	if is_network_master():
+		randomize()
 		pitch_level = rand_range(0.9, 1.1)
 		rpc("sound")
 

@@ -25,7 +25,7 @@ material/0 = SubResource( 1 )
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 3, 1.96548 )
-light_energy = 0.5
-light_indirect_energy = 0.5
+light_energy = 2.0
+light_indirect_energy = 2.0
 spot_range = 50.0
 spot_angle = 60.0
