@@ -26,6 +26,7 @@ func _ready():
 		$Camera/Angle.visible = false
 		$HUD.visible = true
 		$Camera/RayCast.enabled = true
+		$Camera/Lamp.visible = false
 	else:
 		$HUD.visible = false
 
@@ -42,7 +43,6 @@ func _physics_process(delta):
 				rpc("animation", "walk")
 			else:
 				rpc("animation", "idle")
-				
 		
 		if Input.is_action_pressed("sprint"):
 			speed = 16
@@ -95,7 +95,8 @@ func other_abilities():
 				if $Camera/RayCast.get_collider().is_in_group("Zombie"):
 					$Camera/RayCast.get_collider().rpc("shot")
 				else:
-					rpc("impact", $Camera/RayCast.get_collision_point())
+					if not $Camera/RayCast.get_collider().is_in_group("Player"):
+						rpc("impact", $Camera/RayCast.get_collision_point())
 					
 					
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -145,6 +146,7 @@ remotesync func animation(anim):
 
 remotesync func toggle_light(status):
 	$Camera/Flashlight.visible = status
+	$Camera/Lamp/Feedback.visible = status
 
 remotesync func shoot(position, direction):
 	$Camera/Nozzle/ShootSound.play()

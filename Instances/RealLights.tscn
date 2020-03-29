@@ -1,6 +1,4 @@
 [gd_scene format=2]
 
 [node name="RealLights" type="OmniLight"]
-light_energy = 0.3
-light_indirect_energy = 0.3
 omni_range = 20.0

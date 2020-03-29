@@ -12,3 +12,5 @@ sun_energy = 16.0
 [resource]
 background_mode = 2
 background_sky = SubResource( 1 )
+tonemap_mode = 3
+glow_enabled = true
