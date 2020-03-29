@@ -9,6 +9,8 @@ var health = 100
 var ammo = 12
 var pack = 2
 
+var impact = "res://Instances/Impact.tscn"
+
 var can_shoot = true
 
 puppet var puppet_transform = transform
@@ -57,13 +59,12 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("jump"):
 			if is_on_floor():
 				movement.y = jump_force
-	
+
 		movement = move_and_slide(movement, Vector3.UP)
 		
 		other_abilities()
-		
 		rset("puppet_transform", transform)
-		rset("puppet_camera_rotation", $Camera.rotation)
+		
 	else:
 		transform = puppet_transform
 		$Camera.rotation = puppet_camera_rotation
@@ -75,6 +76,7 @@ func _input(event):
 				rotation_degrees.y -= event.relative.x / 7
 				$Camera.rotation_degrees.x -= event.relative.y / 7
 				$Camera.rotation_degrees.x = clamp($Camera.rotation_degrees.x, -90, 90)
+				rset("puppet_camera_rotation", $Camera.rotation)
 
 func other_abilities():
 	if Input.is_action_just_pressed("shoot"):
@@ -95,7 +97,10 @@ func other_abilities():
 			if $Camera/RayCast.is_colliding():
 				if $Camera/RayCast.get_collider().is_in_group("Zombie"):
 					$Camera/RayCast.get_collider().rpc("shot")
-			
+				else:
+					rpc("impact", $Camera/RayCast.get_collision_point())
+					
+					
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	if Input.is_action_just_pressed("ui_cancel"):
@@ -112,6 +117,11 @@ func other_abilities():
 	if Input.is_action_just_pressed("flashlight"):
 		$Camera/Flashlight.visible = !$Camera/Flashlight.visible
 		rpc("toggle_light", $Camera/Flashlight.visible)
+
+remotesync func impact(position):
+	var impact_instance = load(impact).instance()
+	impact_instance.global_transform.origin = position
+	get_tree().get_root().get_node("Game").add_child(impact_instance)
 
 func heal():
 	health_float += 50
@@ -146,7 +156,9 @@ remotesync func shoot_sound():
 	$ShootSound.play()
 
 func _on_network_peer_connected(id):
-	rpc("toggle_light", $Camera/Flashlight.visible)
+	if is_network_master():
+		rpc("toggle_light", $Camera/Flashlight.visible)
+		rset("puppet_camera_rotation", $Camera.rotation)
 
 
 func _on_Timer_timeout():

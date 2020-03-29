@@ -23,6 +23,10 @@ func _on_Area_body_entered(body):
 		body.update_HUD()
 		picked = true
 		rset("puppet_picked", picked)
+		rpc("sound")
+
+remotesync func sound():
+	$PickupSound.play()
 
 func _on_network_peer_connected(id):
 	rset("puppet_picked", picked)

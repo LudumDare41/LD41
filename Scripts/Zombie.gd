@@ -24,8 +24,8 @@ func _ready():
 func _process(delta):
 	if is_network_master():
 		
-		if get_tree().get_nodes_in_group("Player"):
-			if not dead:
+		if not dead:
+			if get_tree().get_nodes_in_group("Player"):
 				var player = get_tree().get_nodes_in_group("Player")[0]
 				if player:
 					$LineOfSight.look_at(player.global_transform.origin, Vector3.UP)
@@ -51,7 +51,7 @@ func _process(delta):
 						$AttackRange.get_collider().attacked(delta)
 			
 			
-			rset_unreliable("puppet_transform", transform)
+				rset_unreliable("puppet_transform", transform)
 		if health <= 0:
 			if dead == false:
 				rpc("dead")
@@ -63,12 +63,14 @@ func _process(delta):
 func _on_network_peer_connected(id):
 	if is_network_master() and health <= 0:
 		rpc("dead")
-
+		rset("puppet_transform", transform)
 remotesync func dead():
 	if death_animation == false:
 		$ZombieModel/AnimationPlayer.play("DieAction")
 		death_animation = true
 	$CollisionShape.disabled = true
+	$LineOfSight.enabled = false
+	$AttackRange.enabled = false
 
 remotesync func sound():
 	$Hit.pitch_scale = pitch_level

@@ -35,7 +35,7 @@ glow_bicubic_upscale = true
 adjustment_enabled = true
 adjustment_saturation = 1.1
 
-[node name="Node" type="Node"]
+[node name="Game" type="Node"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
