@@ -4,6 +4,7 @@ var movement = Vector3()
 var jump_force = 5
 var speed = 12
 
+var health_float = 100.0
 var health = 100
 var ammo = 12
 var pack = 2
@@ -15,7 +16,7 @@ puppet var puppet_camera_rotation = null
 
 func _ready():
 	get_tree().connect("network_peer_connected", self, "_on_network_peer_connected")
-	refresh_HUD()
+	update_HUD()
 	
 	if is_network_master():
 		$Camera.current = true
@@ -79,7 +80,7 @@ func other_abilities():
 	if Input.is_action_just_pressed("shoot"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED and can_shoot and ammo > 0 and $Camera/Handgun/AnimationPlayer.current_animation != "reload":
 			ammo -= 1
-			refresh_HUD()
+			update_HUD()
 			
 			
 			$Camera/ShootLight.visible = true
@@ -105,18 +106,30 @@ func other_abilities():
 			rpc("reload")
 			ammo = 12
 			pack -= 1
-			refresh_HUD()
+			update_HUD()
 	
 	
 	if Input.is_action_just_pressed("flashlight"):
 		$Camera/Flashlight.visible = !$Camera/Flashlight.visible
 		rpc("toggle_light", $Camera/Flashlight.visible)
 
+func heal():
+	health_float += 50
+	if health_float > 100:
+		health_float = 100
+	health = int(health_float)
+	update_HUD()
+
+func attacked(delta):
+	health_float -= 30 * delta
+	health = int(health_float)
+	update_HUD()
+
 remotesync func reload():
 	$Camera/Handgun/AnimationPlayer.play("reload")
 	$ReloadSound.play()
 
-func refresh_HUD():
+func update_HUD():
 	$HUD/Health.text = str (health)
 	$HUD/Ammo.text = str( ammo ) + " / " + str(pack)
 

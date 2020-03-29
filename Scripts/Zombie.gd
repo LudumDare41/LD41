@@ -24,15 +24,31 @@ func _process(delta):
 		
 		if get_tree().get_nodes_in_group("Player"):
 			if not dead:
+				
 				var player = get_tree().get_nodes_in_group("Player")[0]
-				look_at(player.global_transform.origin, Vector3.UP)
-				rotation.x = 0
+				print(player)
+				if player:
+					$LineOfSight.look_at(player.global_transform.origin, Vector3.UP)
+					
+					if $LineOfSight.is_colliding():
+						if $LineOfSight.get_collider().is_in_group("Player"):
 				
-				vector.x = player.global_transform.origin.x - global_transform.origin.x
-				vector.z = player.global_transform.origin.z - global_transform.origin.z
+							look_at(player.global_transform.origin, Vector3.UP)
+			
+							rotation.x = 0
+							vector.x = player.global_transform.origin.x - global_transform.origin.x
+							vector.z = player.global_transform.origin.z - global_transform.origin.z
+						else:
+							vector.x = 0
+							vector.z = 0
+				
+				
 				vector.y -= 9.8 * delta
-				
 				move_and_slide(vector / 3)
+			
+				if $AttackRange.is_colliding():
+					if $AttackRange.get_collider().is_in_group("Player"):
+						$AttackRange.get_collider().attacked(delta)
 			
 			
 			rset_unreliable("puppet_transform", transform)

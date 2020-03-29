@@ -56,6 +56,9 @@ transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 66, -1.
 [node name="MedKit3" parent="MedKits" instance=ExtResource( 6 )]
 transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.0699998, 0.000141948, -0.0699994, 0.000119187, -0.000262151, 3.10444, 0, -48.116 )
 
+[node name="MedKit5" parent="MedKits" instance=ExtResource( 6 )]
+transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.0699998, 0.000141948, -0.0699994, 0.000119187, -0.000262151, -19.8545, 0, 13.054 )
+
 [node name="MedKit4" parent="MedKits" instance=ExtResource( 6 )]
 transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.0699998, 0.000141948, -0.0699994, 0.000119187, -0.000262151, -44.12, 5.86513, -64.8835 )
 

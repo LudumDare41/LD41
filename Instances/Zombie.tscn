@@ -75,9 +75,14 @@ max_db = -3.0
 one_shot = true
 autostart = true
 
-[node name="RayCast" type="RayCast" parent="."]
+[node name="LineOfSight" type="RayCast" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.64515, 0 )
 enabled = true
 cast_to = Vector3( 0, 0, -40 )
+
+[node name="AttackRange" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24085, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -2 )
 [connection signal="timeout" from="DeadTimer" to="." method="_on_DeadTimer_timeout"]
 [connection signal="timeout" from="GrowlTimer" to="." method="_on_GrowlTimer_timeout"]

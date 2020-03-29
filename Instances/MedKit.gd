@@ -9,7 +9,7 @@ func _ready():
 
 func _process(delta):
 	if is_network_master():
-		rset_unreliable("puppet_picked", picked)
+		rset("puppet_picked", picked)
 	else:
 		picked = puppet_picked
 	
@@ -20,6 +20,6 @@ func _process(delta):
 
 func _on_Area_body_entered(body):
 	if body.is_in_group("Player"):
-		body.pack += 1
-		body.update_HUD()
-		picked = true
+		if body.health < 100:
+			body.heal()
+			picked = true
