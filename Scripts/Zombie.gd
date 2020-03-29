@@ -14,6 +14,8 @@ puppet var puppet_dead = false
 puppet var puppet_transform = transform
 
 func _ready():
+	get_tree().connect("network_peer_connected", self, "_on_network_peer_connected")
+	
 	set_network_master(1)
 	if is_network_master():
 		pitch_level = rand_range(0.9, 1.1)
@@ -24,9 +26,7 @@ func _process(delta):
 		
 		if get_tree().get_nodes_in_group("Player"):
 			if not dead:
-				
 				var player = get_tree().get_nodes_in_group("Player")[0]
-				print(player)
 				if player:
 					$LineOfSight.look_at(player.global_transform.origin, Vector3.UP)
 					
@@ -53,17 +53,22 @@ func _process(delta):
 			
 			rset_unreliable("puppet_transform", transform)
 		if health <= 0:
+			if dead == false:
+				rpc("dead")
 			dead = true
-			rset_unreliable("puppet_dead", dead)
+
 	else:
 		transform = puppet_transform
-		dead = puppet_dead
 
-	if dead:
-		if death_animation == false:
-			$ZombieModel/AnimationPlayer.play("DieAction")
-			death_animation = true
-		$CollisionShape.disabled = true
+func _on_network_peer_connected(id):
+	if is_network_master() and health <= 0:
+		rpc("dead")
+
+remotesync func dead():
+	if death_animation == false:
+		$ZombieModel/AnimationPlayer.play("DieAction")
+		death_animation = true
+	$CollisionShape.disabled = true
 
 remotesync func sound():
 	$Hit.pitch_scale = pitch_level
