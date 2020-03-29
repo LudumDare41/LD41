@@ -23,9 +23,14 @@ config/icon="res://icon.png"
 
 Network="*res://Network.gd"
 
+[debug]
+
+settings/stdout/print_fps=true
+
 [display]
 
 window/size/resizable=false
+window/vsync/use_vsync=false
 window/stretch/mode="viewport"
 
 [importer_defaults]

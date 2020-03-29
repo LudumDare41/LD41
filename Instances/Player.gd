@@ -11,8 +11,8 @@ var pack = 2
 
 var can_shoot = true
 
-puppet var puppet_transform = null
-puppet var puppet_camera_rotation = null
+puppet var puppet_transform = transform
+puppet var puppet_camera_rotation = Vector3()
 
 func _ready():
 	get_tree().connect("network_peer_connected", self, "_on_network_peer_connected")

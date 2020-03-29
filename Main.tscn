@@ -57,7 +57,7 @@ transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 66, -1.
 transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.0699998, 0.000141948, -0.0699994, 0.000119187, -0.000262151, 3.10444, 0, -48.116 )
 
 [node name="MedKit5" parent="MedKits" instance=ExtResource( 6 )]
-transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.0699998, 0.000141948, -0.0699994, 0.000119187, -0.000262151, -19.8545, 0, 13.054 )
+transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.0699998, 0.000141948, -0.0699994, 0.000119187, -0.000262151, -9.02374, 0, 22.2333 )
 
 [node name="MedKit4" parent="MedKits" instance=ExtResource( 6 )]
 transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.0699998, 0.000141948, -0.0699994, 0.000119187, -0.000262151, -44.12, 5.86513, -64.8835 )
@@ -77,7 +77,7 @@ transform = Transform( -0.0199717, 0, -0.022386, 0, 0.03, 0, 0.022386, 0, -0.019
 transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, -8.52525, 0, -18.5219 )
 
 [node name="AmmoBox16" parent="AmmoBoxes" instance=ExtResource( 7 )]
-transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, -15.5732, 0, 18.2982 )
+transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, -8.83998, 0, 26.8036 )
 
 [node name="AmmoBox12" parent="AmmoBoxes" instance=ExtResource( 7 )]
 transform = Transform( 0.00438235, 0, 0.0296782, 0, 0.03, 0, -0.0296782, 0, 0.00438235, -13.1761, 4.76837e-07, -31.8097 )
@@ -116,6 +116,12 @@ transform = Transform( -0.029221, 0, -0.00679232, 0, 0.03, 0, 0.00679232, 0, -0.
 
 [node name="Zombie70" parent="Zombies" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8051, 1.75794, -0.200688 )
+
+[node name="Zombie92" parent="Zombies" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5509, 1.75794, 28.0504 )
+
+[node name="Zombie93" parent="Zombies" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5509, 1.75794, 24.0117 )
 
 [node name="Zombie71" parent="Zombies" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2678, 1.75794, -5.7931 )
