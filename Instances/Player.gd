@@ -10,6 +10,7 @@ var ammo = 12
 var pack = 2
 
 var impact = "res://Instances/Impact.tscn"
+var bullet = "res://Instances/Bullet.tscn"
 
 var can_shoot = true
 
@@ -35,13 +36,11 @@ func _physics_process(delta):
 		direction_2D.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 		direction_2D = direction_2D.normalized()
 		
-		if $Camera/Handgun/AnimationPlayer.current_animation != "fire" and $Camera/Handgun/AnimationPlayer.current_animation != "reload":
+		if $Camera/Handgun/AnimationPlayer.current_animation != "fire" and $Camera/Handgun/AnimationPlayer.current_animation != "reload" and $Camera/Handgun/AnimationPlayer.current_animation != "pull out":
 		
 			if direction_2D != Vector2():
-				$Camera/Handgun/AnimationPlayer.play("walk")
 				rpc("animation", "walk")
 			else:
-				$Camera/Handgun/AnimationPlayer.play("idle")
 				rpc("animation", "idle")
 				
 		
@@ -59,6 +58,8 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("jump"):
 			if is_on_floor():
 				movement.y = jump_force
+				if $Camera/Handgun/AnimationPlayer.current_animation != "reload":
+					rpc("animation", "pull out")
 
 		movement = move_and_slide(movement, Vector3.UP)
 		
@@ -84,16 +85,12 @@ func other_abilities():
 			ammo -= 1
 			update_HUD()
 			
+			rpc("shoot", $Camera/Nozzle.global_transform, $Camera.global_transform.basis.z)
 			
-			$Camera/ShootLight.visible = true
-			rpc("shootlight", true)
-			$ShootLightTimer.start()
 			can_shoot = false
 			$Timer.start()
 			
-			rpc("shoot_sound")
 			rpc("animation", "fire")
-			$Camera/Handgun/AnimationPlayer.play("fire")
 			if $Camera/RayCast.is_colliding():
 				if $Camera/RayCast.get_collider().is_in_group("Zombie"):
 					$Camera/RayCast.get_collider().rpc("shot")
@@ -137,33 +134,38 @@ func attacked(delta):
 
 remotesync func reload():
 	$Camera/Handgun/AnimationPlayer.play("reload")
-	$ReloadSound.play()
+	$Camera/Nozzle/ReloadSound.play()
 
 func update_HUD():
 	$HUD/Health.text = str (health)
 	$HUD/Ammo.text = str( ammo ) + " / " + str(pack)
 
-remote func shootlight(status):
-	$Camera/ShootLight.visible = status
-
-remote func animation(anim):
+remotesync func animation(anim):
 	$Camera/Handgun/AnimationPlayer.play(anim)
 
 remotesync func toggle_light(status):
 	$Camera/Flashlight.visible = status
 
-remotesync func shoot_sound():
-	$ShootSound.play()
+remotesync func shoot(position, direction):
+	$Camera/Nozzle/ShootSound.play()
+	$Camera/ShootLight.visible = true
+	$ShootLightTimer.start()
+
+	var bullet_instance = load(bullet).instance()
+	bullet_instance.global_transform = position
+	get_tree().get_root().get_node("Game").add_child(bullet_instance)
+	bullet_instance.linear_velocity = direction * -200
+	yield(get_tree().create_timer(2), "timeout")
+	bullet_instance.queue_free()
+
 
 func _on_network_peer_connected(id):
 	if is_network_master():
 		rpc("toggle_light", $Camera/Flashlight.visible)
 		rset("puppet_camera_rotation", $Camera.rotation)
 
-
 func _on_Timer_timeout():
 	can_shoot = true
-
 
 func _on_ShootLightTimer_timeout():
 	$Camera/ShootLight.visible = false
