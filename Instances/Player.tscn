@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Instances/Player.gd" type="Script" id=1]
 [ext_resource path="res://other/crosshair.png" type="Texture" id=2]
 [ext_resource path="res://other/fire.wav" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Weapons/Handgun/HandgunScene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Fonts/gunplay rg.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/Audio/Reload_1.wav" type="AudioStream" id=6]
 
 [sub_resource type="CylinderMesh" id=1]
 top_radius = 0.1
@@ -17,6 +19,13 @@ height = 2.5
 [sub_resource type="CapsuleMesh" id=3]
 radius = 0.35
 mid_height = 2.8
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="Theme" id=5]
+default_font = SubResource( 4 )
 
 [node name="Player" type="KinematicBody" groups=[
 "Player",
@@ -59,9 +68,9 @@ mesh = SubResource( 3 )
 material/0 = null
 
 [node name="HUD" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -72,11 +81,35 @@ anchor_bottom = 1.0
 texture = ExtResource( 2 )
 stretch_mode = 4
 
+[node name="Ammo" type="Label" parent="HUD"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_right = 110.0
+text = "30"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health" type="Label" parent="HUD"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -110.0
+margin_top = -40.0
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ShootSound" type="AudioStreamPlayer3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
 stream = ExtResource( 3 )
-unit_db = -20.0
+unit_db = -25.0
 unit_size = 100.0
+max_db = -2.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.25
@@ -85,5 +118,11 @@ one_shot = true
 [node name="ShootLightTimer" type="Timer" parent="."]
 wait_time = 0.05
 one_shot = true
+
+[node name="ReloadSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 6 )
+unit_db = -10.0
+unit_size = 10.0
+max_db = -3.0
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="ShootLightTimer" to="." method="_on_ShootLightTimer_timeout"]

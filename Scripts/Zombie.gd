@@ -53,7 +53,7 @@ remotesync func sound():
 	$Hit.pitch_scale = pitch_level
 
 remotesync func shot():
-	health -= 25
+	health -= 40
 	$Hit.play()
 
 

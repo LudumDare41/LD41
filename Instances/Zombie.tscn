@@ -69,6 +69,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60091, -0.470155 )
 stream = ExtResource( 5 )
 unit_db = -25.0
 unit_size = 100.0
+max_db = -3.0
 
 [node name="GrowlTimer" type="Timer" parent="."]
 one_shot = true

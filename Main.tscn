@@ -40,16 +40,16 @@ adjustment_saturation = 1.1
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
 [node name="Levels" type="Spatial" parent="."]
 
 [node name="Labyrinth" parent="Levels" instance=ExtResource( 2 )]
 
 [node name="Labyrinth 2" parent="Levels" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 66, -1.5, 51.8659 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
-autoplay = true
 
 [node name="MedKits" type="Node" parent="."]
 
@@ -72,6 +72,9 @@ transform = Transform( -0.0199717, 0, -0.022386, 0, 0.03, 0, 0.022386, 0, -0.019
 
 [node name="AmmoBox11" parent="AmmoBoxes" instance=ExtResource( 7 )]
 transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, -8.52525, 0, -18.5219 )
+
+[node name="AmmoBox16" parent="AmmoBoxes" instance=ExtResource( 7 )]
+transform = Transform( -0.0142759, 0, 0.0263856, 0, 0.03, 0, -0.0263856, 0, -0.0142759, -15.5732, 0, 18.2982 )
 
 [node name="AmmoBox12" parent="AmmoBoxes" instance=ExtResource( 7 )]
 transform = Transform( 0.00438235, 0, 0.0296782, 0, 0.03, 0, -0.0296782, 0, 0.00438235, -13.1761, 4.76837e-07, -31.8097 )

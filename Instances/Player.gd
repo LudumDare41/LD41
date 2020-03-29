@@ -4,6 +4,10 @@ var movement = Vector3()
 var jump_force = 5
 var speed = 12
 
+var health = 100
+var ammo = 12
+var pack = 2
+
 var can_shoot = true
 
 puppet var puppet_transform = null
@@ -11,12 +15,15 @@ puppet var puppet_camera_rotation = null
 
 func _ready():
 	get_tree().connect("network_peer_connected", self, "_on_network_peer_connected")
+	refresh_HUD()
 	
 	if is_network_master():
 		$Camera.current = true
 		$Camera/Angle.visible = false
 		$HUD.visible = true
 		$Camera/RayCast.enabled = true
+	else:
+		$HUD.visible = false
 
 func _physics_process(delta):
 	if is_network_master():
@@ -25,7 +32,7 @@ func _physics_process(delta):
 		direction_2D.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 		direction_2D = direction_2D.normalized()
 		
-		if $Camera/Handgun/AnimationPlayer.current_animation != "fire":
+		if $Camera/Handgun/AnimationPlayer.current_animation != "fire" and $Camera/Handgun/AnimationPlayer.current_animation != "reload":
 		
 			if direction_2D != Vector2():
 				$Camera/Handgun/AnimationPlayer.play("walk")
@@ -69,9 +76,12 @@ func _input(event):
 				$Camera.rotation_degrees.x = clamp($Camera.rotation_degrees.x, -90, 90)
 
 func other_abilities():
-	print($Timer.time_left)
 	if Input.is_action_just_pressed("shoot"):
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED and can_shoot:
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED and can_shoot and ammo > 0 and $Camera/Handgun/AnimationPlayer.current_animation != "reload":
+			ammo -= 1
+			refresh_HUD()
+			
+			
 			$Camera/ShootLight.visible = true
 			rpc("shootlight", true)
 			$ShootLightTimer.start()
@@ -86,14 +96,29 @@ func other_abilities():
 					$Camera/RayCast.get_collider().rpc("shot")
 			
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		
 	
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		
+	
+	if Input.is_action_just_pressed("reload") and ammo != 12:
+		if pack > 0:
+			rpc("reload")
+			ammo = 12
+			pack -= 1
+			refresh_HUD()
+	
+	
 	if Input.is_action_just_pressed("flashlight"):
 		$Camera/Flashlight.visible = !$Camera/Flashlight.visible
 		rpc("toggle_light", $Camera/Flashlight.visible)
+
+remotesync func reload():
+	$Camera/Handgun/AnimationPlayer.play("reload")
+	$ReloadSound.play()
+
+func refresh_HUD():
+	$HUD/Health.text = str (health)
+	$HUD/Ammo.text = str( ammo ) + " / " + str(pack)
 
 remote func shootlight(status):
 	$Camera/ShootLight.visible = status
