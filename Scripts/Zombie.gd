@@ -32,6 +32,7 @@ func _process(delta):
 	
 	if not $ZombieModel/AnimationPlayer.is_playing() and not walk_animation:
 		$ZombieModel/AnimationPlayer.play("WalkAction 2")
+		$CollisionShape.disabled = false
 		walk_animation = true
 	
 	if is_network_master():
@@ -104,11 +105,10 @@ remotesync func wakeup():
 	death_animation = false
 	health = 100
 	dead = false
-	$CollisionShape.disabled = false
+	
 	walk_animation = false
 	$LineOfSight.enabled = true
 	$AttackRange.enabled = true
-
 
 func _on_DeadTimer_timeout():
 	rpc("wakeup")
