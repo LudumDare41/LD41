@@ -58,7 +58,7 @@ cast_to = Vector3( 0, 0, -40 )
 [node name="AttackRange" type="RayCast" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24085, 0 )
 enabled = true
-cast_to = Vector3( 0, 0, -2 )
+cast_to = Vector3( 0, 0, -1.7 )
 
 [node name="Mouth" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5355, -0.338126 )

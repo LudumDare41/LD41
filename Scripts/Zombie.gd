@@ -3,6 +3,7 @@ extends KinematicBody
 var health = 100
 
 var dead = false
+var speed = 0.5
 
 var death_animation = false
 
@@ -45,7 +46,7 @@ func _process(delta):
 				
 				
 				vector.y -= 9.8 * delta
-				move_and_slide(vector / 3)
+				move_and_slide(vector * speed)
 			
 				if $AttackRange.is_colliding():
 					if $AttackRange.get_collider().is_in_group("Player"):
