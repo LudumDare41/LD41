@@ -7,7 +7,7 @@
 albedo_texture = ExtResource( 2 )
 roughness = 0.9
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "WalkAction"
 length = 2.04167
 loop = true
@@ -217,5 +217,4 @@ transform = Transform( 0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 0, 0 )
 material/0 = SubResource( 1 )
 
 [node name="AnimationPlayer" parent="." index="1"]
-autoplay = "WalkAction 2"
-"anims/WalkAction 2" = SubResource( 3 )
+"anims/WalkAction 2" = SubResource( 2 )

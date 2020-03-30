@@ -52,7 +52,6 @@ func _physics_process(delta):
 				rpc("animation", "idle")
 				rpc("footstep", false, 1.0)
 		
-
 		
 		movement.z = direction_2D.y * speed
 		movement.x = direction_2D.x * speed
@@ -67,6 +66,13 @@ func _physics_process(delta):
 					rpc("animation", "pull out")
 
 		movement = move_and_slide(movement, Vector3.UP)
+		
+		if health <= 0:
+			global_transform = Network.spawn.global_transform
+			yield(get_tree().create_timer(.01), "timeout")
+
+			health_float = 100
+			update_HUD()
 		
 		other_abilities()
 		rset("puppet_transform", transform)
@@ -149,7 +155,6 @@ func heal():
 
 func attacked(delta):
 	health_float -= 30 * delta
-	health = int(health_float)
 	update_HUD()
 	rpc("hurt_sound")
 
@@ -168,6 +173,7 @@ remotesync func reload():
 	$Camera/Nozzle/ReloadSound.play()
 
 func update_HUD():
+	health = int(health_float)
 	$HUD/Health.text = str (health)
 	$HUD/Ammo.text = str( ammo ) + " / " + str(pack)
 
