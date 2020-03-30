@@ -19,8 +19,8 @@ func _ready():
 	set_network_master(1)
 	if is_network_master():
 		randomize()
-		pitch_level = rand_range(0.9, 1.1)
-		rpc("sound")
+		pitch_level = rand_range(0.88, 1.12)
+		rpc("sound_setup")
 
 func _process(delta):
 	if is_network_master():
@@ -65,20 +65,25 @@ func _on_network_peer_connected(id):
 	if is_network_master() and health <= 0:
 		rpc("dead")
 		rset("puppet_transform", transform)
+		rpc("sound_setup")
+		
 remotesync func dead():
 	if death_animation == false:
 		$ZombieModel/AnimationPlayer.play("DieAction")
+		$Mouth/Dead.play()
 		death_animation = true
 	$CollisionShape.disabled = true
 	$LineOfSight.enabled = false
 	$AttackRange.enabled = false
 
-remotesync func sound():
-	$Hit.pitch_scale = pitch_level
+remotesync func sound_setup():
+	$Mouth/Hit.pitch_scale = pitch_level
+	$Mouth/Dead.pitch_scale = pitch_level
 
 remotesync func shot():
 	health -= 40
-	$Hit.play()
+	if health > 0:
+		$Mouth/Hit.play()
 
 
 

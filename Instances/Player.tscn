@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Instances/Player.gd" type="Script" id=1]
 [ext_resource path="res://other/crosshair.png" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Instances/Lamp.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/Audio/Player_Damage_1.wav" type="AudioStream" id=8]
 [ext_resource path="res://Assets/Audio/Player_Damage_2.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Audio/Movement_1.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Audio/Gun_Empty_2.wav" type="AudioStream" id=11]
 
 [sub_resource type="CylinderMesh" id=1]
 top_radius = 0.1
@@ -74,8 +76,13 @@ max_db = -2.0
 [node name="ReloadSound" type="AudioStreamPlayer3D" parent="Camera/Nozzle"]
 stream = ExtResource( 6 )
 unit_db = -10.0
-unit_size = 10.0
+unit_size = 5.0
 max_db = -3.0
+
+[node name="EmptySound" type="AudioStreamPlayer3D" parent="Camera/Nozzle"]
+stream = ExtResource( 11 )
+unit_db = -5.0
+unit_size = 5.0
 
 [node name="Lamp" parent="Camera" instance=ExtResource( 7 )]
 transform = Transform( -0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0, 0.322357, -0.351897 )
@@ -148,5 +155,11 @@ stream = ExtResource( 9 )
 unit_db = -20.0
 unit_size = 10.0
 max_db = -4.0
+
+[node name="FootStep" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0 )
+stream = ExtResource( 10 )
+unit_db = -20.0
+unit_size = 10.0
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="ShootLightTimer" to="." method="_on_ShootLightTimer_timeout"]

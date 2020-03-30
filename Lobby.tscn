@@ -73,4 +73,5 @@ text = "Join game"
 stream = ExtResource( 2 )
 autoplay = true
 [connection signal="pressed" from="Menu/HostButton" to="." method="_on_HostButton_pressed"]
+[connection signal="text_entered" from="Menu/IP" to="." method="_on_IP_text_entered"]
 [connection signal="pressed" from="Menu/JoinButton" to="." method="_on_JoinButton_pressed"]

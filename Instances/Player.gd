@@ -42,13 +42,17 @@ func _physics_process(delta):
 		
 			if direction_2D != Vector2():
 				rpc("animation", "walk")
+				if not Input.is_action_pressed("sprint"):
+					rpc("footstep", true, 1.0)
+					speed = 10
+				else:
+					rpc("footstep", true, 1.1)
+					speed = 16
 			else:
 				rpc("animation", "idle")
+				rpc("footstep", false, 1.0)
 		
-		if Input.is_action_pressed("sprint"):
-			speed = 16
-		else:
-			speed = 12
+
 		
 		movement.z = direction_2D.y * speed
 		movement.x = direction_2D.x * speed
@@ -82,22 +86,25 @@ func _input(event):
 
 func other_abilities():
 	if Input.is_action_just_pressed("shoot"):
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED and can_shoot and ammo > 0 and $Camera/Handgun/AnimationPlayer.current_animation != "reload":
-			ammo -= 1
-			update_HUD()
-			
-			rpc("shoot", $Camera/Nozzle.global_transform, $Camera.global_transform.basis.z)
-			
-			can_shoot = false
-			$Timer.start()
-			
-			rpc("animation", "fire")
-			if $Camera/RayCast.is_colliding():
-				if $Camera/RayCast.get_collider().is_in_group("Zombie"):
-					$Camera/RayCast.get_collider().rpc("shot")
-				else:
-					if not $Camera/RayCast.get_collider().is_in_group("Player"):
-						rpc("impact", $Camera/RayCast.get_collision_point())
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED and can_shoot and $Camera/Handgun/AnimationPlayer.current_animation != "reload":
+			if ammo > 0:
+				ammo -= 1
+				update_HUD()
+				
+				rpc("shoot", $Camera/Nozzle.global_transform, $Camera.global_transform.basis.z)
+				
+				can_shoot = false
+				$Timer.start()
+				
+				rpc("animation", "fire")
+				if $Camera/RayCast.is_colliding():
+					if $Camera/RayCast.get_collider().is_in_group("Zombie"):
+						$Camera/RayCast.get_collider().rpc("shot")
+					else:
+						if not $Camera/RayCast.get_collider().is_in_group("Player"):
+							rpc("impact", $Camera/RayCast.get_collision_point())
+			else:
+				rpc("empty_sound")
 					
 					
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -116,6 +123,17 @@ func other_abilities():
 	if Input.is_action_just_pressed("flashlight"):
 		$Camera/Flashlight.visible = !$Camera/Flashlight.visible
 		rpc("toggle_light", $Camera/Flashlight.visible)
+
+remotesync func empty_sound():
+	$Camera/Nozzle/EmptySound.play()
+
+remotesync func footstep(status, pitch):
+	if not $FootStep.playing:
+		if status:
+			$FootStep.pitch_scale = pitch
+			$FootStep.play()
+		else:
+			$FootStep.stop()
 
 remotesync func impact(position):
 	var impact_instance = load(impact).instance()
