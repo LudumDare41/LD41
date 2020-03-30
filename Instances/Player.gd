@@ -97,7 +97,7 @@ func other_abilities():
 				ammo -= 1
 				update_HUD()
 				
-				rpc("shoot", $Camera/Nozzle.global_transform, $Camera.global_transform.basis.z)
+				rpc("shoot")
 				
 				can_shoot = false
 				$Timer.start()
@@ -184,7 +184,7 @@ remotesync func toggle_light(status):
 	$Camera/Flashlight.visible = status
 	$Camera/Lamp/Feedback.visible = status
 
-remotesync func shoot(position, direction):
+remotesync func shoot():
 	$Camera/Nozzle/ShootSound.play()
 	$Camera/ShootLight.visible = true
 	$ShootLightTimer.start()
@@ -195,8 +195,9 @@ remotesync func shoot(position, direction):
 	bullet_instance.linear_velocity = $Camera.global_transform.basis.z * -200
 	
 	var shell_instance = load(shell).instance()
-	bullet_instance.global_transform = $Camera/ShellPosition.global_transform
+	shell_instance.global_transform = $Camera/ShellPosition.global_transform
 	get_tree().get_root().get_node("Game").add_child(shell_instance)
+	shell_instance.linear_velocity = $Camera/ShellPosition.global_transform.basis.x * 5
 	
 	yield(get_tree().create_timer(2), "timeout")
 	bullet_instance.queue_free()
