@@ -71,7 +71,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.238141, 0, -1.28651 )
 stream = ExtResource( 3 )
 unit_db = -25.0
 unit_size = 100.0
-max_db = -2.0
+max_db = 0.0
 
 [node name="ReloadSound" type="AudioStreamPlayer3D" parent="Camera/Nozzle"]
 stream = ExtResource( 6 )

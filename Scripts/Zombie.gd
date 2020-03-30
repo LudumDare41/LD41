@@ -23,6 +23,10 @@ func _ready():
 		randomize()
 		pitch_level = rand_range(0.88, 1.12)
 		rpc("sound_setup")
+		
+		var new_time = rand_range(2, 5)
+		$GrowlTimer.wait_time = new_time
+		$GrowlTimer.start()
 
 func _process(delta):
 	
@@ -58,10 +62,8 @@ func _process(delta):
 					if $AttackRange.get_collider().is_in_group("Player"):
 						$AttackRange.get_collider().attacked(delta)
 			
-			
 				rset_unreliable("puppet_transform", transform)
 		if health <= 0:
-			print($DeadTimer.time_left)
 			if dead == false:
 				rpc("dead")
 				$DeadTimer.start()
@@ -89,6 +91,7 @@ remotesync func dead():
 remotesync func sound_setup():
 	$Mouth/Hit.pitch_scale = pitch_level
 	$Mouth/Dead.pitch_scale = pitch_level
+	$Mouth/Growl.pitch_scale = pitch_level
 
 remotesync func shot():
 	health -= 50
@@ -109,3 +112,15 @@ remotesync func wakeup():
 
 func _on_DeadTimer_timeout():
 	rpc("wakeup")
+
+remotesync func growl():
+	$Mouth/Growl.play()
+
+func _on_GrowlTimer_timeout():
+	if is_network_master():
+		if not dead:
+			rpc("growl")
+		randomize()
+		var new_time = rand_range(2, 5)
+		$GrowlTimer.wait_time = new_time
+		$GrowlTimer.start()

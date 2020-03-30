@@ -48,7 +48,6 @@ draw_pass_1 = SubResource( 4 )
 
 [node name="GrowlTimer" type="Timer" parent="."]
 one_shot = true
-autostart = true
 
 [node name="LineOfSight" type="RayCast" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.64515, 0 )
@@ -70,13 +69,13 @@ unit_size = 15.0
 
 [node name="Growl" type="AudioStreamPlayer3D" parent="Mouth"]
 stream = ExtResource( 4 )
-unit_db = -3.0
-unit_size = 6.0
+unit_db = -32.0
+unit_size = 100.0
 
 [node name="GrowlAttack" type="AudioStreamPlayer3D" parent="Mouth"]
 stream = ExtResource( 4 )
 unit_db = 5.0
-unit_size = 6.0
+unit_size = 15.0
 pitch_scale = 1.3
 
 [node name="Hit" type="AudioStreamPlayer3D" parent="Mouth"]
