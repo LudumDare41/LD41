@@ -7,6 +7,8 @@ var speed = 0.5
 
 var death_animation = false
 var walk_animation = false
+var growl_min = 3
+var growl_max = 10
 
 var pitch_level = 1
 
@@ -24,7 +26,7 @@ func _ready():
 		pitch_level = rand_range(0.88, 1.12)
 		rpc("sound_setup")
 		
-		var new_time = rand_range(2, 5)
+		var new_time = rand_range(growl_min, growl_max)
 		$GrowlTimer.wait_time = new_time
 		$GrowlTimer.start()
 
@@ -32,7 +34,6 @@ func _process(delta):
 	
 	if not $ZombieModel/AnimationPlayer.is_playing() and not walk_animation:
 		$ZombieModel/AnimationPlayer.play("WalkAction 2")
-		$CollisionShape.disabled = false
 		walk_animation = true
 	
 	if is_network_master():
@@ -61,7 +62,7 @@ func _process(delta):
 			
 				if $AttackRange.is_colliding():
 					if $AttackRange.get_collider().is_in_group("Player"):
-						$AttackRange.get_collider().attacked(delta)
+						$AttackRange.get_collider().rpc("attacked", delta)
 			
 				rset_unreliable("puppet_transform", transform)
 		if health <= 0:
@@ -107,6 +108,7 @@ remotesync func wakeup():
 	dead = false
 	
 	walk_animation = false
+	$CollisionShape.disabled = false
 	$LineOfSight.enabled = true
 	$AttackRange.enabled = true
 
@@ -121,6 +123,6 @@ func _on_GrowlTimer_timeout():
 		if not dead:
 			rpc("growl")
 		randomize()
-		var new_time = rand_range(2, 5)
+		var new_time = rand_range(growl_min, growl_max)
 		$GrowlTimer.wait_time = new_time
 		$GrowlTimer.start()

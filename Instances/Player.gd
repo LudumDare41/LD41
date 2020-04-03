@@ -153,7 +153,7 @@ func heal():
 	health = int(health_float)
 	update_HUD()
 
-func attacked(delta):
+remotesync func attacked(delta):
 	health_float -= 30 * delta
 	update_HUD()
 	rpc("hurt_sound")

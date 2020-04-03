@@ -30,6 +30,7 @@ settings/stdout/print_fps=true
 [display]
 
 window/size/resizable=false
+window/vsync/use_vsync=false
 
 [importer_defaults]
 
@@ -153,4 +154,5 @@ mute={
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 quality/filters/msaa=2
