@@ -26,7 +26,7 @@ radius = 0.35
 mid_height = 2.8
 
 [sub_resource type="DynamicFont" id=4]
-size = 30
+size = 20
 font_data = ExtResource( 5 )
 
 [sub_resource type="Theme" id=5]
@@ -114,10 +114,10 @@ stretch_mode = 4
 [node name="Ammo" type="Label" parent="HUD"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -40.0
-margin_right = 110.0
+margin_left = 10.0
+margin_top = -30.0
+margin_right = 78.0
 text = "30"
-align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -127,9 +127,11 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -110.0
-margin_top = -40.0
+margin_left = -70.0
+margin_top = -30.0
+margin_right = -10.0
 text = "100"
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
