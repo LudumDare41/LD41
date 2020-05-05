@@ -84,8 +84,8 @@ func _physics_process(delta):
 func _input(event):
 	if is_network_master():
 		if event is InputEventMouseMotion:
-			rotation_degrees.y -= event.relative.x
-			$Camera.rotation_degrees.x -= event.relative.y
+			rotation_degrees.y -= event.relative.x * 1.1
+			$Camera.rotation_degrees.x -= event.relative.y * 1.1
 			$Camera.rotation_degrees.x = clamp($Camera.rotation_degrees.x, -90, 90)
 			rset("puppet_camera_rotation", $Camera.rotation)
 
