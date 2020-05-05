@@ -29,8 +29,8 @@ settings/stdout/print_fps=true
 
 [display]
 
-window/size/width=480
-window/size/height=270
+window/size/width=640
+window/size/height=360
 window/vsync/use_vsync=false
 window/stretch/mode="viewport"
 
@@ -156,5 +156,4 @@ mute={
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 quality/filters/msaa=2
