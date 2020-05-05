@@ -1,4 +1,6 @@
 # Way Out - Ludum Dare 41
+PLAY: https://ludumdare41.github.io/LD41/
+
 ## Description
 This game was made for the Ludum Dare 41 (compo) in 72 hours with the following theme:  [Combine 2 Incompatible Genres](https://ldjam.com/events/ludum-dare/41)
 This is combination of a FPS Survivor and a maze game. You can check the page of the Ludum Dare here: [Way Out](https://ldjam.com/events/ludum-dare/41/way-out)
