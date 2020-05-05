@@ -83,16 +83,15 @@ func _physics_process(delta):
 
 func _input(event):
 	if is_network_master():
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			if event is InputEventMouseMotion:
-				rotation_degrees.y -= event.relative.x / 7
-				$Camera.rotation_degrees.x -= event.relative.y / 7
-				$Camera.rotation_degrees.x = clamp($Camera.rotation_degrees.x, -90, 90)
-				rset("puppet_camera_rotation", $Camera.rotation)
+		if event is InputEventMouseMotion:
+			rotation_degrees.y -= event.relative.x / 7
+			$Camera.rotation_degrees.x -= event.relative.y / 7
+			$Camera.rotation_degrees.x = clamp($Camera.rotation_degrees.x, -90, 90)
+			rset("puppet_camera_rotation", $Camera.rotation)
 
 func other_abilities():
 	if Input.is_action_just_pressed("shoot"):
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED and can_shoot and $Camera/Handgun/AnimationPlayer.current_animation != "reload":
+		if can_shoot and $Camera/Handgun/AnimationPlayer.current_animation != "reload":
 			if ammo > 0:
 				ammo -= 1
 				update_HUD()
@@ -111,9 +110,6 @@ func other_abilities():
 							rpc("impact", $Camera/RayCast.get_collision_point())
 			else:
 				rpc("empty_sound")
-					
-					
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
