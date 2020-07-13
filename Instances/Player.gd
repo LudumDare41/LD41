@@ -1,8 +1,13 @@
 extends KinematicBody
 
-var movement = Vector3()
-var jump_force = 5
-var speed = 12
+var direction = Vector3()
+var velocity = Vector3()
+var jump = 4.2
+var acceleration = 8
+var speed = 6
+var fall = 0
+
+const GRAVITY = 9.8
 
 var health_float = 100.0
 var health = 100
@@ -33,14 +38,28 @@ func _ready():
 
 func _physics_process(delta):
 	if is_network_master():
-		var direction_2D = Vector2()
-		direction_2D.y = Input.get_action_strength("down") - Input.get_action_strength("up")
-		direction_2D.x = Input.get_action_strength("right") - Input.get_action_strength("left")
-		direction_2D = direction_2D.normalized()
+		
+		if is_on_floor():
+			fall = -0.001
+		if Input.is_action_just_pressed("jump"):
+			fall = jump
+			if $Camera/Handgun/AnimationPlayer.current_animation != "reload":
+					rpc("animation", "pull out")
+		else:
+			fall -= GRAVITY * delta
+
+		direction.z = -Input.get_action_strength("move_forward") + Input.get_action_strength("move_backward")
+		direction.x = -Input.get_action_strength("move_left") + Input.get_action_strength("move_right")
+		direction = direction.normalized().rotated(Vector3.UP, rotation.y)
+	
+		velocity = velocity.linear_interpolate(direction * speed, acceleration * delta)
+	
+		velocity = move_and_slide(Vector3(velocity.x, fall, velocity.z), Vector3.UP, true)
+		
 		
 		if $Camera/Handgun/AnimationPlayer.current_animation != "fire" and $Camera/Handgun/AnimationPlayer.current_animation != "reload" and $Camera/Handgun/AnimationPlayer.current_animation != "pull out":
 		
-			if direction_2D != Vector2():
+			if direction != Vector3():
 				rpc("animation", "walk")
 				if not Input.is_action_pressed("sprint"):
 					rpc("footstep", true, 1.0)
@@ -52,20 +71,6 @@ func _physics_process(delta):
 				rpc("animation", "idle")
 				rpc("footstep", false, 1.0)
 		
-		
-		movement.z = direction_2D.y * speed
-		movement.x = direction_2D.x * speed
-		movement.y -= 9.8 * delta
-		
-		movement = movement.rotated(Vector3.UP, rotation.y)
-		
-		if Input.is_action_just_pressed("jump"):
-			if is_on_floor():
-				movement.y = jump_force
-				if $Camera/Handgun/AnimationPlayer.current_animation != "reload":
-					rpc("animation", "pull out")
-
-		movement = move_and_slide(movement, Vector3.UP)
 		
 		if health <= 0:
 			global_transform = Network.spawn.global_transform
@@ -162,8 +167,6 @@ remotesync func hurt_sound():
 		else:
 			$Hurt2.play()
 	
-	
-
 remotesync func reload():
 	$Camera/Handgun/AnimationPlayer.play("reload")
 	$Camera/Nozzle/ReloadSound.play()
