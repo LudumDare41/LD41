@@ -1,10 +1,16 @@
 extends KinematicBody
 
+
+
+
+var speed = 6
+var acceleration = 8
+var jump = 4.5
+var mouse_sensitivity = 1
+
 var direction = Vector3()
 var velocity = Vector3()
-var jump = 4.2
-var acceleration = 8
-var speed = 6
+var snap = Vector3()
 var fall = 0
 
 const GRAVITY = 9.8
@@ -36,25 +42,36 @@ func _ready():
 	else:
 		$HUD.visible = false
 
-func _physics_process(delta):
+func _input(event):
 	if is_network_master():
-		
-		if is_on_floor():
-			fall = -0.001
-		if Input.is_action_just_pressed("jump"):
-			fall = jump
-			if $Camera/Handgun/AnimationPlayer.current_animation != "reload":
-					rpc("animation", "pull out")
-		else:
-			fall -= GRAVITY * delta
-
+		if event is InputEventMouseMotion:
+			rotation_degrees.y -= event.relative.x * mouse_sensitivity / 10
+			$Camera.rotation_degrees.x = clamp($Camera.rotation_degrees.x - event.relative.y * mouse_sensitivity / 10, -90, 90)
+	
 		direction.z = -Input.get_action_strength("move_forward") + Input.get_action_strength("move_backward")
 		direction.x = -Input.get_action_strength("move_left") + Input.get_action_strength("move_right")
 		direction = direction.normalized().rotated(Vector3.UP, rotation.y)
+		
+		if is_on_floor() and Input.is_action_just_pressed("jump"):
+			snap = Vector3()
+			fall = jump
+		rset_unreliable("puppet_camera_rotation", $Camera.rotation)
+	else:
+		$Camera.rotation = puppet_camera_rotation
+	
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().change_scene("res://Lobby.tscn")
+	
+func _physics_process(delta):
+	if is_network_master():
+		
+		fall -= GRAVITY * delta
+		if is_on_floor() and not Input.is_action_just_pressed("jump"):
+			snap = Vector3.DOWN * 0.1
+			fall = 0
 	
 		velocity = velocity.linear_interpolate(direction * speed, acceleration * delta)
-	
-		velocity = move_and_slide(Vector3(velocity.x, fall, velocity.z), Vector3.UP, true)
+		move_and_slide_with_snap(Vector3(velocity.x, fall, velocity.z), snap, Vector3.UP, true, 4, deg2rad(45))
 		
 		
 		if $Camera/Handgun/AnimationPlayer.current_animation != "fire" and $Camera/Handgun/AnimationPlayer.current_animation != "reload" and $Camera/Handgun/AnimationPlayer.current_animation != "pull out":
@@ -79,20 +96,20 @@ func _physics_process(delta):
 			health_float = 100
 			update_HUD()
 		
+		rset_unreliable("puppet_transform", transform)
 		other_abilities()
-		rset("puppet_transform", transform)
+
 		
 	else:
 		transform = puppet_transform
 		$Camera.rotation = puppet_camera_rotation
 
-func _input(event):
-	if is_network_master():
-		if event is InputEventMouseMotion:
-			rotation_degrees.y -= event.relative.x * 1.1
-			$Camera.rotation_degrees.x -= event.relative.y * 1.1
-			$Camera.rotation_degrees.x = clamp($Camera.rotation_degrees.x, -90, 90)
-			rset("puppet_camera_rotation", $Camera.rotation)
+
+
+
+
+
+
 
 func other_abilities():
 	if Input.is_action_just_pressed("shoot"):
