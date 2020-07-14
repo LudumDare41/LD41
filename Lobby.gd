@@ -2,6 +2,11 @@ extends Control
 
 func _ready():
 	get_tree().set_network_peer(null)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+func _input(event):
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().quit()
 
 func _on_HostButton_pressed():
 	Network.create_server()

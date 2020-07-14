@@ -30,6 +30,8 @@ puppet var puppet_transform = transform
 puppet var puppet_camera_rotation = Vector3()
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 	get_tree().connect("network_peer_connected", self, "_on_network_peer_connected")
 	update_HUD()
 	
@@ -53,6 +55,7 @@ func _input(event):
 		direction = direction.normalized().rotated(Vector3.UP, rotation.y)
 		
 		if is_on_floor() and Input.is_action_just_pressed("jump"):
+			rpc("animation", "pull out")
 			snap = Vector3()
 			fall = jump
 		rset_unreliable("puppet_camera_rotation", $Camera.rotation)
@@ -79,7 +82,7 @@ func _physics_process(delta):
 			if direction != Vector3():
 				rpc("animation", "walk")
 				if not Input.is_action_pressed("sprint"):
-					rpc("footstep", true, 1.0)
+					rpc("footstep", true, 1)
 					speed = 10
 				else:
 					rpc("footstep", true, 1.1)
@@ -217,7 +220,6 @@ remotesync func shoot():
 	
 	yield(get_tree().create_timer(2), "timeout")
 	bullet_instance.queue_free()
-
 
 func _on_network_peer_connected(id):
 	if is_network_master():
