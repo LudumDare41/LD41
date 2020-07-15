@@ -121,8 +121,8 @@ remotesync func growl():
 func _on_GrowlTimer_timeout():
 	if is_network_master():
 		if not dead:
-			rpc("growl")
 		randomize()
 		var new_time = rand_range(growl_min, growl_max)
 		$GrowlTimer.wait_time = new_time
 		$GrowlTimer.start()
+			rpc("growl")

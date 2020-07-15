@@ -1,8 +1,7 @@
 extends KinematicBody
 
-var speed = 6
-var crouch_speed = 2
-var sprint_speed = 10
+var speed = 8
+var crouch_speed = 3
 var acceleration = 8
 var jump = 4.5
 var air_control = 0.3
@@ -60,6 +59,7 @@ func _input(event):
 			if Input.is_action_just_pressed("jump"):
 				Y_velocity = jump
 				snap = Vector3()
+				rpc("animation", "pull out")
 			if Input.is_action_pressed("crouch"):
 				speed = crouch_speed
 			else:
@@ -92,10 +92,10 @@ func _physics_process(delta):
 		
 			if direction != Vector3():
 				rpc("animation", "walk")
-				if not Input.is_action_pressed("sprint"):
-					rpc("footstep", true, 1)
+				if not Input.is_action_pressed("crouch"):
+					rpc("footstep", true, 0.9, -20)
 				else:
-					rpc("footstep", true, 1.1)
+					rpc("footstep", true, 0.7, -25)
 			else:
 				rpc("animation", "idle")
 				rpc("footstep", false, 1.0)
@@ -162,10 +162,11 @@ func other_abilities():
 remotesync func empty_sound():
 	$Camera/Nozzle/EmptySound.play()
 
-remotesync func footstep(status, pitch):
+remotesync func footstep(status, pitch, volume):
 	if not $FootStep.playing:
 		if status:
 			$FootStep.pitch_scale = pitch
+			$FootStep.unit_db = volume
 			$FootStep.play()
 		else:
 			$FootStep.stop()
