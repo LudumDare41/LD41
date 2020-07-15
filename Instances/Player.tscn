@@ -26,7 +26,7 @@ radius = 0.35
 mid_height = 2.8
 
 [sub_resource type="DynamicFont" id=4]
-size = 20
+size = 30
 font_data = ExtResource( 5 )
 
 [sub_resource type="Theme" id=5]
@@ -60,6 +60,7 @@ cast_to = Vector3( 0, 0, -1000 )
 [node name="ShootLight" type="OmniLight" parent="Camera"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.236496, 1.19209e-07, -1.48368 )
 visible = false
+shadow_enabled = true
 omni_range = 10.0
 
 [node name="Nozzle" type="Position3D" parent="Camera"]
@@ -106,17 +107,21 @@ __meta__ = {
 }
 
 [node name="Crosshair" type="TextureRect" parent="HUD"]
+modulate = Color( 1, 1, 1, 0.588235 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
 stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Ammo" type="Label" parent="HUD"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 10.0
-margin_top = -30.0
-margin_right = 78.0
+margin_left = 20.0
+margin_top = -50.0
+margin_right = 131.0
 text = "30"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -127,9 +132,9 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -70.0
-margin_top = -30.0
-margin_right = -10.0
+margin_left = -180.0
+margin_top = -50.0
+margin_right = -20.0
 text = "100"
 align = 2
 __meta__ = {

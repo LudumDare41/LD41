@@ -1,17 +1,19 @@
 extends KinematicBody
 
-
-
-
 var speed = 6
+var crouch_speed = 2
+var sprint_speed = 10
 var acceleration = 8
 var jump = 4.5
+var air_control = 0.3
 var mouse_sensitivity = 1
 
 var direction = Vector3()
 var velocity = Vector3()
 var snap = Vector3()
-var fall = 0
+var Y_velocity = 0
+var saved_speed = speed
+var saved_air_control = air_control
 
 const GRAVITY = 9.8
 
@@ -53,11 +55,18 @@ func _input(event):
 		direction.z = -Input.get_action_strength("move_forward") + Input.get_action_strength("move_backward")
 		direction.x = -Input.get_action_strength("move_left") + Input.get_action_strength("move_right")
 		direction = direction.normalized().rotated(Vector3.UP, rotation.y)
-		
-		if is_on_floor() and Input.is_action_just_pressed("jump"):
-			rpc("animation", "pull out")
-			snap = Vector3()
-			fall = jump
+	
+		if is_on_floor():
+			if Input.is_action_just_pressed("jump"):
+				Y_velocity = jump
+				snap = Vector3()
+			if Input.is_action_pressed("crouch"):
+				speed = crouch_speed
+			else:
+				speed = saved_speed
+		else:
+			speed = saved_speed
+
 		rset_unreliable("puppet_camera_rotation", $Camera.rotation)
 	else:
 		$Camera.rotation = puppet_camera_rotation
@@ -67,15 +76,17 @@ func _input(event):
 	
 func _physics_process(delta):
 	if is_network_master():
-		
-		fall -= GRAVITY * delta
 		if is_on_floor() and not Input.is_action_just_pressed("jump"):
 			snap = Vector3.DOWN * 0.1
-			fall = 0
+			Y_velocity = 0
+			air_control = 1
+		else:
+			Y_velocity -= GRAVITY * delta
+			air_control = saved_air_control
 	
-		velocity = velocity.linear_interpolate(direction * speed, acceleration * delta)
-		move_and_slide_with_snap(Vector3(velocity.x, fall, velocity.z), snap, Vector3.UP, true, 4, deg2rad(45))
-		
+		velocity.y = Y_velocity
+		velocity = velocity.linear_interpolate(direction * speed, acceleration * air_control * delta)
+		move_and_slide_with_snap(velocity, snap, Vector3.UP, true, 4, deg2rad(45))
 		
 		if $Camera/Handgun/AnimationPlayer.current_animation != "fire" and $Camera/Handgun/AnimationPlayer.current_animation != "reload" and $Camera/Handgun/AnimationPlayer.current_animation != "pull out":
 		
@@ -83,10 +94,8 @@ func _physics_process(delta):
 				rpc("animation", "walk")
 				if not Input.is_action_pressed("sprint"):
 					rpc("footstep", true, 1)
-					speed = 10
 				else:
 					rpc("footstep", true, 1.1)
-					speed = 16
 			else:
 				rpc("animation", "idle")
 				rpc("footstep", false, 1.0)
@@ -107,8 +116,7 @@ func _physics_process(delta):
 		transform = puppet_transform
 		$Camera.rotation = puppet_camera_rotation
 
-
-
+	print(speed)
 
 
 

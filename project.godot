@@ -27,10 +27,6 @@ Network="*res://Network.gd"
 
 settings/stdout/print_fps=true
 
-[display]
-
-window/size/fullscreen=true
-
 [importer_defaults]
 
 texture={
@@ -145,7 +141,12 @@ mute={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":77,"unicode":0,"echo":false,"script":null)
  ]
 }
+crouch={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777238,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [rendering]
 
-quality/filters/msaa=4
+quality/filters/msaa=3
