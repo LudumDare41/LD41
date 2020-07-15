@@ -50,6 +50,9 @@ cast_shadow = 0
 mesh = SubResource( 1 )
 material/0 = null
 
+[node name="Hand" type="Spatial" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24, -0.359, -0.901 )
+
 [node name="Handgun" parent="Camera" instance=ExtResource( 4 )]
 transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.239572, -0.359475, -0.900766 )
 

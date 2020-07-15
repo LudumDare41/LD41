@@ -36,6 +36,8 @@ func _process(delta):
 		$ZombieModel/AnimationPlayer.play("WalkAction 2")
 		walk_animation = true
 	
+	
+	
 	if is_network_master():
 		
 		if not dead and walk_animation:
@@ -121,8 +123,8 @@ remotesync func growl():
 func _on_GrowlTimer_timeout():
 	if is_network_master():
 		if not dead:
-		randomize()
-		var new_time = rand_range(growl_min, growl_max)
-		$GrowlTimer.wait_time = new_time
-		$GrowlTimer.start()
+			randomize()
+			var new_time = rand_range(growl_min, growl_max)
+			$GrowlTimer.wait_time = new_time
+			$GrowlTimer.start()
 			rpc("growl")

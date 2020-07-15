@@ -16,11 +16,11 @@ func _process(delta):
 	rotate_y(0.05)
 	if not $Tween.is_active():
 		if forward:
-			$Tween.interpolate_property(self, "translation:y", translation.y, initial_position + 0.5, 1, Tween.TRANS_BACK, Tween.EASE_IN_OUT, 0)
+			$Tween.interpolate_property(self, "translation:y", translation.y, initial_position + 0.2, 0.5, Tween.TRANS_BACK, Tween.EASE_IN_OUT, 0)
 			$Tween.start()
 			forward = false
 		else:
-			$Tween.interpolate_property(self, "translation:y", translation.y, initial_position, 1, Tween.TRANS_BACK, Tween.EASE_IN_OUT, 0)
+			$Tween.interpolate_property(self, "translation:y", translation.y, initial_position, 0.5, Tween.TRANS_BACK, Tween.EASE_IN_OUT, 0)
 			$Tween.start()
 			forward = true
 			

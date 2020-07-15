@@ -27,6 +27,11 @@ Network="*res://Network.gd"
 
 settings/stdout/print_fps=true
 
+[display]
+
+window/size/resizable=false
+window/size/fullscreen=true
+
 [importer_defaults]
 
 texture={

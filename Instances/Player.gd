@@ -1,7 +1,7 @@
 extends KinematicBody
 
-var speed = 8
-var crouch_speed = 3
+var speed = 12
+var crouch_speed = 4
 var acceleration = 8
 var jump = 4.5
 var air_control = 0.3
@@ -21,6 +21,8 @@ var health = 100
 var ammo = 12
 var pack = 2
 
+var sway = 30
+
 var impact = "res://Instances/Impact.tscn"
 var bullet = "res://Instances/Bullet.tscn"
 var shell = "res://Instances/Shell.tscn"
@@ -35,6 +37,8 @@ func _ready():
 	
 	get_tree().connect("network_peer_connected", self, "_on_network_peer_connected")
 	update_HUD()
+	$Camera/Handgun.set_as_toplevel(true)
+	
 	
 	if is_network_master():
 		$Camera.current = true
@@ -73,7 +77,11 @@ func _input(event):
 	
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().change_scene("res://Lobby.tscn")
-	
+
+func _process(delta):
+	$Camera/Handgun.global_transform.origin = $Camera/Hand.global_transform.origin
+	$Camera/Handgun.rotation.y = lerp_angle($Camera/Handgun.rotation.y, rotation.y, sway * delta)
+	$Camera/Handgun.rotation.x = lerp_angle($Camera/Handgun.rotation.x, $Camera.rotation.x, sway * delta)
 func _physics_process(delta):
 	if is_network_master():
 		if is_on_floor() and not Input.is_action_just_pressed("jump"):
@@ -95,10 +103,10 @@ func _physics_process(delta):
 				if not Input.is_action_pressed("crouch"):
 					rpc("footstep", true, 0.9, -20)
 				else:
-					rpc("footstep", true, 0.7, -25)
+					rpc("footstep", true, 0.75, -25)
 			else:
 				rpc("animation", "idle")
-				rpc("footstep", false, 1.0)
+				rpc("footstep", false, 1.0, -20)
 		
 		
 		if health <= 0:
@@ -128,8 +136,9 @@ func other_abilities():
 			if ammo > 0:
 				ammo -= 1
 				update_HUD()
-				
-				rpc("shoot")
+				randomize()
+				var pitch = rand_range(0.9, 1.1)
+				rpc("shoot", pitch)
 				
 				can_shoot = false
 				$Timer.start()
@@ -186,15 +195,20 @@ func heal():
 remotesync func attacked(delta):
 	health_float -= 30 * delta
 	update_HUD()
-	rpc("hurt_sound")
+	randomize()
+	var number = rand_range(0,2)
+	var pitch = rand_range(0.9, 1.1)
+	rpc("hurt_sound", number, pitch)
 
-remotesync func hurt_sound():
+remotesync func hurt_sound(number, pitch):
 	if $Hurt1.playing == false and $Hurt2.playing == false:
-		var number = rand_range(0,2)
+
 		if number < 1:
+			$Hurt1.pitch_scale = pitch
 			$Hurt1.play()
 		else:
 			$Hurt2.play()
+			$Hurt2.pitch_scale = pitch
 	
 remotesync func reload():
 	$Camera/Handgun/AnimationPlayer.play("reload")
@@ -212,7 +226,8 @@ remotesync func toggle_light(status):
 	$Camera/Flashlight.visible = status
 	$Camera/Lamp/Feedback.visible = status
 
-remotesync func shoot():
+remotesync func shoot(pitch):
+	$Camera/Nozzle/ShootSound.pitch_scale = pitch
 	$Camera/Nozzle/ShootSound.play()
 	$Camera/ShootLight.visible = true
 	$ShootLightTimer.start()
