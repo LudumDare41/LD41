@@ -79,7 +79,9 @@ func _input(event):
 		get_tree().change_scene("res://Lobby.tscn")
 
 func _process(delta):
-	$Camera/Handgun.global_transform.origin = $Camera/Hand.global_transform.origin
+	
+	$Camera/Handgun.global_transform.origin = lerp($Camera/Handgun.global_transform.origin, $Camera/Hand.global_transform.origin, sway * 1.5 * delta)
+	
 	$Camera/Handgun.rotation.y = lerp_angle($Camera/Handgun.rotation.y, rotation.y, sway * delta)
 	$Camera/Handgun.rotation.x = lerp_angle($Camera/Handgun.rotation.x, $Camera.rotation.x, sway * delta)
 func _physics_process(delta):
