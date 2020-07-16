@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Instances/Player.gd" type="Script" id=1]
 [ext_resource path="res://other/crosshair.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Assets/Audio/Player_Damage_2.wav" type="AudioStream" id=9]
 [ext_resource path="res://Assets/Audio/Movement_1.wav" type="AudioStream" id=10]
 [ext_resource path="res://Assets/Audio/Gun_Empty_2.wav" type="AudioStream" id=11]
+[ext_resource path="res://Instances/Flashlight.gd" type="Script" id=12]
 
 [sub_resource type="CylinderMesh" id=1]
 top_radius = 0.1
@@ -39,10 +40,6 @@ script = ExtResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
 
-[node name="Flashlight" type="SpotLight" parent="Camera"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.319011, -0.328942 )
-spot_range = 30.0
-
 [node name="Angle" type="MeshInstance" parent="Camera"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.5 )
 visible = false
@@ -56,15 +53,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24, -0.359, -0.901 )
 [node name="Handgun" parent="Camera" instance=ExtResource( 4 )]
 transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.239572, -0.359475, -0.900766 )
 
+[node name="ShootLight" type="OmniLight" parent="Camera/Handgun"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -0.012304, 1.4379, -2.33166 )
+shadow_enabled = true
+omni_range = 10.0
+
+[node name="Flashlight" type="SpotLight" parent="Camera/Handgun"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0.00171202, 1.96914, -0.855756 )
+spot_range = 30.0
+script = ExtResource( 12 )
+
 [node name="RayCast" type="RayCast" parent="Camera"]
 enabled = true
 cast_to = Vector3( 0, 0, -1000 )
-
-[node name="ShootLight" type="OmniLight" parent="Camera"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.236496, 1.19209e-07, -1.48368 )
-visible = false
-shadow_enabled = true
-omni_range = 10.0
 
 [node name="Nozzle" type="Position3D" parent="Camera"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.238141, 0, -1.28651 )

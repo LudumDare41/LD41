@@ -1,15 +1,87 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Lobby.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Audio/LD41_Way_Out_Main_scene_-_Track_01_Merlin.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Assets/Fonts/gunplay rg.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/UI/menuBackgroun.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/godot_icon.png" type="Texture" id=5]
+[ext_resource path="res://Assets/UI/Blender-icon.png" type="Texture" id=6]
+[ext_resource path="res://Assets/UI/magicavoxel-icon.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
-size = 20
+size = 30
 font_data = ExtResource( 3 )
 
 [sub_resource type="Theme" id=2]
 default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "background"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:custom_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Label2:custom_colors/font_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ColorRect4:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Lobby" type="Control"]
 anchor_right = 1.0
@@ -19,70 +91,107 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.954795, 0.954795 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Back" type="ColorRect" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -256.5
-margin_top = -139.0
-margin_right = 256.5
-margin_bottom = 139.0
-color = Color( 0, 0, 0, 1 )
+margin_left = -187.0
+margin_top = -129.5
+margin_right = 187.0
+margin_bottom = 129.5
+color = Color( 0, 0, 0, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0.4 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -882.413
+margin_top = -504.413
+margin_right = -307.413
+margin_bottom = 78.5874
+color = Color( 0, 0, 0, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0.4 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 249.0
+margin_top = -506.0
+margin_right = 958.0
+margin_bottom = 77.0
+color = Color( 0, 0, 0, 0.588235 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Menu" type="VBoxContainer" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -112.5
-margin_top = -78.0
-margin_right = 112.5
-margin_bottom = 78.0
+margin_left = -135.5
+margin_top = -102.0
+margin_right = 135.5
+margin_bottom = 102.0
 theme = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HostButton" type="Button" parent="Menu"]
-margin_right = 225.0
-margin_bottom = 31.0
+margin_right = 271.0
+margin_bottom = 43.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "Host game/solo"
 
 [node name="HSeparator" type="HSeparator" parent="Menu"]
-margin_top = 35.0
-margin_right = 225.0
-margin_bottom = 39.0
+margin_top = 47.0
+margin_right = 271.0
+margin_bottom = 51.0
 
 [node name="IP" type="LineEdit" parent="Menu"]
-margin_top = 43.0
-margin_right = 225.0
-margin_bottom = 78.0
+margin_top = 55.0
+margin_right = 271.0
+margin_bottom = 102.0
 text = "127.0.0.1"
 caret_blink = true
 
 [node name="JoinButton" type="Button" parent="Menu"]
-margin_top = 82.0
-margin_right = 225.0
-margin_bottom = 113.0
+margin_top = 106.0
+margin_right = 271.0
+margin_bottom = 149.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "Join game"
 
 [node name="HSeparator2" type="HSeparator" parent="Menu"]
-margin_top = 117.0
-margin_right = 225.0
-margin_bottom = 121.0
+margin_top = 153.0
+margin_right = 271.0
+margin_bottom = 157.0
 
 [node name="Quit" type="Button" parent="Menu"]
-margin_top = 125.0
-margin_right = 225.0
-margin_bottom = 156.0
+margin_top = 161.0
+margin_right = 271.0
+margin_bottom = 204.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "Quit"
@@ -90,7 +199,79 @@ text = "Quit"
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 autoplay = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 96.0
+margin_top = 42.0
+margin_right = 643.0
+margin_bottom = 614.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 0.4 )
+text = "## Credits ##
+
+Linko - 3D Modelling and Level design
+Victor Lima - Programmer
+Nutriz - Programmer
+Leida - 3D Modelling and UI
+Orendi - 3D Modelling and Animation
+Seba - 3D Modelling and Animation
+Merlin - Sound designer/ Level design 
+Tye - Sound designer
+Typodermic Fonts - Game font
+
+Post Game Jam:
+Linko - Programmer and multiplayer"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 1219.0
+margin_top = 42.0
+margin_right = 1898.0
+margin_bottom = 614.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 0.4 )
+text = "## Help ##
+Try to survive and find the escape of the maze !
+
+## Commands ##
+W, A, S, D / Z, Q, S, D- Move the character
+Left mouse button - Shoot
+R - Reload
+F - Turn Off/On the flashlight
+Shift - Run
+Esc - Go to main menu/Exit the game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo1" type="Sprite" parent="."]
+position = Vector2( 300, -124.132 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="Logo2" type="Sprite" parent="."]
+position = Vector2( 960, -124.132 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 7 )
+
+[node name="Logo3" type="Sprite" parent="."]
+position = Vector2( 1617.76, -124.132 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 6 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "background"
+anims/background = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
 [connection signal="pressed" from="Menu/HostButton" to="." method="_on_HostButton_pressed"]
 [connection signal="text_entered" from="Menu/IP" to="." method="_on_IP_text_entered"]
 [connection signal="pressed" from="Menu/JoinButton" to="." method="_on_JoinButton_pressed"]
 [connection signal="pressed" from="Menu/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

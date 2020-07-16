@@ -98,7 +98,7 @@ func _physics_process(delta):
 		
 		if $Camera/Handgun/AnimationPlayer.current_animation != "fire" and $Camera/Handgun/AnimationPlayer.current_animation != "reload" and $Camera/Handgun/AnimationPlayer.current_animation != "pull out":
 		
-			if direction != Vector3():
+			if direction != Vector3() and is_on_floor():
 				rpc("animation", "walk")
 				if not Input.is_action_pressed("crouch"):
 					rpc("footstep", true, 0.9, -20)
@@ -165,8 +165,8 @@ func other_abilities():
 	
 	
 	if Input.is_action_just_pressed("flashlight"):
-		$Camera/Flashlight.visible = !$Camera/Flashlight.visible
-		rpc("toggle_light", $Camera/Flashlight.visible)
+		$Camera/Handgun/Flashlight.visible = !$Camera/Handgun/Flashlight.visible
+		rpc("toggle_light", $Camera/Handgun/Flashlight.visible)
 
 remotesync func empty_sound():
 	$Camera/Nozzle/EmptySound.play()
@@ -223,13 +223,13 @@ remotesync func animation(anim):
 	$Camera/Handgun/AnimationPlayer.play(anim)
 
 remotesync func toggle_light(status):
-	$Camera/Flashlight.visible = status
+	$Camera/Handgun/Flashlight.visible = status
 	$Camera/Lamp/Feedback.visible = status
 
 remotesync func shoot(pitch):
 	$Camera/Nozzle/ShootSound.pitch_scale = pitch
 	$Camera/Nozzle/ShootSound.play()
-	$Camera/ShootLight.visible = true
+	$Camera/Handgun/ShootLight.visible = true
 	$ShootLightTimer.start()
 
 	var bullet_instance = load(bullet).instance()
@@ -254,5 +254,5 @@ func _on_Timer_timeout():
 	can_shoot = true
 
 func _on_ShootLightTimer_timeout():
-	$Camera/ShootLight.visible = false
+	$Camera/Handgun/ShootLight.visible = false
 	rpc("shootlight", false)

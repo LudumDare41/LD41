@@ -12,5 +12,11 @@ sun_energy = 16.0
 [resource]
 background_mode = 2
 background_sky = SubResource( 1 )
+fog_enabled = true
+fog_depth_begin = 0.0
+fog_depth_end = 200.0
 tonemap_mode = 3
+tonemap_white = 16.0
+ss_reflections_enabled = true
+ssao_enabled = true
 glow_enabled = true
