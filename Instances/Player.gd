@@ -21,7 +21,7 @@ var health = 100
 var ammo = 12
 var pack = 2
 
-var sway = 30
+var sway = 40
 
 var impact = "res://Instances/Impact.tscn"
 var bullet = "res://Instances/Bullet.tscn"
@@ -42,7 +42,6 @@ func _ready():
 	
 	if is_network_master():
 		$Camera.current = true
-		$Camera/Angle.visible = false
 		$HUD.visible = true
 		$Camera/RayCast.enabled = true
 		$Camera/Lamp.visible = false
@@ -79,11 +78,14 @@ func _input(event):
 		get_tree().change_scene("res://Lobby.tscn")
 
 func _process(delta):
+	if $Camera/RayCast.is_colliding():
+		$Camera/HandPosition.look_at($Camera/RayCast.get_collision_point(), Vector3.UP)
+	else:
+		$Camera/HandPosition.rotation = Vector3()
 	
-	$Camera/Handgun.global_transform.origin = lerp($Camera/Handgun.global_transform.origin, $Camera/Hand.global_transform.origin, sway * 1.5 * delta)
-	
-	$Camera/Handgun.rotation.y = lerp_angle($Camera/Handgun.rotation.y, rotation.y, sway * delta)
-	$Camera/Handgun.rotation.x = lerp_angle($Camera/Handgun.rotation.x, $Camera.rotation.x, sway * delta)
+	$Camera/Handgun.global_transform = $Camera/Handgun.global_transform.interpolate_with($Camera/HandPosition.global_transform, sway * delta)
+
+	pass
 func _physics_process(delta):
 	if is_network_master():
 		if is_on_floor() and not Input.is_action_just_pressed("jump"):

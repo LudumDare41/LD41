@@ -68,6 +68,12 @@ transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 66, -1.
 [node name="MedKit3" parent="MedKits" instance=ExtResource( 6 )]
 transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.0699998, 0.000141948, -0.0699994, 0.000119187, -0.000262151, 3.10444, 0, -48.116 )
 
+[node name="MedKit6" parent="MedKits" instance=ExtResource( 6 )]
+transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.0699998, 0.000141948, -0.0699994, 0.000119187, -0.000262151, -27.8471, 1.00122, -35.838 )
+
+[node name="MedKit7" parent="MedKits" instance=ExtResource( 6 )]
+transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.0699998, 0.000141948, -0.0699994, 0.000119187, -0.000262151, -24.763, -0.251413, 38.7653 )
+
 [node name="MedKit5" parent="MedKits" instance=ExtResource( 6 )]
 transform = Transform( -0.000262392, -0.000141504, 0.0699994, 0.000118657, 0.0699998, 0.000141948, -0.0699994, 0.000119187, -0.000262151, 34.9529, 0, 19.025 )
 
@@ -94,6 +100,9 @@ transform = Transform( 0.00438235, 0, 0.0296782, 0, 0.03, 0, -0.0296782, 0, 0.00
 [node name="AmmoBox16" parent="AmmoBoxes" instance=ExtResource( 7 )]
 transform = Transform( 0.00438235, 0, 0.0296782, 0, 0.03, 0, -0.0296782, 0, 0.00438235, 10.4675, 2.38419e-06, -20.6544 )
 
+[node name="AmmoBox19" parent="AmmoBoxes" instance=ExtResource( 7 )]
+transform = Transform( 0.00438235, 0, 0.0296782, 0, 0.03, 0, -0.0296782, 0, 0.00438235, -23.6896, -0.185803, 36.1438 )
+
 [node name="AmmoBox10" parent="AmmoBoxes" instance=ExtResource( 7 )]
 transform = Transform( -0.0286671, 0, 0.00884285, 0, 0.03, 0, -0.00884285, 0, -0.0286671, -8.98025, 0, 11.6624 )
 
@@ -114,6 +123,9 @@ transform = Transform( -0.0152533, 0, -0.0258329, 0, 0.03, 0, 0.0258329, 0, -0.0
 
 [node name="AmmoBox3" parent="AmmoBoxes" instance=ExtResource( 7 )]
 transform = Transform( -0.00799815, 0, 0.0289142, 0, 0.03, 0, -0.0289142, 0, -0.00799815, -45.9269, 5.9783, -64.7982 )
+
+[node name="AmmoBox18" parent="AmmoBoxes" instance=ExtResource( 7 )]
+transform = Transform( -0.00799815, 0, 0.0289142, 0, 0.03, 0, -0.0289142, 0, -0.00799815, -27.3359, 0.69876, -39.6402 )
 
 [node name="AmmoBox14" parent="AmmoBoxes" instance=ExtResource( 7 )]
 transform = Transform( 0.000182583, 0, 0.0299995, 0, 0.03, 0, -0.0299995, 0, 0.000182583, -45.9269, 5.9783, -65.597 )
@@ -400,7 +412,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5154, 8.35512, 9.4297 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2252, 1.37929, 43.9742 )
 
 [node name="Spawn" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.046, 3, 26.75 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2522, 3, 26.3027 )
 
 [node name="GIProbe" type="GIProbe" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5283, 16.9093, -37.2883 )

@@ -1,6 +1,17 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Instances/RealLights.gd" type="Script" id=1]
 
 [node name="RealLights" type="OmniLight"]
 light_energy = 0.8
 light_indirect_energy = 0.8
 omni_range = 20.0
+script = ExtResource( 1 )
+
+[node name="TurnedOn" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="TurnedOff" type="Timer" parent="."]
+wait_time = 0.1
+[connection signal="timeout" from="TurnedOn" to="." method="_on_TurnedOn_timeout"]
+[connection signal="timeout" from="TurnedOff" to="." method="_on_TurnedOff_timeout"]

@@ -239,8 +239,6 @@ Try to survive and find the escape of the maze !
 W, A, S, D / Z, Q, S, D- Move the character
 Left mouse button - Shoot
 R - Reload
-F - Turn Off/On the flashlight
-Shift - Run
 Esc - Go to main menu/Exit the game"
 __meta__ = {
 "_edit_use_anchors_": false
